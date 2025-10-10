@@ -15,10 +15,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.stellarwind22.foundry_works.fabric.FoundryWorksFabric"
+      "com.github.stellarwind22.foundry_works.fabric.init.FoundryWorksFabric"
     ],
     "client": [
-      "com.github.stellarwind22.foundry_works.fabric.client.FoundryWorksFabricClient"
+      "com.github.stellarwind22.foundry_works.fabric.init.FoundryWorksFabricClient"
     ]
   },
   "mixins": [

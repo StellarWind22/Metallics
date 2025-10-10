@@ -45,12 +45,14 @@ public class FoundryWorksItems {
         COPPER_JACK_O_LANTERN = registerItem("copper_jack_o_lantern", props -> new BlockItem(FoundryWorksBlocks.COPPER_JACK_O_LANTERN.get(), props));
 
         //Gold
+        GOLD_CHAIN = registerItem("gold_chain", props -> new BlockItem(FoundryWorksBlocks.GOLD_CHAIN.get(), props));
         GOLD_JACK_O_LANTERN = registerItem("gold_jack_o_lantern", props -> new BlockItem(FoundryWorksBlocks.GOLD_JACK_O_LANTERN.get(), props));
 
         //Iron
 
         //Netherite
         NETHERITE_NUGGET = registerItem("netherite_nugget", Item::new);
+        NETHERITE_CHAIN = registerItem("netherite_chain", props -> new BlockItem(FoundryWorksBlocks.NETHERITE_CHAIN.get(), props));
         NETHERITE_JACK_O_LANTERN = registerItem("netherite_jack_o_lantern", props -> new BlockItem(FoundryWorksBlocks.NETHERITE_JACK_O_LANTERN.get(), props));
 
         //Register stuff here ▲▲▲

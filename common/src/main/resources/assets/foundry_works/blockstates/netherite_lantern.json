@@ -1,10 +1,10 @@
 {
   "variants": {
     "hanging=false": {
-      "model": "minecraft:block/lantern"
+      "model": "foundry_works:block/netherite_lantern"
     },
     "hanging=true": {
-      "model": "minecraft:block/lantern_hanging"
+      "model": "foundry_works:block/netherite_lantern_hanging"
     }
   }
 }

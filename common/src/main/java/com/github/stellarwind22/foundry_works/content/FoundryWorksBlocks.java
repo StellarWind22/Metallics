@@ -32,7 +32,7 @@ public class FoundryWorksBlocks {
             .requiresCorrectToolForDrops()
             .strength(5.0F, 6.0F)
             .sound(SoundType.CHAIN)
-            .noCollision();
+            .noOcclusion();
 
     //Soul
     public static RegistrySupplier<Block> SOUL_JACK_O_LANTERN;
