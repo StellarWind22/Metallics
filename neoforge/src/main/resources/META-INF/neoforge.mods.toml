@@ -1,0 +1,38 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "foundry_works"
+version = "${version}"
+displayName = "Foundry Works"
+authors = "StellarWind22"
+description = '''
+
+'''
+#logoFile = ""
+
+[[dependencies.foundry_works]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.foundry_works]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.9,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.foundry_works]]
+modId = "architectury"
+type = "required"
+versionRange = "[18.0.3,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[mixins]]
+config = "foundry_works.mixins.json"
