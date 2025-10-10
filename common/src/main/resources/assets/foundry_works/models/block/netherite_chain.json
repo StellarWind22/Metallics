@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_chain",
+  "textures": {
+    "texture": "foundry_works:block/netherite_chain"
+  }
+}
