@@ -1,6 +1,6 @@
 package com.github.stellarwind22.foundry_works.fabric;
 
-import com.github.stellarwind22.foundry_works.FoundryWorks;
+import com.github.stellarwind22.foundry_works.init.FoundryWorks;
 import net.fabricmc.api.ModInitializer;
 
 public final class FoundryWorksFabric implements ModInitializer {

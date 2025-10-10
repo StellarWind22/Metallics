@@ -1,6 +1,6 @@
 package com.github.stellarwind22.foundry_works.neoforge;
 
-import com.github.stellarwind22.foundry_works.FoundryWorks;
+import com.github.stellarwind22.foundry_works.init.FoundryWorks;
 import net.neoforged.fml.common.Mod;
 
 @Mod(FoundryWorks.MOD_ID)
