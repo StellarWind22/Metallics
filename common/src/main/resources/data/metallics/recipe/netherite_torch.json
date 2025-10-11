@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    ".": "metallics:netherite_nugget",
+    "#": [
+      "minecraft:coal",
+      "minecraft:charcoal"
+    ],
+    "l": "minecraft:stick"
+  },
+  "pattern": [
+    ".",
+    "#",
+    "l"
+  ],
+  "result": {
+    "id": "metallics:netherite_torch"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_bars_cap_alt",
+  "textures": {
+    "bars": "metallics:block/netherite_bars",
+    "edge": "metallics:block/netherite_bars"
+  }
+}

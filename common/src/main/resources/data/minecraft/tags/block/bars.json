@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "foundry_works:gold_bars",
-    "foundry_works:netherite_bars"
+    "metallics:gold_bars",
+    "metallics:netherite_bars"
   ]
 }

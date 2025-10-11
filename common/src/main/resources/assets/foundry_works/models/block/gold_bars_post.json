@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/template_bars_post",
-  "textures": {
-    "bars": "foundry_works:block/gold_bars",
-    "edge": "foundry_works:block/gold_bars"
-  }
-}
