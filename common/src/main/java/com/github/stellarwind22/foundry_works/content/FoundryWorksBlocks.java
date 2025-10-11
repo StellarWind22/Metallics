@@ -44,6 +44,8 @@ public class FoundryWorksBlocks {
     public static RegistrySupplier<Block> GOLD_JACK_O_LANTERN;
 
     public static RegistrySupplier<Block> GOLD_CHAIN;
+    public static RegistrySupplier<Block> HANGING_GOLD_LANTERN;
+    public static RegistrySupplier<Block> GOLD_LANTERN;
 
     //Iron
 
@@ -51,6 +53,8 @@ public class FoundryWorksBlocks {
     public static RegistrySupplier<Block> NETHERITE_JACK_O_LANTERN;
 
     public static RegistrySupplier<Block> NETHERITE_CHAIN;
+    public static RegistrySupplier<Block> HANGING_NETHERITE_LANTERN;
+    public static RegistrySupplier<Block> NETHERITE_LANTERN;
 
     public static void init() {
         BLOCKS = DeferredRegister.create(FoundryWorks.MOD_ID, Registries.BLOCK);
