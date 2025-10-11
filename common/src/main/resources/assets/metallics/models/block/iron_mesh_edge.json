@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_mesh_edge",
+  "textures": {
+    "edge": "minecraft:block/iron_bars"
+  }
+}

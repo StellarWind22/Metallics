@@ -1,5 +1,5 @@
 {
-  "parent": "metallics:block/template_mesh_noside",
+  "parent": "metallics:block/template_mesh_center_alt",
   "textures": {
     "mesh": "metallics:block/iron_grate"
   }

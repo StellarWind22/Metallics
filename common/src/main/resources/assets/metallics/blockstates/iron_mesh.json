@@ -2,7 +2,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "metallics:block/iron_mesh_post"
+        "model": "metallics:block/iron_mesh_vert"
       }
     },
     {
@@ -41,36 +41,51 @@
     },
     {
       "apply": {
-        "model": "metallics:block/iron_mesh_noside"
+        "model": "metallics:block/iron_mesh_edge"
       },
       "when": {
-        "north": "false"
+        "north": "false",
+        "south": "false",
+        "east":  "false",
+        "west":  "false"
       }
     },
     {
       "apply": {
-        "model": "metallics:block/iron_mesh_noside_alt"
+        "model": "metallics:block/iron_mesh_edge"
       },
       "when": {
-        "east": "false"
+        "north": "false",
+        "south": "true"
       }
     },
     {
       "apply": {
-        "model": "metallics:block/iron_mesh_noside_alt",
+        "model": "metallics:block/iron_mesh_edge_alt"
+      },
+      "when": {
+        "east": "false",
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/iron_mesh_edge_alt",
         "y": 90
       },
       "when": {
-        "south": "false"
+        "south": "false",
+        "north": "true"
       }
     },
     {
       "apply": {
-        "model": "metallics:block/iron_mesh_noside",
+        "model": "metallics:block/iron_mesh_edge",
         "y": 270
       },
       "when": {
-        "west": "false"
+        "west": "false",
+        "east": "true"
       }
     }
   ]
