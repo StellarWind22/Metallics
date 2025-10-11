@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/template_hanging_lantern",
+  "parent": "metallics:block/template_alt_hanging_lantern",
   "textures": {
     "lantern": "metallics:block/netherite_lantern"
   }

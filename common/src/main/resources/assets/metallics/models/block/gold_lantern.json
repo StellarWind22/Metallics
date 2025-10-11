@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/template_lantern",
+  "parent": "metallics:block/template_alt_lantern",
   "textures": {
     "lantern": "metallics:block/gold_lantern"
   }
