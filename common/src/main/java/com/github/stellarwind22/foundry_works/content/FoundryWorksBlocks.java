@@ -34,6 +34,21 @@ public class FoundryWorksBlocks {
             .sound(SoundType.CHAIN)
             .noOcclusion();
 
+    private static final MBlockProps lanternProps = new MBlockProps()
+            .mapColor(MapColor.METAL)
+            .forceSolidOn()
+            .strength(3.5F)
+            .sound(SoundType.LANTERN)
+            .lightLevel((blockState) -> 15)
+            .noOcclusion()
+            .pushReaction(PushReaction.DESTROY);
+
+    private static final MBlockProps barsProps = new MBlockProps()
+            .requiresCorrectToolForDrops()
+            .strength(5.0F, 6.0F)
+            .sound(SoundType.IRON).noOcclusion();
+
+
     //Soul
     public static RegistrySupplier<Block> SOUL_JACK_O_LANTERN;
 
@@ -44,8 +59,8 @@ public class FoundryWorksBlocks {
     public static RegistrySupplier<Block> GOLD_JACK_O_LANTERN;
 
     public static RegistrySupplier<Block> GOLD_CHAIN;
-    public static RegistrySupplier<Block> HANGING_GOLD_LANTERN;
     public static RegistrySupplier<Block> GOLD_LANTERN;
+    public static RegistrySupplier<Block> GOLD_BARS;
 
     //Iron
 
@@ -53,8 +68,8 @@ public class FoundryWorksBlocks {
     public static RegistrySupplier<Block> NETHERITE_JACK_O_LANTERN;
 
     public static RegistrySupplier<Block> NETHERITE_CHAIN;
-    public static RegistrySupplier<Block> HANGING_NETHERITE_LANTERN;
     public static RegistrySupplier<Block> NETHERITE_LANTERN;
+    public static RegistrySupplier<Block> NETHERITE_BARS;
 
     public static void init() {
         BLOCKS = DeferredRegister.create(FoundryWorks.MOD_ID, Registries.BLOCK);
@@ -62,9 +77,9 @@ public class FoundryWorksBlocks {
         //Register stuff here ▼▼▼
 
         //Soul
-        SOUL_JACK_O_LANTERN = registerBlock("soul_jack_o_lantern", new MBlock(props -> new CarvedPumpkinBlock(props.lightLevel((state) -> 10)),
-                Optional.of(jackOLanternProps.getCopy()
-                )
+        SOUL_JACK_O_LANTERN = registerBlock("soul_jack_o_lantern", new MBlock(
+                props -> new CarvedPumpkinBlock(props.lightLevel((state) -> 10)),
+                Optional.of(jackOLanternProps.getCopy())
         ));
 
         //Copper
@@ -73,12 +88,16 @@ public class FoundryWorksBlocks {
         //Gold
         GOLD_JACK_O_LANTERN = registerBlock("gold_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
         GOLD_CHAIN = registerBlock("gold_chain", new MBlock(ChainBlock::new, Optional.of(chainProps.getCopy())));
+        GOLD_LANTERN = registerBlock("gold_lantern", new MBlock(LanternBlock::new, Optional.of(lanternProps.getCopy())));
+        GOLD_BARS = registerBlock("gold_bars", new MBlock(IronBarsBlock::new, Optional.of(barsProps.getCopy())));
 
         //Iron
 
         //Netherite
         NETHERITE_JACK_O_LANTERN = registerBlock("netherite_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
         NETHERITE_CHAIN = registerBlock("netherite_chain", new MBlock(ChainBlock::new, Optional.of(chainProps.getCopy())));
+        NETHERITE_LANTERN = registerBlock("netherite_lantern", new MBlock(LanternBlock::new, Optional.of(lanternProps.getCopy())));
+        NETHERITE_BARS = registerBlock("netherite_bars", new MBlock(IronBarsBlock::new, Optional.of(barsProps.getCopy())));
 
 
         //Register stuff here ▲▲▲

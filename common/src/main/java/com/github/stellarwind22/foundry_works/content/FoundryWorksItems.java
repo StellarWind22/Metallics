@@ -23,6 +23,8 @@ public class FoundryWorksItems {
 
     //Gold
     public static RegistrySupplier<BlockItem> GOLD_CHAIN;
+    public static RegistrySupplier<BlockItem> GOLD_LANTERN;
+    public static RegistrySupplier<BlockItem> GOLD_BARS;
     public static RegistrySupplier<BlockItem> GOLD_JACK_O_LANTERN;
 
     //Iron
@@ -30,6 +32,8 @@ public class FoundryWorksItems {
     //Netherite
     public static RegistrySupplier<Item> NETHERITE_NUGGET;
     public static RegistrySupplier<BlockItem> NETHERITE_CHAIN;
+    public static RegistrySupplier<BlockItem> NETHERITE_LANTERN;
+    public static RegistrySupplier<BlockItem> NETHERITE_BARS;
     public static RegistrySupplier<BlockItem> NETHERITE_JACK_O_LANTERN;
 
     public static void init() {
@@ -46,6 +50,8 @@ public class FoundryWorksItems {
 
         //Gold
         GOLD_CHAIN = registerItem("gold_chain", props -> new BlockItem(FoundryWorksBlocks.GOLD_CHAIN.get(), props));
+        GOLD_BARS = registerItem("gold_bars", props -> new BlockItem(FoundryWorksBlocks.GOLD_BARS.get(), props));
+        GOLD_LANTERN = registerItem("gold_lantern", props -> new BlockItem(FoundryWorksBlocks.GOLD_LANTERN.get(), props));
         GOLD_JACK_O_LANTERN = registerItem("gold_jack_o_lantern", props -> new BlockItem(FoundryWorksBlocks.GOLD_JACK_O_LANTERN.get(), props));
 
         //Iron
@@ -53,6 +59,8 @@ public class FoundryWorksItems {
         //Netherite
         NETHERITE_NUGGET = registerItem("netherite_nugget", Item::new);
         NETHERITE_CHAIN = registerItem("netherite_chain", props -> new BlockItem(FoundryWorksBlocks.NETHERITE_CHAIN.get(), props));
+        NETHERITE_BARS = registerItem("netherite_bars", props -> new BlockItem(FoundryWorksBlocks.NETHERITE_BARS.get(), props));
+        NETHERITE_LANTERN = registerItem("netherite_lantern", props -> new BlockItem(FoundryWorksBlocks.NETHERITE_LANTERN.get(), props));
         NETHERITE_JACK_O_LANTERN = registerItem("netherite_jack_o_lantern", props -> new BlockItem(FoundryWorksBlocks.NETHERITE_JACK_O_LANTERN.get(), props));
 
         //Register stuff here ▲▲▲

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_hanging_lantern",
   "textures": {
-    "lantern": "minecraft:block/lantern"
+    "lantern": "foundry_works:block/gold_lantern"
   }
 }
