@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "metallics:block/netherite_campfire"
+    "model": "metallics:item/netherite_campfire"
   }
 }

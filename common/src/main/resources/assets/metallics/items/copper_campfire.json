@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "metallics:block/copper_campfire"
+    "model": "metallics:item/copper_campfire"
   }
 }
