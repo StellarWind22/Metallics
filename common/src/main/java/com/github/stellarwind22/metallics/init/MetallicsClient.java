@@ -1,6 +1,6 @@
-package com.github.stellarwind22.foundry_works.init;
+package com.github.stellarwind22.metallics.init;
 
-import com.github.stellarwind22.foundry_works.content.MetallicsBlocks;
+import com.github.stellarwind22.metallics.content.MetallicsBlocks;
 import dev.architectury.registry.client.rendering.RenderTypeRegistry;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 

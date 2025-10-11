@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "metallics",
   "version": "${version}",
-  "name": "Foundry Works",
+  "name": "Metallics",
   "description": "",
   "authors": [
     "StellarWind22"
@@ -15,15 +15,12 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.stellarwind22.metallics.fabric.init.FoundryWorksFabric"
+      "com.github.stellarwind22.metallics.fabric.init.MetallicsFabric"
     ],
     "client": [
-      "com.github.stellarwind22.metallics.fabric.init.FoundryWorksFabricClient"
+      "com.github.stellarwind22.metallics.fabric.init.MetallicsFabricClient"
     ]
   },
-  "mixins": [
-    "metallics.mixins.json"
-  ],
   "depends": {
     "fabricloader": ">=0.17.3",
     "minecraft": "~1.21.9",

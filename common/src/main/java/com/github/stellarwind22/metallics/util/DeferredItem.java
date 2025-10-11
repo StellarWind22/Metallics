@@ -1,4 +1,4 @@
-package com.github.stellarwind22.foundry_works.util;
+package com.github.stellarwind22.metallics.util;
 
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.world.item.Item;

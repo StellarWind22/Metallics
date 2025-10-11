@@ -1,4 +1,4 @@
-package com.github.stellarwind22.foundry_works.util;
+package com.github.stellarwind22.metallics.util;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;

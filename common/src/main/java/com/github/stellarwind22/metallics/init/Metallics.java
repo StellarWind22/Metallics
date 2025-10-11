@@ -1,8 +1,8 @@
-package com.github.stellarwind22.foundry_works.init;
+package com.github.stellarwind22.metallics.init;
 
-import com.github.stellarwind22.foundry_works.content.MetallicsBlocks;
-import com.github.stellarwind22.foundry_works.content.MetallicsItems;
-import com.github.stellarwind22.foundry_works.content.MetallicsTabs;
+import com.github.stellarwind22.metallics.content.MetallicsBlocks;
+import com.github.stellarwind22.metallics.content.MetallicsItems;
+import com.github.stellarwind22.metallics.content.MetallicsTabs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

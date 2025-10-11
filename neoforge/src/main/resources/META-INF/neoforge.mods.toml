@@ -4,30 +4,30 @@ loaderVersion = "[2,)"
 license = "MIT"
 
 [[mods]]
-modId = "foundry_works"
+modId = "metallics"
 version = "${version}"
-displayName = "Foundry Works"
+displayName = "Metallics"
 authors = "StellarWind22"
 description = '''
 
 '''
 #logoFile = ""
 
-[[dependencies.foundry_works]]
+[[dependencies.metallics]]
 modId = "neoforge"
 type = "required"
 versionRange = "[21,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.foundry_works]]
+[[dependencies.metallics]]
 modId = "minecraft"
 type = "required"
 versionRange = "[1.21.9,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.foundry_works]]
+[[dependencies.metallics]]
 modId = "architectury"
 type = "required"
 versionRange = "[18.0.3,)"
@@ -35,4 +35,4 @@ ordering = "AFTER"
 side = "BOTH"
 
 [[mixins]]
-config = "foundry_works.mixins.json"
+config = "metallics.mixins.json"

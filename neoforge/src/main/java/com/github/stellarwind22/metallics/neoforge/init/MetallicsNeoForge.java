@@ -1,7 +1,7 @@
-package com.github.stellarwind22.foundry_works.neoforge.init;
+package com.github.stellarwind22.metallics.neoforge.init;
 
-import com.github.stellarwind22.foundry_works.init.Metallics;
-import com.github.stellarwind22.foundry_works.init.MetallicsClient;
+import com.github.stellarwind22.metallics.init.Metallics;
+import com.github.stellarwind22.metallics.init.MetallicsClient;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.loading.FMLEnvironment;

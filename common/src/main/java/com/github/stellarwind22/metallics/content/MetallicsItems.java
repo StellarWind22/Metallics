@@ -1,6 +1,6 @@
 package com.github.stellarwind22.metallics.content;
 
-import com.github.stellarwind22.foundry_works.init.Metallics;
+import com.github.stellarwind22.metallics.init.Metallics;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.Direction;
