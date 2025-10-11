@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "minecraft:block/copper_torch"
+      "model": "foundry_works:block/netherite_torch"
     }
   }
 }
