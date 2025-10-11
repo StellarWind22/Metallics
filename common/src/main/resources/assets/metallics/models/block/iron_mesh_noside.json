@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/template_mesh_noside",
+  "parent": "metallics:block/template_mesh_noside",
   "textures": {
     "mesh": "metallics:block/iron_grate"
   }

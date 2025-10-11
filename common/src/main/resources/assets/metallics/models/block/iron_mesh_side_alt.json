@@ -1,7 +1,7 @@
 {
-  "parent": "minecraft:block/template_mesh_side_alt",
+  "parent": "metallics:block/template_mesh_side_alt",
   "textures": {
-    "edge": "minecraft:block/iron_mesh_top",
+    "edge": "minecraft:block/iron_bars",
     "mesh": "metallics:block/iron_grate"
   }
 }
