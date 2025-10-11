@@ -1,7 +1,7 @@
 {
-  "parent": "minecraft:block/template_bars_post",
+  "parent": "minecraft:block/template_mesh_post",
   "textures": {
-    "bars": "metallics:block/iron_grate",
-    "edge": "minecraft:block/iron_bars"
+    "edge": "minecraft:block/iron_mesh_top",
+    "mesh": "metallics:block/iron_grate"
   }
 }

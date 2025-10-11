@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/template_bars_post_ends",
-  "textures": {
-    "bars": "metallics:block/iron_grate",
-    "edge": "minecraft:block/iron_bars"
-  }
-}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_mesh_noside",
+  "textures": {
+    "mesh": "metallics:block/iron_grate"
+  }
+}
