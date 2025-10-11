@@ -12,6 +12,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
@@ -67,11 +69,20 @@ public class MetallicsBlocks {
             .isSuffocating(MBlockProps::never)
             .isViewBlocking(MBlockProps::never);
 
+    private static final MBlockProps campfireProps = new MBlockProps()
+            .mapColor(MapColor.PODZOL)
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(2.0F).sound(SoundType.WOOD)
+            .lightLevel((blockState) -> blockState.getValue(BlockStateProperties.LIT)? 15 : 0)
+            .noOcclusion()
+            .ignitedByLava();
+
 
     //Soul
     public static RegistrySupplier<Block> SOUL_JACK_O_LANTERN;
 
     //Copper
+    public static RegistrySupplier<Block> COPPER_CAMPFIRE;
     public static RegistrySupplier<Block> COPPER_JACK_O_LANTERN;
 
     //Gold
@@ -82,6 +93,7 @@ public class MetallicsBlocks {
 
     public static RegistrySupplier<Block> GOLD_TORCH;
     public static RegistrySupplier<Block> GOLD_WALL_TORCH;
+    public static RegistrySupplier<Block> GOLD_CAMPFIRE;
     public static RegistrySupplier<Block> GOLD_JACK_O_LANTERN;
 
     //Iron
@@ -95,6 +107,7 @@ public class MetallicsBlocks {
 
     public static RegistrySupplier<Block> NETHERITE_TORCH;
     public static RegistrySupplier<Block> NETHERITE_WALL_TORCH;
+    public static RegistrySupplier<Block> NETHERITE_CAMPFIRE;
     public static RegistrySupplier<Block> NETHERITE_JACK_O_LANTERN;
 
     public static void init() {
@@ -109,6 +122,7 @@ public class MetallicsBlocks {
         ));
 
         //Copper
+        COPPER_CAMPFIRE = registerBlock("copper_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         COPPER_JACK_O_LANTERN = registerBlock("copper_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
 
         //Gold
@@ -119,6 +133,7 @@ public class MetallicsBlocks {
 
         GOLD_TORCH = registerBlock("gold_torch", new MBlock(props -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         GOLD_WALL_TORCH = registerBlock("gold_wall_torch", new MBlock(props -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
+        GOLD_CAMPFIRE = registerBlock("gold_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         GOLD_JACK_O_LANTERN = registerBlock("gold_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
 
         //Iron
@@ -132,6 +147,7 @@ public class MetallicsBlocks {
 
         NETHERITE_TORCH = registerBlock("netherite_torch", new MBlock(props -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         NETHERITE_WALL_TORCH = registerBlock("netherite_wall_torch", new MBlock(props -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
+        NETHERITE_CAMPFIRE = registerBlock("netherite_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         NETHERITE_JACK_O_LANTERN = registerBlock("netherite_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
 
 

@@ -4,12 +4,15 @@ import com.github.stellarwind22.metallics.init.Metallics;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.Direction;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.StandingAndWallBlockItem;
+import net.minecraft.world.item.component.ItemContainerContents;
 
 import java.util.function.Function;
 
@@ -21,6 +24,7 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> SOUL_JACK_O_LANTERN;
 
     //Copper
+    public static RegistrySupplier<BlockItem> COPPER_CAMPFIRE;
     public static RegistrySupplier<BlockItem> COPPER_JACK_O_LANTERN;
 
     //Gold
@@ -30,6 +34,7 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> GOLD_GRATE;
 
     public static RegistrySupplier<BlockItem> GOLD_TORCH;
+    public static RegistrySupplier<BlockItem> GOLD_CAMPFIRE;
     public static RegistrySupplier<BlockItem> GOLD_JACK_O_LANTERN;
 
     //Iron
@@ -43,6 +48,7 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> NETHERITE_GRATE;
 
     public static RegistrySupplier<BlockItem> NETHERITE_TORCH;
+    public static RegistrySupplier<BlockItem> NETHERITE_CAMPFIRE;
     public static RegistrySupplier<BlockItem> NETHERITE_JACK_O_LANTERN;
 
     public static void init() {
@@ -55,6 +61,7 @@ public class MetallicsItems {
         SOUL_JACK_O_LANTERN = registerItem("soul_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.SOUL_JACK_O_LANTERN.get(), props));
 
         //Copper
+        COPPER_CAMPFIRE = registerItem("copper_campfire", props -> new BlockItem(MetallicsBlocks.COPPER_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
         COPPER_JACK_O_LANTERN = registerItem("copper_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.COPPER_JACK_O_LANTERN.get(), props));
 
         //Gold
@@ -64,6 +71,7 @@ public class MetallicsItems {
         GOLD_GRATE = registerItem("gold_grate", props -> new BlockItem(MetallicsBlocks.GOLD_GRATE.get(), props));
 
         GOLD_TORCH = registerItem("gold_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.GOLD_TORCH.get(), MetallicsBlocks.GOLD_WALL_TORCH.get(), Direction.DOWN, props));
+        GOLD_CAMPFIRE = registerItem("gold_campfire", props -> new BlockItem(MetallicsBlocks.GOLD_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
         GOLD_JACK_O_LANTERN = registerItem("gold_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.GOLD_JACK_O_LANTERN.get(), props));
 
         //Iron
@@ -77,6 +85,7 @@ public class MetallicsItems {
         NETHERITE_GRATE = registerItem("netherite_grate", props -> new BlockItem(MetallicsBlocks.NETHERITE_GRATE.get(), props));
 
         NETHERITE_TORCH = registerItem("netherite_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.NETHERITE_TORCH.get(), MetallicsBlocks.NETHERITE_WALL_TORCH.get(), Direction.DOWN, props));
+        NETHERITE_CAMPFIRE = registerItem("netherite_campfire", props -> new BlockItem(MetallicsBlocks.NETHERITE_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
         NETHERITE_JACK_O_LANTERN = registerItem("netherite_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.NETHERITE_JACK_O_LANTERN.get(), props));
 
         //Register stuff here ▲▲▲

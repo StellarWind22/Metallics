@@ -126,6 +126,11 @@ public class MBlockProps {
         return this;
     }
 
+    public MBlockProps instrument(NoteBlockInstrument noteBlockInstrument) {
+        this.instrument = noteBlockInstrument;
+        return this;
+    }
+
     public MBlockProps mapColor(Function<BlockState, MapColor> function) {
         this.mapColor = function;
         return this;
