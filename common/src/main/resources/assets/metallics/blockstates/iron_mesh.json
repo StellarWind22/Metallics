@@ -1,290 +1,69 @@
 {
   "multipart": [
     {
-      "apply": {
-        "model": "metallics:block/iron_mesh_vert"
-      }
-    },
-    {
-      "apply": {
-        "model": "metallics:block/iron_mesh_side"
-      },
-      "when": {
-        "north": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "metallics:block/iron_mesh_side",
-        "y": 90
-      },
-      "when": {
-        "east": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "metallics:block/iron_mesh_side_alt"
-      },
-      "when": {
-        "south": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "metallics:block/iron_mesh_side_alt",
-        "y": 90
-      },
-      "when": {
-        "west": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "metallics:block/iron_mesh_post"
-      },
-      "when": {
-        "north": "false",
-        "south": "false",
-        "east":  "false",
-        "west":  "false"
-      }
-    },
-    {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge"
-      },
-      "when": {
-        "north": "false",
-        "south": "true",
-        "east":  "false",
-        "west":  "false"
-      }
-    },
-    {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge_alt"
-      },
-      "when": {
-        "east":  "false",
-        "west":  "true",
-        "north": "false",
-        "south": "false"
-      }
-    },
-    {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge_alt",
-        "y": 90
-      },
-      "when": {
-        "south": "false",
-        "north": "true",
-        "east":  "false",
-        "west":  "false"
-      }
-    },
-    {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge",
-        "y": 270
-      },
-      "when": {
-        "west":  "false",
-        "east":  "true",
-        "north": "false",
-        "south": "false"
-      }
+      "apply": { "model": "metallics:block/iron_mesh_vert" }
     },
 
+    { "when": { "north": "true" }, "apply": { "model": "metallics:block/iron_mesh_side" } },
+    { "when": { "east": "true" },  "apply": { "model": "metallics:block/iron_mesh_side", "y": 90 } },
+    { "when": { "south": "true" }, "apply": { "model": "metallics:block/iron_mesh_side_alt" } },
+    { "when": { "west": "true" },  "apply": { "model": "metallics:block/iron_mesh_side_alt", "y": 90 } },
 
-
     {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge"
-      },
-      "when": {
-        "north": "false",
-        "south": "true",
-        "east":  "true",
-        "west":  "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge_alt"
-      },
-      "when": {
-        "east":  "false",
-        "west":  "true",
-        "north": "true",
-        "south": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge_alt",
-        "y": 90
-      },
-      "when": {
-        "south": "false",
-        "north": "true",
-        "east":  "true",
-        "west":  "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge",
-        "y": 270
-      },
-      "when": {
-        "west":  "false",
-        "east":  "true",
-        "north": "true",
-        "south": "true"
-      }
+      "when": { "north": "false", "south": "false", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/iron_mesh_post" }
     },
 
     {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge"
-      },
-      "when": {
-        "north": "false",
-        "south": "true",
-        "east":  "false",
-        "west":  "true"
-      }
+      "when": { "north": "false", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/iron_mesh_edge" }
     },
     {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge_alt"
-      },
-      "when": {
-        "east":  "false",
-        "west":  "true",
-        "north": "false",
-        "south": "true"
-      }
+      "when": { "east": "false", "west": "true", "north": "false", "south": "false" },
+      "apply": { "model": "metallics:block/iron_mesh_edge_alt" }
     },
     {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge_alt",
-        "y": 90
-      },
-      "when": {
-        "south": "false",
-        "north": "true",
-        "east":  "false",
-        "west":  "true"
-      }
+      "when": { "south": "false", "north": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/iron_mesh_edge_alt", "y": 90 }
     },
     {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge",
-        "y": 270
-      },
-      "when": {
-        "west":  "false",
-        "east":  "true",
-        "north": "false",
-        "south": "true"
-      }
+      "when": { "west": "false", "east": "true", "north": "false", "south": "false" },
+      "apply": { "model": "metallics:block/iron_mesh_edge", "y": 270 }
     },
 
     {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge"
-      },
-      "when": {
-        "north": "false",
-        "south": "true",
-        "east":  "true",
-        "west":  "false"
-      }
+      "when": { "north": "false", "south": "true", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/iron_mesh_edge" }
     },
     {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge_alt"
-      },
-      "when": {
-        "east":  "false",
-        "west":  "true",
-        "north": "true",
-        "south": "false"
-      }
+      "when": { "south": "false", "north": "true", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/iron_mesh_edge_alt", "y": 90 }
     },
     {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge_alt",
-        "y": 90
-      },
-      "when": {
-        "south": "false",
-        "north": "true",
-        "east":  "true",
-        "west":  "false"
-      }
+      "when": { "east": "false", "west": "true", "north": "true", "south": "true" },
+      "apply": { "model": "metallics:block/iron_mesh_edge_alt" }
     },
     {
-      "apply": {
-        "model": "metallics:block/iron_mesh_edge",
-        "y": 270
-      },
-      "when": {
-        "west":  "false",
-        "east":  "true",
-        "north": "true",
-        "south": "false"
-      }
+      "when": { "west": "false", "east": "true", "north": "true", "south": "true" },
+      "apply": { "model": "metallics:block/iron_mesh_edge", "y": 270 }
     },
 
     {
-      "apply": {
-        "model": "metallics:block/iron_mesh_center"
-      },
-      "when": {
-        "north": "true",
-        "south": "true",
-        "east":  "false",
-        "west":  "false"
-      }
+      "when": { "north": "true", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/iron_mesh_center", "y": 90 }
     },
     {
-      "apply": {
-        "model": "metallics:block/iron_mesh_center_alt"
-      },
-      "when": {
-        "east":  "true",
-        "west":  "true",
-        "north": "false",
-        "south": "false"
-      }
+      "when": { "south": "true", "north": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/iron_mesh_center", "y": 270 }
+    },
+
+    {
+      "when": { "east": "true", "west": "true", "north": "false", "south": "false" },
+      "apply": { "model": "metallics:block/iron_mesh_center_alt", "y": 90 }
     },
     {
-      "apply": {
-        "model": "metallics:block/iron_mesh_center_alt",
-        "y": 90
-      },
-      "when": {
-        "south": "true",
-        "north": "true",
-        "east":  "false",
-        "west":  "false"
-      }
-    },
-    {
-      "apply": {
-        "model": "metallics:block/iron_mesh_center",
-        "y": 270
-      },
-      "when": {
-        "west":  "true",
-        "east":  "true",
-        "north": "false",
-        "south": "false"
-      }
+      "when": { "west": "true", "east": "true", "north": "false", "south": "false" },
+      "apply": { "model": "metallics:block/iron_mesh_center_alt", "y": 270 }
     }
   ]
 }
