@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    ".": "minecraft:gold_nugget",
+    "i": "metallics:gold_torch"
+  },
+  "pattern": [
+    " . ",
+    ".i.",
+    " . "
+  ],
+  "result": {
+    "id": "metallics:gold_lantern"
+  }
+}

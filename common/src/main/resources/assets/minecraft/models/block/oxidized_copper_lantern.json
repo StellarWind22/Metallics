@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_thick_lantern",
+  "textures": {
+    "lantern": "metallics:block/oxidized_copper_lantern"
+  }
+}

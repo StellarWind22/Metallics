@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "metallics:gold_bars",
-    "metallics:netherite_bars"
+    "metallics:netherite_bars",
+    "metallics:iron_mesh",
+    "metallics:copper_mesh",
+    "metallics:gold_mesh",
+    "metallics:netherite_mesh"
   ]
 }

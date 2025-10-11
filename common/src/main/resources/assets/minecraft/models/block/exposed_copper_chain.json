@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_thick_chain",
+  "textures": {
+    "all": "metallics:block/exposed_copper_chain"
+  }
+}

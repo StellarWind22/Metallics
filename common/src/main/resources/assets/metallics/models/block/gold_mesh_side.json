@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_bars_side",
+  "textures": {
+    "bars": "metallics:block/gold_grate",
+    "edge": "metallics:block/gold_bars"
+  }
+}
