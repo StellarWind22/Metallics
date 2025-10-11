@@ -1,6 +1,7 @@
 package com.github.stellarwind22.metallics.content;
 
 import com.github.stellarwind22.metallics.init.Metallics;
+import com.github.stellarwind22.metallics.object.MGrateBlock;
 import com.github.stellarwind22.metallics.util.MBlock;
 import com.github.stellarwind22.metallics.util.MBlockProps;
 import dev.architectury.registry.registries.DeferredRegister;
@@ -57,6 +58,15 @@ public class MetallicsBlocks {
             .strength(5.0F, 6.0F)
             .sound(SoundType.IRON).noOcclusion();
 
+    private static final MBlockProps grateProps = new MBlockProps()
+            .strength(3.0F, 6.0F)
+            .sound(SoundType.COPPER_GRATE)
+            .noOcclusion().requiresCorrectToolForDrops()
+            .isValidSpawn(MBlockProps::never)
+            .isRedstoneConductor(MBlockProps::never)
+            .isSuffocating(MBlockProps::never)
+            .isViewBlocking(MBlockProps::never);
+
 
     //Soul
     public static RegistrySupplier<Block> SOUL_JACK_O_LANTERN;
@@ -68,17 +78,20 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> GOLD_CHAIN;
     public static RegistrySupplier<Block> GOLD_LANTERN;
     public static RegistrySupplier<Block> GOLD_BARS;
+    public static RegistrySupplier<Block> GOLD_GRATE;
 
     public static RegistrySupplier<Block> GOLD_TORCH;
     public static RegistrySupplier<Block> GOLD_WALL_TORCH;
     public static RegistrySupplier<Block> GOLD_JACK_O_LANTERN;
 
     //Iron
+    public static RegistrySupplier<Block> IRON_GRATE;
 
     //Netherite
     public static RegistrySupplier<Block> NETHERITE_CHAIN;
     public static RegistrySupplier<Block> NETHERITE_LANTERN;
     public static RegistrySupplier<Block> NETHERITE_BARS;
+    public static RegistrySupplier<Block> NETHERITE_GRATE;
 
     public static RegistrySupplier<Block> NETHERITE_TORCH;
     public static RegistrySupplier<Block> NETHERITE_WALL_TORCH;
@@ -102,17 +115,20 @@ public class MetallicsBlocks {
         GOLD_CHAIN = registerBlock("gold_chain", new MBlock(ChainBlock::new, Optional.of(chainProps.getCopy())));
         GOLD_LANTERN = registerBlock("gold_lantern", new MBlock(LanternBlock::new, Optional.of(lanternProps.getCopy())));
         GOLD_BARS = registerBlock("gold_bars", new MBlock(IronBarsBlock::new, Optional.of(barsProps.getCopy())));
+        GOLD_GRATE = registerBlock("gold_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.getCopy())));
 
         GOLD_TORCH = registerBlock("gold_torch", new MBlock(props -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         GOLD_WALL_TORCH = registerBlock("gold_wall_torch", new MBlock(props -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         GOLD_JACK_O_LANTERN = registerBlock("gold_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
 
         //Iron
+        IRON_GRATE = registerBlock("iron_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.getCopy())));
 
         //Netherite
         NETHERITE_CHAIN = registerBlock("netherite_chain", new MBlock(ChainBlock::new, Optional.of(chainProps.getCopy())));
         NETHERITE_LANTERN = registerBlock("netherite_lantern", new MBlock(LanternBlock::new, Optional.of(lanternProps.getCopy())));
         NETHERITE_BARS = registerBlock("netherite_bars", new MBlock(IronBarsBlock::new, Optional.of(barsProps.getCopy())));
+        NETHERITE_GRATE = registerBlock("netherite_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.getCopy())));
 
         NETHERITE_TORCH = registerBlock("netherite_torch", new MBlock(props -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         NETHERITE_WALL_TORCH = registerBlock("netherite_wall_torch", new MBlock(props -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
