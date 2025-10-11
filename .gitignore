@@ -33,6 +33,8 @@ bin/
 run/
 tmp/
 
-# helper scripts
+# helper scripts & templates
 
 *.py
+_*.json
+_*.png.mcmeta

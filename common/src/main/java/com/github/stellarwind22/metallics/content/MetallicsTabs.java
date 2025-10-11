@@ -21,7 +21,7 @@ public class MetallicsTabs {
 
         //Register stuff here ▼▼▼
 
-        TAB = registerTab("main", CreativeTabRegistry.create(Component.translatable("tab.foundry_works.main"), () -> new ItemStack(new DeferredItem<>(MetallicsItems.NETHERITE_NUGGET))));
+        TAB = registerTab("main", CreativeTabRegistry.create(Component.translatable("tab." + Metallics.MOD_ID + ".main"), () -> new ItemStack(new DeferredItem<>(MetallicsItems.GOLD_LANTERN))));
 
         //Register stuff here ▲▲▲
 
