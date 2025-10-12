@@ -113,7 +113,7 @@
 
     {
       "when": { "north": "true", "south": "false", "east": "true", "west": "true" },
-      "apply": { "model": "metallics:block/netherite_mesh_edge_post"}
+      "apply": { "model": "metallics:block/netherite_mesh_post"}
     },
 
     {
