@@ -14,7 +14,11 @@
       "apply": { "model": "metallics:block/iron_mesh_post" }
     },
 
-    {"c":"SINGLE CONNECTION ZONE >>>>"},
+
+
+
+
+
     {
       "when": { "north": "true", "south": "false", "east": "false", "west": "false" },
       "apply": { "model": "metallics:block/iron_mesh_edge_alt" }
@@ -58,25 +62,49 @@
       "when": { "north": "false", "south": "false", "east": "false", "west": "true" },
        "apply": { "model": "metallics:block/iron_mesh_edge_alt" }
     },
-    {"c":"SINGLE CONNECTION ZONE <<<<"},
 
-    {"c":"TWO CONNECTION ZONE: WALL >>>>"},
+
+
+
+
+
+
+
+
     {
-      "when": { "north": "true", "south": "true", "east": "false", "west": "true" },
-      "apply": { "model": "metallics:block/iron_mesh_edge", "y": 90 }
+      "when": { "north": "true", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/iron_mesh_center", "y": 90 }
     },{
-      "when": { "north": "true", "south": "true", "east": "false", "west": "true" },
-      "apply": { "model": "metallics:block/iron_mesh_edge_alt", "y": 90 }
+      "when": { "north": "true", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/iron_mesh_center_alt", "y": 90 }
     },
     
     {
       "when": { "north": "false", "south": "false", "east": "true", "west": "true" },
-      "apply": { "model": "metallics:block/iron_mesh_edge"}
+      "apply": { "model": "metallics:block/iron_mesh_center"}
     },{
       "when": { "north": "false", "south": "false", "east": "true", "west": "true" },
-      "apply": { "model": "metallics:block/iron_mesh_edge_alt"}
+      "apply": { "model": "metallics:block/iron_mesh_center_alt"}
     },
-    {"c":"TWO CONNECTION ZONE: WALL <<<<"}
+
+
+
+
+
+
+    {
+      "when": { "north": "true", "south": "false", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/iron_mesh_center_alt"}
+    },
+    
+    
+    {
+      "when": { "north": "true", "south": "false", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/iron_mesh_center_alt"}
+    }
+
+
+
 
   ]
 }
