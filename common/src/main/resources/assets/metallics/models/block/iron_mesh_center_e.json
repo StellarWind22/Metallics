@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_mesh_center_e",
+  "textures": {
+    "mesh": "metallics:block/iron_grate"
+  }
+}

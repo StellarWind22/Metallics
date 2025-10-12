@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_mesh_center_s",
+  "textures": {
+    "mesh": "metallics:block/netherite_grate"
+  }
+}

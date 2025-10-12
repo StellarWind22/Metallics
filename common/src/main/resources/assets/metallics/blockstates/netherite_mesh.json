@@ -60,50 +60,50 @@
 
     {
       "when": { "north": "true", "south": "true", "east": "false", "west": "false" },
-      "apply": { "model": "metallics:block/netherite_mesh_center", "y": 90 }
+      "apply": { "model": "metallics:block/netherite_mesh_center_e" }
     },{
       "when": { "north": "true", "south": "true", "east": "false", "west": "false" },
-      "apply": { "model": "metallics:block/netherite_mesh_center_alt", "y": 90 }
+      "apply": { "model": "metallics:block/netherite_mesh_center_w"}
     },
-    
+
     {
       "when": { "north": "false", "south": "false", "east": "true", "west": "true" },
-      "apply": { "model": "metallics:block/netherite_mesh_center"}
+      "apply": { "model": "metallics:block/netherite_mesh_center_n"}
     },{
       "when": { "north": "false", "south": "false", "east": "true", "west": "true" },
-      "apply": { "model": "metallics:block/netherite_mesh_center_alt"}
+      "apply": { "model": "metallics:block/netherite_mesh_center_s"}
     },
 
     {
       "when": { "north": "true", "south": "false", "east": "true", "west": "false" },
-      "apply": { "model": "metallics:block/netherite_mesh_center_alt"}
+      "apply": { "model": "metallics:block/netherite_mesh_center_s"}
     },{
       "when": { "north": "true", "south": "false", "east": "true", "west": "false" },
-      "apply": { "model": "metallics:block/netherite_mesh_center_alt", "y": 90}
+      "apply": { "model": "metallics:block/netherite_mesh_center_w"}
     },
 
     {
       "when": { "north": "true", "south": "false", "east": "false", "west": "true" },
-      "apply": { "model": "metallics:block/netherite_mesh_center_alt"}
+      "apply": { "model": "metallics:block/netherite_mesh_center_s"}
     },{
       "when": { "north": "true", "south": "false", "east": "false", "west": "true" },
-      "apply": { "model": "metallics:block/netherite_mesh_center", "y": 90}
+      "apply": { "model": "metallics:block/netherite_mesh_center_e"}
     },
 
     {
       "when": { "north": "false", "south": "true", "east": "true", "west": "false" },
-      "apply": { "model": "metallics:block/netherite_mesh_center"}
+      "apply": { "model": "metallics:block/netherite_mesh_center_n"}
     },{
       "when": { "north": "false", "south": "true", "east": "true", "west": "false" },
-      "apply": { "model": "metallics:block/netherite_mesh_center_alt", "y": 90}
+      "apply": { "model": "metallics:block/netherite_mesh_center_w"}
     },
 
     {
       "when": { "north": "false", "south": "true", "east": "false", "west": "true" },
-      "apply": { "model": "metallics:block/netherite_mesh_center"}
+      "apply": { "model": "metallics:block/netherite_mesh_center_n"}
     },{
       "when": { "north": "false", "south": "true", "east": "false", "west": "true" },
-      "apply": { "model": "metallics:block/netherite_mesh_center", "y": 90}
+      "apply": { "model": "metallics:block/netherite_mesh_center_e"}
     },
 
     {

@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_mesh_center_w",
+  "textures": {
+    "mesh": "metallics:block/gold_grate"
+  }
+}

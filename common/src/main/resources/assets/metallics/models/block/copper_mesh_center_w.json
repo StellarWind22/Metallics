@@ -1,5 +1,5 @@
 {
-  "parent": "metallics:block/template_mesh_center",
+  "parent": "metallics:block/template_mesh_center_w",
   "textures": {
     "mesh": "minecraft:block/copper_grate"
   }
