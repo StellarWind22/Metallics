@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_mesh_edge_alt",
+  "textures": {
+    "edge": "metallics:block/netherite_bars"
+  }
+}

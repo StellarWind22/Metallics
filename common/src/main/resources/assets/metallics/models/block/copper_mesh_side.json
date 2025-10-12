@@ -1,0 +1,7 @@
+{
+  "parent": "metallics:block/template_mesh_side",
+  "textures": {
+    "edge": "minecraft:block/copper_bars",
+    "mesh": "minecraft:block/copper_grate"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_mesh_center_alt",
+  "textures": {
+    "mesh": "minecraft:block/copper_grate"
+  }
+}

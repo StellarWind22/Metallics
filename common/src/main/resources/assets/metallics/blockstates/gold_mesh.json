@@ -1,77 +1,129 @@
 {
   "multipart": [
     {
-      "apply": {
-        "model": "metallics:block/gold_mesh_post"
-      }
+      "apply": { "model": "metallics:block/gold_mesh_vert" }
     },
+
+    { "when": { "north": "true" }, "apply": { "model": "metallics:block/gold_mesh_side" } },
+    { "when": { "east": "true" },  "apply": { "model": "metallics:block/gold_mesh_side", "y": 90 } },
+    { "when": { "south": "true" }, "apply": { "model": "metallics:block/gold_mesh_side_alt" } },
+    { "when": { "west": "true" },  "apply": { "model": "metallics:block/gold_mesh_side_alt", "y": 90 } },
+
     {
-      "apply": {
-        "model": "metallics:block/gold_mesh_side"
-      },
-      "when": {
-        "north": "true"
-      }
+      "when": { "north": "false", "south": "false", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_post" }
     },
+
     {
-      "apply": {
-        "model": "metallics:block/gold_mesh_side",
-        "y": 90
-      },
-      "when": {
-        "east": "true"
-      }
+      "when": { "north": "true", "south": "false", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_edge_alt" }
+    },{
+      "when": { "north": "true", "south": "false", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_edge_alt", "y": 90}
+    },{
+      "when": { "north": "true", "south": "false", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_edge", "y": 90 }
     },
+
     {
-      "apply": {
-        "model": "metallics:block/gold_mesh_side_alt"
-      },
-      "when": {
-        "south": "true"
-      }
+      "when": { "north": "false", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_edge" }
+    },{
+      "when": { "north": "false", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_edge_alt", "y": 90}
+    },{
+      "when": { "north": "false", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_edge", "y": 90 }
     },
+
     {
-      "apply": {
-        "model": "metallics:block/gold_mesh_side_alt",
-        "y": 90
-      },
-      "when": {
-        "west": "true"
-      }
+      "when": { "north": "false", "south": "false", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_edge_alt", "y": 90}
+    },{
+      "when": { "north": "false", "south": "false", "east": "true", "west": "false" },
+       "apply": { "model": "metallics:block/gold_mesh_edge" }
+    },{
+      "when": { "north": "false", "south": "false", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_edge_alt" }
     },
+
     {
-      "apply": {
-        "model": "metallics:block/gold_mesh_noside"
-      },
-      "when": {
-        "north": "false"
-      }
+      "when": { "north": "false", "south": "false", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/gold_mesh_edge", "y": 90 }
+    },{
+      "when": { "north": "false", "south": "false", "east": "false", "west": "true" },
+       "apply": { "model": "metallics:block/gold_mesh_edge" }
+    },{
+      "when": { "north": "false", "south": "false", "east": "false", "west": "true" },
+       "apply": { "model": "metallics:block/gold_mesh_edge_alt" }
     },
+
     {
-      "apply": {
-        "model": "metallics:block/gold_mesh_noside_alt"
-      },
-      "when": {
-        "east": "false"
-      }
+      "when": { "north": "true", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_center", "y": 90 }
+    },{
+      "when": { "north": "true", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_center_alt", "y": 90 }
     },
+    
     {
-      "apply": {
-        "model": "metallics:block/gold_mesh_noside_alt",
-        "y": 90
-      },
-      "when": {
-        "south": "false"
-      }
+      "when": { "north": "false", "south": "false", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/gold_mesh_center"}
+    },{
+      "when": { "north": "false", "south": "false", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/gold_mesh_center_alt"}
     },
+
     {
-      "apply": {
-        "model": "metallics:block/gold_mesh_noside",
-        "y": 270
-      },
-      "when": {
-        "west": "false"
-      }
+      "when": { "north": "true", "south": "false", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_center_alt"}
+    },{
+      "when": { "north": "true", "south": "false", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_center_alt", "y": 90}
+    },
+
+    {
+      "when": { "north": "true", "south": "false", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/gold_mesh_center_alt"}
+    },{
+      "when": { "north": "true", "south": "false", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/gold_mesh_center", "y": 90}
+    },
+
+    {
+      "when": { "north": "false", "south": "true", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_center"}
+    },{
+      "when": { "north": "false", "south": "true", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_center_alt", "y": 90}
+    },
+
+    {
+      "when": { "north": "false", "south": "true", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/gold_mesh_center"}
+    },{
+      "when": { "north": "false", "south": "true", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/gold_mesh_center", "y": 90}
+    },
+
+    {
+      "when": { "north": "false", "south": "true", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/gold_mesh_post"}
+    },
+
+    {
+      "when": { "north": "true", "south": "false", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/gold_mesh_edge_post"}
+    },
+
+    {
+      "when": { "north": "true", "south": "true", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/gold_mesh_post"}
+    },
+    
+    {
+      "when": { "north": "true", "south": "true", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/gold_mesh_post"}
     }
   ]
 }
