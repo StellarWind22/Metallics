@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_mesh_noside_e",
+  "textures": {
+    "mesh": "minecraft:block/copper_grate"
+  }
+}

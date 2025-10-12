@@ -88,6 +88,15 @@ public class MetallicsBlocks {
 
     //Copper
     public static RegistrySupplier<Block> COPPER_MESH;
+    public static RegistrySupplier<Block> EXPOSED_COPPER_MESH;
+    public static RegistrySupplier<Block> WEATHERED_COPPER_MESH;
+    public static RegistrySupplier<Block> OXIDIZED_COPPER_MESH;
+    public static RegistrySupplier<Block> WAXED_COPPER_MESH;
+    public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_MESH;
+    public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_MESH;
+    public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_MESH;
+
+    public static WeatheringCopperBlocks COPPER_MESHES;
 
     public static RegistrySupplier<Block> COPPER_CAMPFIRE;
     public static RegistrySupplier<Block> COPPER_JACK_O_LANTERN;
@@ -132,7 +141,14 @@ public class MetallicsBlocks {
         ));
 
         //Copper
-        COPPER_MESH = registerBlock("copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
+        COPPER_MESH = registerBlock("copper_mesh", new MBlock(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(meshProps.getCopy())));
+        EXPOSED_COPPER_MESH = registerBlock("exposed_copper_mesh", new MBlock(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(meshProps.getCopy())));
+        WEATHERED_COPPER_MESH = registerBlock("weathered_copper_mesh", new MBlock(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.WEATHERED, props), Optional.of(meshProps.getCopy())));
+        OXIDIZED_COPPER_MESH = registerBlock("oxidized_copper_mesh", new MBlock(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.OXIDIZED, props), Optional.of(meshProps.getCopy())));
+        WAXED_COPPER_MESH = registerBlock("waxed_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
+        WAXED_EXPOSED_COPPER_MESH = registerBlock("waxed_exposed_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
+        WAXED_WEATHERED_COPPER_MESH = registerBlock("waxed_weathered_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
+        WAXED_OXIDIZED_COPPER_MESH = registerBlock("waxed_oxidized_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
 
         COPPER_CAMPFIRE = registerBlock("copper_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         COPPER_JACK_O_LANTERN = registerBlock("copper_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
@@ -168,6 +184,18 @@ public class MetallicsBlocks {
         //Register stuff here ▲▲▲
 
         BLOCKS.register();
+
+        //Post registration stuff here ▼▼▼
+        COPPER_MESHES = new WeatheringCopperBlocks(
+                COPPER_MESH.get(),
+                EXPOSED_COPPER_MESH.get(),
+                WEATHERED_COPPER_MESH.get(),
+                OXIDIZED_COPPER_MESH.get(),
+                WAXED_COPPER_MESH.get(),
+                WAXED_EXPOSED_COPPER_MESH.get(),
+                WAXED_WEATHERED_COPPER_MESH.get(),
+                WAXED_OXIDIZED_COPPER_MESH.get()
+        );
     }
 
     private static RegistrySupplier<Block> registerBlock(String name, MBlock mBlock) {

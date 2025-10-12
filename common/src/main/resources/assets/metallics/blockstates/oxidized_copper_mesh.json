@@ -1,0 +1,117 @@
+{
+  "multipart": [
+    {
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_vert" }
+    },
+
+    { "when": { "north": "true" }, "apply": { "model": "metallics:block/oxidized_copper_mesh_side" } },
+    { "when": { "east": "true" },  "apply": { "model": "metallics:block/oxidized_copper_mesh_side", "y": 90 } },
+    { "when": { "south": "true" }, "apply": { "model": "metallics:block/oxidized_copper_mesh_side_alt" } },
+    { "when": { "west": "true" },  "apply": { "model": "metallics:block/oxidized_copper_mesh_side_alt", "y": 90 } },
+
+    {
+      "when": { "north": "false", "south": "false", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_post" }
+    },
+
+    {
+      "when": { "north": "true", "south": "false", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_edge_alt" }
+    },{
+      "when": { "north": "true", "south": "false", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_edge_alt", "y": 90}
+    },{
+      "when": { "north": "true", "south": "false", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_edge", "y": 90 }
+    },
+
+    {
+      "when": { "north": "false", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_edge" }
+    },{
+      "when": { "north": "false", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_edge_alt", "y": 90}
+    },{
+      "when": { "north": "false", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_edge", "y": 90 }
+    },
+
+    {
+      "when": { "north": "false", "south": "false", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_edge_alt", "y": 90}
+    },{
+      "when": { "north": "false", "south": "false", "east": "true", "west": "false" },
+       "apply": { "model": "metallics:block/oxidized_copper_mesh_edge" }
+    },{
+      "when": { "north": "false", "south": "false", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_edge_alt" }
+    },
+
+    {
+      "when": { "north": "false", "south": "false", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_edge", "y": 90 }
+    },{
+      "when": { "north": "false", "south": "false", "east": "false", "west": "true" },
+       "apply": { "model": "metallics:block/oxidized_copper_mesh_edge" }
+    },{
+      "when": { "north": "false", "south": "false", "east": "false", "west": "true" },
+       "apply": { "model": "metallics:block/oxidized_copper_mesh_edge_alt" }
+    },
+
+    {
+      "when": { "north": "true", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_center_e" }
+    },{
+      "when": { "north": "true", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_center_w"}
+    },
+
+    {
+      "when": { "north": "false", "south": "false", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_center_n"}
+    },{
+      "when": { "north": "false", "south": "false", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_center_s"}
+    },
+
+    {
+      "when": { "north": "true", "south": "false", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_post"}
+    },
+
+    {
+      "when": { "north": "true", "south": "false", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_post"}
+    },
+
+    {
+      "when": { "north": "false", "south": "true", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_post"}
+    },
+
+    {
+      "when": { "north": "false", "south": "true", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_post"}
+    },
+
+    {
+      "when": { "north": "false", "south": "true", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_post"}
+    },
+
+    {
+      "when": { "north": "true", "south": "false", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_post"}
+    },
+
+    {
+      "when": { "north": "true", "south": "true", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_post"}
+    },
+    
+    {
+      "when": { "north": "true", "south": "true", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_post"}
+    }
+  ]
+}

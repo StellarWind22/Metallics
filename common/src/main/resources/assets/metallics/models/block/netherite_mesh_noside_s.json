@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_mesh_noside_s",
+  "textures": {
+    "mesh": "metallics:block/netherite_grate"
+  }
+}

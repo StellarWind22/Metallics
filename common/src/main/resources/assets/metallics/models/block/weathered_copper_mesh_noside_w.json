@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_mesh_noside_w",
+  "textures": {
+    "mesh": "minecraft:block/weathered_copper_grate"
+  }
+}

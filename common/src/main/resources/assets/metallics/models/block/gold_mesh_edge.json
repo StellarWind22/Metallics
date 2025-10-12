@@ -1,6 +1,0 @@
-{
-  "parent": "metallics:block/template_mesh_edge",
-  "textures": {
-    "edge": "metallics:block/gold_bars"
-  }
-}

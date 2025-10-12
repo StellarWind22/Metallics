@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_mesh_noside_n",
+  "textures": {
+    "mesh": "metallics:block/gold_grate"
+  }
+}
