@@ -184,6 +184,9 @@ public class MetallicsBlocks {
         //Register stuff here ▲▲▲
 
         BLOCKS.register();
+    }
+
+    public static void postRegisterInit() {
 
         //Post registration stuff here ▼▼▼
         COPPER_MESHES = new WeatheringCopperBlocks(

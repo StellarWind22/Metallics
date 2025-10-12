@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": {
+    "metallics:copper_mesh": {
+      "next_oxidation_stage": "metallics:exposed_copper_mesh"
+    },
+    "metallics:exposed_copper_mesh": {
+      "next_oxidation_stage": "metallics:weathered_copper_mesh"
+    },
+    "metallics:weathered_copper_mesh": {
+      "next_oxidation_stage": "metallics:oxidized_copper_mesh"
+    }
+  }
+}
