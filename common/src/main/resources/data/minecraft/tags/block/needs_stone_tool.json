@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#metallics:copper_blocks",
+    "#metallics:iron_blocks"
+  ]
+}

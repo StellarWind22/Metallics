@@ -1,0 +1,12 @@
+{
+  "values": [
+    "metallics:copper_mesh",
+    "metallics:exposed_copper_mesh",
+    "metallics:weathered_copper_mesh",
+    "metallics:oxidized_copper_mesh",
+    "metallics:waxed_copper_mesh",
+    "metallics:waxed_exposed_copper_mesh",
+    "metallics:waxed_weathered_copper_mesh",
+    "metallics:waxed_oxidized_copper_mesh"
+  ]
+}
