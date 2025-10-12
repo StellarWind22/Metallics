@@ -8,6 +8,13 @@ public class MetallicsClient {
 
     public static void init() {
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.COPPER_MESH.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.EXPOSED_COPPER_MESH.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WEATHERED_COPPER_MESH.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.OXIDIZED_COPPER_MESH.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_COPPER_MESH.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_EXPOSED_COPPER_MESH.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_WEATHERED_COPPER_MESH.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_OXIDIZED_COPPER_MESH.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.COPPER_CAMPFIRE.get());
 
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.GOLD_CHAIN.get());
