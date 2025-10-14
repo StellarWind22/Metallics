@@ -136,6 +136,7 @@ public class MetallicsBlocks {
     //Iron
     public static RegistrySupplier<Block> IRON_MESH;
     public static RegistrySupplier<Block> IRON_GRATE;
+    public static RegistrySupplier<Block> IRON_LAMP;
 
     //Netherite
     public static RegistrySupplier<Block> NETHERITE_CHAIN;
@@ -183,6 +184,11 @@ public class MetallicsBlocks {
         WAXED_WEATHERED_COPPER_LAMP = registerBlock("waxed_weathered_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
         WAXED_OXIDIZED_COPPER_LAMP = registerBlock("waxed_oxidized_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
 
+        //Iron
+        IRON_MESH = registerBlock("iron_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
+        IRON_GRATE = registerBlock("iron_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.getCopy())));
+        IRON_LAMP = registerBlock("iron_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
+
         //Gold
         GOLD_CHAIN = registerBlock("gold_chain", new MBlock(ChainBlock::new, Optional.of(chainProps.getCopy())));
         GOLD_LANTERN = registerBlock("gold_lantern", new MBlock(LanternBlock::new, Optional.of(lanternProps.getCopy())));
@@ -195,10 +201,6 @@ public class MetallicsBlocks {
         GOLD_CAMPFIRE = registerBlock("gold_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         GOLD_JACK_O_LANTERN = registerBlock("gold_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
         GOLD_LAMP = registerBlock("gold_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lanternProps.getCopy())));
-
-        //Iron
-        IRON_MESH = registerBlock("iron_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
-        IRON_GRATE = registerBlock("iron_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.getCopy())));
 
         //Netherite
         NETHERITE_CHAIN = registerBlock("netherite_chain", new MBlock(ChainBlock::new, Optional.of(chainProps.getCopy())));
