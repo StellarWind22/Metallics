@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:redstone_lamp",
+    ".": "metallics:netherite_mesh"
+  },
+  "pattern": [
+    " . ",
+    ".#.",
+    " . "
+  ],
+  "result": {
+    "id": "metallics:netherite_lamp"
+  }
+}

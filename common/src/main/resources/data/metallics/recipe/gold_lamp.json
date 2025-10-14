@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:redstone_lamp",
+    ".": "metallics:gold_mesh"
+  },
+  "pattern": [
+    " . ",
+    ".#.",
+    " . "
+  ],
+  "result": {
+    "id": "metallics:gold_lamp"
+  }
+}

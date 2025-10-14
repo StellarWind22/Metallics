@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:redstone_lamp",
+    ".": "metallics:iron_mesh"
+  },
+  "pattern": [
+    " . ",
+    ".#.",
+    " . "
+  ],
+  "result": {
+    "id": "metallics:iron_lamp"
+  }
+}
