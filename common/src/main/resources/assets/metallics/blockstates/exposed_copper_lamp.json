@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "metallics:block/exposed_copper_lamp"
+    },
+    "lit=true": {
+      "model": "metallics:block/exposed_copper_lamp_on"
+    }
+  }
+}

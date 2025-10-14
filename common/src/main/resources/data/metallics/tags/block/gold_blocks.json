@@ -2,6 +2,7 @@
   "values": [
     "metallics:gold_bars",
     "metallics:gold_mesh",
-    "metallics:gold_grate"
+    "metallics:gold_grate",
+    "metallics:gold_lamp"
   ]
 }

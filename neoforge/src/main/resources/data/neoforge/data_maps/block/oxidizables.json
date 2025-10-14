@@ -9,6 +9,15 @@
     },
     "metallics:weathered_copper_mesh": {
       "next_oxidation_stage": "metallics:oxidized_copper_mesh"
+    },
+    "metallics:copper_lamp": {
+      "next_oxidation_stage": "metallics:exposed_copper_lamp"
+    },
+    "metallics:exposed_copper_lamp": {
+      "next_oxidation_stage": "metallics:weathered_copper_lamp"
+    },
+    "metallics:weathered_copper_lamp": {
+      "next_oxidation_stage": "metallics:oxidized_copper_mesh"
     }
   }
 }

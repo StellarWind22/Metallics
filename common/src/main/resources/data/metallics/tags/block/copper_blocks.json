@@ -7,6 +7,7 @@
     "metallics:waxed_copper_mesh",
     "metallics:waxed_exposed_copper_mesh",
     "metallics:waxed_weathered_copper_mesh",
-    "metallics:waxed_oxidized_copper_mesh"
+    "metallics:waxed_oxidized_copper_mesh",
+    "metallics:copper_lamp"
   ]
 }

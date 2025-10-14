@@ -2,6 +2,7 @@ package com.github.stellarwind22.metallics.content;
 
 import com.github.stellarwind22.metallics.init.Metallics;
 import com.github.stellarwind22.metallics.object.MGrateBlock;
+import com.github.stellarwind22.metallics.object.MWeatheringLamp;
 import com.github.stellarwind22.metallics.util.MBlock;
 import com.github.stellarwind22.metallics.util.MBlockProps;
 import dev.architectury.registry.registries.DeferredRegister;
@@ -82,6 +83,13 @@ public class MetallicsBlocks {
             .noOcclusion()
             .ignitedByLava();
 
+    private static final MBlockProps lampProps = new MBlockProps()
+            .forceSolidOn()
+            .strength(3.5F)
+            .sound(SoundType.GLASS)
+            .lightLevel((blockState) -> blockState.getValue(BlockStateProperties.LIT)? 15 : 0)
+            .noOcclusion();
+
 
     //Soul
     public static RegistrySupplier<Block> SOUL_JACK_O_LANTERN;
@@ -101,6 +109,17 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> COPPER_CAMPFIRE;
     public static RegistrySupplier<Block> COPPER_JACK_O_LANTERN;
 
+    public static RegistrySupplier<Block> COPPER_LAMP;
+    public static RegistrySupplier<Block> EXPOSED_COPPER_LAMP;
+    public static RegistrySupplier<Block> WEATHERED_COPPER_LAMP;
+    public static RegistrySupplier<Block> OXIDIZED_COPPER_LAMP;
+    public static RegistrySupplier<Block> WAXED_COPPER_LAMP;
+    public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_LAMP;
+    public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_LAMP;
+    public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_LAMP;
+
+    public static WeatheringCopperBlocks COPPER_LAMPS;
+
     //Gold
     public static RegistrySupplier<Block> GOLD_CHAIN;
     public static RegistrySupplier<Block> GOLD_LANTERN;
@@ -112,6 +131,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> GOLD_WALL_TORCH;
     public static RegistrySupplier<Block> GOLD_CAMPFIRE;
     public static RegistrySupplier<Block> GOLD_JACK_O_LANTERN;
+    public static RegistrySupplier<Block> GOLD_LAMP;
 
     //Iron
     public static RegistrySupplier<Block> IRON_MESH;
@@ -128,6 +148,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> NETHERITE_WALL_TORCH;
     public static RegistrySupplier<Block> NETHERITE_CAMPFIRE;
     public static RegistrySupplier<Block> NETHERITE_JACK_O_LANTERN;
+    public static RegistrySupplier<Block> NETHERITE_LAMP;
 
     public static void init() {
         BLOCKS = DeferredRegister.create(Metallics.MOD_ID, Registries.BLOCK);
@@ -153,6 +174,15 @@ public class MetallicsBlocks {
         COPPER_CAMPFIRE = registerBlock("copper_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         COPPER_JACK_O_LANTERN = registerBlock("copper_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
 
+        COPPER_LAMP = registerBlock("copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(lampProps.getCopy())));
+        EXPOSED_COPPER_LAMP = registerBlock("exposed_copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(lampProps.getCopy())));
+        WEATHERED_COPPER_LAMP = registerBlock("weathered_copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(lampProps.getCopy())));
+        OXIDIZED_COPPER_LAMP = registerBlock("oxidized_copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(lampProps.getCopy())));
+        WAXED_COPPER_LAMP = registerBlock("waxed_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
+        WAXED_EXPOSED_COPPER_LAMP = registerBlock("waxed_exposed_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
+        WAXED_WEATHERED_COPPER_LAMP = registerBlock("waxed_weathered_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
+        WAXED_OXIDIZED_COPPER_LAMP = registerBlock("waxed_oxidized_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
+
         //Gold
         GOLD_CHAIN = registerBlock("gold_chain", new MBlock(ChainBlock::new, Optional.of(chainProps.getCopy())));
         GOLD_LANTERN = registerBlock("gold_lantern", new MBlock(LanternBlock::new, Optional.of(lanternProps.getCopy())));
@@ -164,6 +194,7 @@ public class MetallicsBlocks {
         GOLD_WALL_TORCH = registerBlock("gold_wall_torch", new MBlock(props -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         GOLD_CAMPFIRE = registerBlock("gold_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         GOLD_JACK_O_LANTERN = registerBlock("gold_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
+        GOLD_LAMP = registerBlock("gold_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lanternProps.getCopy())));
 
         //Iron
         IRON_MESH = registerBlock("iron_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
@@ -180,6 +211,7 @@ public class MetallicsBlocks {
         NETHERITE_WALL_TORCH = registerBlock("netherite_wall_torch", new MBlock(props -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         NETHERITE_CAMPFIRE = registerBlock("netherite_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         NETHERITE_JACK_O_LANTERN = registerBlock("netherite_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
+        NETHERITE_LAMP = registerBlock("netherite_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lanternProps.getCopy())));
 
         //Register stuff here ▲▲▲
 
@@ -198,6 +230,17 @@ public class MetallicsBlocks {
                 WAXED_EXPOSED_COPPER_MESH.get(),
                 WAXED_WEATHERED_COPPER_MESH.get(),
                 WAXED_OXIDIZED_COPPER_MESH.get()
+        );
+
+        COPPER_LAMPS = new WeatheringCopperBlocks(
+                COPPER_LAMP.get(),
+                EXPOSED_COPPER_LAMP.get(),
+                WEATHERED_COPPER_LAMP.get(),
+                OXIDIZED_COPPER_LAMP.get(),
+                WAXED_COPPER_LAMP.get(),
+                WAXED_EXPOSED_COPPER_LAMP.get(),
+                WAXED_WEATHERED_COPPER_LAMP.get(),
+                WAXED_OXIDIZED_COPPER_LAMP.get()
         );
     }
 

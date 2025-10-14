@@ -3,6 +3,7 @@
   "values": [
     "metallics:netherite_bars",
     "metallics:netherite_mesh",
-    "metallics:netherite_grate"
+    "metallics:netherite_grate",
+    "metallics:netherite_lamp"
   ]
 }

@@ -12,6 +12,18 @@
     },
     "metallics:oxidized_copper_mesh": {
       "waxed": "metallics:waxed_oxidized_copper_mesh"
+    },
+    "metallics:copper_lamp": {
+      "waxed": "metallics:waxed_copper_lamp"
+    },
+    "metallics:exposed_copper_lamp": {
+      "waxed": "metallics:waxed_exposed_copper_lamp"
+    },
+    "metallics:weathered_copper_lamp": {
+      "waxed": "metallics:waxed_weathered_copper_lamp"
+    },
+    "metallics:oxidized_copper_lamp": {
+      "waxed": "metallics:waxed_oxidized_copper_lamp"
     }
   }
 }
