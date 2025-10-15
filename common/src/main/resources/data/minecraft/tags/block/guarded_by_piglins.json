@@ -2,6 +2,6 @@
   "replace": false,
   "values": [
     "#metallics:gold_blocks",
-    "#metallics:gold_lantern"
+    "metallics:gold_lantern"
   ]
 }
