@@ -185,6 +185,11 @@ public class MBlockProps {
         return this;
     }
 
+    public MBlockProps strength(StrPair strPair) {
+        this.strength(strPair.Strength1(), strPair.Strength2());
+        return this;
+    }
+
     public MBlockProps randomTicks() {
         this.isRandomlyTicking = true;
         return this;

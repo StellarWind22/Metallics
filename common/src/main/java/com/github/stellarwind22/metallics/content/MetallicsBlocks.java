@@ -5,6 +5,7 @@ import com.github.stellarwind22.metallics.object.MGrateBlock;
 import com.github.stellarwind22.metallics.object.MWeatheringLamp;
 import com.github.stellarwind22.metallics.util.MBlock;
 import com.github.stellarwind22.metallics.util.MBlockProps;
+import com.github.stellarwind22.metallics.util.StrPair;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.particles.ParticleTypes;
@@ -50,7 +51,6 @@ public class MetallicsBlocks {
     private static final MBlockProps lanternProps = new MBlockProps()
             .mapColor(MapColor.METAL)
             .forceSolidOn()
-            .strength(3.5F)
             .sound(SoundType.LANTERN)
             .lightLevel((blockState) -> 15)
             .noOcclusion()
@@ -58,7 +58,6 @@ public class MetallicsBlocks {
 
     private static final MBlockProps barsProps = new MBlockProps()
             .requiresCorrectToolForDrops()
-            .strength(5.0F, 6.0F)
             .sound(SoundType.IRON).noOcclusion();
 
     private static final MBlockProps meshProps = new MBlockProps()
@@ -67,7 +66,6 @@ public class MetallicsBlocks {
             .sound(SoundType.COPPER_GRATE).noOcclusion();
 
     private static final MBlockProps grateProps = new MBlockProps()
-            .strength(3.0F, 6.0F)
             .sound(SoundType.COPPER_GRATE)
             .noOcclusion().requiresCorrectToolForDrops()
             .isValidSpawn(MBlockProps::never)
@@ -85,7 +83,6 @@ public class MetallicsBlocks {
 
     private static final MBlockProps lampProps = new MBlockProps()
             .forceSolidOn()
-            .strength(3.5F)
             .sound(SoundType.GLASS)
             .lightLevel((blockState) -> blockState.getValue(BlockStateProperties.LIT)? 15 : 0)
             .noOcclusion().requiresCorrectToolForDrops();
@@ -151,6 +148,23 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> NETHERITE_JACK_O_LANTERN;
     public static RegistrySupplier<Block> NETHERITE_LAMP;
 
+    static final StrPair CPR_STR = new StrPair(3.0F, 6.0F);
+    static final StrPair IRN_STR = new StrPair(5.0F, 6.0F);
+    static final StrPair GLD_STR = new StrPair(3.0F, 6.0F);
+    static final StrPair NTR_STR = new StrPair(50.0F, 1200.0F);
+
+    static final StrPair GRT_MULT = StrPair.of(1.0F);
+    static final StrPair BAR_MULT = StrPair.of(1.0F);
+    static final StrPair LNT_MULT = new StrPair(0.7F, 0.58F);
+    static final StrPair MSH_MULT = StrPair.of(0.5F);
+    
+    static final StrPair CPR_LNT = CPR_STR.mult(LNT_MULT);
+    static final StrPair IRN_LNT = IRN_STR.mult(LNT_MULT);
+    static final StrPair GLD_LNT = GLD_STR.mult(LNT_MULT);
+    static final StrPair NTR_LNT = NTR_STR.mult(LNT_MULT);
+
+
+
     public static void init() {
         BLOCKS = DeferredRegister.create(Metallics.MOD_ID, Registries.BLOCK);
 
@@ -175,45 +189,45 @@ public class MetallicsBlocks {
         COPPER_CAMPFIRE = registerBlock("copper_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         COPPER_JACK_O_LANTERN = registerBlock("copper_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
 
-        COPPER_LAMP = registerBlock("copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(lampProps.getCopy())));
-        EXPOSED_COPPER_LAMP = registerBlock("exposed_copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(lampProps.getCopy())));
-        WEATHERED_COPPER_LAMP = registerBlock("weathered_copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(lampProps.getCopy())));
-        OXIDIZED_COPPER_LAMP = registerBlock("oxidized_copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(lampProps.getCopy())));
-        WAXED_COPPER_LAMP = registerBlock("waxed_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
-        WAXED_EXPOSED_COPPER_LAMP = registerBlock("waxed_exposed_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
-        WAXED_WEATHERED_COPPER_LAMP = registerBlock("waxed_weathered_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
-        WAXED_OXIDIZED_COPPER_LAMP = registerBlock("waxed_oxidized_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
+        COPPER_LAMP = registerBlock("copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(lampProps.strength(CPR_LNT).getCopy())));
+        EXPOSED_COPPER_LAMP = registerBlock("exposed_copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(lampProps.strength(CPR_LNT).getCopy())));
+        WEATHERED_COPPER_LAMP = registerBlock("weathered_copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(lampProps.strength(CPR_LNT).getCopy())));
+        OXIDIZED_COPPER_LAMP = registerBlock("oxidized_copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(lampProps.strength(CPR_LNT).getCopy())));
+        WAXED_COPPER_LAMP = registerBlock("waxed_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
+        WAXED_EXPOSED_COPPER_LAMP = registerBlock("waxed_exposed_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
+        WAXED_WEATHERED_COPPER_LAMP = registerBlock("waxed_weathered_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
+        WAXED_OXIDIZED_COPPER_LAMP = registerBlock("waxed_oxidized_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
 
         //Iron
-        IRON_MESH = registerBlock("iron_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
-        IRON_GRATE = registerBlock("iron_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.getCopy())));
-        IRON_LAMP = registerBlock("iron_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
+        IRON_MESH = registerBlock("iron_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(IRN_STR).getCopy())));
+        IRON_GRATE = registerBlock("iron_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.strength(IRN_STR).getCopy())));
+        IRON_LAMP = registerBlock("iron_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
 
         //Gold
         GOLD_CHAIN = registerBlock("gold_chain", new MBlock(ChainBlock::new, Optional.of(chainProps.getCopy())));
-        GOLD_LANTERN = registerBlock("gold_lantern", new MBlock(LanternBlock::new, Optional.of(lanternProps.getCopy())));
-        GOLD_BARS = registerBlock("gold_bars", new MBlock(IronBarsBlock::new, Optional.of(barsProps.getCopy())));
-        GOLD_MESH = registerBlock("gold_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
-        GOLD_GRATE = registerBlock("gold_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.getCopy())));
+        GOLD_LANTERN = registerBlock("gold_lantern", new MBlock(LanternBlock::new, Optional.of(lanternProps.strength(GLD_LNT).getCopy())));
+        GOLD_BARS = registerBlock("gold_bars", new MBlock(IronBarsBlock::new, Optional.of(barsProps.strength(GLD_STR).getCopy())));
+        GOLD_MESH = registerBlock("gold_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(GLD_STR).getCopy())));
+        GOLD_GRATE = registerBlock("gold_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.strength(GLD_STR).getCopy())));
 
         GOLD_TORCH = registerBlock("gold_torch", new MBlock(props -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         GOLD_WALL_TORCH = registerBlock("gold_wall_torch", new MBlock(props -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         GOLD_CAMPFIRE = registerBlock("gold_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         GOLD_JACK_O_LANTERN = registerBlock("gold_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
-        GOLD_LAMP = registerBlock("gold_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
+        GOLD_LAMP = registerBlock("gold_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(GLD_LNT).getCopy())));
 
         //Netherite
         NETHERITE_CHAIN = registerBlock("netherite_chain", new MBlock(ChainBlock::new, Optional.of(chainProps.getCopy())));
-        NETHERITE_LANTERN = registerBlock("netherite_lantern", new MBlock(LanternBlock::new, Optional.of(lanternProps.getCopy())));
-        NETHERITE_BARS = registerBlock("netherite_bars", new MBlock(IronBarsBlock::new, Optional.of(barsProps.getCopy())));
-        NETHERITE_MESH = registerBlock("netherite_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
-        NETHERITE_GRATE = registerBlock("netherite_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.getCopy())));
+        NETHERITE_LANTERN = registerBlock("netherite_lantern", new MBlock(LanternBlock::new, Optional.of(lanternProps.strength(NTR_LNT).getCopy())));
+        NETHERITE_BARS = registerBlock("netherite_bars", new MBlock(IronBarsBlock::new, Optional.of(barsProps.strength(NTR_STR).getCopy())));
+        NETHERITE_MESH = registerBlock("netherite_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(NTR_STR).getCopy())));
+        NETHERITE_GRATE = registerBlock("netherite_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.strength(NTR_STR).getCopy())));
 
         NETHERITE_TORCH = registerBlock("netherite_torch", new MBlock(props -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         NETHERITE_WALL_TORCH = registerBlock("netherite_wall_torch", new MBlock(props -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         NETHERITE_CAMPFIRE = registerBlock("netherite_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         NETHERITE_JACK_O_LANTERN = registerBlock("netherite_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
-        NETHERITE_LAMP = registerBlock("netherite_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
+        NETHERITE_LAMP = registerBlock("netherite_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(NTR_LNT).getCopy())));
 
         //Register stuff here ▲▲▲
 
