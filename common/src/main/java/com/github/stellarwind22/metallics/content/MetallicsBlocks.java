@@ -200,7 +200,7 @@ public class MetallicsBlocks {
         GOLD_WALL_TORCH = registerBlock("gold_wall_torch", new MBlock(props -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         GOLD_CAMPFIRE = registerBlock("gold_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         GOLD_JACK_O_LANTERN = registerBlock("gold_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
-        GOLD_LAMP = registerBlock("gold_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lanternProps.getCopy())));
+        GOLD_LAMP = registerBlock("gold_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
 
         //Netherite
         NETHERITE_CHAIN = registerBlock("netherite_chain", new MBlock(ChainBlock::new, Optional.of(chainProps.getCopy())));
@@ -213,7 +213,7 @@ public class MetallicsBlocks {
         NETHERITE_WALL_TORCH = registerBlock("netherite_wall_torch", new MBlock(props -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         NETHERITE_CAMPFIRE = registerBlock("netherite_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         NETHERITE_JACK_O_LANTERN = registerBlock("netherite_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
-        NETHERITE_LAMP = registerBlock("netherite_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lanternProps.getCopy())));
+        NETHERITE_LAMP = registerBlock("netherite_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.getCopy())));
 
         //Register stuff here ▲▲▲
 
