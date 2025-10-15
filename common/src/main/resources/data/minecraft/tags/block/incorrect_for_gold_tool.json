@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "#metallics:gold_blocks",
-    "#metallics:iron_blocks"
+    "#metallics:iron_blocks",
+    "#metallics:netherite_blocks"
   ]
 }

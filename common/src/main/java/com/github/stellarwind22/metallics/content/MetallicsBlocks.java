@@ -84,12 +84,11 @@ public class MetallicsBlocks {
             .ignitedByLava();
 
     private static final MBlockProps lampProps = new MBlockProps()
-            .requiresCorrectToolForDrops()
             .forceSolidOn()
             .strength(3.5F)
             .sound(SoundType.GLASS)
             .lightLevel((blockState) -> blockState.getValue(BlockStateProperties.LIT)? 15 : 0)
-            .noOcclusion();
+            .noOcclusion().requiresCorrectToolForDrops();
 
 
     //Soul
