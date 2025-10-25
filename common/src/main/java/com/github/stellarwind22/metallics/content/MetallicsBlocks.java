@@ -157,11 +157,21 @@ public class MetallicsBlocks {
     static final StrPair BAR_MULT = StrPair.of(1.0F);
     static final StrPair LNT_MULT = new StrPair(0.7F, 0.58F);
     static final StrPair MSH_MULT = StrPair.of(0.5F);
+
+    static final StrPair CPR_GRT = CPR_STR.mult(GRT_MULT);
+    static final StrPair IRN_GRT = IRN_STR.mult(GRT_MULT);
+    static final StrPair GLD_GRT = GLD_STR.mult(GRT_MULT);
+    static final StrPair NTR_GRT = NTR_STR.mult(GRT_MULT);
     
     static final StrPair CPR_LNT = CPR_STR.mult(LNT_MULT);
     static final StrPair IRN_LNT = IRN_STR.mult(LNT_MULT);
     static final StrPair GLD_LNT = GLD_STR.mult(LNT_MULT);
     static final StrPair NTR_LNT = NTR_STR.mult(LNT_MULT);
+
+    static final StrPair CPR_MSH = CPR_STR.mult(MSH_MULT);
+    static final StrPair IRN_MSH = IRN_STR.mult(MSH_MULT);
+    static final StrPair GLD_MSH = GLD_STR.mult(MSH_MULT);
+    static final StrPair NTR_MSH = NTR_STR.mult(MSH_MULT);
 
 
 
@@ -177,14 +187,14 @@ public class MetallicsBlocks {
         ));
 
         //Copper
-        COPPER_MESH = registerBlock("copper_mesh", new MBlock(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(meshProps.getCopy())));
-        EXPOSED_COPPER_MESH = registerBlock("exposed_copper_mesh", new MBlock(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(meshProps.getCopy())));
-        WEATHERED_COPPER_MESH = registerBlock("weathered_copper_mesh", new MBlock(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.WEATHERED, props), Optional.of(meshProps.getCopy())));
-        OXIDIZED_COPPER_MESH = registerBlock("oxidized_copper_mesh", new MBlock(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.OXIDIZED, props), Optional.of(meshProps.getCopy())));
-        WAXED_COPPER_MESH = registerBlock("waxed_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
-        WAXED_EXPOSED_COPPER_MESH = registerBlock("waxed_exposed_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
-        WAXED_WEATHERED_COPPER_MESH = registerBlock("waxed_weathered_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
-        WAXED_OXIDIZED_COPPER_MESH = registerBlock("waxed_oxidized_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.getCopy())));
+        COPPER_MESH = registerBlock("copper_mesh", new MBlock(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        EXPOSED_COPPER_MESH = registerBlock("exposed_copper_mesh", new MBlock(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        WEATHERED_COPPER_MESH = registerBlock("weathered_copper_mesh", new MBlock(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.WEATHERED, props), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        OXIDIZED_COPPER_MESH = registerBlock("oxidized_copper_mesh", new MBlock(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.OXIDIZED, props), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        WAXED_COPPER_MESH = registerBlock("waxed_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        WAXED_EXPOSED_COPPER_MESH = registerBlock("waxed_exposed_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        WAXED_WEATHERED_COPPER_MESH = registerBlock("waxed_weathered_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        WAXED_OXIDIZED_COPPER_MESH = registerBlock("waxed_oxidized_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
 
         COPPER_CAMPFIRE = registerBlock("copper_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         COPPER_JACK_O_LANTERN = registerBlock("copper_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
@@ -199,16 +209,16 @@ public class MetallicsBlocks {
         WAXED_OXIDIZED_COPPER_LAMP = registerBlock("waxed_oxidized_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
 
         //Iron
-        IRON_MESH = registerBlock("iron_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(IRN_STR).getCopy())));
-        IRON_GRATE = registerBlock("iron_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.strength(IRN_STR).getCopy())));
+        IRON_MESH = registerBlock("iron_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
+        IRON_GRATE = registerBlock("iron_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         IRON_LAMP = registerBlock("iron_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
 
         //Gold
         GOLD_CHAIN = registerBlock("gold_chain", new MBlock(ChainBlock::new, Optional.of(chainProps.getCopy())));
         GOLD_LANTERN = registerBlock("gold_lantern", new MBlock(LanternBlock::new, Optional.of(lanternProps.strength(GLD_LNT).getCopy())));
         GOLD_BARS = registerBlock("gold_bars", new MBlock(IronBarsBlock::new, Optional.of(barsProps.strength(GLD_STR).getCopy())));
-        GOLD_MESH = registerBlock("gold_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(GLD_STR).getCopy())));
-        GOLD_GRATE = registerBlock("gold_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.strength(GLD_STR).getCopy())));
+        GOLD_MESH = registerBlock("gold_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(GLD_MSH).getCopy())));
+        GOLD_GRATE = registerBlock("gold_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
 
         GOLD_TORCH = registerBlock("gold_torch", new MBlock(props -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         GOLD_WALL_TORCH = registerBlock("gold_wall_torch", new MBlock(props -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
@@ -220,8 +230,8 @@ public class MetallicsBlocks {
         NETHERITE_CHAIN = registerBlock("netherite_chain", new MBlock(ChainBlock::new, Optional.of(chainProps.getCopy())));
         NETHERITE_LANTERN = registerBlock("netherite_lantern", new MBlock(LanternBlock::new, Optional.of(lanternProps.strength(NTR_LNT).getCopy())));
         NETHERITE_BARS = registerBlock("netherite_bars", new MBlock(IronBarsBlock::new, Optional.of(barsProps.strength(NTR_STR).getCopy())));
-        NETHERITE_MESH = registerBlock("netherite_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(NTR_STR).getCopy())));
-        NETHERITE_GRATE = registerBlock("netherite_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.strength(NTR_STR).getCopy())));
+        NETHERITE_MESH = registerBlock("netherite_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
+        NETHERITE_GRATE = registerBlock("netherite_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
 
         NETHERITE_TORCH = registerBlock("netherite_torch", new MBlock(props -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         NETHERITE_WALL_TORCH = registerBlock("netherite_wall_torch", new MBlock(props -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
