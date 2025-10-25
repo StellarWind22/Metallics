@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "metallics:block/netherite_lamp"
+    },
+    "lit=true": {
+      "model": "metallics:block/netherite_lamp_on"
+    }
+  }
+}

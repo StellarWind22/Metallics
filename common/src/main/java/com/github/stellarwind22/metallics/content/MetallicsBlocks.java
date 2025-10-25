@@ -131,6 +131,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> GOLD_LAMP;
 
     //Iron
+    public static RegistrySupplier<Block> IRON_PLATE_BLOCK;
     public static RegistrySupplier<Block> IRON_MESH;
     public static RegistrySupplier<Block> IRON_GRATE;
     public static RegistrySupplier<Block> IRON_LAMP;
@@ -209,6 +210,7 @@ public class MetallicsBlocks {
         WAXED_OXIDIZED_COPPER_LAMP = registerBlock("waxed_oxidized_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
 
         //Iron
+        IRON_PLATE_BLOCK = registerBlock("iron_plate_block", new MBlock(Block::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         IRON_MESH = registerBlock("iron_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
         IRON_GRATE = registerBlock("iron_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         IRON_LAMP = registerBlock("iron_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
