@@ -107,6 +107,7 @@ public class MetallicsItems {
 
         //Iron
         IRON_PLATE_BLOCK = registerItem("iron_plate_block", props -> new BlockItem(MetallicsBlocks.IRON_PLATE_BLOCK.get(), props));
+        CUT_IRON_PLATE_BLOCK = registerItem("cut_iron_plate_block", props -> new BlockItem(MetallicsBlocks.CUT_IRON_PLATE_BLOCK.get(), props));
         IRON_MESH = registerItem("iron_mesh", props -> new BlockItem(MetallicsBlocks.IRON_MESH.get(), props));
         IRON_GRATE = registerItem("iron_grate", props -> new BlockItem(MetallicsBlocks.IRON_GRATE.get(), props));
         IRON_LAMP = registerItem("iron_lamp", props -> new BlockItem(MetallicsBlocks.IRON_LAMP.get(), props));
