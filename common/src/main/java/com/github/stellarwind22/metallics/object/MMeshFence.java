@@ -56,7 +56,6 @@ public class MMeshFence extends Block implements SimpleWaterloggedBlock {
 
     private Function<BlockState, VoxelShape> makeShapes(float f, float g) {
         VoxelShape voxelShape = Block.column(8.0F, 0.0F, f);
-        int i = 6;
         Map<Direction, VoxelShape> map = Shapes.rotateHorizontal(Block.boxZ(6.0F, 0.0F, g, 0.0F, 11.0F));
         Map<Direction, VoxelShape> map2 = Shapes.rotateHorizontal(Block.boxZ(6.0F, 0.0F, f, 0.0F, 11.0F));
         return this.getShapeForEachState(blockState -> {
@@ -119,7 +118,7 @@ public class MMeshFence extends Block implements SimpleWaterloggedBlock {
     }
 
     protected @NotNull BlockState updateShape(BlockState blockState, LevelReader levelReader, ScheduledTickAccess scheduledTickAccess, BlockPos blockPos, Direction direction, BlockPos blockPos2, BlockState blockState2, RandomSource randomSource) {
-        if ((Boolean)blockState.getValue(WATERLOGGED)) {
+        if (blockState.getValue(WATERLOGGED)) {
             scheduledTickAccess.scheduleTick(blockPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelReader));
         }
 
@@ -164,7 +163,8 @@ public class MMeshFence extends Block implements SimpleWaterloggedBlock {
     }
 
     private boolean shouldRaisePost(BlockState blockState, BlockState blockState2, VoxelShape voxelShape) {
-        boolean bl = blockState2.getBlock() instanceof WallBlock && (Boolean)blockState2.getValue(UP);
+        var block = blockState2.getBlock();
+        boolean bl = (block instanceof MMeshFence || block instanceof WallBlock) && blockState2.getValue(UP);
         if (bl) {
             return true;
         } else {
