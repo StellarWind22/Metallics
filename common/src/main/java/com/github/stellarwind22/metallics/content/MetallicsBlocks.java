@@ -2,6 +2,7 @@ package com.github.stellarwind22.metallics.content;
 
 import com.github.stellarwind22.metallics.init.Metallics;
 import com.github.stellarwind22.metallics.object.MGrateBlock;
+import com.github.stellarwind22.metallics.object.MMeshFence;
 import com.github.stellarwind22.metallics.object.MWeatheringLamp;
 import com.github.stellarwind22.metallics.util.MBlock;
 import com.github.stellarwind22.metallics.util.MBlockProps;
@@ -201,7 +202,7 @@ public class MetallicsBlocks {
         WAXED_WEATHERED_COPPER_MESH = registerBlock("waxed_weathered_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
         WAXED_OXIDIZED_COPPER_MESH = registerBlock("waxed_oxidized_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
 
-        COPPER_MESH_FENCE = registerBlock("copper_mesh_fence", new MBlock(FenceBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        COPPER_MESH_FENCE = registerBlock("copper_mesh_fence", new MBlock(MMeshFence::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
 
         COPPER_CAMPFIRE = registerBlock("copper_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         COPPER_JACK_O_LANTERN = registerBlock("copper_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
