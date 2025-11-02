@@ -10,8 +10,8 @@
 				"north": {"uv": [7, 0, 9, 15], "texture": "#mesh", "cullface": "north"},
 				"east": {"uv": [0, 0, 9, 15], "texture": "#mesh"},
 				"west": {"uv": [0, 0, 9, 15], "texture": "#mesh"},
-				"up": {"uv": [7, 0, 9, 9], "texture": "#mesh"},
-				"down": {"uv": [7, 0, 9, 9], "texture": "#mesh"}
+				"up": {"uv": [7, 0, 9, 7], "texture": "#edge"},
+				"down": {"uv": [7, 0, 9, 7], "texture": "#edge"}
 			}
 		}
 	]

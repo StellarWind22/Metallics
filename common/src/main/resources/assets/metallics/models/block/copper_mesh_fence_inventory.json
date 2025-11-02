@@ -3,6 +3,7 @@
   "textures": {
     "post": "minecraft:block/copper_block",
     "mesh": "minecraft:block/copper_grate",
+    "edge": "metallics:block/copper_mesh_edge",
     "particle": "minecraft:block/copper_block"
   }
 }
