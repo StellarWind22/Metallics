@@ -1,6 +1,7 @@
 {
   "parent": "metallics:block/template_mesh_fence_post",
   "textures": {
-    "post": "minecraft:block/copper_block"
+    "post": "metallics:block/copper_misc",
+    "particle":"minecraft:block/copper_block"
   }
 }
