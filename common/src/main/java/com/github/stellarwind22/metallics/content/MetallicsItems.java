@@ -57,7 +57,8 @@ public class MetallicsItems {
 
     //Iron
     public static RegistrySupplier<BlockItem> IRON_PLATE_BLOCK;
-    public static RegistrySupplier<BlockItem> CUT_IRON_PLATE_BLOCK;
+    public static RegistrySupplier<BlockItem> CUT_IRON_PLATE;
+    public static RegistrySupplier<BlockItem> CHISELED_IRON_PLATE;
     public static RegistrySupplier<BlockItem> IRON_MESH;
     public static RegistrySupplier<BlockItem> IRON_GRATE;
     public static RegistrySupplier<BlockItem> IRON_LAMP;
@@ -107,7 +108,8 @@ public class MetallicsItems {
 
         //Iron
         IRON_PLATE_BLOCK = registerItem("iron_plate_block", props -> new BlockItem(MetallicsBlocks.IRON_PLATE_BLOCK.get(), props));
-        CUT_IRON_PLATE_BLOCK = registerItem("cut_iron_plate_block", props -> new BlockItem(MetallicsBlocks.CUT_IRON_PLATE_BLOCK.get(), props));
+        CUT_IRON_PLATE = registerItem("cut_iron_plate", props -> new BlockItem(MetallicsBlocks.CUT_IRON_PLATE.get(), props));
+        CHISELED_IRON_PLATE = registerItem("chiseled_iron_plate", props -> new BlockItem(MetallicsBlocks.CHISELED_IRON_PLATE.get(), props));
         IRON_MESH = registerItem("iron_mesh", props -> new BlockItem(MetallicsBlocks.IRON_MESH.get(), props));
         IRON_GRATE = registerItem("iron_grate", props -> new BlockItem(MetallicsBlocks.IRON_GRATE.get(), props));
         IRON_LAMP = registerItem("iron_lamp", props -> new BlockItem(MetallicsBlocks.IRON_LAMP.get(), props));
