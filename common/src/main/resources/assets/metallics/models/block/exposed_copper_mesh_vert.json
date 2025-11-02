@@ -1,7 +1,7 @@
 {
   "parent": "metallics:block/template_mesh_vert",
   "textures": {
-    "edge": "minecraft:block/exposed_copper_bars",
+    "edge": "metallics:block/exposed_copper_mesh_edge",
     "mesh": "minecraft:block/exposed_copper_grate"
   }
 }
