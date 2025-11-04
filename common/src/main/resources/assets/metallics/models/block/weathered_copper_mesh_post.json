@@ -1,7 +1,7 @@
 {
   "parent": "metallics:block/template_mesh_post",
   "textures": {
-    "edge": "metallics:block/weathered_copper_mesh_edge",
+    "edge": "metallics:block/weathered_copper_misc",
     "mesh": "minecraft:block/weathered_copper_grate"
   }
 }

@@ -55,9 +55,9 @@ public class MMeshFence extends Block implements SimpleWaterloggedBlock {
     }
 
     private Function<BlockState, VoxelShape> makeShapes(float f, float g) {
-        VoxelShape voxelShape = Block.column(8.0F, 0.0F, f);
-        Map<Direction, VoxelShape> map = Shapes.rotateHorizontal(Block.boxZ(6.0F, 0.0F, g, 0.0F, 11.0F));
-        Map<Direction, VoxelShape> map2 = Shapes.rotateHorizontal(Block.boxZ(6.0F, 0.0F, f, 0.0F, 11.0F));
+        VoxelShape voxelShape = Block.column(4.0F, 0.0F, f);
+        Map<Direction, VoxelShape> map = Shapes.rotateHorizontal(Block.boxZ(2.0F, 0.0F, g, 0.0F, 11.0F));
+        Map<Direction, VoxelShape> map2 = Shapes.rotateHorizontal(Block.boxZ(2.0F, 0.0F, f, 0.0F, 11.0F));
         return this.getShapeForEachState(blockState -> {
             VoxelShape voxelShape2 = blockState.getValue(UP) ? voxelShape : Shapes.empty();
 
@@ -253,7 +253,7 @@ public class MMeshFence extends Block implements SimpleWaterloggedBlock {
         WEST = BlockStateProperties.WEST_WALL;
         PROPERTY_BY_DIRECTION = ImmutableMap.copyOf(Maps.newEnumMap(Map.of(Direction.NORTH, NORTH, Direction.EAST, EAST, Direction.SOUTH, SOUTH, Direction.WEST, WEST)));
         WATERLOGGED = BlockStateProperties.WATERLOGGED;
-        TEST_SHAPE_POST = Block.column(2.0F, 0.0F, 16.0F);
+        TEST_SHAPE_POST = Block.column(4.0F, 0.0F, 14.0F);
         TEST_SHAPES_WALL = Shapes.rotateHorizontal(Block.boxZ(2.0F, 16.0F, 0.0F, 9.0F));
     }
 }
