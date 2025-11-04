@@ -45,18 +45,6 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> WAXED_WEATHERED_COPPER_LAMP;
     public static RegistrySupplier<BlockItem> WAXED_OXIDIZED_COPPER_LAMP;
 
-    //Gold
-    public static RegistrySupplier<BlockItem> GOLD_CHAIN;
-    public static RegistrySupplier<BlockItem> GOLD_LANTERN;
-    public static RegistrySupplier<BlockItem> GOLD_BARS;
-    public static RegistrySupplier<BlockItem> GOLD_MESH;
-    public static RegistrySupplier<BlockItem> GOLD_GRATE;
-
-    public static RegistrySupplier<BlockItem> GOLD_TORCH;
-    public static RegistrySupplier<BlockItem> GOLD_CAMPFIRE;
-    public static RegistrySupplier<BlockItem> GOLD_JACK_O_LANTERN;
-    public static RegistrySupplier<BlockItem> GOLD_LAMP;
-
     //Iron
     public static RegistrySupplier<BlockItem> IRON_PLATE_BLOCK;
     public static RegistrySupplier<BlockItem> CUT_IRON_PLATE;
@@ -65,11 +53,27 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> IRON_GRATE;
     public static RegistrySupplier<BlockItem> IRON_LAMP;
 
+    //Gold
+    public static RegistrySupplier<BlockItem> GOLD_CHAIN;
+    public static RegistrySupplier<BlockItem> GOLD_LANTERN;
+    public static RegistrySupplier<BlockItem> GOLD_BARS;
+    public static RegistrySupplier<BlockItem> GOLD_PLATE_BLOCK;
+    public static RegistrySupplier<BlockItem> CUT_GOLD_PLATE;
+    public static RegistrySupplier<BlockItem> GOLD_MESH;
+    public static RegistrySupplier<BlockItem> GOLD_GRATE;
+
+    public static RegistrySupplier<BlockItem> GOLD_TORCH;
+    public static RegistrySupplier<BlockItem> GOLD_CAMPFIRE;
+    public static RegistrySupplier<BlockItem> GOLD_JACK_O_LANTERN;
+    public static RegistrySupplier<BlockItem> GOLD_LAMP;
+
     //Netherite
     public static RegistrySupplier<Item> NETHERITE_NUGGET;
     public static RegistrySupplier<BlockItem> NETHERITE_CHAIN;
     public static RegistrySupplier<BlockItem> NETHERITE_LANTERN;
     public static RegistrySupplier<BlockItem> NETHERITE_BARS;
+    public static RegistrySupplier<BlockItem> NETHERITE_PLATE_BLOCK;
+    public static RegistrySupplier<BlockItem> CUT_NETHERITE_PLATE;
     public static RegistrySupplier<BlockItem> NETHERITE_MESH;
     public static RegistrySupplier<BlockItem> NETHERITE_GRATE;
 
@@ -122,6 +126,8 @@ public class MetallicsItems {
         GOLD_CHAIN = registerItem("gold_chain", props -> new BlockItem(MetallicsBlocks.GOLD_CHAIN.get(), props));
         GOLD_BARS = registerItem("gold_bars", props -> new BlockItem(MetallicsBlocks.GOLD_BARS.get(), props));
         GOLD_MESH = registerItem("gold_mesh", props -> new BlockItem(MetallicsBlocks.GOLD_MESH.get(), props));
+        GOLD_PLATE_BLOCK = registerItem("gold_plate_block", props -> new BlockItem(MetallicsBlocks.GOLD_PLATE_BLOCK.get(), props));
+        CUT_GOLD_PLATE = registerItem("cut_gold_plate", props -> new BlockItem(MetallicsBlocks.CUT_GOLD_PLATE.get(), props));
         GOLD_LANTERN = registerItem("gold_lantern", props -> new BlockItem(MetallicsBlocks.GOLD_LANTERN.get(), props));
         GOLD_GRATE = registerItem("gold_grate", props -> new BlockItem(MetallicsBlocks.GOLD_GRATE.get(), props));
 
@@ -134,6 +140,8 @@ public class MetallicsItems {
         NETHERITE_NUGGET = registerItem("netherite_nugget", Item::new);
         NETHERITE_CHAIN = registerItem("netherite_chain", props -> new BlockItem(MetallicsBlocks.NETHERITE_CHAIN.get(), props));
         NETHERITE_BARS = registerItem("netherite_bars", props -> new BlockItem(MetallicsBlocks.NETHERITE_BARS.get(), props));
+        NETHERITE_PLATE_BLOCK = registerItem("netherite_plate_block", props -> new BlockItem(MetallicsBlocks.NETHERITE_PLATE_BLOCK.get(), props));
+        CUT_NETHERITE_PLATE = registerItem("cut_netherite_plate", props -> new BlockItem(MetallicsBlocks.CUT_NETHERITE_PLATE.get(), props));
         NETHERITE_LANTERN = registerItem("netherite_lantern", props -> new BlockItem(MetallicsBlocks.NETHERITE_LANTERN.get(), props));
         NETHERITE_MESH = registerItem("netherite_mesh", props -> new BlockItem(MetallicsBlocks.NETHERITE_MESH.get(), props));
         NETHERITE_GRATE = registerItem("netherite_grate", props -> new BlockItem(MetallicsBlocks.NETHERITE_GRATE.get(), props));
