@@ -1,7 +1,6 @@
 {
-  "parent": "metallics:block/template_mesh_fence_inventory",
+  "parent": "metallics:block/template_mesh_fence_side_tall_v",
   "textures": {
-    "mesh": "metallics:block/copper_mesh_short",
     "post": "metallics:block/copper_misc",
     "particle":"minecraft:block/copper_block"
   }

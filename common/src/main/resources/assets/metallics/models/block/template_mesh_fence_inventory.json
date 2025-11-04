@@ -1,4 +1,5 @@
 {
+    "ambientocclusion": false,
 	"parent": "block/block",
 	"textures": {
 		"particle": "#particle"
@@ -38,7 +39,7 @@
 				"up": {"uv": [7, 0, 9, 7], "texture": "#post"},
 				"down": {"uv": [7, 0, 9, 7], "texture": "#post"}
 			}
-		}
+        }
 	],
 	"display": {
 		"gui": {

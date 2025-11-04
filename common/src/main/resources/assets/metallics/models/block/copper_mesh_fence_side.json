@@ -1,7 +1,7 @@
 {
   "parent": "metallics:block/template_mesh_fence_side",
   "textures": {
-    "mesh": "minecraft:block/copper_grate",
+    "mesh": "metallics:block/copper_mesh_short",
     "post": "metallics:block/copper_misc",
     "particle":"minecraft:block/copper_block"
   }

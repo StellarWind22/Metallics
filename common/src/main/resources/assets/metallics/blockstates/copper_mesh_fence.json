@@ -13,9 +13,13 @@
         "model": "metallics:block/copper_mesh_fence_side",
         "uvlock": true
       },
-      "when": {
-        "north": "low"
-      }
+      "when": { "north": "low" }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_side_v"
+      },
+      "when": { "north": "low" }
     },
     {
       "apply": {
@@ -23,9 +27,14 @@
         "uvlock": true,
         "y": 90
       },
-      "when": {
-        "east": "low"
-      }
+      "when": { "east": "low" }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_side_v",
+        "y": 90
+      },
+      "when": { "east": "low" }
     },
     {
       "apply": {
@@ -33,9 +42,14 @@
         "uvlock": true,
         "y": 180
       },
-      "when": {
-        "south": "low"
-      }
+      "when": { "south": "low" }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_side_v",
+        "y": 180
+      },
+      "when": { "south": "low" }
     },
     {
       "apply": {
@@ -43,18 +57,27 @@
         "uvlock": true,
         "y": 270
       },
-      "when": {
-        "west": "low"
-      }
+      "when": { "west": "low" }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_side_v",
+        "y": 270
+      },
+      "when": { "west": "low" }
     },
     {
       "apply": {
         "model": "metallics:block/copper_mesh_fence_side_tall",
         "uvlock": true
       },
-      "when": {
-        "north": "tall"
-      }
+      "when": { "north": "tall" }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_side_tall_v"
+      },
+      "when": { "north": "tall" }
     },
     {
       "apply": {
@@ -62,9 +85,14 @@
         "uvlock": true,
         "y": 90
       },
-      "when": {
-        "east": "tall"
-      }
+      "when": { "east": "tall" }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_side_tall_v",
+        "y": 90
+      },
+      "when": { "east": "tall" }
     },
     {
       "apply": {
@@ -72,9 +100,14 @@
         "uvlock": true,
         "y": 180
       },
-      "when": {
-        "south": "tall"
-      }
+      "when": { "south": "tall" }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_side_tall_v",
+        "y": 180
+      },
+      "when": { "south": "tall" }
     },
     {
       "apply": {
@@ -82,9 +115,14 @@
         "uvlock": true,
         "y": 270
       },
-      "when": {
-        "west": "tall"
-      }
+      "when": { "west": "tall" }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_side_tall_v",
+        "y": 270
+      },
+      "when": { "west": "tall" }
     }
   ]
 }
