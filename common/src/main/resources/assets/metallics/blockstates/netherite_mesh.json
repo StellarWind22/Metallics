@@ -14,6 +14,10 @@
       "apply": { "model": "metallics:block/netherite_mesh_post" }
     },
     {
+      "when": { "north": "true", "south": "true", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/netherite_mesh_post" }
+    },
+    {
       "when": { "north": "true", "south": "false", "east": "false", "west": "false" },
       "apply": { "model": "metallics:block/netherite_mesh_post" }
     },

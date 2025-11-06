@@ -37,7 +37,10 @@
       "when": { "north": "true", "south": "true", "east": "false", "west": "false" },
       "apply": { "model": "metallics:block/oxidized_copper_mesh_noside_w"}
     },
-
+    {
+      "when": { "north": "true", "south": "true", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/oxidized_copper_mesh_post" }
+    },
     {
       "when": { "north": "false", "south": "false", "east": "true", "west": "true" },
       "apply": { "model": "metallics:block/oxidized_copper_mesh_noside_n"}
