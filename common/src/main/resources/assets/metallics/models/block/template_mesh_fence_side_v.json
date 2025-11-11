@@ -6,11 +6,11 @@
 	"elements": [
 		{
 			"from": [7, 0, 0],
-			"to": [9, 15, 8],
+			"to": [9, 15, 7],
 			"faces": {
-				"up": {"uv": [7, 0, 9, 7], "texture": "#post", "cullface": "up"},
-				"down": {"uv": [7, 0, 9, 7], "texture": "#post", "cullface": "down"}
+				"up": {"uv": [7, 0, 9, 6], "texture": "#post", "cullface": "up"},
+				"down": {"uv": [7, 0, 9, 6], "texture": "#post", "cullface": "down"}
 			}
-        }
+		}
 	]
 }

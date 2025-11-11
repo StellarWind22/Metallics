@@ -1,0 +1,17 @@
+{
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "#particle"
+	},
+	"elements": [
+		{
+			"from": [7, 0, 7],
+			"to": [9, 15, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 2]},
+			"faces": {
+				"up": {"uv": [7, 7, 9, 9], "texture": "#post", "cullface": "up"},
+				"down": {"uv": [7, 7, 9, 9], "texture": "#post", "cullface": "down"}
+			}
+		}
+	]
+}
