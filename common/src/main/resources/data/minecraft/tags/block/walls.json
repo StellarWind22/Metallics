@@ -8,6 +8,7 @@
     "metallics:waxed_copper_mesh_fence",
     "metallics:waxed_exposed_copper_mesh_fence",
     "metallics:waxed_weathered_copper_mesh_fence",
-    "metallics:waxed_oxidized_copper_mesh_fence"
+    "metallics:waxed_oxidized_copper_mesh_fence",
+    "metallics:gold_mesh_fence"
   ]
 }
