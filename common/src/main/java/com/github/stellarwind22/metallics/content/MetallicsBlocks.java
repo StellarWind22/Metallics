@@ -2,8 +2,9 @@ package com.github.stellarwind22.metallics.content;
 
 import com.github.stellarwind22.metallics.init.Metallics;
 import com.github.stellarwind22.metallics.object.MGrateBlock;
-import com.github.stellarwind22.metallics.object.MMeshFence;
-import com.github.stellarwind22.metallics.object.MWeatheringLamp;
+import com.github.stellarwind22.metallics.object.MMeshFenceBlock;
+import com.github.stellarwind22.metallics.object.MWeatheringLampBlock;
+import com.github.stellarwind22.metallics.object.MWeatheringMeshFenceBlock;
 import com.github.stellarwind22.metallics.util.MBlock;
 import com.github.stellarwind22.metallics.util.MBlockProps;
 import com.github.stellarwind22.metallics.util.StrPair;
@@ -102,10 +103,16 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_MESH;
     public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_MESH;
 
+    public static WeatheringCopperBlocks COPPER_MESH_FENCES;
+
     public static RegistrySupplier<Block> COPPER_MESH_FENCE;
     public static RegistrySupplier<Block> EXPOSED_COPPER_MESH_FENCE;
     public static RegistrySupplier<Block> WEATHERED_COPPER_MESH_FENCE;
     public static RegistrySupplier<Block> OXIDIZED_COPPER_MESH_FENCE;
+    public static RegistrySupplier<Block> WAXED_COPPER_MESH_FENCE;
+    public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_MESH_FENCE;
+    public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_MESH_FENCE;
+    public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_MESH_FENCE;
 
     public static WeatheringCopperBlocks COPPER_MESHES;
 
@@ -208,18 +215,22 @@ public class MetallicsBlocks {
         WAXED_WEATHERED_COPPER_MESH = registerBlock("waxed_weathered_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
         WAXED_OXIDIZED_COPPER_MESH = registerBlock("waxed_oxidized_copper_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
 
-        COPPER_MESH_FENCE = registerBlock("copper_mesh_fence", new MBlock(MMeshFence::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
-        EXPOSED_COPPER_MESH_FENCE = registerBlock("exposed_copper_mesh_fence", new MBlock(MMeshFence::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
-        WEATHERED_COPPER_MESH_FENCE = registerBlock("weathered_copper_mesh_fence", new MBlock(MMeshFence::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
-        OXIDIZED_COPPER_MESH_FENCE = registerBlock("oxidized_copper_mesh_fence", new MBlock(MMeshFence::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        COPPER_MESH_FENCE = registerBlock("copper_mesh_fence", new MBlock(props -> new MWeatheringMeshFenceBlock(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        EXPOSED_COPPER_MESH_FENCE = registerBlock("exposed_copper_mesh_fence", new MBlock(props -> new MWeatheringMeshFenceBlock(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        WEATHERED_COPPER_MESH_FENCE = registerBlock("weathered_copper_mesh_fence", new MBlock(props -> new MWeatheringMeshFenceBlock(props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        OXIDIZED_COPPER_MESH_FENCE = registerBlock("oxidized_copper_mesh_fence", new MBlock(props -> new MWeatheringMeshFenceBlock(props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        WAXED_COPPER_MESH_FENCE = registerBlock("waxed_copper_mesh_fence", new MBlock(MMeshFenceBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        WAXED_EXPOSED_COPPER_MESH_FENCE = registerBlock("waxed_exposed_copper_mesh_fence", new MBlock(MMeshFenceBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        WAXED_WEATHERED_COPPER_MESH_FENCE = registerBlock("waxed_weathered_copper_mesh_fence", new MBlock(MMeshFenceBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        WAXED_OXIDIZED_COPPER_MESH_FENCE = registerBlock("waxed_oxidized_copper_mesh_fence", new MBlock(MMeshFenceBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
 
         COPPER_CAMPFIRE = registerBlock("copper_campfire", new MBlock(props -> new CampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         COPPER_JACK_O_LANTERN = registerBlock("copper_jack_o_lantern", new MBlock(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
 
-        COPPER_LAMP = registerBlock("copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(lampProps.strength(CPR_LNT).getCopy())));
-        EXPOSED_COPPER_LAMP = registerBlock("exposed_copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(lampProps.strength(CPR_LNT).getCopy())));
-        WEATHERED_COPPER_LAMP = registerBlock("weathered_copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(lampProps.strength(CPR_LNT).getCopy())));
-        OXIDIZED_COPPER_LAMP = registerBlock("oxidized_copper_lamp", new MBlock(props -> new MWeatheringLamp(props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(lampProps.strength(CPR_LNT).getCopy())));
+        COPPER_LAMP = registerBlock("copper_lamp", new MBlock(props -> new MWeatheringLampBlock(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(lampProps.strength(CPR_LNT).getCopy())));
+        EXPOSED_COPPER_LAMP = registerBlock("exposed_copper_lamp", new MBlock(props -> new MWeatheringLampBlock(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(lampProps.strength(CPR_LNT).getCopy())));
+        WEATHERED_COPPER_LAMP = registerBlock("weathered_copper_lamp", new MBlock(props -> new MWeatheringLampBlock(props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(lampProps.strength(CPR_LNT).getCopy())));
+        OXIDIZED_COPPER_LAMP = registerBlock("oxidized_copper_lamp", new MBlock(props -> new MWeatheringLampBlock(props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(lampProps.strength(CPR_LNT).getCopy())));
         WAXED_COPPER_LAMP = registerBlock("waxed_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
         WAXED_EXPOSED_COPPER_LAMP = registerBlock("waxed_exposed_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
         WAXED_WEATHERED_COPPER_LAMP = registerBlock("waxed_weathered_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
@@ -280,6 +291,17 @@ public class MetallicsBlocks {
                 WAXED_EXPOSED_COPPER_MESH.get(),
                 WAXED_WEATHERED_COPPER_MESH.get(),
                 WAXED_OXIDIZED_COPPER_MESH.get()
+        );
+
+        COPPER_MESH_FENCES = new WeatheringCopperBlocks(
+                COPPER_MESH_FENCE.get(),
+                EXPOSED_COPPER_MESH_FENCE.get(),
+                WEATHERED_COPPER_MESH_FENCE.get(),
+                OXIDIZED_COPPER_MESH_FENCE.get(),
+                WAXED_COPPER_MESH_FENCE.get(),
+                WAXED_EXPOSED_COPPER_MESH_FENCE.get(),
+                WAXED_WEATHERED_COPPER_MESH_FENCE.get(),
+                WAXED_OXIDIZED_COPPER_MESH_FENCE.get()
         );
 
         COPPER_LAMPS = new WeatheringCopperBlocks(

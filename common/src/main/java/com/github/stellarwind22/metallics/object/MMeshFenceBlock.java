@@ -28,9 +28,9 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Map;
 import java.util.function.Function;
 
-public class MMeshFence extends Block implements SimpleWaterloggedBlock {
+public class MMeshFenceBlock extends Block implements SimpleWaterloggedBlock {
 
-    public static final MapCodec<MMeshFence> CODEC = simpleCodec(MMeshFence::new);
+    public static final MapCodec<MMeshFenceBlock> CODEC = simpleCodec(MMeshFenceBlock::new);
     public static final BooleanProperty UP;
     public static final EnumProperty<WallSide> EAST;
     public static final EnumProperty<WallSide> NORTH;
@@ -43,11 +43,11 @@ public class MMeshFence extends Block implements SimpleWaterloggedBlock {
     private static final VoxelShape TEST_SHAPE_POST;
     private static final Map<Direction, VoxelShape> TEST_SHAPES_WALL;
 
-    public @NotNull MapCodec<MMeshFence> codec() {
+    public @NotNull MapCodec<MMeshFenceBlock> codec() {
         return CODEC;
     }
 
-    public MMeshFence(BlockBehaviour.Properties properties) {
+    public MMeshFenceBlock(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(UP, true).setValue(NORTH, WallSide.NONE).setValue(EAST, WallSide.NONE).setValue(SOUTH, WallSide.NONE).setValue(WEST, WallSide.NONE).setValue(WATERLOGGED, false));
         this.shapes = this.makeShapes(16.0F, 15.0F);
@@ -164,7 +164,7 @@ public class MMeshFence extends Block implements SimpleWaterloggedBlock {
 
     private boolean shouldRaisePost(BlockState blockState, BlockState blockState2, VoxelShape voxelShape) {
         var block = blockState2.getBlock();
-        boolean bl = (block instanceof MMeshFence || block instanceof WallBlock) && blockState2.getValue(UP);
+        boolean bl = (block instanceof MMeshFenceBlock || block instanceof WallBlock) && blockState2.getValue(UP);
         if (bl) {
             return true;
         } else {

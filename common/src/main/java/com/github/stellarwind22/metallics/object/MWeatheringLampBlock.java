@@ -8,11 +8,11 @@ import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
 
-public class MWeatheringLamp extends RedstoneLampBlock implements WeatheringCopper {
+public class MWeatheringLampBlock extends RedstoneLampBlock implements WeatheringCopper {
 
     public WeatherState weatherState;
 
-    public MWeatheringLamp(Properties properties, WeatherState weatherState) {
+    public MWeatheringLampBlock(Properties properties, WeatherState weatherState) {
         super(properties);
         this.weatherState = weatherState;
     }
