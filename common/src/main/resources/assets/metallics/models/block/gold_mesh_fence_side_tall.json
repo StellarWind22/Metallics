@@ -1,0 +1,8 @@
+{
+  "parent": "metallics:block/template_mesh_fence_side_tall",
+  "textures": {
+    "mesh": "minecraft:block/gold_grate",
+    "post": "metallics:block/gold_misc",
+    "particle": "metallics:block/gold_plate_block"
+  }
+}

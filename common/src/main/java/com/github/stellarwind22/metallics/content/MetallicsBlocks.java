@@ -145,6 +145,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> GOLD_PLATE_BLOCK;
     public static RegistrySupplier<Block> CUT_GOLD_PLATE;
     public static RegistrySupplier<Block> GOLD_MESH;
+    public static RegistrySupplier<Block> GOLD_MESH_FENCE;
     public static RegistrySupplier<Block> GOLD_GRATE;
 
     public static RegistrySupplier<Block> GOLD_TORCH;
@@ -251,6 +252,7 @@ public class MetallicsBlocks {
         GOLD_PLATE_BLOCK = registerBlock("gold_plate_block", new MBlock(Block::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
         CUT_GOLD_PLATE = registerBlock("cut_gold_plate", new MBlock(Block::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
         GOLD_MESH = registerBlock("gold_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(GLD_MSH).getCopy())));
+        GOLD_MESH_FENCE = registerBlock("gold_mesh_fence", new MBlock(MMeshFenceBlock::new, Optional.of(meshProps.strength(GLD_MSH).getCopy())));
         GOLD_GRATE = registerBlock("gold_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
 
         GOLD_TORCH = registerBlock("gold_torch", new MBlock(props -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));

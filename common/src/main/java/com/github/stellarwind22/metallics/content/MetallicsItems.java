@@ -67,6 +67,7 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> GOLD_PLATE_BLOCK;
     public static RegistrySupplier<BlockItem> CUT_GOLD_PLATE;
     public static RegistrySupplier<BlockItem> GOLD_MESH;
+    public static RegistrySupplier<BlockItem> GOLD_MESH_FENCE;
     public static RegistrySupplier<BlockItem> GOLD_GRATE;
 
     public static RegistrySupplier<BlockItem> GOLD_TORCH;
@@ -140,6 +141,7 @@ public class MetallicsItems {
         GOLD_CHAIN = registerItem("gold_chain", props -> new BlockItem(MetallicsBlocks.GOLD_CHAIN.get(), props));
         GOLD_BARS = registerItem("gold_bars", props -> new BlockItem(MetallicsBlocks.GOLD_BARS.get(), props));
         GOLD_MESH = registerItem("gold_mesh", props -> new BlockItem(MetallicsBlocks.GOLD_MESH.get(), props));
+        GOLD_MESH_FENCE = registerItem("gold_mesh_fence", props -> new BlockItem(MetallicsBlocks.GOLD_MESH_FENCE.get(), props));
         GOLD_PLATE_BLOCK = registerItem("gold_plate_block", props -> new BlockItem(MetallicsBlocks.GOLD_PLATE_BLOCK.get(), props));
         CUT_GOLD_PLATE = registerItem("cut_gold_plate", props -> new BlockItem(MetallicsBlocks.CUT_GOLD_PLATE.get(), props));
         GOLD_LANTERN = registerItem("gold_lantern", props -> new BlockItem(MetallicsBlocks.GOLD_LANTERN.get(), props));
