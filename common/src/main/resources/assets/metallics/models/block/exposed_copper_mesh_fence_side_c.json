@@ -1,0 +1,8 @@
+{
+  "parent": "metallics:block/template_mesh_fence_side_c",
+  "textures": {
+    "post": "metallics:block/exposed_copper_misc",
+    "mesh": "metallics:block/exposed_copper_mesh_short",
+    "particle":"minecraft:block/exposed_copper_block"
+  }
+}

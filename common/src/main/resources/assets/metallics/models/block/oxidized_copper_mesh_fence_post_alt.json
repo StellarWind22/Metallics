@@ -1,0 +1,7 @@
+{
+  "parent": "metallics:block/template_mesh_fence_post_alt",
+  "textures": {
+    "edge": "metallics:block/oxidized_copper_misc",
+    "particle":"minecraft:block/oxidized_copper_block"
+  }
+}

@@ -33,6 +33,9 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> WAXED_OXIDIZED_COPPER_MESH;
 
     public static RegistrySupplier<BlockItem> COPPER_MESH_FENCE;
+    public static RegistrySupplier<BlockItem> EXPOSED_COPPER_MESH_FENCE;
+    public static RegistrySupplier<BlockItem> WEATHERED_COPPER_MESH_FENCE;
+    public static RegistrySupplier<BlockItem> OXIDIZED_COPPER_MESH_FENCE;
 
     public static RegistrySupplier<BlockItem> COPPER_CAMPFIRE;
     public static RegistrySupplier<BlockItem> COPPER_JACK_O_LANTERN;
@@ -102,6 +105,9 @@ public class MetallicsItems {
         WAXED_OXIDIZED_COPPER_MESH = registerItem("waxed_oxidized_copper_mesh", props -> new BlockItem(MetallicsBlocks.WAXED_OXIDIZED_COPPER_MESH.get(), props));
 
         COPPER_MESH_FENCE = registerItem("copper_mesh_fence", props -> new BlockItem(MetallicsBlocks.COPPER_MESH_FENCE.get(), props));
+        COPPER_MESH_FENCE = registerItem("exposed_copper_mesh_fence", props -> new BlockItem(MetallicsBlocks.EXPOSED_COPPER_MESH_FENCE.get(), props));
+        COPPER_MESH_FENCE = registerItem("weathered_copper_mesh_fence", props -> new BlockItem(MetallicsBlocks.WEATHERED_COPPER_MESH_FENCE.get(), props));
+        COPPER_MESH_FENCE = registerItem("oxidized_copper_mesh_fence", props -> new BlockItem(MetallicsBlocks.OXIDIZED_COPPER_MESH_FENCE.get(), props));
 
         COPPER_CAMPFIRE = registerItem("copper_campfire", props -> new BlockItem(MetallicsBlocks.COPPER_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
         COPPER_JACK_O_LANTERN = registerItem("copper_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.COPPER_JACK_O_LANTERN.get(), props));

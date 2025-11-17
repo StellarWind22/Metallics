@@ -1,0 +1,8 @@
+{
+  "parent": "metallics:block/template_mesh_fence_side_tall_alt",
+  "textures": {
+    "mesh": "minecraft:block/oxidized_copper_grate",
+    "post": "metallics:block/oxidized_copper_misc",
+    "particle":"minecraft:block/oxidized_copper_block"
+  }
+}

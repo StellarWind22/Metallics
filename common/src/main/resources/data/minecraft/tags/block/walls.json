@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "metallics:copper_mesh_fence"
+    "metallics:copper_mesh_fence",
+    "metallics:exposed_copper_mesh_fence",
+    "metallics:weathered_copper_mesh_fence",
+    "metallics:oxidized_copper_mesh_fence"
   ]
 }

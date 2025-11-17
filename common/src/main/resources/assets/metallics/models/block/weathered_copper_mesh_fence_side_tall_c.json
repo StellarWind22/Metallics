@@ -1,0 +1,8 @@
+{
+  "parent": "metallics:block/template_mesh_fence_side_tall_c",
+  "textures": {
+    "post": "metallics:block/weathered_copper_misc",
+    "mesh": "minecraft:block/weathered_copper_grate",
+    "particle":"minecraft:block/weathered_copper_block"
+  }
+}
