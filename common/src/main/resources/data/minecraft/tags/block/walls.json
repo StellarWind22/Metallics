@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "metallics:iron_mesh_fence",
     "metallics:copper_mesh_fence",
     "metallics:exposed_copper_mesh_fence",
     "metallics:weathered_copper_mesh_fence",
@@ -9,6 +10,7 @@
     "metallics:waxed_exposed_copper_mesh_fence",
     "metallics:waxed_weathered_copper_mesh_fence",
     "metallics:waxed_oxidized_copper_mesh_fence",
-    "metallics:gold_mesh_fence"
+    "metallics:gold_mesh_fence",
+    "metallics:netherite_mesh_fence"
   ]
 }

@@ -135,6 +135,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CUT_IRON_PLATE;
     public static RegistrySupplier<Block> CHISELED_IRON_PLATE;
     public static RegistrySupplier<Block> IRON_MESH;
+    public static RegistrySupplier<Block> IRON_MESH_FENCE;
     public static RegistrySupplier<Block> IRON_GRATE;
     public static RegistrySupplier<Block> IRON_LAMP;
 
@@ -161,6 +162,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> NETHERITE_PLATE_BLOCK;
     public static RegistrySupplier<Block> CUT_NETHERITE_PLATE;
     public static RegistrySupplier<Block> NETHERITE_MESH;
+    public static RegistrySupplier<Block> NETHERITE_MESH_FENCE;
     public static RegistrySupplier<Block> NETHERITE_GRATE;
 
     public static RegistrySupplier<Block> NETHERITE_TORCH;
@@ -242,6 +244,7 @@ public class MetallicsBlocks {
         CUT_IRON_PLATE = registerBlock("cut_iron_plate", new MBlock(Block::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         CHISELED_IRON_PLATE = registerBlock("chiseled_iron_plate", new MBlock(Block::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         IRON_MESH = registerBlock("iron_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
+        IRON_MESH_FENCE = registerBlock("iron_mesh_fence", new MBlock(MMeshFenceBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
         IRON_GRATE = registerBlock("iron_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         IRON_LAMP = registerBlock("iron_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
 
@@ -268,6 +271,7 @@ public class MetallicsBlocks {
         NETHERITE_PLATE_BLOCK = registerBlock("netherite_plate_block", new MBlock(Block::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
         CUT_NETHERITE_PLATE = registerBlock("cut_netherite_plate", new MBlock(Block::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
         NETHERITE_MESH = registerBlock("netherite_mesh", new MBlock(IronBarsBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
+        NETHERITE_MESH_FENCE = registerBlock("netherite_mesh_fence", new MBlock(MMeshFenceBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
         NETHERITE_GRATE = registerBlock("netherite_grate", new MBlock(MGrateBlock::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
 
         NETHERITE_TORCH = registerBlock("netherite_torch", new MBlock(props -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));

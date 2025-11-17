@@ -57,6 +57,7 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> CUT_IRON_PLATE;
     public static RegistrySupplier<BlockItem> CHISELED_IRON_PLATE;
     public static RegistrySupplier<BlockItem> IRON_MESH;
+    public static RegistrySupplier<BlockItem> IRON_MESH_FENCE;
     public static RegistrySupplier<BlockItem> IRON_GRATE;
     public static RegistrySupplier<BlockItem> IRON_LAMP;
 
@@ -83,6 +84,7 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> NETHERITE_PLATE_BLOCK;
     public static RegistrySupplier<BlockItem> CUT_NETHERITE_PLATE;
     public static RegistrySupplier<BlockItem> NETHERITE_MESH;
+    public static RegistrySupplier<BlockItem> NETHERITE_MESH_FENCE;
     public static RegistrySupplier<BlockItem> NETHERITE_GRATE;
 
     public static RegistrySupplier<BlockItem> NETHERITE_TORCH;
@@ -134,6 +136,7 @@ public class MetallicsItems {
         CUT_IRON_PLATE = registerItem("cut_iron_plate", props -> new BlockItem(MetallicsBlocks.CUT_IRON_PLATE.get(), props));
         CHISELED_IRON_PLATE = registerItem("chiseled_iron_plate", props -> new BlockItem(MetallicsBlocks.CHISELED_IRON_PLATE.get(), props));
         IRON_MESH = registerItem("iron_mesh", props -> new BlockItem(MetallicsBlocks.IRON_MESH.get(), props));
+        IRON_MESH_FENCE = registerItem("iron_mesh_fence", props -> new BlockItem(MetallicsBlocks.IRON_MESH_FENCE.get(), props));
         IRON_GRATE = registerItem("iron_grate", props -> new BlockItem(MetallicsBlocks.IRON_GRATE.get(), props));
         IRON_LAMP = registerItem("iron_lamp", props -> new BlockItem(MetallicsBlocks.IRON_LAMP.get(), props));
 
@@ -160,6 +163,7 @@ public class MetallicsItems {
         CUT_NETHERITE_PLATE = registerItem("cut_netherite_plate", props -> new BlockItem(MetallicsBlocks.CUT_NETHERITE_PLATE.get(), props.fireResistant()));
         NETHERITE_LANTERN = registerItem("netherite_lantern", props -> new BlockItem(MetallicsBlocks.NETHERITE_LANTERN.get(), props.fireResistant()));
         NETHERITE_MESH = registerItem("netherite_mesh", props -> new BlockItem(MetallicsBlocks.NETHERITE_MESH.get(), props.fireResistant()));
+        NETHERITE_MESH_FENCE = registerItem("netherite_mesh_fence", props -> new BlockItem(MetallicsBlocks.NETHERITE_MESH_FENCE.get(), props));
         NETHERITE_GRATE = registerItem("netherite_grate", props -> new BlockItem(MetallicsBlocks.NETHERITE_GRATE.get(), props.fireResistant()));
 
         NETHERITE_TORCH = registerItem("netherite_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.NETHERITE_TORCH.get(), MetallicsBlocks.NETHERITE_WALL_TORCH.get(), Direction.DOWN, props));

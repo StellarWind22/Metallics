@@ -1,0 +1,7 @@
+{
+  "parent": "metallics:block/template_mesh_fence_post",
+  "textures": {
+    "post": "metallics:block/netherite_misc",
+    "particle": "metallics:block/netherite_plate_block"
+  }
+}
