@@ -2,6 +2,7 @@
   "parent": "metallics:block/template_mesh_fence_side_tall_v_alt",
   "textures": {
     "post": "metallics:block/copper_misc",
+    "mesh": "minecraft:block/copper_grate",
     "particle":"minecraft:block/copper_block"
   }
 }
