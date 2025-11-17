@@ -3,6 +3,6 @@
   "textures": {
     "mesh": "metallics:block/oxidized_copper_mesh_short",
     "post": "metallics:block/oxidized_copper_misc",
-    "particle":"minecraft:block/oxidized_copper_block"
+    "particle":"minecraft:block/oxidized_copper"
   }
 }

@@ -3,6 +3,6 @@
   "textures": {
     "post": "metallics:block/weathered_copper_misc",
     "mesh": "metallics:block/weathered_copper_mesh_short",
-    "particle":"minecraft:block/weathered_copper_block"
+    "particle":"minecraft:block/weathered_copper"
   }
 }

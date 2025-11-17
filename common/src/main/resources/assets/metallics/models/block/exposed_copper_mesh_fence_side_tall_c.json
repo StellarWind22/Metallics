@@ -3,6 +3,6 @@
   "textures": {
     "post": "metallics:block/exposed_copper_misc",
     "mesh": "minecraft:block/exposed_copper_grate",
-    "particle":"minecraft:block/exposed_copper_block"
+    "particle":"minecraft:block/exposed_copper"
   }
 }

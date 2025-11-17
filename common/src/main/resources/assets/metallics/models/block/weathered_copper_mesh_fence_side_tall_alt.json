@@ -3,6 +3,6 @@
   "textures": {
     "mesh": "minecraft:block/weathered_copper_grate",
     "post": "metallics:block/weathered_copper_misc",
-    "particle":"minecraft:block/weathered_copper_block"
+    "particle":"minecraft:block/weathered_copper"
   }
 }

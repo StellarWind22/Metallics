@@ -3,6 +3,6 @@
   "textures": {
     "mesh": "minecraft:block/oxidized_copper_grate",
     "post": "metallics:block/oxidized_copper_misc",
-    "particle":"minecraft:block/oxidized_copper_block"
+    "particle":"minecraft:block/oxidized_copper"
   }
 }

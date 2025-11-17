@@ -3,6 +3,6 @@
   "textures": {
     "mesh": "metallics:block/exposed_copper_mesh_short",
     "post": "metallics:block/exposed_copper_misc",
-    "particle":"minecraft:block/exposed_copper_block"
+    "particle":"minecraft:block/exposed_copper"
   }
 }
