@@ -18,7 +18,23 @@
     },
     {
       "apply": {
+        "model": "metallics:block/copper_mesh_fence_post_alt"
+      },
+      "when": {
+        "up": "false", "north": "low", "south": "low", "east": "low", "west": "low"
+      }
+    },
+    {
+      "apply": {
         "model": "metallics:block/copper_mesh_fence_side_tall_c_v"
+      },
+      "when": {
+        "up": "false", "north": "tall", "south": "tall", "east": "tall", "west": "tall"
+      }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_post_alt_tall"
       },
       "when": {
         "up": "false", "north": "tall", "south": "tall", "east": "tall", "west": "tall"
@@ -29,7 +45,7 @@
         "model": "metallics:block/copper_mesh_fence_side_c_v"
       },
       "when": {
-        "up": "false", "north": "low", "south": "low"
+        "up": "false", "north": "low", "south": "low", "east": "none", "west": "none"
       }
     },
     {
@@ -38,7 +54,7 @@
         "uvlock": true
       },
       "when": {
-        "up": "false", "north": "low", "south": "low"
+        "up": "false", "north": "low", "south": "low", "east": "none", "west": "none"
       }
     },
     {
@@ -48,7 +64,7 @@
         "y": 180
       },
       "when": {
-        "up": "false", "north": "low", "south": "low"
+        "up": "false", "north": "low", "south": "low", "east": "none", "west": "none"
       }
     },
     {
@@ -56,7 +72,7 @@
         "model": "metallics:block/copper_mesh_fence_side_c_v"
       },
       "when": {
-        "up": "false", "east": "low", "west": "low"
+        "up": "false", "east": "low", "west": "low", "north": "none", "south": "none"
       }
     },
     {
@@ -66,7 +82,7 @@
         "y": 90
       },
       "when": {
-        "up": "false", "east": "low", "west": "low"
+        "up": "false", "east": "low", "west": "low", "north": "none", "south": "none"
       }
     },
     {
@@ -76,7 +92,62 @@
         "y": 270
       },
       "when": {
-        "up": "false", "east": "low", "west": "low"
+        "up": "false", "east": "low", "west": "low", "north": "none", "south": "none"
+      }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_side_tall_c_v"
+      },
+      "when": {
+        "up": "false", "north": "tall", "south": "tall", "east": "none", "west": "none"
+      }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_side_tall_c",
+        "uvlock": true
+      },
+      "when": {
+        "up": "false", "north": "tall", "south": "tall", "east": "none", "west": "none"
+      }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_side_tall_c",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "up": "false", "north": "tall", "south": "tall", "east": "none", "west": "none"
+      }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_side_tall_c_v"
+      },
+      "when": {
+        "up": "false", "east": "tall", "west": "tall", "north": "none", "south": "none"
+      }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_side_tall_c",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "up": "false", "east": "tall", "west": "tall", "north": "none", "south": "none"
+      }
+    },
+    {
+      "apply": {
+        "model": "metallics:block/copper_mesh_fence_side_tall_c",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "up": "false", "east": "tall", "west": "tall", "north": "none", "south": "none"
       }
     },
     {

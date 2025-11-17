@@ -15,7 +15,7 @@
     },
     {
       "when": { "north": "true", "south": "true", "east": "true", "west": "true" },
-      "apply": { "model": "metallics:block/weathered_mesh_post" }
+      "apply": { "model": "metallics:block/weathered_copper_mesh_post" }
     },
     {
       "when": { "north": "true", "south": "false", "east": "false", "west": "false" },
