@@ -113,8 +113,6 @@ public class MetallicsBlocks {
 
     public static WeatheringCopperBlocks COPPER_MESH_FENCES;
 
-    public static RegistrySupplier<Block> COPPER_SUPPORT;
-
     public static RegistrySupplier<Block> COPPER_CAMPFIRE;
     public static RegistrySupplier<Block> COPPER_JACK_O_LANTERN;
 
@@ -237,8 +235,6 @@ public class MetallicsBlocks {
         WAXED_EXPOSED_COPPER_LAMP = registerBlock("waxed_exposed_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
         WAXED_WEATHERED_COPPER_LAMP = registerBlock("waxed_weathered_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
         WAXED_OXIDIZED_COPPER_LAMP = registerBlock("waxed_oxidized_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
-
-        COPPER_SUPPORT = registerBlock("copper_support", new MBlock(MSupportBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
 
         //Iron
         IRON_PLATE_BLOCK = registerBlock("iron_plate_block", new MBlock(Block::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));

@@ -15,6 +15,14 @@
     "metallics:waxed_copper_lamp",
     "metallics:waxed_exposed_copper_lamp",
     "metallics:waxed_weathered_copper_lamp",
-    "metallics:waxed_oxidized_copper_lamp"
+    "metallics:waxed_oxidized_copper_lamp",
+    "metallics:copper_mesh_fence",
+    "metallics:exposed_copper_mesh_fence",
+    "metallics:weathered_copper_mesh_fence",
+    "metallics:oxidized_copper_mesh_fence",
+    "metallics:waxed_copper_mesh_fence",
+    "metallics:waxed_exposed_copper_mesh_fence",
+    "metallics:waxed_weathered_copper_mesh_fence",
+    "metallics:waxed_oxidized_copper_mesh_fence"
   ]
 }
