@@ -1,10 +1,7 @@
 package com.github.stellarwind22.metallics.content;
 
 import com.github.stellarwind22.metallics.init.Metallics;
-import com.github.stellarwind22.metallics.object.MGrateBlock;
-import com.github.stellarwind22.metallics.object.MMeshFenceBlock;
-import com.github.stellarwind22.metallics.object.MWeatheringLampBlock;
-import com.github.stellarwind22.metallics.object.MWeatheringMeshFenceBlock;
+import com.github.stellarwind22.metallics.object.*;
 import com.github.stellarwind22.metallics.util.MBlock;
 import com.github.stellarwind22.metallics.util.MBlockProps;
 import com.github.stellarwind22.metallics.util.StrPair;
@@ -103,7 +100,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_MESH;
     public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_MESH;
 
-    public static WeatheringCopperBlocks COPPER_MESH_FENCES;
+    public static WeatheringCopperBlocks COPPER_MESHES;
 
     public static RegistrySupplier<Block> COPPER_MESH_FENCE;
     public static RegistrySupplier<Block> EXPOSED_COPPER_MESH_FENCE;
@@ -114,7 +111,9 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_MESH_FENCE;
     public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_MESH_FENCE;
 
-    public static WeatheringCopperBlocks COPPER_MESHES;
+    public static WeatheringCopperBlocks COPPER_MESH_FENCES;
+
+    public static RegistrySupplier<Block> COPPER_SUPPORT;
 
     public static RegistrySupplier<Block> COPPER_CAMPFIRE;
     public static RegistrySupplier<Block> COPPER_JACK_O_LANTERN;
@@ -238,6 +237,8 @@ public class MetallicsBlocks {
         WAXED_EXPOSED_COPPER_LAMP = registerBlock("waxed_exposed_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
         WAXED_WEATHERED_COPPER_LAMP = registerBlock("waxed_weathered_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
         WAXED_OXIDIZED_COPPER_LAMP = registerBlock("waxed_oxidized_copper_lamp", new MBlock(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
+
+        COPPER_SUPPORT = registerBlock("copper_support", new MBlock(MSupportBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
 
         //Iron
         IRON_PLATE_BLOCK = registerBlock("iron_plate_block", new MBlock(Block::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));

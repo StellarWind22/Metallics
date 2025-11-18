@@ -52,6 +52,8 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> WAXED_WEATHERED_COPPER_LAMP;
     public static RegistrySupplier<BlockItem> WAXED_OXIDIZED_COPPER_LAMP;
 
+    public static RegistrySupplier<BlockItem> COPPER_SUPPORT;
+
     //Iron
     public static RegistrySupplier<BlockItem> IRON_PLATE_BLOCK;
     public static RegistrySupplier<BlockItem> CUT_IRON_PLATE;
@@ -130,6 +132,8 @@ public class MetallicsItems {
         WAXED_EXPOSED_COPPER_LAMP = registerItem("waxed_exposed_copper_lamp", props -> new BlockItem(MetallicsBlocks.WAXED_EXPOSED_COPPER_LAMP.get(), props));
         WAXED_WEATHERED_COPPER_LAMP = registerItem("waxed_weathered_copper_lamp", props -> new BlockItem(MetallicsBlocks.WAXED_WEATHERED_COPPER_LAMP.get(), props));
         WAXED_OXIDIZED_COPPER_LAMP = registerItem("waxed_oxidized_copper_lamp", props -> new BlockItem(MetallicsBlocks.WAXED_OXIDIZED_COPPER_LAMP.get(), props));
+
+        COPPER_SUPPORT = registerItem("copper_support", props -> new BlockItem(MetallicsBlocks.COPPER_SUPPORT.get(), props));
 
         //Iron
         IRON_PLATE_BLOCK = registerItem("iron_plate_block", props -> new BlockItem(MetallicsBlocks.IRON_PLATE_BLOCK.get(), props));
