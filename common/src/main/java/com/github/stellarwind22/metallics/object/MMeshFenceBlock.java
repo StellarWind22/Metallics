@@ -56,8 +56,8 @@ public class MMeshFenceBlock extends Block implements SimpleWaterloggedBlock {
 
     private Function<BlockState, VoxelShape> makeShapes(float f, float g) {
         VoxelShape voxelShape = Block.column(4.0F, 0.0F, f);
-        Map<Direction, VoxelShape> map = Shapes.rotateHorizontal(Block.boxZ(2.0F, 0.0F, g, 0.0F, 11.0F));
-        Map<Direction, VoxelShape> map2 = Shapes.rotateHorizontal(Block.boxZ(2.0F, 0.0F, f, 0.0F, 11.0F));
+        Map<Direction, VoxelShape> map = Shapes.rotateHorizontal(Block.boxZ(2.0F, 0.0F, g, 0.0F, 9.0F));
+        Map<Direction, VoxelShape> map2 = Shapes.rotateHorizontal(Block.boxZ(2.0F, 0.0F, f, 0.0F, 9.0F));
         return this.getShapeForEachState(blockState -> {
             VoxelShape voxelShape2 = blockState.getValue(UP) ? voxelShape : Shapes.empty();
 
