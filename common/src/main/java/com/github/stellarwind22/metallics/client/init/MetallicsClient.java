@@ -15,8 +15,6 @@ public class MetallicsClient {
     public static void init() {
 
         Metallics.LOGGER.info("Initializing client code...");
-
-        MetallicsParticleTypes.initClient();
         MetallicsBlockEntityRenderers.init();
 
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.COPPER_MESH.get());
