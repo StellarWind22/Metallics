@@ -16,7 +16,7 @@ description = '''
 [[dependencies.metallics]]
 modId = "neoforge"
 type = "required"
-versionRange = "[21.10.52-beta,)"
+versionRange = "[21,)"
 ordering = "NONE"
 side = "BOTH"
 
@@ -28,7 +28,7 @@ ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.metallics]]
-modId = "architectury-api"
+modId = "architectury"
 type = "required"
 versionRange = "[18.0.6,)"
 ordering = "AFTER"

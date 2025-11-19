@@ -4,11 +4,8 @@ import com.github.stellarwind22.metallics.client.content.MetallicsBlockEntityRen
 import com.github.stellarwind22.metallics.content.MetallicsBlocks;
 import com.github.stellarwind22.metallics.init.Metallics;
 import dev.architectury.registry.client.rendering.RenderTypeRegistry;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 
-@Environment(EnvType.CLIENT)
 public class MetallicsClient {
 
     public static void init() {
