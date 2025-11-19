@@ -10,6 +10,7 @@ public final class MetallicsFabric implements ModInitializer {
     public void onInitialize() {
 
         Metallics.init();
+        MetallicsFabricBlockEntity.init();
         MetallicsBlocks.postRegisterInit();
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_MESHES);
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_LAMPS);

@@ -174,7 +174,6 @@ public class MetallicsBlocks {
     static final StrPair NTR_STR = new StrPair(50.0F, 1200.0F);
 
     static final StrPair GRT_MULT = StrPair.of(1.0F);
-    static final StrPair BAR_MULT = StrPair.of(1.0F);
     static final StrPair LNT_MULT = new StrPair(0.7F, 0.58F);
     static final StrPair MSH_MULT = StrPair.of(0.5F);
 
