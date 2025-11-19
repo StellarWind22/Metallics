@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "metallics:iron_plate_block",
+    "i": "metallics:iron_mesh"
+  },
+  "pattern": [
+    "#i#",
+    "#i#"
+  ],
+  "result": {
+    "id": "metallics:iron_mesh_fence",
+    "count": 4
+  }
+}

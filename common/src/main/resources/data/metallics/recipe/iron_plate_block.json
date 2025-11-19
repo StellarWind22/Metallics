@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:iron_ingot",
+    "#minecraft:stone_crafting_materials",
+    "#minecraft:stone_crafting_materials",
+    "#minecraft:stone_crafting_materials",
+    "#minecraft:stone_crafting_materials",
+    "#minecraft:stone_crafting_materials",
+    "#minecraft:stone_crafting_materials",
+    "#minecraft:stone_crafting_materials",
+    "#minecraft:stone_crafting_materials"
+  ],
+  "result": {
+    "id": "metallics:iron_plate_block",
+    "count": 16
+  }
+}

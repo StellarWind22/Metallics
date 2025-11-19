@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "metallics:gold_plate_block",
+    "i": "metallics:gold_mesh"
+  },
+  "pattern": [
+    "#i#",
+    "#i#"
+  ],
+  "result": {
+    "id": "metallics:gold_mesh_fence",
+    "count": 4
+  }
+}

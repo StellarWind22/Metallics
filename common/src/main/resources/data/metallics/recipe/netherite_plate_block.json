@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:netherite_ingot",
+    "#minecraft:stone_crafting_materials",
+    "#minecraft:stone_crafting_materials",
+    "#minecraft:stone_crafting_materials",
+    "#minecraft:stone_crafting_materials",
+    "#minecraft:stone_crafting_materials",
+    "#minecraft:stone_crafting_materials",
+    "#minecraft:stone_crafting_materials",
+    "#minecraft:stone_crafting_materials"
+  ],
+  "result": {
+    "id": "metallics:netherite_plate_block",
+    "count": 16
+  }
+}
