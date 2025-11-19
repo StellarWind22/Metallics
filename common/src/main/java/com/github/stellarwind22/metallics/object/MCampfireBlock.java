@@ -2,12 +2,16 @@ package com.github.stellarwind22.metallics.object;
 
 import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.DataResult;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -58,24 +62,37 @@ import org.jetbrains.annotations.Nullable;
 @SuppressWarnings("deprecation")
 public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterloggedBlock {
 
-    public static final MapCodec<MCampfireBlock> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(Codec.BOOL.fieldOf("spawn_particles").forGetter((campfireBlock) -> campfireBlock.spawnParticles), Codec.intRange(0, 1000).fieldOf("fire_damage").forGetter((campfireBlock) -> campfireBlock.fireDamage), propertiesCodec()).apply(instance, MCampfireBlock::new));
+    protected static final MapCodec<SimpleParticleType> PARTICLE_OPTIONS_FIELD = BuiltInRegistries.PARTICLE_TYPE.byNameCodec().comapFlatMap((particleType) -> {
+        if (particleType instanceof SimpleParticleType simpleParticleType) {
+            return DataResult.success(simpleParticleType);
+        } else {
+            return DataResult.error(() -> "Not a SimpleParticleType: " + String.valueOf(particleType));
+        }
+    }, (simpleParticleType) -> (ParticleType<?>) simpleParticleType).fieldOf("particle_options");
+
+    public static final MapCodec<MCampfireBlock> CODEC = RecordCodecBuilder.mapCodec((instance) ->
+            instance.group(
+                    Codec.intRange(0, 1000).fieldOf("fire_damage").forGetter((campfireBlock) -> campfireBlock.fireDamage),
+                    PARTICLE_OPTIONS_FIELD.forGetter(campfireBlock -> campfireBlock.campfireParticle),
+                    propertiesCodec()).apply(instance, MCampfireBlock::new)
+    );
     public static final BooleanProperty LIT;
     public static final BooleanProperty SIGNAL_FIRE;
     public static final BooleanProperty WATERLOGGED;
     public static final EnumProperty<Direction> FACING;
     private static final VoxelShape SHAPE;
     private static final VoxelShape SHAPE_VIRTUAL_POST;
-    private final boolean spawnParticles;
     private final int fireDamage;
+    private final SimpleParticleType campfireParticle;
 
     public @NotNull MapCodec<MCampfireBlock> codec() {
         return CODEC;
     }
 
-    public MCampfireBlock(boolean bl, int i, BlockBehaviour.Properties properties) {
+    public MCampfireBlock(int fireDamage, SimpleParticleType campfireParticle, BlockBehaviour.Properties properties) {
         super(properties);
-        this.spawnParticles = bl;
-        this.fireDamage = i;
+        this.fireDamage = fireDamage;
+        this.campfireParticle = campfireParticle;
         this.registerDefaultState(this.stateDefinition.any().setValue(LIT, true).setValue(SIGNAL_FIRE, false).setValue(WATERLOGGED, false).setValue(FACING, Direction.NORTH));
     }
 
@@ -136,9 +153,9 @@ public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterlogged
                 level.playLocalSound((double)blockPos.getX() + (double)0.5F, (double)blockPos.getY() + (double)0.5F, (double)blockPos.getZ() + (double)0.5F, SoundEvents.CAMPFIRE_CRACKLE, SoundSource.BLOCKS, 0.5F + randomSource.nextFloat(), randomSource.nextFloat() * 0.7F + 0.6F, false);
             }
 
-            if (this.spawnParticles && randomSource.nextInt(5) == 0) {
+            if (randomSource.nextInt(5) == 0) {
                 for(int i = 0; i < randomSource.nextInt(1) + 1; ++i) {
-                    level.addParticle(ParticleTypes.LAVA, (double)blockPos.getX() + (double)0.5F, (double)blockPos.getY() + (double)0.5F, (double)blockPos.getZ() + (double)0.5F, randomSource.nextFloat() / 2.0F, 5.0E-5, randomSource.nextFloat() / 2.0F);
+                    level.addParticle((ParticleOptions) this.campfireParticle, (double)blockPos.getX() + (double)0.5F, (double)blockPos.getY() + (double)0.5F, (double)blockPos.getZ() + (double)0.5F, randomSource.nextFloat() / 2.0F, 5.0E-5, randomSource.nextFloat() / 2.0F);
                 }
             }
 
