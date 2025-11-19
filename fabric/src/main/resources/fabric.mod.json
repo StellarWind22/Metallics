@@ -10,7 +10,7 @@
   "contact": {
     "homepage": ""
   },
-  "license": "MIT",
+  "license": "CC0-1",
   "icon": "assets/metallics/icon.png",
   "environment": "*",
   "entrypoints": {

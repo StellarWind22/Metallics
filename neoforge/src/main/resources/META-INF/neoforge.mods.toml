@@ -1,7 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "[2,)"
 #issueTrackerURL = ""
-license = "MIT"
+license = "CC0-1"
 
 [[mods]]
 modId = "metallics"
@@ -16,23 +16,20 @@ description = '''
 [[dependencies.metallics]]
 modId = "neoforge"
 type = "required"
-versionRange = "[21,)"
+versionRange = "[21.10.52-beta,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.metallics]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21.9,)"
+versionRange = "[1.21.10,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.metallics]]
-modId = "architectury"
+modId = "architectury-api"
 type = "required"
-versionRange = "[18.0.3,)"
+versionRange = "[18.0.6,)"
 ordering = "AFTER"
 side = "BOTH"
-
-[[mixins]]
-config = "metallics.mixins.json"
