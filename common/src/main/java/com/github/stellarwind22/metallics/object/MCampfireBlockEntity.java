@@ -5,10 +5,10 @@
 
 package com.github.stellarwind22.metallics.object;
 
+import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
 import com.mojang.logging.LogUtils;
 import java.util.Arrays;
 import java.util.Optional;
-import java.util.function.Supplier;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -56,7 +56,7 @@ public class MCampfireBlockEntity extends BlockEntity implements Clearable {
     private final int[] cookingTime;
 
     public MCampfireBlockEntity(BlockPos blockPos, BlockState blockState) {
-        super(BlockEntityType.CAMPFIRE, blockPos, blockState);
+        super(MetallicsBlockEntityTypes.CAMPFIRE.get(), blockPos, blockState);
         this.items = NonNullList.withSize(4, ItemStack.EMPTY);
         this.cookingProgress = new int[4];
         this.cookingTime = new int[4];

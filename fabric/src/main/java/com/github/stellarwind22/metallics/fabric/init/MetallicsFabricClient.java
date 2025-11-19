@@ -1,6 +1,6 @@
 package com.github.stellarwind22.metallics.fabric.init;
 
-import com.github.stellarwind22.metallics.init.MetallicsClient;
+import com.github.stellarwind22.metallics.client.init.MetallicsClient;
 import net.fabricmc.api.ClientModInitializer;
 
 public final class MetallicsFabricClient implements ClientModInitializer {

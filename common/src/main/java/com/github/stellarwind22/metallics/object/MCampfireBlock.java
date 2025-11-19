@@ -1,5 +1,6 @@
 package com.github.stellarwind22.metallics.object;
 
+import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -36,7 +37,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.CampfireBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -81,11 +81,11 @@ public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterlogged
 
     protected @NotNull InteractionResult useItemOn(ItemStack itemStack, BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
         BlockEntity blockEntity = level.getBlockEntity(blockPos);
-        if (blockEntity instanceof CampfireBlockEntity campfireBlockEntity) {
+        if (blockEntity instanceof MCampfireBlockEntity mCampfireBlockEntity) {
             ItemStack itemStack2 = player.getItemInHand(interactionHand);
             if (level.recipeAccess().propertySet(RecipePropertySet.CAMPFIRE_INPUT).test(itemStack2)) {
                 if (level instanceof ServerLevel serverLevel) {
-                    if (campfireBlockEntity.placeFood(serverLevel, player, itemStack2)) {
+                    if (mCampfireBlockEntity.placeFood(serverLevel, player, itemStack2)) {
                         player.awardStat(Stats.INTERACT_WITH_CAMPFIRE);
                         return InteractionResult.SUCCESS_SERVER;
                     }
@@ -231,7 +231,7 @@ public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterlogged
         builder.add(LIT, SIGNAL_FIRE, WATERLOGGED, FACING);
     }
 
-    public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public @NotNull BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
         return new MCampfireBlockEntity(blockPos, blockState);
     }
 
@@ -240,12 +240,12 @@ public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterlogged
         if (level instanceof ServerLevel serverLevel) {
             if (blockState.getValue(LIT)) {
                 RecipeManager.CachedCheck<SingleRecipeInput, CampfireCookingRecipe> cachedCheck = RecipeManager.createCheck(RecipeType.CAMPFIRE_COOKING);
-                return createTickerHelper(blockEntityType, BlockEntityType.CAMPFIRE, (levelx, blockPos, blockStatex, mCampfireBlockEntity) -> MCampfireBlockEntity.cookTick(serverLevel, blockPos, blockStatex, mCampfireBlockEntity, cachedCheck));
+                return createTickerHelper(blockEntityType, MetallicsBlockEntityTypes.CAMPFIRE.get(), (levelx, blockPos, blockStatex, mCampfireBlockEntity) -> MCampfireBlockEntity.cookTick(serverLevel, blockPos, blockStatex, mCampfireBlockEntity, cachedCheck));
             } else {
-                return createTickerHelper(blockEntityType, BlockEntityType.CAMPFIRE, CampfireBlockEntity::cooldownTick);
+                return createTickerHelper(blockEntityType, MetallicsBlockEntityTypes.CAMPFIRE.get(), MCampfireBlockEntity::cooldownTick);
             }
         } else {
-            return blockState.getValue(LIT) ? createTickerHelper(blockEntityType, BlockEntityType.CAMPFIRE, CampfireBlockEntity::particleTick) : null;
+            return blockState.getValue(LIT) ? createTickerHelper(blockEntityType, MetallicsBlockEntityTypes.CAMPFIRE.get(), MCampfireBlockEntity::particleTick) : null;
         }
     }
 

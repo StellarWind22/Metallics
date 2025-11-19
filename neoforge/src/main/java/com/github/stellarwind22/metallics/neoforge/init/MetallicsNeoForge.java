@@ -1,7 +1,7 @@
 package com.github.stellarwind22.metallics.neoforge.init;
 
 import com.github.stellarwind22.metallics.init.Metallics;
-import com.github.stellarwind22.metallics.init.MetallicsClient;
+import com.github.stellarwind22.metallics.client.init.MetallicsClient;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

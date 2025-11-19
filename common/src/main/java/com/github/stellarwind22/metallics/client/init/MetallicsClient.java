@@ -1,4 +1,4 @@
-package com.github.stellarwind22.metallics.init;
+package com.github.stellarwind22.metallics.client.init;
 
 import com.github.stellarwind22.metallics.content.MetallicsBlocks;
 import dev.architectury.registry.client.rendering.RenderTypeRegistry;
