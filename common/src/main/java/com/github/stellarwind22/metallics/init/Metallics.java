@@ -14,9 +14,13 @@ public final class Metallics {
 
     public static void init() {
 
+        LOGGER.info("Initializing common code...");
+
         MetallicsTabs.init();
         MetallicsBlocks.init();
         MetallicsBlockEntityTypes.init();
         MetallicsItems.init();
+
+        LOGGER.info("Metallics tabs/blocks/blockEntities/items registered!");
     }
 }
