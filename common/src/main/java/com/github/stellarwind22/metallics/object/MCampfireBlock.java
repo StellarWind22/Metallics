@@ -66,9 +66,9 @@ public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterlogged
         if (particleType instanceof SimpleParticleType simpleParticleType) {
             return DataResult.success(simpleParticleType);
         } else {
-            return DataResult.error(() -> "Not a SimpleParticleType: " + String.valueOf(particleType));
+            return DataResult.error(() -> "Not a SimpleParticleType: " + particleType);
         }
-    }, (simpleParticleType) -> (ParticleType<?>) simpleParticleType).fieldOf("particle_options");
+    }, (simpleParticleType) -> simpleParticleType).fieldOf("particle_options");
 
     public static final MapCodec<MCampfireBlock> CODEC = RecordCodecBuilder.mapCodec((instance) ->
             instance.group(
@@ -155,7 +155,7 @@ public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterlogged
 
             if (randomSource.nextInt(5) == 0) {
                 for(int i = 0; i < randomSource.nextInt(1) + 1; ++i) {
-                    level.addParticle((ParticleOptions) this.campfireParticle, (double)blockPos.getX() + (double)0.5F, (double)blockPos.getY() + (double)0.5F, (double)blockPos.getZ() + (double)0.5F, randomSource.nextFloat() / 2.0F, 5.0E-5, randomSource.nextFloat() / 2.0F);
+                    level.addParticle(this.campfireParticle, (double)blockPos.getX() + (double)0.5F, (double)blockPos.getY() + (double)0.5F, (double)blockPos.getZ() + (double)0.5F, randomSource.nextFloat() / 2.0F, 5.0E-5, randomSource.nextFloat() / 2.0F);
                 }
             }
 

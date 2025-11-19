@@ -8,7 +8,6 @@ import com.github.stellarwind22.metallics.util.MBlockProps;
 import com.github.stellarwind22.metallics.util.StrPair;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
