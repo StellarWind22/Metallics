@@ -1,5 +1,6 @@
 package com.github.stellarwind22.metallics.client.init;
 
+import com.github.stellarwind22.metallics.client.content.MetallicsBlockEntityRenderers;
 import com.github.stellarwind22.metallics.client.content.MetallicsParticleTypes;
 import com.github.stellarwind22.metallics.content.MetallicsBlocks;
 import com.github.stellarwind22.metallics.init.Metallics;
@@ -15,7 +16,8 @@ public class MetallicsClient {
 
         Metallics.LOGGER.info("Initializing client code...");
 
-        MetallicsParticleTypes.init();
+        MetallicsParticleTypes.initClient();
+        MetallicsBlockEntityRenderers.init();
 
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.COPPER_MESH.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.EXPOSED_COPPER_MESH.get());

@@ -1,5 +1,6 @@
 package com.github.stellarwind22.metallics.content;
 
+import com.github.stellarwind22.metallics.client.content.MetallicsParticleTypes;
 import com.github.stellarwind22.metallics.init.Metallics;
 import com.github.stellarwind22.metallics.object.*;
 import com.github.stellarwind22.metallics.util.MBlock;
@@ -254,7 +255,7 @@ public class MetallicsBlocks {
         GOLD_MESH_FENCE = registerBlock("gold_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(GLD_MSH).getCopy())));
         GOLD_GRATE = registerBlock("gold_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
 
-        GOLD_TORCH = registerBlock("gold_torch", new MBlock<>(props -> new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
+        GOLD_TORCH = registerBlock("gold_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.GOLD_FLAME.get(), props), Optional.of(torchProps.getCopy())));
         GOLD_WALL_TORCH = registerBlock("gold_wall_torch", new MBlock<>(props -> new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, props), Optional.of(torchProps.getCopy())));
         GOLD_CAMPFIRE = registerBlock("gold_campfire", new MBlock<>(props -> new MCampfireBlock(true, 1, props), Optional.of(campfireProps.getCopy())));
         GOLD_JACK_O_LANTERN = registerBlock("gold_jack_o_lantern", new MBlock<>(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
