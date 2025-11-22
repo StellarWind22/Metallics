@@ -27,6 +27,5 @@
     "java": ">=21",
     "architectury": ">=18.0.3",
     "fabric-api": "*"
-  },
-  "accessWidener": "metallics.accesswidener"
+  }
 }

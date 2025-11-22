@@ -1,7 +1,6 @@
 package com.github.stellarwind22.metallics.init;
 
 import com.github.stellarwind22.metallics.client.content.MetallicsParticleTypes;
-import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
 import com.github.stellarwind22.metallics.content.MetallicsBlocks;
 import com.github.stellarwind22.metallics.content.MetallicsItems;
 import com.github.stellarwind22.metallics.content.MetallicsTabs;
@@ -20,7 +19,6 @@ public final class Metallics {
         MetallicsTabs.init();
         MetallicsParticleTypes.init();
         MetallicsBlocks.init();
-        MetallicsBlockEntityTypes.init();
         MetallicsItems.init();
 
         LOGGER.info("Metallics tabs/blocks/blockEntities/items registered!");

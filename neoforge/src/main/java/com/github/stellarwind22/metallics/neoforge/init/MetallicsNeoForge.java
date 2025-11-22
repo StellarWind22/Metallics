@@ -1,9 +1,16 @@
 package com.github.stellarwind22.metallics.neoforge.init;
 
 import com.github.stellarwind22.metallics.client.content.MetallicsParticleTypes;
+import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
+import com.github.stellarwind22.metallics.content.MetallicsBlocks;
 import com.github.stellarwind22.metallics.init.Metallics;
 import com.github.stellarwind22.metallics.client.init.MetallicsClient;
+import com.github.stellarwind22.metallics.object.MCampfireBlockEntity;
 import net.minecraft.client.particle.LavaParticle;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -11,12 +18,39 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.function.Supplier;
 
 @Mod(Metallics.MOD_ID)
 public final class MetallicsNeoForge {
+
+    public static DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES;
+
     public MetallicsNeoForge() {
         // Run our common setup.
         Metallics.init();
+
+        BLOCK_ENTITY_TYPES = DeferredRegister.create(
+                Registries.BLOCK_ENTITY_TYPE,
+                Metallics.MOD_ID
+        );
+
+        MetallicsBlockEntityTypes.CAMPFIRE = registerBlockEntity("campfire",
+                MCampfireBlockEntity::new,
+                MetallicsBlocks.COPPER_CAMPFIRE.get(),
+                MetallicsBlocks.GOLD_CAMPFIRE.get(),
+                MetallicsBlocks.NETHERITE_CAMPFIRE.get()
+        );
+
+
+    }
+
+    public static <E extends BlockEntity> Supplier<BlockEntityType<E>> registerBlockEntity(String name, BlockEntityType.BlockEntitySupplier<E> supplier, Block... blocks) {
+        HashSet<Block> blocksIn = new HashSet<>(Arrays.stream(blocks).toList());
+        return BLOCK_ENTITY_TYPES.register(name, () -> new BlockEntityType<>(supplier, blocksIn));
     }
 
     @EventBusSubscriber
