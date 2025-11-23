@@ -1,12 +1,14 @@
 package com.github.stellarwind22.metallics.neoforge.init;
 
 import com.github.stellarwind22.metallics.client.content.MetallicsParticleTypes;
+import com.github.stellarwind22.metallics.client.renderer.MCampfireRenderer;
 import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
 import com.github.stellarwind22.metallics.content.MetallicsBlocks;
 import com.github.stellarwind22.metallics.init.Metallics;
 import com.github.stellarwind22.metallics.client.init.MetallicsClient;
 import com.github.stellarwind22.metallics.object.MCampfireBlockEntity;
 import net.minecraft.client.particle.LavaParticle;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -17,6 +19,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -45,7 +48,11 @@ public final class MetallicsNeoForge {
                 MetallicsBlocks.NETHERITE_CAMPFIRE.get()
         );
 
+        if(FMLLoader.getCurrent().getDist() == Dist.CLIENT) {
+            MetallicsClient.init();
 
+            BlockEntityRenderers.register(MetallicsBlockEntityTypes.CAMPFIRE.get(), MCampfireRenderer::new);
+        }
     }
 
     public static <E extends BlockEntity> Supplier<BlockEntityType<E>> registerBlockEntity(String name, BlockEntityType.BlockEntitySupplier<E> supplier, Block... blocks) {
