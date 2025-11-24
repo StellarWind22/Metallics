@@ -23,6 +23,14 @@
     "metallics:waxed_copper_mesh_fence",
     "metallics:waxed_exposed_copper_mesh_fence",
     "metallics:waxed_weathered_copper_mesh_fence",
-    "metallics:waxed_oxidized_copper_mesh_fence"
+    "metallics:waxed_oxidized_copper_mesh_fence",
+    "metallics:copper_slab",
+    "metallics:exposed_copper_slab",
+    "metallics:weathered_copper_slab",
+    "metallics:oxidized_copper_slab",
+    "metallics:waxed_copper_slab",
+    "metallics:waxed_exposed_copper_slab",
+    "metallics:waxed_weathered_copper_slab",
+    "metallics:waxed_oxidized_copper_slab"
   ]
 }
