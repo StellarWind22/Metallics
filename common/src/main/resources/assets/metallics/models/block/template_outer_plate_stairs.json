@@ -1,4 +1,6 @@
 {
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
 	"textures": {
 		"particle": "#bottom"
 	},
@@ -10,7 +12,7 @@
 				"north": {"uv": [0, 8, 16, 16], "texture": "#double", "cullface": "north"},
 				"east": {"uv": [0, 8, 16, 16], "texture": "#stairs_right", "cullface": "east"},
 				"south": {"uv": [0, 8, 16, 16], "texture": "#stairs_left", "cullface": "south"},
-				"west": {"uv": [0, 8, 16, 16], "texture": "#double", "cullface": "west"},
+				"west": {"uv": [0, 8, 16, 16], "texture": "#stairs_left", "cullface": "west"},
 				"up": {"uv": [0, 0, 16, 16], "texture": "#stairs_down"},
 				"down": {"uv": [0, 0, 16, 16], "texture": "#bottom", "cullface": "down"}
 			}
@@ -19,10 +21,10 @@
 			"from": [8, 8, 8],
 			"to": [16, 16, 16],
 			"faces": {
-				"north": {"uv": [0, 0, 8, 8], "texture": "#double"},
+				"north": {"uv": [8, 0, 16, 8], "texture": "#stairs_right"},
 				"east": {"uv": [0, 0, 8, 8], "texture": "#stairs_right", "cullface": "east"},
 				"south": {"uv": [8, 0, 16, 8], "texture": "#stairs_left", "cullface": "south"},
-				"west": {"uv": [8, 0, 16, 8], "texture": "#double"},
+				"west": {"uv": [0, 0, 8, 8], "texture": "#stairs_left"},
 				"up": {"uv": [8, 8, 16, 16], "texture": "#stairs_down", "cullface": "up"}
 			}
 		}

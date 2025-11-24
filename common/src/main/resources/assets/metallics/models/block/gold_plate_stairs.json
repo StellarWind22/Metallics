@@ -1,8 +1,10 @@
 {
-  "parent": "minecraft:block/stairs",
+  "parent": "metallics:block/template_plate_stairs",
   "textures": {
     "bottom": "metallics:block/gold_plate_block",
     "side": "metallics:block/gold_plate_block",
-    "top": "metallics:block/gold_plate_block"
+    "stairs_left": "metallics:block/gold_plate_stairs_left",
+    "stairs_right": "metallics:block/gold_plate_stairs_right",
+    "double": "metallics:block/double_gold_plate"
   }
 }
