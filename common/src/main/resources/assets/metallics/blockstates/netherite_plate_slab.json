@@ -4,7 +4,7 @@
       "model": "metallics:block/netherite_plate_slab"
     },
     "type=double": {
-      "model": "metallics:block/netherite_plate"
+      "model": "metallics:block/netherite_plate_slab_double"
     },
     "type=top": {
       "model": "metallics:block/netherite_plate_slab_top"

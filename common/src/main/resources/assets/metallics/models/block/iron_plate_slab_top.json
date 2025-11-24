@@ -2,7 +2,7 @@
   "parent": "minecraft:block/slab_top",
   "textures": {
     "bottom": "metallics:block/iron_plate_block",
-    "side": "metallics:block/iron_plate_block",
+    "side": "metallics:block/double_iron_plate",
     "top": "metallics:block/iron_plate_block"
   }
 }
