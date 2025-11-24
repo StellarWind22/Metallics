@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
+    "metallics:netherite_plate_block",
+    "metallics:netherite_plate_stairs",
+    "metallics:netherite_plate_slab",
+    "metallics:cut_netherite_plate",
+    "metallics:cut_netherite_stairs",
+    "metallics:cut_netherite_slab",
     "metallics:netherite_bars",
     "metallics:netherite_mesh",
     "metallics:netherite_mesh_fence",

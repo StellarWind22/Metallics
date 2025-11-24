@@ -265,8 +265,8 @@ public class MetallicsBlocks {
         GOLD_LANTERN = registerBlock("gold_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(GLD_LNT).getCopy())));
         GOLD_BARS = registerBlock("gold_bars", new MBlock<>(IronBarsBlock::new, Optional.of(barsProps.strength(GLD_STR).getCopy())));
         GOLD_PLATE_BLOCK = registerBlock("gold_plate_block", new MBlock<>(Block::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
-        GOLD_PLATE_STAIRS = registerBlock("gold_plate_stairs", new MBlock<>(props -> new StairBlock(Blocks.GOLD_BLOCK.defaultBlockState(), props), Optional.of(grateProps.strength(IRN_GRT).getCopy())));
-        GOLD_PLATE_SLAB = registerBlock("gold_plate_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
+        GOLD_PLATE_STAIRS = registerBlock("gold_plate_stairs", new MBlock<>(props -> new StairBlock(Blocks.GOLD_BLOCK.defaultBlockState(), props), Optional.of(grateProps.strength(GLD_GRT).getCopy())));
+        GOLD_PLATE_SLAB = registerBlock("gold_plate_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
         CUT_GOLD_PLATE = registerBlock("cut_gold_plate", new MBlock<>(Block::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
         CUT_GOLD_STAIRS = registerBlock("cut_gold_stairs", new MBlock<>(props -> new StairBlock(Blocks.GOLD_BLOCK.defaultBlockState(), props), Optional.of(grateProps.strength(GLD_GRT).getCopy())));
         CUT_GOLD_SLAB = registerBlock("cut_gold_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
@@ -285,8 +285,8 @@ public class MetallicsBlocks {
         NETHERITE_LANTERN = registerBlock("netherite_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(NTR_LNT).getCopy())));
         NETHERITE_BARS = registerBlock("netherite_bars", new MBlock<>(IronBarsBlock::new, Optional.of(barsProps.strength(NTR_STR).getCopy())));
         NETHERITE_PLATE_BLOCK = registerBlock("netherite_plate_block", new MBlock<>(Block::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
-        NETHERITE_PLATE_STAIRS = registerBlock("netherite_plate_stairs", new MBlock<>(props -> new StairBlock(Blocks.NETHERITE_BLOCK.defaultBlockState(), props), Optional.of(grateProps.strength(IRN_GRT).getCopy())));
-        NETHERITE_PLATE_SLAB = registerBlock("netherite_plate_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
+        NETHERITE_PLATE_STAIRS = registerBlock("netherite_plate_stairs", new MBlock<>(props -> new StairBlock(Blocks.NETHERITE_BLOCK.defaultBlockState(), props), Optional.of(grateProps.strength(NTR_GRT).getCopy())));
+        NETHERITE_PLATE_SLAB = registerBlock("netherite_plate_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
         CUT_NETHERITE_PLATE = registerBlock("cut_netherite_plate", new MBlock<>(Block::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
         CUT_NETHERITE_STAIRS = registerBlock("cut_netherite_stairs", new MBlock<>(props -> new StairBlock(Blocks.NETHERITE_BLOCK.defaultBlockState(), props), Optional.of(grateProps.strength(NTR_GRT).getCopy())));
         CUT_NETHERITE_SLAB = registerBlock("cut_netherite_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
