@@ -54,7 +54,6 @@ public class MetallicsItems {
 
     //Iron
     public static RegistrySupplier<BlockItem> IRON_PLATE_BLOCK;
-    public static RegistrySupplier<BlockItem> IRON_PLATE_STAIRS;
     public static RegistrySupplier<BlockItem> IRON_PLATE_SLAB;
     public static RegistrySupplier<BlockItem> CUT_IRON_PLATE;
     public static RegistrySupplier<BlockItem> CUT_IRON_STAIRS;
@@ -70,7 +69,6 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> GOLD_LANTERN;
     public static RegistrySupplier<BlockItem> GOLD_BARS;
     public static RegistrySupplier<BlockItem> GOLD_PLATE_BLOCK;
-    public static RegistrySupplier<BlockItem> GOLD_PLATE_STAIRS;
     public static RegistrySupplier<BlockItem> GOLD_PLATE_SLAB;
     public static RegistrySupplier<BlockItem> CUT_GOLD_PLATE;
     public static RegistrySupplier<BlockItem> CUT_GOLD_STAIRS;
@@ -90,7 +88,6 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> NETHERITE_LANTERN;
     public static RegistrySupplier<BlockItem> NETHERITE_BARS;
     public static RegistrySupplier<BlockItem> NETHERITE_PLATE_BLOCK;
-    public static RegistrySupplier<BlockItem> NETHERITE_PLATE_STAIRS;
     public static RegistrySupplier<BlockItem> NETHERITE_PLATE_SLAB;
     public static RegistrySupplier<BlockItem> CUT_NETHERITE_PLATE;
     public static RegistrySupplier<BlockItem> CUT_NETHERITE_STAIRS;
@@ -145,7 +142,6 @@ public class MetallicsItems {
 
         //Iron
         IRON_PLATE_BLOCK = registerItem("iron_plate_block", props -> new BlockItem(MetallicsBlocks.IRON_PLATE_BLOCK.get(), props));
-        IRON_PLATE_STAIRS = registerItem("iron_plate_stairs", props -> new BlockItem(MetallicsBlocks.IRON_PLATE_STAIRS.get(), props));
         IRON_PLATE_SLAB = registerItem("iron_plate_slab", props -> new BlockItem(MetallicsBlocks.IRON_PLATE_SLAB.get(), props));
         CUT_IRON_PLATE = registerItem("cut_iron_plate", props -> new BlockItem(MetallicsBlocks.CUT_IRON_PLATE.get(), props));
         CUT_IRON_STAIRS = registerItem("cut_iron_stairs", props -> new BlockItem(MetallicsBlocks.CUT_IRON_STAIRS.get(), props));
@@ -162,7 +158,6 @@ public class MetallicsItems {
         GOLD_MESH = registerItem("gold_mesh", props -> new BlockItem(MetallicsBlocks.GOLD_MESH.get(), props));
         GOLD_MESH_FENCE = registerItem("gold_mesh_fence", props -> new BlockItem(MetallicsBlocks.GOLD_MESH_FENCE.get(), props));
         GOLD_PLATE_BLOCK = registerItem("gold_plate_block", props -> new BlockItem(MetallicsBlocks.GOLD_PLATE_BLOCK.get(), props));
-        GOLD_PLATE_STAIRS = registerItem("gold_plate_stairs", props -> new BlockItem(MetallicsBlocks.GOLD_PLATE_STAIRS.get(), props));
         GOLD_PLATE_SLAB = registerItem("gold_plate_slab", props -> new BlockItem(MetallicsBlocks.GOLD_PLATE_SLAB.get(), props));
         CUT_GOLD_PLATE = registerItem("cut_gold_plate", props -> new BlockItem(MetallicsBlocks.CUT_GOLD_PLATE.get(), props));
         CUT_GOLD_STAIRS = registerItem("cut_gold_stairs", props -> new BlockItem(MetallicsBlocks.CUT_GOLD_STAIRS.get(), props));
@@ -180,7 +175,6 @@ public class MetallicsItems {
         NETHERITE_CHAIN = registerItem("netherite_chain", props -> new BlockItem(MetallicsBlocks.NETHERITE_CHAIN.get(), props.fireResistant()));
         NETHERITE_BARS = registerItem("netherite_bars", props -> new BlockItem(MetallicsBlocks.NETHERITE_BARS.get(), props.fireResistant()));
         NETHERITE_PLATE_BLOCK = registerItem("netherite_plate_block", props -> new BlockItem(MetallicsBlocks.NETHERITE_PLATE_BLOCK.get(), props.fireResistant()));
-        NETHERITE_PLATE_STAIRS = registerItem("netherite_plate_stairs", props -> new BlockItem(MetallicsBlocks.NETHERITE_PLATE_STAIRS.get(), props));
         NETHERITE_PLATE_SLAB = registerItem("netherite_plate_slab", props -> new BlockItem(MetallicsBlocks.NETHERITE_PLATE_SLAB.get(), props));
         CUT_NETHERITE_PLATE = registerItem("cut_netherite_plate", props -> new BlockItem(MetallicsBlocks.CUT_NETHERITE_PLATE.get(), props.fireResistant()));
         CUT_NETHERITE_STAIRS = registerItem("cut_netherite_stairs", props -> new BlockItem(MetallicsBlocks.CUT_NETHERITE_STAIRS.get(), props));

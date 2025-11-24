@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "metallics:netherite_plate_block",
-    "metallics:netherite_plate_stairs",
     "metallics:netherite_plate_slab",
     "metallics:cut_netherite_plate",
     "metallics:cut_netherite_stairs",
