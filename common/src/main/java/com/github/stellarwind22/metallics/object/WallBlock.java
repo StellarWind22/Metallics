@@ -3,6 +3,8 @@ package com.github.stellarwind22.metallics.object;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import com.mojang.serialization.MapCodec;
+import java.util.Map;
+import java.util.function.Function;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
@@ -15,7 +17,11 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.*;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.WallSide;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.pathfinder.PathComputationType;
@@ -25,12 +31,8 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Map;
-import java.util.function.Function;
-
-public class MMeshFenceBlock extends Block implements SimpleWaterloggedBlock {
-
-    public static final MapCodec<MMeshFenceBlock> CODEC = simpleCodec(MMeshFenceBlock::new);
+public class WallBlock extends Block implements SimpleWaterloggedBlock {
+    public static final MapCodec<WallBlock> CODEC = simpleCodec(WallBlock::new);
     public static final BooleanProperty UP;
     public static final EnumProperty<WallSide> EAST;
     public static final EnumProperty<WallSide> NORTH;
@@ -43,22 +45,22 @@ public class MMeshFenceBlock extends Block implements SimpleWaterloggedBlock {
     private static final VoxelShape TEST_SHAPE_POST;
     private static final Map<Direction, VoxelShape> TEST_SHAPES_WALL;
 
-    public @NotNull MapCodec<MMeshFenceBlock> codec() {
+    public @NotNull MapCodec<WallBlock> codec() {
         return CODEC;
     }
 
-    public MMeshFenceBlock(BlockBehaviour.Properties properties) {
+    public WallBlock(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(UP, true).setValue(NORTH, WallSide.NONE).setValue(EAST, WallSide.NONE).setValue(SOUTH, WallSide.NONE).setValue(WEST, WallSide.NONE).setValue(WATERLOGGED, false));
-        this.shapes = this.makeShapes(16.0F, 15.0F);
+        this.shapes = this.makeShapes(16.0F, 14.0F);
         this.collisionShapes = this.makeShapes(24.0F, 24.0F);
     }
 
     private Function<BlockState, VoxelShape> makeShapes(float f, float g) {
-        VoxelShape voxelShape = Block.column(4.0F, 0.0F, f);
-        Map<Direction, VoxelShape> map = Shapes.rotateHorizontal(Block.boxZ(2.0F, 0.0F, g, 0.0F, 9.0F));
-        Map<Direction, VoxelShape> map2 = Shapes.rotateHorizontal(Block.boxZ(2.0F, 0.0F, f, 0.0F, 9.0F));
-        return this.getShapeForEachState(blockState -> {
+        VoxelShape voxelShape = Block.column(8.0F, 0.0F, f);
+        Map<Direction, VoxelShape> map = Shapes.rotateHorizontal(Block.boxZ(6.0F, 0.0F, g, 0.0F, 11.0F));
+        Map<Direction, VoxelShape> map2 = Shapes.rotateHorizontal(Block.boxZ(6.0F, 0.0F, f, 0.0F, 11.0F));
+        return this.getShapeForEachState((blockState) -> {
             VoxelShape voxelShape2 = blockState.getValue(UP) ? voxelShape : Shapes.empty();
 
             for(Map.Entry<Direction, EnumProperty<WallSide>> entry : PROPERTY_BY_DIRECTION.entrySet()) {
@@ -163,39 +165,7 @@ public class MMeshFenceBlock extends Block implements SimpleWaterloggedBlock {
     }
 
     private boolean shouldRaisePost(BlockState blockState, BlockState blockState2, VoxelShape voxelShape) {
-
-        Block block = blockState2.getBlock();
-        boolean bars = block instanceof  IronBarsBlock;
-        boolean match = bars;
-
-        if(match) {
-            var bl_n = blockState.getValue(NORTH) != WallSide.NONE;
-            if(bl_n) {
-                if(!blockState2.getValue(IronBarsBlock.NORTH)) {
-                    match = false;
-                }
-            }
-            var bl_s = blockState.getValue(SOUTH) != WallSide.NONE;
-            if(bl_s) {
-                if(!blockState2.getValue(IronBarsBlock.SOUTH)) {
-                    match = false;
-                }
-            }
-            var bl_e = blockState.getValue(EAST) != WallSide.NONE;
-            if(bl_e) {
-                if(!blockState2.getValue(IronBarsBlock.EAST)) {
-                    match = false;
-                }
-            }
-            var bl_w = blockState.getValue(WEST) != WallSide.NONE;
-            if(bl_w) {
-                if(!blockState2.getValue(IronBarsBlock.WEST)) {
-                    match = false;
-                }
-            }
-        }
-
-        boolean bl = (block instanceof WallBlock && blockState2.getValue(WallBlock.UP)) || (block instanceof MMeshFenceBlock && blockState2.getValue(UP)) || (!match && bars);
+        boolean bl = blockState2.getBlock() instanceof WallBlock && blockState2.getValue(UP);
         if (bl) {
             return true;
         } else {
@@ -238,7 +208,7 @@ public class MMeshFenceBlock extends Block implements SimpleWaterloggedBlock {
     }
 
     protected boolean propagatesSkylightDown(BlockState blockState) {
-        return !blockState.getValue(WATERLOGGED);
+        return !(Boolean)blockState.getValue(WATERLOGGED);
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
@@ -284,7 +254,7 @@ public class MMeshFenceBlock extends Block implements SimpleWaterloggedBlock {
         WEST = BlockStateProperties.WEST_WALL;
         PROPERTY_BY_DIRECTION = ImmutableMap.copyOf(Maps.newEnumMap(Map.of(Direction.NORTH, NORTH, Direction.EAST, EAST, Direction.SOUTH, SOUTH, Direction.WEST, WEST)));
         WATERLOGGED = BlockStateProperties.WATERLOGGED;
-        TEST_SHAPE_POST = Block.column(4.0F, 0.0F, 14.0F);
+        TEST_SHAPE_POST = Block.column(2.0F, 0.0F, 16.0F);
         TEST_SHAPES_WALL = Shapes.rotateHorizontal(Block.boxZ(2.0F, 16.0F, 0.0F, 9.0F));
     }
 }

@@ -8,10 +8,11 @@ import java.util.Collections;
 import java.util.List;
 
 public class MCampfireRenderState extends BlockEntityRenderState {
-    public List<ItemStackRenderState> items = Collections.emptyList();
+    public List<ItemStackRenderState> items;
     public Direction facing;
 
     public MCampfireRenderState() {
+        this.items = Collections.emptyList();
         this.facing = Direction.NORTH;
     }
 }

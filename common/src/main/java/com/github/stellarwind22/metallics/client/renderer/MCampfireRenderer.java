@@ -1,5 +1,6 @@
 package com.github.stellarwind22.metallics.client.renderer;
 
+import com.github.stellarwind22.metallics.object.MCampfireBlock;
 import com.github.stellarwind22.metallics.object.MCampfireBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
@@ -13,7 +14,6 @@ import net.minecraft.client.renderer.state.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemDisplayContext;
-import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -32,10 +32,12 @@ public class MCampfireRenderer implements BlockEntityRenderer<MCampfireBlockEnti
         return new MCampfireRenderState();
     }
 
+    @Override
     public void extractRenderState(MCampfireBlockEntity campfireBlockEntity, MCampfireRenderState campfireRenderState, float f, Vec3 vec3, @Nullable ModelFeatureRenderer.CrumblingOverlay crumblingOverlay) {
-        campfireRenderState.facing = campfireBlockEntity.getBlockState().getValue(CampfireBlock.FACING);
+        BlockEntityRenderer.super.extractRenderState(campfireBlockEntity, campfireRenderState, f, vec3, crumblingOverlay);
+        campfireRenderState.facing = campfireBlockEntity.getBlockState().getValue(MCampfireBlock.FACING);
         int i = (int)campfireBlockEntity.getBlockPos().asLong();
-        campfireRenderState.items = new ArrayList<>();
+        campfireRenderState.items = new ArrayList<>(4);
 
         for(int j = 0; j < campfireBlockEntity.getItems().size(); ++j) {
             ItemStackRenderState itemStackRenderState = new ItemStackRenderState();
@@ -45,6 +47,7 @@ public class MCampfireRenderer implements BlockEntityRenderer<MCampfireBlockEnti
 
     }
 
+    @Override
     public void submit(MCampfireRenderState campfireRenderState, PoseStack poseStack, SubmitNodeCollector submitNodeCollector, CameraRenderState cameraRenderState) {
         Direction direction = campfireRenderState.facing;
         List<ItemStackRenderState> list = campfireRenderState.items;
@@ -64,6 +67,5 @@ public class MCampfireRenderer implements BlockEntityRenderer<MCampfireBlockEnti
                 poseStack.popPose();
             }
         }
-
     }
 }
