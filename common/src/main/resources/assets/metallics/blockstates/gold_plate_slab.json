@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "metallics:block/gold_plate_slab"
+    },
+    "type=double": {
+      "model": "metallics:block/gold_plate"
+    },
+    "type=top": {
+      "model": "metallics:block/gold_plate_slab_top"
+    }
+  }
+}

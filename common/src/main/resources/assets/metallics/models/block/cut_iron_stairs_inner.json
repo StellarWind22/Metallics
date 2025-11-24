@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "metallics:block/cut_iron_plate",
+    "side": "metallics:block/cut_iron_plate",
+    "top": "metallics:block/cut_iron_plate"
+  }
+}

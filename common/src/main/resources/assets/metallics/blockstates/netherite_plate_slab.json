@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "metallics:block/netherite_plate_slab"
+    },
+    "type=double": {
+      "model": "metallics:block/netherite_plate"
+    },
+    "type=top": {
+      "model": "metallics:block/netherite_plate_slab_top"
+    }
+  }
+}
