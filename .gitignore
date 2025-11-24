@@ -36,5 +36,6 @@ tmp/
 # helper scripts & templates
 
 *.py
+*.exe
 _*.json
 _*.png.mcmeta
