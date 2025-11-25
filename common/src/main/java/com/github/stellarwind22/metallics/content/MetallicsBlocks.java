@@ -90,6 +90,10 @@ public class MetallicsBlocks {
             .lightLevel((blockState) -> blockState.getValue(BlockStateProperties.LIT)? 15 : 0)
             .noOcclusion().requiresCorrectToolForDrops();
 
+    private static final MBlockProps doorProps = new MBlockProps()
+            .pushReaction(PushReaction.DESTROY)
+            .noOcclusion();
+
 
     //Soul
     public static RegistrySupplier<Block> SOUL_JACK_O_LANTERN;
@@ -163,6 +167,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CUT_GOLD_BLOCK;
     public static RegistrySupplier<Block> CUT_GOLD_STAIRS;
     public static RegistrySupplier<Block> CUT_GOLD_SLAB;
+    public static RegistrySupplier<Block> CHISELED_GOLD_BLOCK;
     public static RegistrySupplier<IronBarsBlock> GOLD_MESH;
     public static RegistrySupplier<MMeshFenceBlock> GOLD_MESH_FENCE;
     public static RegistrySupplier<MGrateBlock> GOLD_GRATE;
@@ -290,6 +295,7 @@ public class MetallicsBlocks {
         CUT_GOLD_BLOCK = registerBlock("cut_gold_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
         CUT_GOLD_STAIRS = registerBlock("cut_gold_stairs", new MBlock<>(props -> new StairBlock(Blocks.GOLD_BLOCK.defaultBlockState(), props), Optional.of(blockProps.strength(GLD_GRT).getCopy())));
         CUT_GOLD_SLAB = registerBlock("cut_gold_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
+        CHISELED_GOLD_BLOCK = registerBlock("chiseled_gold_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
         GOLD_MESH = registerBlock("gold_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(GLD_MSH).getCopy())));
         GOLD_MESH_FENCE = registerBlock("gold_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(GLD_MSH).getCopy())));
         GOLD_GRATE = registerBlock("gold_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
