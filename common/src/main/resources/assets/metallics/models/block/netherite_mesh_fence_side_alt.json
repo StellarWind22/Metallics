@@ -3,6 +3,6 @@
   "textures": {
     "mesh": "metallics:block/netherite_mesh_short",
     "post": "metallics:block/netherite_misc",
-    "particle": "metallics:block/netherite_plate_block"
+    "particle": "metallics:block/netherite_plated_block"
   }
 }

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "metallics:block/gold_plate_block",
-    "side": "metallics:block/double_gold_plate",
-    "top": "metallics:block/gold_plate_block"
-  }
-}

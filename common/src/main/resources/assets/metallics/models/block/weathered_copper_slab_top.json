@@ -2,7 +2,7 @@
   "parent": "minecraft:block/slab_top",
   "textures": {
     "bottom": "minecraft:block/weathered_copper",
-    "side": "metallics:block/weathered_double_copper_plate",
+    "side": "metallics:block/weathered_double_copper_block",
     "top": "minecraft:block/weathered_copper"
   }
 }

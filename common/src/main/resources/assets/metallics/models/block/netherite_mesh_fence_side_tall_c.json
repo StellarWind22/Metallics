@@ -3,6 +3,6 @@
   "textures": {
     "post": "metallics:block/netherite_misc",
     "mesh": "metallics:block/netherite_grate",
-    "particle": "metallics:block/netherite_plate_block"
+    "particle": "metallics:block/netherite_plated_block"
   }
 }

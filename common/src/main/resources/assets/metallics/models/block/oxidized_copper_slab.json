@@ -2,7 +2,7 @@
   "parent": "minecraft:block/slab",
   "textures": {
     "bottom": "minecraft:block/oxidized_copper",
-    "side": "metallics:block/oxidized_double_copper_plate",
+    "side": "metallics:block/oxidized_double_copper_block",
     "top": "minecraft:block/oxidized_copper"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "metallics:block/netherite_plate_block"
+    "all": "metallics:block/cut_iron_block"
   }
 }

@@ -2,6 +2,6 @@
   "parent": "metallics:block/template_mesh_fence_post_alt_tall",
   "textures": {
     "edge": "metallics:block/netherite_misc",
-    "particle": "metallics:block/netherite_plate_block"
+    "particle": "metallics:block/netherite_plated_block"
   }
 }

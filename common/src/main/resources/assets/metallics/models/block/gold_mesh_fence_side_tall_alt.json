@@ -3,6 +3,6 @@
   "textures": {
     "mesh": "metallics:block/gold_grate",
     "post": "metallics:block/gold_misc",
-    "particle": "metallics:block/gold_plate_block"
+    "particle": "metallics:block/gold_plated_block"
   }
 }

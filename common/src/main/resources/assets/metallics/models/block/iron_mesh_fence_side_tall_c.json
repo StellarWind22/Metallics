@@ -3,6 +3,6 @@
   "textures": {
     "post": "metallics:block/iron_misc",
     "mesh": "metallics:block/iron_grate",
-    "particle": "metallics:block/iron_plate_block"
+    "particle": "metallics:block/iron_plated_block"
   }
 }

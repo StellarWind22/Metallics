@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cube_column",
   "textures": {
     "end": "minecraft:block/copper_block",
-    "side": "metallics:block/double_copper_plate"
+    "side": "metallics:block/double_copper_block"
   }
 }

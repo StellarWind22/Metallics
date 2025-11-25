@@ -72,6 +72,10 @@ public class MetallicsBlocks {
             .isSuffocating(MBlockProps::never)
             .isViewBlocking(MBlockProps::never);
 
+    private static final MBlockProps blockProps = new MBlockProps()
+            .sound(SoundType.COPPER)
+            .requiresCorrectToolForDrops();
+
     private static final MBlockProps campfireProps = new MBlockProps()
             .mapColor(MapColor.PODZOL)
             .instrument(NoteBlockInstrument.BASS)
@@ -139,12 +143,12 @@ public class MetallicsBlocks {
     public static WeatheringCopperBlocks COPPER_LAMPS;
 
     //Iron
-    public static RegistrySupplier<Block> IRON_PLATE_BLOCK;
-    public static RegistrySupplier<Block> IRON_PLATE_SLAB;
-    public static RegistrySupplier<Block> CUT_IRON_PLATE;
+    public static RegistrySupplier<Block> IRON_PLATED_BLOCK;
+    public static RegistrySupplier<Block> IRON_SLAB;
+    public static RegistrySupplier<Block> CUT_IRON_BLOCK;
     public static RegistrySupplier<Block> CUT_IRON_STAIRS;
     public static RegistrySupplier<Block> CUT_IRON_SLAB;
-    public static RegistrySupplier<Block> CHISELED_IRON_PLATE;
+    public static RegistrySupplier<Block> CHISELED_IRON_BLOCK;
     public static RegistrySupplier<IronBarsBlock> IRON_MESH;
     public static RegistrySupplier<Block> IRON_MESH_FENCE;
     public static RegistrySupplier<Block> IRON_GRATE;
@@ -154,9 +158,9 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> GOLD_CHAIN;
     public static RegistrySupplier<Block> GOLD_LANTERN;
     public static RegistrySupplier<IronBarsBlock> GOLD_BARS;
-    public static RegistrySupplier<Block> GOLD_PLATE_BLOCK;
-    public static RegistrySupplier<Block> GOLD_PLATE_SLAB;
-    public static RegistrySupplier<Block> CUT_GOLD_PLATE;
+    public static RegistrySupplier<Block> GOLD_PLATED_BLOCK;
+    public static RegistrySupplier<Block> GOLD_SLAB;
+    public static RegistrySupplier<Block> CUT_GOLD_BLOCK;
     public static RegistrySupplier<Block> CUT_GOLD_STAIRS;
     public static RegistrySupplier<Block> CUT_GOLD_SLAB;
     public static RegistrySupplier<IronBarsBlock> GOLD_MESH;
@@ -173,9 +177,9 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> NETHERITE_CHAIN;
     public static RegistrySupplier<Block> NETHERITE_LANTERN;
     public static RegistrySupplier<IronBarsBlock> NETHERITE_BARS;
-    public static RegistrySupplier<Block> NETHERITE_PLATE_BLOCK;
-    public static RegistrySupplier<Block> NETHERITE_PLATE_SLAB;
-    public static RegistrySupplier<Block> CUT_NETHERITE_PLATE;
+    public static RegistrySupplier<Block> NETHERITE_PLATED_BLOCK;
+    public static RegistrySupplier<Block> NETHERITE_SLAB;
+    public static RegistrySupplier<Block> CUT_NETHERITE_BLOCK;
     public static RegistrySupplier<Block> CUT_NETHERITE_STAIRS;
     public static RegistrySupplier<Block> CUT_NETHERITE_SLAB;
     public static RegistrySupplier<IronBarsBlock> NETHERITE_MESH;
@@ -235,14 +239,14 @@ public class MetallicsBlocks {
         WAXED_WEATHERED_COPPER_MESH = registerBlock("waxed_weathered_copper_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
         WAXED_OXIDIZED_COPPER_MESH = registerBlock("waxed_oxidized_copper_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
 
-        COPPER_SLAB = registerBlock("copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(grateProps.strength(CPR_GRT).getCopy())));
-        EXPOSED_COPPER_SLAB = registerBlock("exposed_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(grateProps.strength(CPR_GRT).getCopy())));
-        WEATHERED_COPPER_SLAB = registerBlock("weathered_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.WEATHERED, props), Optional.of(grateProps.strength(CPR_GRT).getCopy())));
-        OXIDIZED_COPPER_SLAB = registerBlock("oxidized_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.OXIDIZED, props), Optional.of(grateProps.strength(CPR_GRT).getCopy())));
-        WAXED_COPPER_SLAB = registerBlock("waxed_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(CPR_GRT).getCopy())));
-        WAXED_EXPOSED_COPPER_SLAB = registerBlock("waxed_exposed_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(CPR_GRT).getCopy())));
-        WAXED_WEATHERED_COPPER_SLAB = registerBlock("waxed_weathered_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(CPR_GRT).getCopy())));
-        WAXED_OXIDIZED_COPPER_SLAB = registerBlock("waxed_oxidized_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(CPR_GRT).getCopy())));
+        COPPER_SLAB = registerBlock("copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
+        EXPOSED_COPPER_SLAB = registerBlock("exposed_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
+        WEATHERED_COPPER_SLAB = registerBlock("weathered_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.WEATHERED, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
+        OXIDIZED_COPPER_SLAB = registerBlock("oxidized_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.OXIDIZED, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
+        WAXED_COPPER_SLAB = registerBlock("waxed_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(CPR_GRT).getCopy())));
+        WAXED_EXPOSED_COPPER_SLAB = registerBlock("waxed_exposed_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(CPR_GRT).getCopy())));
+        WAXED_WEATHERED_COPPER_SLAB = registerBlock("waxed_weathered_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(CPR_GRT).getCopy())));
+        WAXED_OXIDIZED_COPPER_SLAB = registerBlock("waxed_oxidized_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(CPR_GRT).getCopy())));
 
         COPPER_MESH_FENCE = registerBlock("copper_mesh_fence", new MBlock<>(props -> new MWeatheringMeshFenceBlock(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
         EXPOSED_COPPER_MESH_FENCE = registerBlock("exposed_copper_mesh_fence", new MBlock<>(props -> new MWeatheringMeshFenceBlock(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
@@ -266,12 +270,12 @@ public class MetallicsBlocks {
         WAXED_OXIDIZED_COPPER_LAMP = registerBlock("waxed_oxidized_copper_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
 
         //Iron
-        IRON_PLATE_BLOCK = registerBlock("iron_plate_block", new MBlock<>(Block::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
-        IRON_PLATE_SLAB = registerBlock("iron_plate_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
-        CUT_IRON_PLATE = registerBlock("cut_iron_plate", new MBlock<>(Block::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
-        CUT_IRON_STAIRS = registerBlock("cut_iron_stairs", new MBlock<>(props -> new StairBlock(Blocks.IRON_BLOCK.defaultBlockState(), props), Optional.of(grateProps.strength(IRN_GRT).getCopy())));
-        CUT_IRON_SLAB = registerBlock("cut_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
-        CHISELED_IRON_PLATE = registerBlock("chiseled_iron_plate", new MBlock<>(Block::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
+        IRON_PLATED_BLOCK = registerBlock("iron_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        IRON_SLAB = registerBlock("iron_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        CUT_IRON_BLOCK = registerBlock("cut_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        CUT_IRON_STAIRS = registerBlock("cut_iron_stairs", new MBlock<>(props -> new StairBlock(Blocks.IRON_BLOCK.defaultBlockState(), props), Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        CUT_IRON_SLAB = registerBlock("cut_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        CHISELED_IRON_BLOCK = registerBlock("chiseled_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         IRON_MESH = registerBlock("iron_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
         IRON_MESH_FENCE = registerBlock("iron_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
         IRON_GRATE = registerBlock("iron_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
@@ -281,11 +285,11 @@ public class MetallicsBlocks {
         GOLD_CHAIN = registerBlock("gold_chain", new MBlock<>(ChainBlock::new, Optional.of(chainProps.getCopy())));
         GOLD_LANTERN = registerBlock("gold_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(GLD_LNT).getCopy())));
         GOLD_BARS = registerBlock("gold_bars", new MBlock<>(IronBarsBlock::new, Optional.of(barsProps.strength(GLD_STR).getCopy())));
-        GOLD_PLATE_BLOCK = registerBlock("gold_plate_block", new MBlock<>(Block::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
-        GOLD_PLATE_SLAB = registerBlock("gold_plate_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
-        CUT_GOLD_PLATE = registerBlock("cut_gold_plate", new MBlock<>(Block::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
-        CUT_GOLD_STAIRS = registerBlock("cut_gold_stairs", new MBlock<>(props -> new StairBlock(Blocks.GOLD_BLOCK.defaultBlockState(), props), Optional.of(grateProps.strength(GLD_GRT).getCopy())));
-        CUT_GOLD_SLAB = registerBlock("cut_gold_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
+        GOLD_PLATED_BLOCK = registerBlock("gold_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
+        GOLD_SLAB = registerBlock("gold_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
+        CUT_GOLD_BLOCK = registerBlock("cut_gold_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
+        CUT_GOLD_STAIRS = registerBlock("cut_gold_stairs", new MBlock<>(props -> new StairBlock(Blocks.GOLD_BLOCK.defaultBlockState(), props), Optional.of(blockProps.strength(GLD_GRT).getCopy())));
+        CUT_GOLD_SLAB = registerBlock("cut_gold_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
         GOLD_MESH = registerBlock("gold_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(GLD_MSH).getCopy())));
         GOLD_MESH_FENCE = registerBlock("gold_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(GLD_MSH).getCopy())));
         GOLD_GRATE = registerBlock("gold_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
@@ -300,11 +304,11 @@ public class MetallicsBlocks {
         NETHERITE_CHAIN = registerBlock("netherite_chain", new MBlock<>(ChainBlock::new, Optional.of(chainProps.getCopy())));
         NETHERITE_LANTERN = registerBlock("netherite_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(NTR_LNT).getCopy())));
         NETHERITE_BARS = registerBlock("netherite_bars", new MBlock<>(IronBarsBlock::new, Optional.of(barsProps.strength(NTR_STR).getCopy())));
-        NETHERITE_PLATE_BLOCK = registerBlock("netherite_plate_block", new MBlock<>(Block::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
-        NETHERITE_PLATE_SLAB = registerBlock("netherite_plate_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
-        CUT_NETHERITE_PLATE = registerBlock("cut_netherite_plate", new MBlock<>(Block::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
-        CUT_NETHERITE_STAIRS = registerBlock("cut_netherite_stairs", new MBlock<>(props -> new StairBlock(Blocks.NETHERITE_BLOCK.defaultBlockState(), props), Optional.of(grateProps.strength(NTR_GRT).getCopy())));
-        CUT_NETHERITE_SLAB = registerBlock("cut_netherite_slab", new MBlock<>(SlabBlock::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
+        NETHERITE_PLATED_BLOCK = registerBlock("netherite_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
+        NETHERITE_SLAB = registerBlock("netherite_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
+        CUT_NETHERITE_BLOCK = registerBlock("cut_netherite_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
+        CUT_NETHERITE_STAIRS = registerBlock("cut_netherite_stairs", new MBlock<>(props -> new StairBlock(Blocks.NETHERITE_BLOCK.defaultBlockState(), props), Optional.of(blockProps.strength(NTR_GRT).getCopy())));
+        CUT_NETHERITE_SLAB = registerBlock("cut_netherite_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
         NETHERITE_MESH = registerBlock("netherite_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
         NETHERITE_MESH_FENCE = registerBlock("netherite_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
         NETHERITE_GRATE = registerBlock("netherite_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));

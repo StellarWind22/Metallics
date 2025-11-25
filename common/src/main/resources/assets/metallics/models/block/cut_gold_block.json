@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "metallics:block/chiseled_iron_plate"
+    "all": "metallics:block/cut_gold_block"
   }
 }
