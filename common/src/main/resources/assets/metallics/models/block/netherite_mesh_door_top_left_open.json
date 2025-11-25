@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "metallics:block/netherite_mesh_door_bottom",
+    "top": "metallics:block/netherite_mesh_door_top"
+  }
+}

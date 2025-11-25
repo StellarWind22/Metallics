@@ -13,6 +13,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -147,30 +148,30 @@ public class MetallicsBlocks {
     public static WeatheringCopperBlocks COPPER_LAMPS;
 
     //Iron
+    public static RegistrySupplier<IronBarsBlock> IRON_MESH;
+    public static RegistrySupplier<Block> IRON_MESH_FENCE;
+    public static RegistrySupplier<Block> IRON_GRATE;
     public static RegistrySupplier<Block> IRON_PLATED_BLOCK;
     public static RegistrySupplier<Block> IRON_SLAB;
     public static RegistrySupplier<Block> CUT_IRON_BLOCK;
     public static RegistrySupplier<Block> CUT_IRON_STAIRS;
     public static RegistrySupplier<Block> CUT_IRON_SLAB;
     public static RegistrySupplier<Block> CHISELED_IRON_BLOCK;
-    public static RegistrySupplier<IronBarsBlock> IRON_MESH;
-    public static RegistrySupplier<Block> IRON_MESH_FENCE;
-    public static RegistrySupplier<Block> IRON_GRATE;
     public static RegistrySupplier<Block> IRON_LAMP;
 
     //Gold
     public static RegistrySupplier<Block> GOLD_CHAIN;
     public static RegistrySupplier<Block> GOLD_LANTERN;
     public static RegistrySupplier<IronBarsBlock> GOLD_BARS;
+    public static RegistrySupplier<IronBarsBlock> GOLD_MESH;
+    public static RegistrySupplier<MMeshFenceBlock> GOLD_MESH_FENCE;
+    public static RegistrySupplier<MGrateBlock> GOLD_GRATE;
     public static RegistrySupplier<Block> GOLD_PLATED_BLOCK;
     public static RegistrySupplier<Block> GOLD_SLAB;
     public static RegistrySupplier<Block> CUT_GOLD_BLOCK;
     public static RegistrySupplier<Block> CUT_GOLD_STAIRS;
     public static RegistrySupplier<Block> CUT_GOLD_SLAB;
     public static RegistrySupplier<Block> CHISELED_GOLD_BLOCK;
-    public static RegistrySupplier<IronBarsBlock> GOLD_MESH;
-    public static RegistrySupplier<MMeshFenceBlock> GOLD_MESH_FENCE;
-    public static RegistrySupplier<MGrateBlock> GOLD_GRATE;
 
     public static RegistrySupplier<Block> GOLD_TORCH;
     public static RegistrySupplier<Block> GOLD_WALL_TORCH;
@@ -182,14 +183,16 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> NETHERITE_CHAIN;
     public static RegistrySupplier<Block> NETHERITE_LANTERN;
     public static RegistrySupplier<IronBarsBlock> NETHERITE_BARS;
+    public static RegistrySupplier<DoorBlock> NETHERITE_DOOR;
+    public static RegistrySupplier<IronBarsBlock> NETHERITE_MESH;
+    public static RegistrySupplier<MMeshFenceBlock> NETHERITE_MESH_FENCE;
+    public static RegistrySupplier<DoorBlock> NETHERITE_MESH_DOOR;
+    public static RegistrySupplier<MGrateBlock> NETHERITE_GRATE;
     public static RegistrySupplier<Block> NETHERITE_PLATED_BLOCK;
     public static RegistrySupplier<Block> NETHERITE_SLAB;
     public static RegistrySupplier<Block> CUT_NETHERITE_BLOCK;
     public static RegistrySupplier<Block> CUT_NETHERITE_STAIRS;
     public static RegistrySupplier<Block> CUT_NETHERITE_SLAB;
-    public static RegistrySupplier<IronBarsBlock> NETHERITE_MESH;
-    public static RegistrySupplier<MMeshFenceBlock> NETHERITE_MESH_FENCE;
-    public static RegistrySupplier<MGrateBlock> NETHERITE_GRATE;
 
     public static RegistrySupplier<Block> NETHERITE_TORCH;
     public static RegistrySupplier<Block> NETHERITE_WALL_TORCH;
@@ -315,8 +318,10 @@ public class MetallicsBlocks {
         CUT_NETHERITE_BLOCK = registerBlock("cut_netherite_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
         CUT_NETHERITE_STAIRS = registerBlock("cut_netherite_stairs", new MBlock<>(props -> new StairBlock(Blocks.NETHERITE_BLOCK.defaultBlockState(), props), Optional.of(blockProps.strength(NTR_GRT).getCopy())));
         CUT_NETHERITE_SLAB = registerBlock("cut_netherite_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
+        NETHERITE_DOOR = registerBlock("netherite_door", new MBlock<>(props -> new DoorBlock(BlockSetType.IRON, props), Optional.of(doorProps.strength(NTR_GRT).getCopy())));
         NETHERITE_MESH = registerBlock("netherite_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
         NETHERITE_MESH_FENCE = registerBlock("netherite_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
+        NETHERITE_MESH_DOOR = registerBlock("netherite_mesh_door", new MBlock<>(props -> new DoorBlock(BlockSetType.IRON, props), Optional.of(doorProps.strength(NTR_GRT).getCopy())));
         NETHERITE_GRATE = registerBlock("netherite_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
 
         NETHERITE_TORCH = registerBlock("netherite_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.NETHERITE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
