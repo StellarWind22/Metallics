@@ -161,7 +161,7 @@ public class MetallicsItems {
         //Iron
         IRON_PLATED_BLOCK = registerItem("iron_plated_block", props -> new BlockItem(MetallicsBlocks.IRON_PLATED_BLOCK.get(), props));
         IRON_SLAB = registerItem("iron_slab", props -> new BlockItem(MetallicsBlocks.IRON_SLAB.get(), props));
-        CUT_IRON_BLOCK= registerItem("cut_iron_plate", props -> new BlockItem(MetallicsBlocks.CUT_IRON_BLOCK.get(), props));
+        CUT_IRON_BLOCK= registerItem("cut_iron_block", props -> new BlockItem(MetallicsBlocks.CUT_IRON_BLOCK.get(), props));
         CUT_IRON_STAIRS = registerItem("cut_iron_stairs", props -> new BlockItem(MetallicsBlocks.CUT_IRON_STAIRS.get(), props));
         CUT_IRON_SLAB = registerItem("cut_iron_slab", props -> new BlockItem(MetallicsBlocks.CUT_IRON_SLAB.get(), props));
         CHISELED_IRON_BLOCK = registerItem("chiseled_iron_block", props -> new BlockItem(MetallicsBlocks.CHISELED_IRON_BLOCK.get(), props));
@@ -177,7 +177,7 @@ public class MetallicsItems {
         GOLD_MESH_FENCE = registerItem("gold_mesh_fence", props -> new BlockItem(MetallicsBlocks.GOLD_MESH_FENCE.get(), props));
         GOLD_PLATED_BLOCK = registerItem("gold_plated_block", props -> new BlockItem(MetallicsBlocks.GOLD_PLATED_BLOCK.get(), props));
         GOLD_SLAB = registerItem("gold_slab", props -> new BlockItem(MetallicsBlocks.GOLD_SLAB.get(), props));
-        CUT_GOLD_BLOCK= registerItem("cut_gold_plate", props -> new BlockItem(MetallicsBlocks.CUT_GOLD_BLOCK.get(), props));
+        CUT_GOLD_BLOCK = registerItem("cut_gold_block", props -> new BlockItem(MetallicsBlocks.CUT_GOLD_BLOCK.get(), props));
         CUT_GOLD_STAIRS = registerItem("cut_gold_stairs", props -> new BlockItem(MetallicsBlocks.CUT_GOLD_STAIRS.get(), props));
         CUT_GOLD_SLAB = registerItem("cut_gold_slab", props -> new BlockItem(MetallicsBlocks.CUT_GOLD_SLAB.get(), props));
         GOLD_LANTERN = registerItem("gold_lantern", props -> new BlockItem(MetallicsBlocks.GOLD_LANTERN.get(), props));
@@ -194,7 +194,7 @@ public class MetallicsItems {
         NETHERITE_BARS = registerItem("netherite_bars", props -> new BlockItem(MetallicsBlocks.NETHERITE_BARS.get(), props.fireResistant()));
         NETHERITE_PLATED_BLOCK = registerItem("netherite_plated_block", props -> new BlockItem(MetallicsBlocks.NETHERITE_PLATED_BLOCK.get(), props.fireResistant()));
         NETHERITE_SLAB = registerItem("netherite_slab", props -> new BlockItem(MetallicsBlocks.NETHERITE_SLAB.get(), props));
-        CUT_NETHERITE_BLOCK= registerItem("cut_netherite_plate", props -> new BlockItem(MetallicsBlocks.CUT_NETHERITE_BLOCK.get(), props.fireResistant()));
+        CUT_NETHERITE_BLOCK= registerItem("cut_netherite_block", props -> new BlockItem(MetallicsBlocks.CUT_NETHERITE_BLOCK.get(), props.fireResistant()));
         CUT_NETHERITE_STAIRS = registerItem("cut_netherite_stairs", props -> new BlockItem(MetallicsBlocks.CUT_NETHERITE_STAIRS.get(), props));
         CUT_NETHERITE_SLAB = registerItem("cut_netherite_slab", props -> new BlockItem(MetallicsBlocks.CUT_NETHERITE_SLAB.get(), props));
         NETHERITE_LANTERN = registerItem("netherite_lantern", props -> new BlockItem(MetallicsBlocks.NETHERITE_LANTERN.get(), props.fireResistant()));

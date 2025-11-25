@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "metallics:block/cut_netherite_plate"
+    "model": "metallics:block/gold_plated_block"
   }
 }

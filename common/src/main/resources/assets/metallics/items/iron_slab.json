@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "metallics:block/gold_plate_slab"
+    "model": "metallics:block/iron_slab"
   }
 }

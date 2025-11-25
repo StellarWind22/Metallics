@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "metallics:block/gold_plate_block"
+    "model": "metallics:block/cut_gold_block"
   }
 }
