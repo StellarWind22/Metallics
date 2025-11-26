@@ -109,6 +109,7 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> CUT_NETHERITE_BLOCK;
     public static RegistrySupplier<BlockItem> CUT_NETHERITE_STAIRS;
     public static RegistrySupplier<BlockItem> CUT_NETHERITE_SLAB;
+    public static RegistrySupplier<BlockItem> CHISELED_NETHERITE_BLOCK;
     public static RegistrySupplier<DoubleHighBlockItem> NETHERITE_DOOR;
     public static RegistrySupplier<BlockItem> NETHERITE_MESH;
     public static RegistrySupplier<BlockItem> NETHERITE_MESH_FENCE;
@@ -223,6 +224,7 @@ public class MetallicsItems {
         CUT_NETHERITE_BLOCK= registerItem("cut_netherite_block", props -> new BlockItem(MetallicsBlocks.CUT_NETHERITE_BLOCK.get(), props.fireResistant()));
         CUT_NETHERITE_STAIRS = registerItem("cut_netherite_stairs", props -> new BlockItem(MetallicsBlocks.CUT_NETHERITE_STAIRS.get(), props));
         CUT_NETHERITE_SLAB = registerItem("cut_netherite_slab", props -> new BlockItem(MetallicsBlocks.CUT_NETHERITE_SLAB.get(), props));
+        CHISELED_NETHERITE_BLOCK = registerItem("chiseled_netherite_block", props -> new BlockItem(MetallicsBlocks.CHISELED_NETHERITE_BLOCK.get(), props));
 
         NETHERITE_TORCH = registerItem("netherite_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.NETHERITE_TORCH.get(), MetallicsBlocks.NETHERITE_WALL_TORCH.get(), Direction.DOWN, props));
         NETHERITE_CAMPFIRE = registerItem("netherite_campfire", props -> new BlockItem(MetallicsBlocks.NETHERITE_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));

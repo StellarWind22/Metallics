@@ -205,6 +205,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CUT_NETHERITE_BLOCK;
     public static RegistrySupplier<Block> CUT_NETHERITE_STAIRS;
     public static RegistrySupplier<Block> CUT_NETHERITE_SLAB;
+    public static RegistrySupplier<Block> CHISELED_NETHERITE_BLOCK;
 
     public static RegistrySupplier<Block> NETHERITE_TORCH;
     public static RegistrySupplier<Block> NETHERITE_WALL_TORCH;
@@ -339,7 +340,8 @@ public class MetallicsBlocks {
         CUT_NETHERITE_BLOCK = registerBlock("cut_netherite_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
         CUT_NETHERITE_STAIRS = registerBlock("cut_netherite_stairs", new MBlock<>(props -> new StairBlock(Blocks.NETHERITE_BLOCK.defaultBlockState(), props), Optional.of(blockProps.strength(NTR_GRT).getCopy())));
         CUT_NETHERITE_SLAB = registerBlock("cut_netherite_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
-        NETHERITE_DOOR = registerBlock("netherite_door", new MBlock<>(props -> new DoorBlock(BlockSetType.IRON, props), Optional.of(doorProps.strength(NTR_GRT).getCopy())));
+        CHISELED_NETHERITE_BLOCK = registerBlock("chiseled_netherite_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
+        NETHERITE_DOOR = registerBlock("netherite_door", new MBlock<>(props -> new DoorBlock(BlockSetType.IRON, props), Optional.of(doorProps.strength(NTR_GRT).pushReaction(PushReaction.BLOCK).getCopy())));
         NETHERITE_MESH = registerBlock("netherite_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
         NETHERITE_MESH_FENCE = registerBlock("netherite_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
         NETHERITE_MESH_DOOR = registerBlock("netherite_mesh_door", new MBlock<>(props -> new DoorBlock(BlockSetType.IRON, props), Optional.of(doorProps.strength(NTR_GRT).getCopy())));
