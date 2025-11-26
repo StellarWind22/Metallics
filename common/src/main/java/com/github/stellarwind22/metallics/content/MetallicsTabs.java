@@ -21,14 +21,14 @@ public class MetallicsTabs {
 
         //Register stuff here ▼▼▼
 
-        TAB = registerTab("main", CreativeTabRegistry.create(Component.translatable("tab." + Metallics.MOD_ID + ".main"), () -> new ItemStack(new DeferredItem<>(MetallicsItems.GOLD_LAMP))));
+        TAB = registerTab(CreativeTabRegistry.create(Component.translatable("tab." + Metallics.MOD_ID + ".main"), () -> new ItemStack(new DeferredItem<>(MetallicsItems.GOLD_LAMP))));
 
         //Register stuff here ▲▲▲
 
         TABS.register();
     }
 
-    private static RegistrySupplier<CreativeModeTab> registerTab(String name, CreativeModeTab tab) {
-        return TABS.register(name, () -> tab);
+    private static RegistrySupplier<CreativeModeTab> registerTab(CreativeModeTab tab) {
+        return TABS.register("main", () -> tab);
     }
 }

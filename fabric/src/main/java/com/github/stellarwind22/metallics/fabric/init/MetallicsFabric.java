@@ -3,6 +3,7 @@ package com.github.stellarwind22.metallics.fabric.init;
 import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
 import com.github.stellarwind22.metallics.content.MetallicsBlocks;
 import com.github.stellarwind22.metallics.init.Metallics;
+import com.github.stellarwind22.metallics.object.MBrushingBlockEntity;
 import com.github.stellarwind22.metallics.object.MCampfireBlockEntity;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
@@ -28,6 +29,12 @@ public final class MetallicsFabric implements ModInitializer {
                 MetallicsBlocks.COPPER_CAMPFIRE.get(),
                 MetallicsBlocks.GOLD_CAMPFIRE.get(),
                 MetallicsBlocks.NETHERITE_CAMPFIRE.get()
+        );
+
+        MetallicsBlockEntityTypes.BRUSHABLE_BLOCK = registerBlockEntity(
+                "brushable_block",
+                MBrushingBlockEntity::new,
+                MetallicsBlocks.IRON_PLATED_BLOCK.get()
         );
 
         MetallicsBlocks.oxidizationInit();

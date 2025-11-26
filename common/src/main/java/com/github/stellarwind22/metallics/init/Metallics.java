@@ -20,6 +20,7 @@ public final class Metallics {
         MetallicsParticleTypes.init();
         MetallicsBlocks.preInit();
         MetallicsBlocks.init();
+        MetallicsBlocks.postInit();
         MetallicsItems.init();
 
         LOGGER.info("Metallics tabs/blocks/blockEntities/items registered!");
