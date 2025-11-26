@@ -98,8 +98,18 @@ public class MetallicsBlocks {
 
     private static final MBlockProps doorProps = new MBlockProps()
             .pushReaction(PushReaction.DESTROY)
-            .noOcclusion()
-            .sound(SoundType.COPPER);
+            .noOcclusion().requiresCorrectToolForDrops()
+            .isSuffocating(MBlockProps::never)
+            .isViewBlocking(MBlockProps::never)
+            .sound(SoundType.COPPER)
+            .isValidSpawn(MBlockProps::never);
+
+    private static final MBlockProps trapdoorProps = new MBlockProps()
+            .noOcclusion().requiresCorrectToolForDrops()
+            .isSuffocating(MBlockProps::never)
+            .isViewBlocking(MBlockProps::never)
+            .sound(SoundType.COPPER)
+            .isValidSpawn(MBlockProps::never);
 
 
     //Soul
@@ -182,9 +192,11 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> GOLD_CHAIN;
     public static RegistrySupplier<Block> GOLD_LANTERN;
     public static RegistrySupplier<IronBarsBlock> GOLD_BARS;
-    public static RegistrySupplier<IronBarsBlock> GOLD_MESH;
     public static RegistrySupplier<DoorBlock> GOLD_DOOR;
+    public static RegistrySupplier<TrapDoorBlock> GOLD_TRAPDOOR;
+    public static RegistrySupplier<IronBarsBlock> GOLD_MESH;
     public static RegistrySupplier<MMeshFenceBlock> GOLD_MESH_FENCE;
+    public static RegistrySupplier<TrapDoorBlock> GOLD_MESH_TRAPDOOR;
     public static RegistrySupplier<DoorBlock> GOLD_MESH_DOOR;
     public static RegistrySupplier<MGrateBlock> GOLD_GRATE;
 
@@ -208,8 +220,10 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> NETHERITE_LANTERN;
     public static RegistrySupplier<IronBarsBlock> NETHERITE_BARS;
     public static RegistrySupplier<DoorBlock> NETHERITE_DOOR;
+    public static RegistrySupplier<TrapDoorBlock> NETHERITE_TRAPDOOR;
     public static RegistrySupplier<IronBarsBlock> NETHERITE_MESH;
     public static RegistrySupplier<MMeshFenceBlock> NETHERITE_MESH_FENCE;
+    public static RegistrySupplier<TrapDoorBlock> NETHERITE_MESH_TRAPDOOR;
     public static RegistrySupplier<DoorBlock> NETHERITE_MESH_DOOR;
     public static RegistrySupplier<MGrateBlock> NETHERITE_GRATE;
     public static RegistrySupplier<Block> NETHERITE_PLATED_BLOCK;

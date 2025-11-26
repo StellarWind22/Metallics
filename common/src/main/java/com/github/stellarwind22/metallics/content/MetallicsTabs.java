@@ -21,7 +21,7 @@ public class MetallicsTabs {
 
         //Register stuff here ▼▼▼
 
-        TAB = registerTab("main", CreativeTabRegistry.create(Component.translatable("tab." + Metallics.MOD_ID + ".main"), () -> new ItemStack(new DeferredItem<>(MetallicsItems.GOLD_GRATE))));
+        TAB = registerTab("main", CreativeTabRegistry.create(Component.translatable("tab." + Metallics.MOD_ID + ".main"), () -> new ItemStack(new DeferredItem<>(MetallicsItems.GOLD_LAMP))));
 
         //Register stuff here ▲▲▲
 

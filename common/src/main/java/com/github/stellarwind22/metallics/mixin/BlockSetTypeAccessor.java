@@ -10,7 +10,7 @@ import java.util.Map;
 @Mixin(BlockSetType.class)
 public interface BlockSetTypeAccessor {
 
-    @Accessor("TYPES") @Mutable
+    @Accessor("TYPES")
     static Map<String, BlockSetType> metallics$getTypes() { throw new AssertionError(); }
 
     @Accessor("TYPES") @Mutable
