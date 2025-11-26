@@ -14,5 +14,5 @@ public interface BlockSetTypeAccessor {
     static Map<String, BlockSetType> metallics$getTypes() { throw new AssertionError(); }
 
     @Accessor("TYPES") @Mutable
-    static void metallics$setTypes(Map<String, BlockSetType> types) { throw new AssertionError(); };
+    static void metallics$setTypes(Map<String, BlockSetType> types) { throw new AssertionError(); }
 }
