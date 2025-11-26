@@ -12,7 +12,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
 
 public interface MBrushable {
 
@@ -23,8 +22,6 @@ public interface MBrushable {
     Block getBrushableBlock();
 
     ResourceLocation getTurnsInto();
-
-    IntegerProperty getDusted(BlockState state);
 
     SoundEvent brushSound();
 
@@ -49,7 +46,7 @@ public interface MBrushable {
         }
     }
 
-    default void onPlaceBrushable(BlockState blockState, Level level, BlockPos blockPos, BlockState blockState2, boolean bl) {
+    default void onPlaceBrushable(Level level, BlockPos blockPos) {
         level.scheduleTick(blockPos, this.getBrushableBlock(), 2);
     }
 }

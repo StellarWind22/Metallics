@@ -83,8 +83,6 @@ public class MBrushingBlockEntity extends BlockEntity {
             if (i != j) {
                 serverLevel.setBlock(this.getBlockPos(), this.getBlockState().setValue(BlockStateProperties.DUSTED, j), 3);
             }
-
-            int k = 4;
             this.brushCountResetsAtTick = serverLevel.getGameTime() + 4L;
         }
 

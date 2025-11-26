@@ -34,7 +34,10 @@ public final class MetallicsFabric implements ModInitializer {
         MetallicsBlockEntityTypes.BRUSHABLE_BLOCK = registerBlockEntity(
                 "brushable_block",
                 MBrushingBlockEntity::new,
-                MetallicsBlocks.IRON_PLATED_BLOCK.get()
+                MetallicsBlocks.BRUSHING_COPPER_BLOCK.get(),
+                MetallicsBlocks.BRUSHING_IRON_BLOCK.get(),
+                MetallicsBlocks.BRUSHING_GOLD_BLOCK.get(),
+                MetallicsBlocks.BRUSHING_NETHERITE_BLOCK.get()
         );
 
         MetallicsBlocks.oxidizationInit();

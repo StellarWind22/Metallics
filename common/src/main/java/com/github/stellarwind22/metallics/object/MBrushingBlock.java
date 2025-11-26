@@ -21,15 +21,15 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class MBrushing extends BaseEntityBlock implements MBrushable {
+public class MBrushingBlock extends BaseEntityBlock implements MBrushable {
 
-    public static final MapCodec<MBrushing> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(
-            ExtraCodecs.POSITIVE_INT.fieldOf("tick_delay").forGetter(MBrushing::tickDelay),
-            ExtraCodecs.POSITIVE_INT.fieldOf("brushes_to_complete").forGetter(MBrushing::brushesToComplete),
-            ResourceLocation.CODEC.fieldOf("turns_into").forGetter(MBrushing::getTurnsInto),
-            BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_sound").forGetter(MBrushing::brushSound),
-            BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_completed_sound").forGetter(MBrushing::brushCompletedSound),
-            propertiesCodec()).apply(instance, MBrushing::new));
+    public static final MapCodec<MBrushingBlock> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(
+            ExtraCodecs.POSITIVE_INT.fieldOf("tick_delay").forGetter(MBrushingBlock::tickDelay),
+            ExtraCodecs.POSITIVE_INT.fieldOf("brushes_to_complete").forGetter(MBrushingBlock::brushesToComplete),
+            ResourceLocation.CODEC.fieldOf("turns_into").forGetter(MBrushingBlock::getTurnsInto),
+            BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_sound").forGetter(MBrushingBlock::brushSound),
+            BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_completed_sound").forGetter(MBrushingBlock::brushCompletedSound),
+            propertiesCodec()).apply(instance, MBrushingBlock::new));
 
     private final int tickDelay;
     private final int brushesToComplete;
@@ -39,7 +39,7 @@ public class MBrushing extends BaseEntityBlock implements MBrushable {
 
     private static final IntegerProperty DUSTED;
 
-    public MBrushing(int tickDelay, int brushesToComplete, ResourceLocation turnsInto, SoundEvent brushSound, SoundEvent brushCompletedSound, Properties properties) {
+    public MBrushingBlock(int tickDelay, int brushesToComplete, ResourceLocation turnsInto, SoundEvent brushSound, SoundEvent brushCompletedSound, Properties properties) {
         super(properties);
         this.tickDelay = tickDelay;
         this.brushesToComplete = brushesToComplete;
@@ -75,11 +75,6 @@ public class MBrushing extends BaseEntityBlock implements MBrushable {
     }
 
     @Override
-    public IntegerProperty getDusted(BlockState state) {
-        return null;
-    }
-
-    @Override
     public SoundEvent brushSound() {
         return this.brushSound;
     }
@@ -101,7 +96,7 @@ public class MBrushing extends BaseEntityBlock implements MBrushable {
 
     @Override
     public void onPlace(BlockState blockState, Level level, BlockPos blockPos, BlockState blockState2, boolean bl) {
-        this.onPlaceBrushable(blockState, level, blockPos, blockState2, bl);
+        this.onPlaceBrushable(level, blockPos);
     }
 
     @Override
