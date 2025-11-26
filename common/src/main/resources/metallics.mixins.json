@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.github.stellarwind22.metallics.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "mixins": [
+    "BlockSetTypeAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

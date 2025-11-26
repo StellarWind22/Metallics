@@ -2,6 +2,7 @@ package com.github.stellarwind22.metallics.content;
 
 import com.github.stellarwind22.metallics.client.content.MetallicsParticleTypes;
 import com.github.stellarwind22.metallics.init.Metallics;
+import com.github.stellarwind22.metallics.mixin.BlockSetTypeAccessor;
 import com.github.stellarwind22.metallics.object.*;
 import com.github.stellarwind22.metallics.util.MBlock;
 import com.github.stellarwind22.metallics.util.MBlockProps;
@@ -11,6 +12,7 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -19,11 +21,14 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
+import java.util.Map;
 import java.util.Optional;
+import java.util.function.Supplier;
 
 public class MetallicsBlocks {
 
     private static DeferredRegister<Block> BLOCKS;
+    private static Map<String, BlockSetType> BLOCK_SETS;
 
     private static final MBlockProps torchProps = new MBlockProps()
             .noCollision()
@@ -172,12 +177,17 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> IRON_LAMP;
 
     //Gold
+    public static Supplier<BlockSetType> GOLD_SET;
+
     public static RegistrySupplier<Block> GOLD_CHAIN;
     public static RegistrySupplier<Block> GOLD_LANTERN;
     public static RegistrySupplier<IronBarsBlock> GOLD_BARS;
     public static RegistrySupplier<IronBarsBlock> GOLD_MESH;
+    public static RegistrySupplier<DoorBlock> GOLD_DOOR;
     public static RegistrySupplier<MMeshFenceBlock> GOLD_MESH_FENCE;
+    public static RegistrySupplier<DoorBlock> GOLD_MESH_DOOR;
     public static RegistrySupplier<MGrateBlock> GOLD_GRATE;
+
     public static RegistrySupplier<Block> GOLD_PLATED_BLOCK;
     public static RegistrySupplier<Block> GOLD_SLAB;
     public static RegistrySupplier<Block> CUT_GOLD_BLOCK;
@@ -192,6 +202,8 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> GOLD_LAMP;
 
     //Netherite
+    public static Supplier<BlockSetType> NETHERITE_SET;
+
     public static RegistrySupplier<Block> NETHERITE_CHAIN;
     public static RegistrySupplier<Block> NETHERITE_LANTERN;
     public static RegistrySupplier<IronBarsBlock> NETHERITE_BARS;
@@ -237,7 +249,55 @@ public class MetallicsBlocks {
     static final StrPair GLD_MSH = GLD_STR.mult(MSH_MULT);
     static final StrPair NTR_MSH = NTR_STR.mult(MSH_MULT);
 
+    public static void preInit() {
 
+        BLOCK_SETS = BlockSetTypeAccessor.metallics$getTypes();
+
+        //Gold
+        GOLD_SET = registerBlockSetType(
+                new BlockSetType(
+                        "gold",
+                        true,
+                        true,
+                        false,
+                        BlockSetType.PressurePlateSensitivity.MOBS,
+                        SoundType.COPPER,
+                        SoundEvents.COPPER_DOOR_CLOSE,
+                        SoundEvents.COPPER_DOOR_OPEN,
+                        SoundEvents.COPPER_TRAPDOOR_CLOSE,
+                        SoundEvents.COPPER_TRAPDOOR_OPEN,
+                        SoundEvents.METAL_PRESSURE_PLATE_CLICK_OFF,
+                        SoundEvents.METAL_PRESSURE_PLATE_CLICK_ON,
+                        SoundEvents.STONE_BUTTON_CLICK_OFF,
+                        SoundEvents.STONE_BUTTON_CLICK_ON)
+        );
+
+        //Netherite
+        NETHERITE_SET = registerBlockSetType(
+                new BlockSetType(
+                        "netherite",
+                        false,
+                        false,
+                        false,
+                        BlockSetType.PressurePlateSensitivity.MOBS,
+                        SoundType.IRON,
+                        SoundEvents.IRON_DOOR_CLOSE,
+                        SoundEvents.IRON_DOOR_OPEN,
+                        SoundEvents.IRON_TRAPDOOR_CLOSE,
+                        SoundEvents.IRON_TRAPDOOR_OPEN,
+                        SoundEvents.METAL_PRESSURE_PLATE_CLICK_OFF,
+                        SoundEvents.METAL_PRESSURE_PLATE_CLICK_ON,
+                        SoundEvents.STONE_BUTTON_CLICK_OFF,
+                        SoundEvents.STONE_BUTTON_CLICK_ON)
+        );
+
+        BlockSetTypeAccessor.metallics$setTypes(BLOCK_SETS);
+    }
+
+    private static Supplier<BlockSetType> registerBlockSetType(BlockSetType type) {
+        BLOCK_SETS.put(type.name(), type);
+        return () -> type;
+    }
 
     public static void init() {
         BLOCKS = DeferredRegister.create(Metallics.MOD_ID, Registries.BLOCK);
@@ -321,8 +381,10 @@ public class MetallicsBlocks {
         CUT_GOLD_STAIRS = registerBlock("cut_gold_stairs", new MBlock<>(props -> new StairBlock(Blocks.GOLD_BLOCK.defaultBlockState(), props), Optional.of(blockProps.strength(GLD_GRT).getCopy())));
         CUT_GOLD_SLAB = registerBlock("cut_gold_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
         CHISELED_GOLD_BLOCK = registerBlock("chiseled_gold_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
+        GOLD_DOOR = registerBlock("gold_door", new MBlock<>(props -> new DoorBlock(GOLD_SET.get(), props), Optional.of(doorProps.strength(NTR_GRT).pushReaction(PushReaction.BLOCK).getCopy())));
         GOLD_MESH = registerBlock("gold_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(GLD_MSH).getCopy())));
         GOLD_MESH_FENCE = registerBlock("gold_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(GLD_MSH).getCopy())));
+        GOLD_MESH_DOOR = registerBlock("gold_mesh_door", new MBlock<>(props -> new DoorBlock(GOLD_SET.get(), props), Optional.of(doorProps.strength(NTR_GRT).getCopy())));
         GOLD_GRATE = registerBlock("gold_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
 
         GOLD_TORCH = registerBlock("gold_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.GOLD_FLAME.get(), props), Optional.of(torchProps.getCopy())));
@@ -341,10 +403,10 @@ public class MetallicsBlocks {
         CUT_NETHERITE_STAIRS = registerBlock("cut_netherite_stairs", new MBlock<>(props -> new StairBlock(Blocks.NETHERITE_BLOCK.defaultBlockState(), props), Optional.of(blockProps.strength(NTR_GRT).getCopy())));
         CUT_NETHERITE_SLAB = registerBlock("cut_netherite_slab", new MBlock<>(SlabBlock::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
         CHISELED_NETHERITE_BLOCK = registerBlock("chiseled_netherite_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
-        NETHERITE_DOOR = registerBlock("netherite_door", new MBlock<>(props -> new DoorBlock(BlockSetType.IRON, props), Optional.of(doorProps.strength(NTR_GRT).pushReaction(PushReaction.BLOCK).getCopy())));
+        NETHERITE_DOOR = registerBlock("netherite_door", new MBlock<>(props -> new DoorBlock(NETHERITE_SET.get(), props), Optional.of(doorProps.strength(NTR_GRT).pushReaction(PushReaction.BLOCK).getCopy())));
         NETHERITE_MESH = registerBlock("netherite_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
         NETHERITE_MESH_FENCE = registerBlock("netherite_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
-        NETHERITE_MESH_DOOR = registerBlock("netherite_mesh_door", new MBlock<>(props -> new DoorBlock(BlockSetType.IRON, props), Optional.of(doorProps.strength(NTR_GRT).getCopy())));
+        NETHERITE_MESH_DOOR = registerBlock("netherite_mesh_door", new MBlock<>(props -> new DoorBlock(NETHERITE_SET.get(), props), Optional.of(doorProps.strength(NTR_GRT).getCopy())));
         NETHERITE_GRATE = registerBlock("netherite_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
 
         NETHERITE_TORCH = registerBlock("netherite_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.NETHERITE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
@@ -358,7 +420,7 @@ public class MetallicsBlocks {
         BLOCKS.register();
     }
 
-    public static void postRegisterInit() {
+    public static void oxidizationInit() {
 
         //Post registration stuff here ▼▼▼
         COPPER_MESHES = new WeatheringCopperBlocks(

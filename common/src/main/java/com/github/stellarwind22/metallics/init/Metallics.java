@@ -18,6 +18,7 @@ public final class Metallics {
 
         MetallicsTabs.init();
         MetallicsParticleTypes.init();
+        MetallicsBlocks.preInit();
         MetallicsBlocks.init();
         MetallicsItems.init();
 

@@ -27,5 +27,8 @@
     "java": ">=21",
     "architectury": ">=18.0.3",
     "fabric-api": "*"
-  }
+  },
+  "mixins": [
+    "metallics.mixins.json"
+  ]
 }

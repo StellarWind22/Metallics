@@ -30,7 +30,7 @@ public final class MetallicsFabric implements ModInitializer {
                 MetallicsBlocks.NETHERITE_CAMPFIRE.get()
         );
 
-        MetallicsBlocks.postRegisterInit();
+        MetallicsBlocks.oxidizationInit();
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_MESHES);
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_LAMPS);
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_SLABS);

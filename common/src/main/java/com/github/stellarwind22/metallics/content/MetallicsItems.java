@@ -90,8 +90,10 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> CUT_GOLD_STAIRS;
     public static RegistrySupplier<BlockItem> CUT_GOLD_SLAB;
     public static RegistrySupplier<BlockItem> CHISELED_GOLD_BLOCK;
+    public static RegistrySupplier<DoubleHighBlockItem> GOLD_DOOR;
     public static RegistrySupplier<BlockItem> GOLD_MESH;
     public static RegistrySupplier<BlockItem> GOLD_MESH_FENCE;
+    public static RegistrySupplier<DoubleHighBlockItem> GOLD_MESH_DOOR;
     public static RegistrySupplier<BlockItem> GOLD_GRATE;
 
     public static RegistrySupplier<BlockItem> GOLD_TORCH;
@@ -193,8 +195,10 @@ public class MetallicsItems {
         //Gold
         GOLD_CHAIN = registerItem("gold_chain", props -> new BlockItem(MetallicsBlocks.GOLD_CHAIN.get(), props));
         GOLD_BARS = registerItem("gold_bars", props -> new BlockItem(MetallicsBlocks.GOLD_BARS.get(), props));
+        GOLD_DOOR = registerItem("gold_door", props -> new DoubleHighBlockItem(MetallicsBlocks.GOLD_DOOR.get(), props));
         GOLD_MESH = registerItem("gold_mesh", props -> new BlockItem(MetallicsBlocks.GOLD_MESH.get(), props));
         GOLD_MESH_FENCE = registerItem("gold_mesh_fence", props -> new BlockItem(MetallicsBlocks.GOLD_MESH_FENCE.get(), props));
+        GOLD_MESH_DOOR = registerItem("gold_mesh_door", props -> new DoubleHighBlockItem(MetallicsBlocks.GOLD_MESH_DOOR.get(), props));
         GOLD_LANTERN = registerItem("gold_lantern", props -> new BlockItem(MetallicsBlocks.GOLD_LANTERN.get(), props));
         GOLD_GRATE = registerItem("gold_grate", props -> new BlockItem(MetallicsBlocks.GOLD_GRATE.get(), props));
         GOLD_PLATED_BLOCK = registerItem("gold_plated_block", props -> new BlockItem(MetallicsBlocks.GOLD_PLATED_BLOCK.get(), props));
