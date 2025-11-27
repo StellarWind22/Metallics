@@ -133,9 +133,6 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable, Simple
         this.tickBrushable(serverLevel, blockPos);
     }
 
-    static {
-    }
-
     protected boolean useShapeForLightOcclusion(BlockState blockState) {
         return blockState.getValue(TYPE) != SlabType.DOUBLE;
     }

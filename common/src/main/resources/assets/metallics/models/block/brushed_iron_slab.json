@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "metallics:block/brushed_iron_block",
+    "side": "metallics:block/double_brushed_iron_block",
+    "top": "metallics:block/brushed_iron_block"
+  }
+}
