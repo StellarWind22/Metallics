@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "metallics:waxed_weathered_copper_mesh_door",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ],
+          "name": "metallics:waxed_weathered_copper_mesh_door"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "metallics:blocks/waxed_weathered_copper_mesh_door"
+}

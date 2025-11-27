@@ -11,7 +11,7 @@
               "add": false,
               "conditions": [
                 {
-                  "block": "metallics:gold_block_slab",
+                  "block": "metallics:waxed_brushed_oxidized_copper_slab",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "type": "double"
@@ -25,11 +25,11 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "metallics:gold_block_slab"
+          "name": "metallics:waxed_brushed_oxidized_copper_slab"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "metallics:blocks/gold_block_slab"
+  "random_sequence": "metallics:blocks/waxed_brushed_oxidized_copper_slab"
 }

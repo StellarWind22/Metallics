@@ -11,7 +11,7 @@
               "add": false,
               "conditions": [
                 {
-                  "block": "metallics:netherite_block_slab",
+                  "block": "metallics:brushed_copper_slab",
                   "condition": "minecraft:block_state_property",
                   "properties": {
                     "type": "double"
@@ -25,11 +25,11 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "metallics:netherite_block_slab"
+          "name": "metallics:brushed_copper_slab"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "metallics:blocks/netherite_block_slab"
+  "random_sequence": "metallics:blocks/brushed_copper_slab"
 }
