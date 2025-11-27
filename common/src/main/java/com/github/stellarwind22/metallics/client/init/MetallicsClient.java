@@ -64,6 +64,10 @@ public class MetallicsClient {
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.IRON_MESH_FENCE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.IRON_GRATE.get());
 
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.BLUE_IRON_MESH.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.BLUE_IRON_MESH_FENCE.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.BLUE_IRON_GRATE.get());
+
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.NETHERITE_CHAIN.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.NETHERITE_BARS.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.NETHERITE_LANTERN.get());

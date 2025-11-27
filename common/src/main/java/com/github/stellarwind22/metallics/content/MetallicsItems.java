@@ -112,6 +112,20 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> IRON_GRATE;
     public static RegistrySupplier<BlockItem> IRON_LAMP;
 
+    //Blue Iron
+    public static RegistrySupplier<BlockItem> BLUE_IRON_PLATED_BLOCK;
+    public static RegistrySupplier<BlockItem> BLUE_IRON_SLAB;
+    public static RegistrySupplier<BlockItem> BRUSHED_BLUE_IRON_BLOCK;
+    public static RegistrySupplier<BlockItem> BRUSHED_BLUE_IRON_SLAB;
+    public static RegistrySupplier<BlockItem> CUT_BLUE_IRON_BLOCK;
+    public static RegistrySupplier<BlockItem> CUT_BLUE_IRON_STAIRS;
+    public static RegistrySupplier<BlockItem> CUT_BLUE_IRON_SLAB;
+    public static RegistrySupplier<BlockItem> CHISELED_BLUE_IRON_BLOCK;
+    public static RegistrySupplier<BlockItem> BLUE_IRON_MESH;
+    public static RegistrySupplier<BlockItem> BLUE_IRON_MESH_FENCE;
+    public static RegistrySupplier<BlockItem> BLUE_IRON_GRATE;
+    public static RegistrySupplier<BlockItem> BLUE_IRON_LAMP;
+
     //Gold
     public static RegistrySupplier<BlockItem> GOLD_CHAIN;
     public static RegistrySupplier<BlockItem> GOLD_LANTERN;
@@ -263,6 +277,20 @@ public class MetallicsItems {
         CUT_IRON_SLAB = registerItem("cut_iron_slab", props -> new BlockItem(MetallicsBlocks.CUT_IRON_SLAB.get(), props));
         CHISELED_IRON_BLOCK = registerItem("chiseled_iron_block", props -> new BlockItem(MetallicsBlocks.CHISELED_IRON_BLOCK.get(), props));
         IRON_LAMP = registerItem("iron_lamp", props -> new BlockItem(MetallicsBlocks.IRON_LAMP.get(), props));
+
+        //Blue Iron
+        BLUE_IRON_MESH = registerItem("blue_iron_mesh", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH.get(), props));
+        BLUE_IRON_MESH_FENCE = registerItem("blue_iron_mesh_fence", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH_FENCE.get(), props));
+        BLUE_IRON_GRATE = registerItem("blue_iron_grate", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_GRATE.get(), props));
+        BLUE_IRON_PLATED_BLOCK = registerItem("blue_iron_plated_block", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_PLATED_BLOCK.get(), props));
+        BLUE_IRON_SLAB = registerItem("blue_iron_slab", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_SLAB.get(), props));
+        BRUSHED_BLUE_IRON_BLOCK= registerItem("brushed_blue_iron_block", props -> new BlockItem(MetallicsBlocks.BRUSHED_BLUE_IRON_BLOCK.get(), props));
+        BRUSHED_BLUE_IRON_SLAB= registerItem("brushed_blue_iron_slab", props -> new BlockItem(MetallicsBlocks.BRUSHED_BLUE_IRON_SLAB.get(), props));
+        CUT_BLUE_IRON_BLOCK= registerItem("cut_blue_iron_block", props -> new BlockItem(MetallicsBlocks.CUT_BLUE_IRON_BLOCK.get(), props));
+        CUT_BLUE_IRON_STAIRS = registerItem("cut_blue_iron_stairs", props -> new BlockItem(MetallicsBlocks.CUT_BLUE_IRON_STAIRS.get(), props));
+        CUT_BLUE_IRON_SLAB = registerItem("cut_blue_iron_slab", props -> new BlockItem(MetallicsBlocks.CUT_BLUE_IRON_SLAB.get(), props));
+        CHISELED_BLUE_IRON_BLOCK = registerItem("chiseled_blue_iron_block", props -> new BlockItem(MetallicsBlocks.CHISELED_BLUE_IRON_BLOCK.get(), props));
+        BLUE_IRON_LAMP = registerItem("blue_iron_lamp", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_LAMP.get(), props));
 
         //Gold
         GOLD_CHAIN = registerItem("gold_chain", props -> new BlockItem(MetallicsBlocks.GOLD_CHAIN.get(), props));

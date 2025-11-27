@@ -235,6 +235,22 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CHISELED_IRON_BLOCK;
     public static RegistrySupplier<Block> IRON_LAMP;
 
+    //Blue Iron
+    public static RegistrySupplier<IronBarsBlock> BLUE_IRON_MESH;
+    public static RegistrySupplier<Block> BLUE_IRON_MESH_FENCE;
+    public static RegistrySupplier<Block> BLUE_IRON_GRATE;
+    public static RegistrySupplier<Block> BLUE_IRON_PLATED_BLOCK;
+    public static RegistrySupplier<MBrushingBlock> BRUSHING_BLUE_IRON_BLOCK;
+    public static RegistrySupplier<MBrushingSlab> BRUSHING_BLUE_IRON_SLAB;
+    public static RegistrySupplier<Block> BRUSHED_BLUE_IRON_BLOCK;
+    public static RegistrySupplier<SlabBlock> BRUSHED_BLUE_IRON_SLAB;
+    public static RegistrySupplier<Block> BLUE_IRON_SLAB;
+    public static RegistrySupplier<Block> CUT_BLUE_IRON_BLOCK;
+    public static RegistrySupplier<Block> CUT_BLUE_IRON_STAIRS;
+    public static RegistrySupplier<Block> CUT_BLUE_IRON_SLAB;
+    public static RegistrySupplier<Block> CHISELED_BLUE_IRON_BLOCK;
+    public static RegistrySupplier<Block> BLUE_IRON_LAMP;
+
     //Gold
     public static Supplier<BlockSetType> GOLD_SET;
 
@@ -476,6 +492,22 @@ public class MetallicsBlocks {
         IRON_MESH_FENCE = registerBlock("iron_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
         IRON_GRATE = registerBlock("iron_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         IRON_LAMP = registerBlock("iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
+
+        //Blue Iron
+        BLUE_IRON_PLATED_BLOCK = registerBlock("blue_iron_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        BLUE_IRON_SLAB = registerBlock("blue_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
+        BRUSHING_BLUE_IRON_BLOCK = registerBlock("brushing_blue_iron_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_blue_iron_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        BRUSHING_BLUE_IRON_SLAB = registerBlock("brushing_blue_iron_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_blue_iron_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
+        BRUSHED_BLUE_IRON_BLOCK = registerBlock("brushed_blue_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        BRUSHED_BLUE_IRON_SLAB = registerBlock("brushed_blue_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
+        CUT_BLUE_IRON_BLOCK = registerBlock("cut_blue_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        CUT_BLUE_IRON_STAIRS = registerBlock("cut_blue_iron_stairs", new MBlock<>(props -> new StairBlock(Blocks.IRON_BLOCK.defaultBlockState(), props), Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
+        CUT_BLUE_IRON_SLAB = registerBlock("cut_blue_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
+        CHISELED_BLUE_IRON_BLOCK = registerBlock("chiseled_blue_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        BLUE_IRON_MESH = registerBlock("blue_iron_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
+        BLUE_IRON_MESH_FENCE = registerBlock("blue_iron_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
+        BLUE_IRON_GRATE = registerBlock("blue_iron_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
+        BLUE_IRON_LAMP = registerBlock("blue_iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
 
         //Gold
         GOLD_CHAIN = registerBlock("gold_chain", new MBlock<>(ChainBlock::new, Optional.of(chainProps.getCopy())));
