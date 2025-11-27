@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "metallics:block/brushed_blue_iron_slab"
+    },
+    "type=double": {
+      "model": "metallics:block/brushed_blue_iron_slab_double"
+    },
+    "type=top": {
+      "model": "metallics:block/brushed_blue_iron_slab_top"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "metallics:block/blue_iron_lamp"
+    },
+    "lit=true": {
+      "model": "metallics:block/blue_iron_lamp_on"
+    }
+  }
+}

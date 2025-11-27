@@ -17,6 +17,9 @@ public class MetallicsItems {
 
     private static DeferredRegister<Item> ITEMS;
 
+    //Chemical
+    public static RegistrySupplier<Item> NITRE_SALT;
+
     //Soul
     public static RegistrySupplier<BlockItem> SOUL_JACK_O_LANTERN;
 
@@ -165,6 +168,7 @@ public class MetallicsItems {
         ITEMS = DeferredRegister.create(Metallics.MOD_ID, Registries.ITEM);
 
         //Register stuff here ▼▼▼
+        NITRE_SALT = registerItem("nitre_salt", Item::new);
 
         //Soul
         SOUL_JACK_O_LANTERN = registerItem("soul_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.SOUL_JACK_O_LANTERN.get(), props));

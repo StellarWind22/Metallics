@@ -1,0 +1,93 @@
+{
+  "multipart": [
+    {
+      "apply": { "model": "metallics:block/blue_iron_mesh_vert" }
+    },
+
+    { "when": { "north": "true" }, "apply": { "model": "metallics:block/blue_iron_mesh_side" } },
+    { "when": { "east": "true" },  "apply": { "model": "metallics:block/blue_iron_mesh_side", "y": 90 } },
+    { "when": { "south": "true" }, "apply": { "model": "metallics:block/blue_iron_mesh_side_alt" } },
+    { "when": { "west": "true" },  "apply": { "model": "metallics:block/blue_iron_mesh_side_alt", "y": 90 } },
+
+    {
+      "when": { "north": "false", "south": "false", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_post" }
+    },
+    {
+      "when": { "north": "true", "south": "true", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_post" }
+    },
+    {
+      "when": { "north": "true", "south": "false", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_post" }
+    },
+    {
+      "when": { "north": "false", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_post" }
+    },
+    {
+      "when": { "north": "false", "south": "false", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_post"}
+    },
+    {
+      "when": { "north": "false", "south": "false", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_post"}
+    },
+
+    {
+      "when": { "north": "true", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_noside_e" }
+    },{
+      "when": { "north": "true", "south": "true", "east": "false", "west": "false" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_noside_w"}
+    },
+
+    {
+      "when": { "north": "false", "south": "false", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_noside_n"}
+    },{
+      "when": { "north": "false", "south": "false", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_noside_s"}
+    },
+
+    {
+      "when": { "north": "true", "south": "false", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_post"}
+    },
+
+    {
+      "when": { "north": "true", "south": "false", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_post"}
+    },
+
+    {
+      "when": { "north": "false", "south": "true", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_post"}
+    },
+
+    {
+      "when": { "north": "false", "south": "true", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_post"}
+    },
+
+    {
+      "when": { "north": "false", "south": "true", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_post"}
+    },
+
+    {
+      "when": { "north": "true", "south": "false", "east": "true", "west": "true" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_post"}
+    },
+
+    {
+      "when": { "north": "true", "south": "true", "east": "false", "west": "true" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_post"}
+    },
+    
+    {
+      "when": { "north": "true", "south": "true", "east": "true", "west": "false" },
+      "apply": { "model": "metallics:block/blue_iron_mesh_post"}
+    }
+  ]
+}
