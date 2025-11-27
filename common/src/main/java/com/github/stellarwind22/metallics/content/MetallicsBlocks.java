@@ -127,16 +127,27 @@ public class MetallicsBlocks {
     //Copper
     public static RegistrySupplier<MBrushingBlock> BRUSHING_COPPER_BLOCK;
 
-    public static RegistrySupplier<Block> BRUSHED_COPPER_BLOCK;
-    public static RegistrySupplier<Block> BRUSHED_EXPOSED_COPPER_BLOCK;
-    public static RegistrySupplier<Block> BRUSHED_WEATHERED_COPPER_BLOCK;
-    public static RegistrySupplier<Block> BRUSHED_OXIDIZED_COPPER_BLOCK;
+    public static RegistrySupplier<WeatheringCopperFullBlock> BRUSHED_COPPER_BLOCK;
+    public static RegistrySupplier<WeatheringCopperFullBlock> BRUSHED_EXPOSED_COPPER_BLOCK;
+    public static RegistrySupplier<WeatheringCopperFullBlock> BRUSHED_WEATHERED_COPPER_BLOCK;
+    public static RegistrySupplier<WeatheringCopperFullBlock> BRUSHED_OXIDIZED_COPPER_BLOCK;
     public static RegistrySupplier<Block> WAXED_BRUSHED_COPPER_BLOCK;
     public static RegistrySupplier<Block> WAXED_BRUSHED_EXPOSED_COPPER_BLOCK;
     public static RegistrySupplier<Block> WAXED_BRUSHED_WEATHERED_COPPER_BLOCK;
     public static RegistrySupplier<Block> WAXED_BRUSHED_OXIDIZED_COPPER_BLOCK;
 
     public static WeatheringCopperBlocks BRUSHED_COPPER_BLOCKS;
+
+    public static RegistrySupplier<WeatheringCopperSlabBlock> BRUSHED_COPPER_SLAB;
+    public static RegistrySupplier<WeatheringCopperSlabBlock> BRUSHED_EXPOSED_COPPER_SLAB;
+    public static RegistrySupplier<WeatheringCopperSlabBlock> BRUSHED_WEATHERED_COPPER_SLAB;
+    public static RegistrySupplier<WeatheringCopperSlabBlock> BRUSHED_OXIDIZED_COPPER_SLAB;
+    public static RegistrySupplier<SlabBlock> WAXED_BRUSHED_COPPER_SLAB;
+    public static RegistrySupplier<SlabBlock> WAXED_BRUSHED_EXPOSED_COPPER_SLAB;
+    public static RegistrySupplier<SlabBlock> WAXED_BRUSHED_WEATHERED_COPPER_SLAB;
+    public static RegistrySupplier<SlabBlock> WAXED_BRUSHED_OXIDIZED_COPPER_SLAB;
+
+    public static WeatheringCopperBlocks BRUSHED_COPPER_SLABS;
 
     public static RegistrySupplier<IronBarsBlock> COPPER_MESH;
     public static RegistrySupplier<IronBarsBlock> EXPOSED_COPPER_MESH;
@@ -214,6 +225,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> IRON_PLATED_BLOCK;
     public static RegistrySupplier<MBrushingBlock> BRUSHING_IRON_BLOCK;
     public static RegistrySupplier<Block> BRUSHED_IRON_BLOCK;
+    public static RegistrySupplier<SlabBlock> BRUSHED_IRON_SLAB;
     public static RegistrySupplier<Block> IRON_SLAB;
     public static RegistrySupplier<Block> CUT_IRON_BLOCK;
     public static RegistrySupplier<Block> CUT_IRON_STAIRS;
@@ -239,6 +251,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> GOLD_SLAB;
     public static RegistrySupplier<MBrushingBlock> BRUSHING_GOLD_BLOCK;
     public static RegistrySupplier<Block> BRUSHED_GOLD_BLOCK;
+    public static RegistrySupplier<SlabBlock> BRUSHED_GOLD_SLAB;
     public static RegistrySupplier<Block> CUT_GOLD_BLOCK;
     public static RegistrySupplier<Block> CUT_GOLD_STAIRS;
     public static RegistrySupplier<Block> CUT_GOLD_SLAB;
@@ -267,6 +280,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> NETHERITE_SLAB;
     public static RegistrySupplier<MBrushingBlock> BRUSHING_NETHERITE_BLOCK;
     public static RegistrySupplier<Block> BRUSHED_NETHERITE_BLOCK;
+    public static RegistrySupplier<SlabBlock> BRUSHED_NETHERITE_SLAB;
     public static RegistrySupplier<Block> CUT_NETHERITE_BLOCK;
     public static RegistrySupplier<Block> CUT_NETHERITE_STAIRS;
     public static RegistrySupplier<Block> CUT_NETHERITE_SLAB;
@@ -366,8 +380,6 @@ public class MetallicsBlocks {
         //Copper
         BRUSHING_COPPER_BLOCK = registerBlock("brushing_copper_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_copper_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(IRN_GRT).getCopy())));
 
-        SlabBlock
-
         BRUSHED_COPPER_BLOCK = registerBlock("brushed_copper_block", new MBlock<>(props -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
         BRUSHED_EXPOSED_COPPER_BLOCK = registerBlock("brushed_exposed_copper_block", new MBlock<>(props -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
         BRUSHED_WEATHERED_COPPER_BLOCK = registerBlock("brushed_weathered_copper_block", new MBlock<>(props -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
@@ -376,6 +388,15 @@ public class MetallicsBlocks {
         WAXED_BRUSHED_EXPOSED_COPPER_BLOCK = registerBlock("waxed_brushed_exposed_copper_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(CPR_GRT).getCopy())));
         WAXED_BRUSHED_WEATHERED_COPPER_BLOCK = registerBlock("waxed_brushed_weathered_copper_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(CPR_GRT).getCopy())));
         WAXED_BRUSHED_OXIDIZED_COPPER_BLOCK = registerBlock("waxed_brushed_oxidized_copper_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(CPR_GRT).getCopy())));
+
+        BRUSHED_COPPER_SLAB = registerBlock("brushed_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
+        BRUSHED_EXPOSED_COPPER_SLAB = registerBlock("brushed_exposed_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
+        BRUSHED_WEATHERED_COPPER_SLAB = registerBlock("brushed_weathered_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.WEATHERED, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
+        BRUSHED_OXIDIZED_COPPER_SLAB = registerBlock("brushed_oxidized_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.OXIDIZED, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
+        WAXED_BRUSHED_COPPER_SLAB = registerBlock("waxed_brushed_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
+        WAXED_BRUSHED_EXPOSED_COPPER_SLAB = registerBlock("waxed_brushed_exposed_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
+        WAXED_BRUSHED_WEATHERED_COPPER_SLAB = registerBlock("waxed_brushed_weathered_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
+        WAXED_BRUSHED_OXIDIZED_COPPER_SLAB = registerBlock("waxed_brushed_oxidized_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
 
         COPPER_MESH = registerBlock("copper_mesh", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
         EXPOSED_COPPER_MESH = registerBlock("exposed_copper_mesh", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
@@ -537,6 +558,17 @@ public class MetallicsBlocks {
                 WAXED_BRUSHED_EXPOSED_COPPER_BLOCK.get(),
                 WAXED_BRUSHED_WEATHERED_COPPER_BLOCK.get(),
                 WAXED_BRUSHED_OXIDIZED_COPPER_BLOCK.get()
+        );
+
+        BRUSHED_COPPER_SLABS = new WeatheringCopperBlocks(
+                BRUSHED_COPPER_SLAB.get(),
+                BRUSHED_EXPOSED_COPPER_SLAB.get(),
+                BRUSHED_WEATHERED_COPPER_SLAB.get(),
+                BRUSHED_OXIDIZED_COPPER_SLAB.get(),
+                WAXED_BRUSHED_COPPER_SLAB.get(),
+                WAXED_BRUSHED_EXPOSED_COPPER_SLAB.get(),
+                WAXED_BRUSHED_WEATHERED_COPPER_SLAB.get(),
+                WAXED_BRUSHED_OXIDIZED_COPPER_SLAB.get()
         );
 
         COPPER_MESHES = new WeatheringCopperBlocks(

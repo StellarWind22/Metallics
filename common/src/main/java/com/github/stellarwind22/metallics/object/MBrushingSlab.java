@@ -18,6 +18,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.*;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -34,15 +35,15 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
 
-public class MBrushingSlab extends BaseEntityBlock implements MBrushable {
+public class MBrushingSlab extends BaseEntityBlock implements MBrushable, SimpleWaterloggedBlock {
 
-    public static final MapCodec<MBrushingBlock> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(
-            ExtraCodecs.POSITIVE_INT.fieldOf("tick_delay").forGetter(MBrushingBlock::tickDelay),
-            ExtraCodecs.POSITIVE_INT.fieldOf("brushes_to_complete").forGetter(MBrushingBlock::brushesToComplete),
-            ResourceLocation.CODEC.fieldOf("turns_into").forGetter(MBrushingBlock::getTurnsInto),
-            BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_sound").forGetter(MBrushingBlock::brushSound),
-            BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_completed_sound").forGetter(MBrushingBlock::brushCompletedSound),
-            propertiesCodec()).apply(instance, MBrushingBlock::new));
+    public static final MapCodec<MBrushingSlab> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(
+            ExtraCodecs.POSITIVE_INT.fieldOf("tick_delay").forGetter(MBrushingSlab::tickDelay),
+            ExtraCodecs.POSITIVE_INT.fieldOf("brushes_to_complete").forGetter(MBrushingSlab::brushesToComplete),
+            ResourceLocation.CODEC.fieldOf("turns_into").forGetter(MBrushingSlab::getTurnsInto),
+            BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_sound").forGetter(MBrushingSlab::brushSound),
+            BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_completed_sound").forGetter(MBrushingSlab::brushCompletedSound),
+            propertiesCodec()).apply(instance, MBrushingSlab::new));
 
     private final int tickDelay;
     private final int brushesToComplete;
@@ -118,7 +119,7 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable {
     }
 
     @Override
-    protected @NotNull MapCodec<? extends BaseEntityBlock> codec() {
+    public @NotNull MapCodec<MBrushingSlab> codec() {
         return CODEC;
     }
 
@@ -189,12 +190,13 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable {
         return blockState.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(blockState);
     }
 
+    @Override
     public boolean placeLiquid(LevelAccessor levelAccessor, BlockPos blockPos, BlockState blockState, FluidState fluidState) {
-        return blockState.getValue(TYPE) != SlabType.DOUBLE ? super.BLockplaceLiquid(levelAccessor, blockPos, blockState, fluidState) : false;
+        return blockState.getValue(TYPE) != SlabType.DOUBLE && SimpleWaterloggedBlock.super.placeLiquid(levelAccessor, blockPos, blockState, fluidState);
     }
 
     public boolean canPlaceLiquid(@Nullable LivingEntity livingEntity, BlockGetter blockGetter, BlockPos blockPos, BlockState blockState, Fluid fluid) {
-        return blockState.getValue(TYPE) != SlabType.DOUBLE ? super.canPlaceLiquid(livingEntity, blockGetter, blockPos, blockState, fluid) : false;
+        return blockState.getValue(TYPE) != SlabType.DOUBLE && SimpleWaterloggedBlock.super.canPlaceLiquid(livingEntity, blockGetter, blockPos, blockState, fluid);
     }
 
     protected @NotNull BlockState updateShape(BlockState blockState, LevelReader levelReader, ScheduledTickAccess scheduledTickAccess, BlockPos blockPos, Direction direction, BlockPos blockPos2, BlockState blockState2, RandomSource randomSource) {
