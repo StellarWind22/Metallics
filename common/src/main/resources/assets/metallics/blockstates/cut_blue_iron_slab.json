@@ -4,7 +4,7 @@
       "model": "metallics:block/cut_blue_iron_slab"
     },
     "type=double": {
-      "model": "metallics:block/cut_blue_iron"
+      "model": "metallics:block/cut_blue_iron_block"
     },
     "type=top": {
       "model": "metallics:block/cut_blue_iron_slab_top"

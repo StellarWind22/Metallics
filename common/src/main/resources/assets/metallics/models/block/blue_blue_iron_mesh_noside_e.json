@@ -1,6 +1,0 @@
-{
-  "parent": "metallics:block/template_mesh_noside_e",
-  "textures": {
-    "mesh": "metallics:block/blue_blue_iron_grate"
-  }
-}

@@ -573,10 +573,12 @@ public class MetallicsBlocks {
     public static void postInit() {
         registerBrushable(Blocks.COPPER_BLOCK, BRUSHING_COPPER_BLOCK.get());
         registerBrushable(IRON_PLATED_BLOCK.get(), BRUSHING_IRON_BLOCK.get());
+        registerBrushable(BLUE_IRON_PLATED_BLOCK.get(), BRUSHING_BLUE_IRON_BLOCK.get());
         registerBrushable(GOLD_PLATED_BLOCK.get(), BRUSHING_GOLD_BLOCK.get());
         registerBrushable(NETHERITE_PLATED_BLOCK.get(), BRUSHING_NETHERITE_BLOCK.get());
         registerBrushable(COPPER_SLAB.get(), BRUSHING_COPPER_SLAB.get());
         registerBrushable(IRON_SLAB.get(), BRUSHING_IRON_SLAB.get());
+        registerBrushable(BLUE_IRON_SLAB.get(), BRUSHING_BLUE_IRON_SLAB.get());
         registerBrushable(GOLD_SLAB.get(), BRUSHING_GOLD_SLAB.get());
         registerBrushable(NETHERITE_SLAB.get(), BRUSHING_NETHERITE_SLAB.get());
     }

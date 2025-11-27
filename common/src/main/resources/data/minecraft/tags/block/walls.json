@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "metallics:iron_mesh_fence",
+    "metallics:blue_iron_mesh_fence",
     "metallics:copper_mesh_fence",
     "metallics:exposed_copper_mesh_fence",
     "metallics:weathered_copper_mesh_fence",

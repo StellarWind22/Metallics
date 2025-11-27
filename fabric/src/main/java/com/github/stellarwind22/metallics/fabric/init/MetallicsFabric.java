@@ -36,10 +36,12 @@ public final class MetallicsFabric implements ModInitializer {
                 MBrushingBlockEntity::new,
                 MetallicsBlocks.BRUSHING_COPPER_BLOCK.get(),
                 MetallicsBlocks.BRUSHING_IRON_BLOCK.get(),
+                MetallicsBlocks.BRUSHING_BLUE_IRON_BLOCK.get(),
                 MetallicsBlocks.BRUSHING_GOLD_BLOCK.get(),
                 MetallicsBlocks.BRUSHING_NETHERITE_BLOCK.get(),
                 MetallicsBlocks.BRUSHING_COPPER_SLAB.get(),
                 MetallicsBlocks.BRUSHING_IRON_SLAB.get(),
+                MetallicsBlocks.BRUSHING_BLUE_IRON_SLAB.get(),
                 MetallicsBlocks.BRUSHING_GOLD_SLAB.get(),
                 MetallicsBlocks.BRUSHING_NETHERITE_SLAB.get()
         );

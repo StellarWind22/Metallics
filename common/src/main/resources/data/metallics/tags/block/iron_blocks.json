@@ -11,6 +11,18 @@
     "metallics:iron_mesh",
     "metallics:iron_mesh_fence",
     "metallics:iron_grate",
-    "metallics:iron_lamp"
+    "metallics:iron_lamp",
+    "metallics:blue_iron_plated_block",
+    "metallics:blue_iron_slab",
+    "metallics:brushed_blue_iron_block",
+    "metallics:brushed_blue_iron_slab",
+    "metallics:cut_blue_iron_block",
+    "metallics:cut_blue_iron_stairs",
+    "metallics:cut_blue_iron_slab",
+    "metallics:chiseled_blue_iron_block",
+    "metallics:blue_iron_mesh",
+    "metallics:blue_iron_mesh_fence",
+    "metallics:blue_iron_grate",
+    "metallics:blue_iron_lamp"
   ]
 }
