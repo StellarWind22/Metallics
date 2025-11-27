@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "metallics:block/blue_iron_plated_block",
+    "side": "metallics:block/double_blue_iron_block"
+  }
+}

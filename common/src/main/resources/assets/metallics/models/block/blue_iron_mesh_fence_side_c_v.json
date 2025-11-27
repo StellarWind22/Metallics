@@ -1,0 +1,7 @@
+{
+  "parent": "metallics:block/template_mesh_fence_side_c_v",
+  "textures": {
+    "post": "metallics:block/blue_iron_misc",
+    "particle": "metallics:block/blue_iron_plated_block"
+  }
+}
