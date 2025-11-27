@@ -68,7 +68,7 @@ public abstract class BrushItemMixin {
                             if (level instanceof ServerLevel serverLevel) {
                                 BlockEntity var16 = level.getBlockEntity(blockPos);
                             if (var16 instanceof MBrushingBlockEntity brushableBlockEntity) {
-                                boolean bl2 = brushableBlockEntity.brush(brushable.brushesToComplete(), level.getGameTime(), serverLevel, blockHitResult.getDirection());
+                                boolean bl2 = brushableBlockEntity.brush(brushable.brushesToComplete(), level.getGameTime(), serverLevel);
                                 if (bl2) {
                                     EquipmentSlot equipmentSlot = itemStack.equals(player.getItemBySlot(EquipmentSlot.OFFHAND)) ? EquipmentSlot.OFFHAND : EquipmentSlot.MAINHAND;
                                     itemStack.hurtAndBreak(1, player, equipmentSlot);

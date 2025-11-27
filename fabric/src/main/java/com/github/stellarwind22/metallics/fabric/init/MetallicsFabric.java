@@ -41,6 +41,8 @@ public final class MetallicsFabric implements ModInitializer {
         );
 
         MetallicsBlocks.oxidizationInit();
+
+        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.BRUSHED_COPPER_BLOCKS);
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_MESHES);
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_LAMPS);
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_SLABS);

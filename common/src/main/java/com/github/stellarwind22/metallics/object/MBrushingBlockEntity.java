@@ -3,7 +3,6 @@ package com.github.stellarwind22.metallics.object;
 import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
@@ -23,18 +22,13 @@ public class MBrushingBlockEntity extends BlockEntity {
     private long brushCountResetsAtTick;
     private long coolDownEndsAtTick;
     @Nullable
-    private Direction hitDirection;
     private Block turnsInto = null;
 
     public MBrushingBlockEntity(BlockPos blockPos, BlockState blockState) {
         super(MetallicsBlockEntityTypes.BRUSHABLE_BLOCK.get(), blockPos, blockState);
     }
 
-    public boolean brush(int maxBrushes, long l, ServerLevel serverLevel, Direction direction) {
-
-        if (this.hitDirection == null) {
-            this.hitDirection = direction;
-        }
+    public boolean brush(int maxBrushes, long l, ServerLevel serverLevel) {
 
         this.brushCountResetsAtTick = l + 40L;
         if (l < this.coolDownEndsAtTick) {
@@ -53,7 +47,6 @@ public class MBrushingBlockEntity extends BlockEntity {
                     BlockState blockState2 = blockState.setValue(BlockStateProperties.DUSTED, j);
                     serverLevel.setBlock(this.getBlockPos(), blockState2, 3);
                 }
-
                 return false;
             }
         }
@@ -87,7 +80,6 @@ public class MBrushingBlockEntity extends BlockEntity {
         }
 
         if (this.brushCount == 0) {
-            this.hitDirection = null;
             this.brushCountResetsAtTick = 0L;
             this.coolDownEndsAtTick = 0L;
         } else {
