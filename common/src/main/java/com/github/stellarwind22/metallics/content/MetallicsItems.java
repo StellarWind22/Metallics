@@ -113,6 +113,10 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> IRON_LAMP;
 
     //Blue Iron
+    public static RegistrySupplier<Item> BLUE_IRON_NUGGET;
+    public static RegistrySupplier<Item> BLUE_IRON_INGOT;
+    public static RegistrySupplier<BlockItem> BLUE_IRON_BLOCK;
+
     public static RegistrySupplier<BlockItem> BLUE_IRON_PLATED_BLOCK;
     public static RegistrySupplier<BlockItem> BLUE_IRON_SLAB;
     public static RegistrySupplier<BlockItem> BRUSHED_BLUE_IRON_BLOCK;
@@ -279,6 +283,9 @@ public class MetallicsItems {
         IRON_LAMP = registerItem("iron_lamp", props -> new BlockItem(MetallicsBlocks.IRON_LAMP.get(), props));
 
         //Blue Iron
+        BLUE_IRON_NUGGET = registerItem("blue_iron_nugget", Item::new);
+        BLUE_IRON_INGOT = registerItem("blue_iron_ingot", Item::new);
+
         BLUE_IRON_MESH = registerItem("blue_iron_mesh", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH.get(), props));
         BLUE_IRON_MESH_FENCE = registerItem("blue_iron_mesh_fence", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH_FENCE.get(), props));
         BLUE_IRON_GRATE = registerItem("blue_iron_grate", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_GRATE.get(), props));
