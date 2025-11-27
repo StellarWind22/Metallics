@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "metallics:gold_plate_block"
+    "#": "metallics:netherite_plated_block"
   },
   "pattern": [
     "###"
   ],
   "result": {
     "count": 6,
-    "id": "metallics:gold_plate_slab"
+    "id": "metallics:netherite_slab"
   }
 }

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "metallics:cut_iron_plate"
+    "#": "metallics:cut_iron_block"
   },
   "pattern": [
     "#  ",

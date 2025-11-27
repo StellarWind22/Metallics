@@ -1,8 +1,8 @@
 {
   "values": [
-    "metallics:iron_plate_block",
-    "metallics:iron_plate_slab",
-    "metallics:cut_iron_plate",
+    "metallics:iron_plated_block",
+    "metallics:iron_slab",
+    "metallics:cut_iron_block",
     "metallics:cut_iron_stairs",
     "metallics:cut_iron_slab",
     "metallics:iron_mesh",

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "metallics:netherite_plate_block",
+    "#": "metallics:netherite_plated_block",
     "i": "metallics:netherite_mesh"
   },
   "pattern": [

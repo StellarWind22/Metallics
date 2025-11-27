@@ -2,14 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "metallics:iron_plate_block"
+    "#": "metallics:iron_plated_block"
   },
   "pattern": [
-    "##",
-    "##"
+    "###"
   ],
   "result": {
-    "count": 4,
-    "id": "metallics:cut_iron_plate"
+    "count": 6,
+    "id": "metallics:iron_slab"
   }
 }

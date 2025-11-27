@@ -1,8 +1,8 @@
 {
   "values": [
-    "metallics:gold_plate_block",
-    "metallics:gold_plate_slab",
-    "metallics:cut_gold_plate",
+    "metallics:gold_plated_block",
+    "metallics:gold_slab",
+    "metallics:cut_gold_block",
     "metallics:cut_gold_stairs",
     "metallics:cut_gold_slab",
     "metallics:gold_bars",

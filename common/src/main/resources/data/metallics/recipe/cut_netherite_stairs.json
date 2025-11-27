@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "metallics:cut_netherite_plate"
+    "#": "metallics:cut_netherite_block"
   },
   "pattern": [
     "#  ",

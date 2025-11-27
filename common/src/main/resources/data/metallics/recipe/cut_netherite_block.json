@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "metallics:gold_plate_block"
+    "#": "metallics:netherite_plated_block"
   },
   "pattern": [
     "##",
@@ -10,6 +10,6 @@
   ],
   "result": {
     "count": 4,
-    "id": "metallics:cut_gold_plate"
+    "id": "metallics:cut_netherite_block"
   }
 }

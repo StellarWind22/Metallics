@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "metallics:gold_plate_block",
+    "#": "metallics:gold_plated_block",
     "i": "metallics:gold_mesh"
   },
   "pattern": [
