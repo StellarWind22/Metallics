@@ -1,13 +1,21 @@
 {
+  "replace": false,
   "values": [
     "metallics:gold_plated_block",
     "metallics:gold_slab",
+    "metallics:brushed_gold_block",
+    "metallics:brushed_gold_slab",
     "metallics:cut_gold_block",
     "metallics:cut_gold_stairs",
     "metallics:cut_gold_slab",
+    "metallics:chiseled_gold_block",
     "metallics:gold_bars",
+    "metallics:gold_door",
+    "metallics:gold_trapdoor",
     "metallics:gold_mesh",
     "metallics:gold_mesh_fence",
+    "metallics:gold_mesh_door",
+    "metallics:gold_mesh_trapdoor",
     "metallics:gold_grate",
     "metallics:gold_lamp"
   ]

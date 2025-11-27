@@ -3,12 +3,19 @@
   "values": [
     "metallics:netherite_plated_block",
     "metallics:netherite_slab",
+    "metallics:brushed_netherite_block",
+    "metallics:brushed_netherite_slab",
     "metallics:cut_netherite_block",
     "metallics:cut_netherite_stairs",
     "metallics:cut_netherite_slab",
+    "metallics:chiseled_netherite_block",
     "metallics:netherite_bars",
+    "metallics:netherite_door",
+    "metallics:netherite_trapdoor",
     "metallics:netherite_mesh",
     "metallics:netherite_mesh_fence",
+    "metallics:netherite_mesh_door",
+    "metallics:netherite_mesh_trapdoor",
     "metallics:netherite_grate",
     "metallics:netherite_lamp"
   ]
