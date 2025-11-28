@@ -20,7 +20,7 @@ public class MetallicsItems {
 
     //Chemical
     public static RegistrySupplier<Item> NITRE_SALT;
-    public static RegistrySupplier<FallingBlock> NITRE_SALT_BLOCK;
+    public static RegistrySupplier<BlockItem> NITRE_SALT_BLOCK;
 
     //Soul
     public static RegistrySupplier<BlockItem> SOUL_JACK_O_LANTERN;
@@ -189,7 +189,7 @@ public class MetallicsItems {
 
         //Register stuff here ▼▼▼
         NITRE_SALT = registerItem("nitre_salt", Item::new);
-        NITRE_SALT_BLOCK = registerItem("nitre_salt_block", new BlockItem());
+        NITRE_SALT_BLOCK = registerItem("nitre_salt_block", props -> new BlockItem(MetallicsBlocks.NITRE_SALT_BLOCK.get(), props));
 
         //Soul
         SOUL_JACK_O_LANTERN = registerItem("soul_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.SOUL_JACK_O_LANTERN.get(), props));
