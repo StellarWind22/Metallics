@@ -288,6 +288,7 @@ public class MetallicsItems {
         //Blue Iron
         BLUE_IRON_NUGGET = registerItem("blue_iron_nugget", Item::new);
         BLUE_IRON_INGOT = registerItem("blue_iron_ingot", Item::new);
+        BLUE_IRON_BLOCK = registerItem("blue_iron_block", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_BLOCK.get(), props));
 
         BLUE_IRON_MESH = registerItem("blue_iron_mesh", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH.get(), props));
         BLUE_IRON_MESH_FENCE = registerItem("blue_iron_mesh_fence", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH_FENCE.get(), props));

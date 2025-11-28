@@ -241,6 +241,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> IRON_LAMP;
 
     //Blue Iron
+    public static RegistrySupplier<Block> BLUE_IRON_BLOCK;
     public static RegistrySupplier<IronBarsBlock> BLUE_IRON_MESH;
     public static RegistrySupplier<Block> BLUE_IRON_MESH_FENCE;
     public static RegistrySupplier<Block> BLUE_IRON_GRATE;
@@ -500,6 +501,7 @@ public class MetallicsBlocks {
         IRON_LAMP = registerBlock("iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
 
         //Blue Iron
+        BLUE_IRON_BLOCK = registerBlock("blue_iron_block",  new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_PLATED_BLOCK = registerBlock("blue_iron_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_SLAB = registerBlock("blue_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
         BRUSHING_BLUE_IRON_BLOCK = registerBlock("brushing_blue_iron_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_blue_iron_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(IRN_GRT).getCopy())));
