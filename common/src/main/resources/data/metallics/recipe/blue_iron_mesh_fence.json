@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "metallics:blue_iron_plated_block",
+    "i": "metallics:blue_iron_mesh"
+  },
+  "pattern": [
+    "#i#",
+    "#i#"
+  ],
+  "result": {
+    "id": "metallics:blue_iron_mesh_fence",
+    "count": 4
+  }
+}

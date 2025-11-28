@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_alt_hanging_lantern",
+  "textures": {
+    "lantern": "metallics:block/blue_lantern_lantern"
+  }
+}

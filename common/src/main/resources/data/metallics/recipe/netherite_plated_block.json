@@ -5,14 +5,10 @@
     "#minecraft:stone_crafting_materials",
     "#minecraft:stone_crafting_materials",
     "#minecraft:stone_crafting_materials",
-    "#minecraft:stone_crafting_materials",
-    "#minecraft:stone_crafting_materials",
-    "#minecraft:stone_crafting_materials",
-    "#minecraft:stone_crafting_materials",
     "#minecraft:stone_crafting_materials"
   ],
   "result": {
     "id": "metallics:netherite_plated_block",
-    "count": 8
+    "count": 4
   }
 }

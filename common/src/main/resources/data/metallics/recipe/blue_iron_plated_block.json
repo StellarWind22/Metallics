@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "minecraft:iron_ingot",
+    "metallics:blue_iron_ingot",
     "#minecraft:stone_crafting_materials",
     "#minecraft:stone_crafting_materials",
     "#minecraft:stone_crafting_materials",
     "#minecraft:stone_crafting_materials"
   ],
   "result": {
-    "id": "metallics:iron_plated_block",
+    "id": "metallics:blue_iron_plated_block",
     "count": 4
   }
 }

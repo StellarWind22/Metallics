@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "metallics:block/blue_lantern_lantern"
+    },
+    "hanging=true": {
+      "model": "metallics:block/blue_lantern_lantern_hanging"
+    }
+  }
+}

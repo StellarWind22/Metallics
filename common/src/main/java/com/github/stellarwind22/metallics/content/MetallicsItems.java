@@ -10,7 +10,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.ItemContainerContents;
-import net.minecraft.world.level.block.FallingBlock;
 
 import java.util.function.Function;
 
@@ -115,6 +114,9 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> IRON_LAMP;
 
     //Blue Iron
+    public static RegistrySupplier<BlockItem> BLUE_IRON_CHAIN;
+    public static RegistrySupplier<BlockItem> BLUE_IRON_LANTERN;
+    public static RegistrySupplier<BlockItem> BLUE_IRON_BARS;
     public static RegistrySupplier<Item> BLUE_IRON_NUGGET;
     public static RegistrySupplier<Item> BLUE_IRON_INGOT;
     public static RegistrySupplier<BlockItem> BLUE_IRON_BLOCK;
@@ -290,6 +292,9 @@ public class MetallicsItems {
         BLUE_IRON_INGOT = registerItem("blue_iron_ingot", Item::new);
         BLUE_IRON_BLOCK = registerItem("blue_iron_block", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_BLOCK.get(), props));
 
+        BLUE_IRON_CHAIN = registerItem("blue_iron_chain", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_CHAIN.get(), props));
+        BLUE_IRON_BARS = registerItem("blue_iron_bars", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_BARS.get(), props));
+        BLUE_IRON_LANTERN = registerItem("blue_iron_lantern", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_LANTERN.get(), props));
         BLUE_IRON_MESH = registerItem("blue_iron_mesh", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH.get(), props));
         BLUE_IRON_MESH_FENCE = registerItem("blue_iron_mesh_fence", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH_FENCE.get(), props));
         BLUE_IRON_GRATE = registerItem("blue_iron_grate", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_GRATE.get(), props));
