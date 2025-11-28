@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.ItemContainerContents;
+import net.minecraft.world.level.block.FallingBlock;
 
 import java.util.function.Function;
 
@@ -19,6 +20,7 @@ public class MetallicsItems {
 
     //Chemical
     public static RegistrySupplier<Item> NITRE_SALT;
+    public static RegistrySupplier<FallingBlock> NITRE_SALT_BLOCK;
 
     //Soul
     public static RegistrySupplier<BlockItem> SOUL_JACK_O_LANTERN;
@@ -187,6 +189,7 @@ public class MetallicsItems {
 
         //Register stuff here ▼▼▼
         NITRE_SALT = registerItem("nitre_salt", Item::new);
+        NITRE_SALT_BLOCK = registerItem("nitre_salt_block", new BlockItem());
 
         //Soul
         SOUL_JACK_O_LANTERN = registerItem("soul_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.SOUL_JACK_O_LANTERN.get(), props));

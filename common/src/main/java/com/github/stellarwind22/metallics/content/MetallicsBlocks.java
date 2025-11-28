@@ -84,6 +84,10 @@ public class MetallicsBlocks {
             .sound(SoundType.COPPER)
             .requiresCorrectToolForDrops();
 
+    private static final MBlockProps saltBlockProps = new MBlockProps()
+            .sound(SoundType.STONE)
+            .requiresCorrectToolForDrops();
+
     private static final MBlockProps stairSlabProps = new MBlockProps()
             .sound(SoundType.COPPER)
             .requiresCorrectToolForDrops()
@@ -120,6 +124,7 @@ public class MetallicsBlocks {
             .sound(SoundType.COPPER)
             .isValidSpawn(MBlockProps::never);
 
+    public static RegistrySupplier<Block> NITRE_SALT_BLOCK;
 
     //Soul
     public static RegistrySupplier<Block> SOUL_JACK_O_LANTERN;
@@ -390,6 +395,7 @@ public class MetallicsBlocks {
         BLOCKS = DeferredRegister.create(Metallics.MOD_ID, Registries.BLOCK);
 
         //Register stuff here ▼▼▼
+        NITRE_SALT_BLOCK = registerBlock("nitre_salt_block", new MBlock<>(Block::new, Optional.of(saltBlockProps.getCopy())));
 
         //Soul
         SOUL_JACK_O_LANTERN = registerBlock("soul_jack_o_lantern", new MBlock<>(
