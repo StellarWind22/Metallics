@@ -243,6 +243,7 @@ public class MetallicsBlocks {
     //Blue Iron
     public static RegistrySupplier<Block> BLUE_IRON_CHAIN;
     public static RegistrySupplier<Block> BLUE_IRON_LANTERN;
+    public static RegistrySupplier<Block> BLUE_IRON_SOUL_LANTERN;
     public static RegistrySupplier<IronBarsBlock> BLUE_IRON_BARS;
     public static RegistrySupplier<Block> BLUE_IRON_BLOCK;
     public static RegistrySupplier<IronBarsBlock> BLUE_IRON_MESH;
@@ -505,7 +506,8 @@ public class MetallicsBlocks {
 
         //Blue Iron
         BLUE_IRON_CHAIN = registerBlock("blue_iron_chain", new MBlock<>(ChainBlock::new, Optional.of(chainProps.getCopy())));
-        BLUE_IRON_LANTERN = registerBlock("blue_iron_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(GLD_LNT).getCopy())));
+        BLUE_IRON_LANTERN = registerBlock("blue_iron_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(IRN_LNT).getCopy())));
+        BLUE_IRON_SOUL_LANTERN = registerBlock("blue_iron_soul_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(IRN_LNT).getCopy())));
         BLUE_IRON_BARS = registerBlock("blue_iron_bars", new MBlock<>(IronBarsBlock::new, Optional.of(barsProps.strength(GLD_STR).getCopy())));
         BLUE_IRON_BLOCK = registerBlock("blue_iron_block",  new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_PLATED_BLOCK = registerBlock("blue_iron_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
