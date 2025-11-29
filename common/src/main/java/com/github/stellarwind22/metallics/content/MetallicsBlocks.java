@@ -246,8 +246,12 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> BLUE_IRON_SOUL_LANTERN;
     public static RegistrySupplier<IronBarsBlock> BLUE_IRON_BARS;
     public static RegistrySupplier<Block> BLUE_IRON_BLOCK;
+    public static RegistrySupplier<DoorBlock> BLUE_IRON_DOOR;
+    public static RegistrySupplier<TrapDoorBlock> BLUE_IRON_TRAPDOOR;
     public static RegistrySupplier<IronBarsBlock> BLUE_IRON_MESH;
     public static RegistrySupplier<Block> BLUE_IRON_MESH_FENCE;
+    public static RegistrySupplier<DoorBlock> BLUE_IRON_MESH_DOOR;
+    public static RegistrySupplier<TrapDoorBlock> BLUE_IRON_MESH_TRAPDOOR;
     public static RegistrySupplier<Block> BLUE_IRON_GRATE;
     public static RegistrySupplier<Block> BLUE_IRON_PLATED_BLOCK;
     public static RegistrySupplier<MBrushingBlock> BRUSHING_BLUE_IRON_BLOCK;
@@ -520,8 +524,12 @@ public class MetallicsBlocks {
         CUT_BLUE_IRON_STAIRS = registerBlock("cut_blue_iron_stairs", new MBlock<>(props -> new StairBlock(Blocks.IRON_BLOCK.defaultBlockState(), props), Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
         CUT_BLUE_IRON_SLAB = registerBlock("cut_blue_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
         CHISELED_BLUE_IRON_BLOCK = registerBlock("chiseled_blue_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        BLUE_IRON_DOOR = registerBlock("blue_iron_door", new MBlock<>(props -> new DoorBlock(BlockSetType.IRON, props), Optional.of(doorProps.strength(IRN_GRT).getCopy())));
+        BLUE_IRON_TRAPDOOR = registerBlock("blue_iron_trapdoor", new MBlock<>(props -> new TrapDoorBlock(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_MESH = registerBlock("blue_iron_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
         BLUE_IRON_MESH_FENCE = registerBlock("blue_iron_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
+        BLUE_IRON_MESH_DOOR = registerBlock("blue_iron_mesh_door", new MBlock<>(props -> new DoorBlock(BlockSetType.IRON, props), Optional.of(doorProps.strength(IRN_GRT).getCopy())));
+        BLUE_IRON_MESH_TRAPDOOR = registerBlock("blue_iron_mesh_trapdoor", new MBlock<>(props -> new TrapDoorBlock(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_GRATE = registerBlock("blue_iron_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_LAMP = registerBlock("blue_iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
 

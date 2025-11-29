@@ -130,8 +130,12 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> CUT_BLUE_IRON_STAIRS;
     public static RegistrySupplier<BlockItem> CUT_BLUE_IRON_SLAB;
     public static RegistrySupplier<BlockItem> CHISELED_BLUE_IRON_BLOCK;
+    public static RegistrySupplier<DoubleHighBlockItem> BLUE_IRON_DOOR;
+    public static RegistrySupplier<BlockItem> BLUE_IRON_TRAPDOOR;
     public static RegistrySupplier<BlockItem> BLUE_IRON_MESH;
     public static RegistrySupplier<BlockItem> BLUE_IRON_MESH_FENCE;
+    public static RegistrySupplier<DoubleHighBlockItem> BLUE_IRON_MESH_DOOR;
+    public static RegistrySupplier<BlockItem> BLUE_IRON_MESH_TRAPDOOR;
     public static RegistrySupplier<BlockItem> BLUE_IRON_GRATE;
     public static RegistrySupplier<BlockItem> BLUE_IRON_LAMP;
 
@@ -297,8 +301,12 @@ public class MetallicsItems {
         BLUE_IRON_BARS = registerItem("blue_iron_bars", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_BARS.get(), props));
         BLUE_IRON_LANTERN = registerItem("blue_iron_lantern", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_LANTERN.get(), props));
         BLUE_IRON_SOUL_LANTERN = registerItem("blue_iron_soul_lantern", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_SOUL_LANTERN.get(), props));
+        BLUE_IRON_DOOR = registerItem("blue_iron_door", props -> new DoubleHighBlockItem(MetallicsBlocks.BLUE_IRON_DOOR.get(), props));
+        BLUE_IRON_TRAPDOOR = registerItem("blue_iron_trapdoor", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_TRAPDOOR.get(), props));
         BLUE_IRON_MESH = registerItem("blue_iron_mesh", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH.get(), props));
         BLUE_IRON_MESH_FENCE = registerItem("blue_iron_mesh_fence", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH_FENCE.get(), props));
+        BLUE_IRON_MESH_DOOR = registerItem("blue_iron_mesh_door", props -> new DoubleHighBlockItem(MetallicsBlocks.BLUE_IRON_MESH_DOOR.get(), props));
+        BLUE_IRON_MESH_TRAPDOOR = registerItem("blue_iron_mesh_trapdoor", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_TRAPDOOR.get(), props));
         BLUE_IRON_GRATE = registerItem("blue_iron_grate", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_GRATE.get(), props));
         BLUE_IRON_PLATED_BLOCK = registerItem("blue_iron_plated_block", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_PLATED_BLOCK.get(), props));
         BLUE_IRON_SLAB = registerItem("blue_iron_slab", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_SLAB.get(), props));
