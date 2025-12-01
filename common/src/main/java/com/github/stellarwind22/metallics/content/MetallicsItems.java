@@ -70,6 +70,8 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> WAXED_WEATHERED_COPPER_MESH_FENCE;
     public static RegistrySupplier<BlockItem> WAXED_OXIDIZED_COPPER_MESH_FENCE;
 
+    public static RegistrySupplier<BlockItem> COPPER_MESH_GATE;
+
     public static RegistrySupplier<DoubleHighBlockItem> COPPER_MESH_DOOR;
     public static RegistrySupplier<DoubleHighBlockItem> EXPOSED_COPPER_MESH_DOOR;
     public static RegistrySupplier<DoubleHighBlockItem> WEATHERED_COPPER_MESH_DOOR;
@@ -206,6 +208,7 @@ public class MetallicsItems {
         BRUSHED_COPPER_SLAB= registerItem("brushed_copper_slab", props -> new BlockItem(MetallicsBlocks.BRUSHED_COPPER_SLAB.get(), props));
         COPPER_MESH = registerItem("copper_mesh", props -> new BlockItem(MetallicsBlocks.COPPER_MESH.get(), props));
         COPPER_MESH_FENCE = registerItem("copper_mesh_fence", props -> new BlockItem(MetallicsBlocks.COPPER_MESH_FENCE.get(), props));
+        COPPER_MESH_GATE = registerItem("copper_mesh_gate", props -> new BlockItem(MetallicsBlocks.COPPER_MESH_GATE.get(), props));
         COPPER_MESH_DOOR = registerItem("copper_mesh_door", props -> new DoubleHighBlockItem(MetallicsBlocks.COPPER_MESH_DOOR.get(), props));
         COPPER_MESH_TRAPDOOR = registerItem("copper_mesh_trapdoor", props -> new BlockItem(MetallicsBlocks.COPPER_MESH_TRAPDOOR.get(), props));
         COPPER_SLAB = registerItem("copper_slab", props -> new BlockItem(MetallicsBlocks.COPPER_SLAB.get(), props));

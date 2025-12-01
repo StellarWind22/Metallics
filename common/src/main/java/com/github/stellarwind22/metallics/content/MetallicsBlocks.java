@@ -177,6 +177,8 @@ public class MetallicsBlocks {
 
     public static WeatheringCopperBlocks COPPER_MESH_FENCES;
 
+    public static RegistrySupplier<MMeshGate> COPPER_MESH_GATE;
+
     public static RegistrySupplier<WeatheringCopperDoorBlock> COPPER_MESH_DOOR;
     public static RegistrySupplier<WeatheringCopperDoorBlock> EXPOSED_COPPER_MESH_DOOR;
     public static RegistrySupplier<WeatheringCopperDoorBlock> WEATHERED_COPPER_MESH_DOOR;
@@ -452,6 +454,8 @@ public class MetallicsBlocks {
         WAXED_EXPOSED_COPPER_MESH_FENCE = registerBlock("waxed_exposed_copper_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
         WAXED_WEATHERED_COPPER_MESH_FENCE = registerBlock("waxed_weathered_copper_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
         WAXED_OXIDIZED_COPPER_MESH_FENCE = registerBlock("waxed_oxidized_copper_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+
+        COPPER_MESH_GATE = registerBlock("copper_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.COPPER, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
 
         COPPER_MESH_TRAPDOOR = registerBlock("copper_mesh_trapdoor", new MBlock<>(props -> new WeatheringCopperTrapDoorBlock(BlockSetType.COPPER, WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
         EXPOSED_COPPER_MESH_TRAPDOOR = registerBlock("exposed_copper_mesh_trapdoor", new MBlock<>(props -> new WeatheringCopperTrapDoorBlock(BlockSetType.COPPER, WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));

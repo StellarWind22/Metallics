@@ -91,7 +91,7 @@ public class MMeshFenceBlock extends Block implements SimpleWaterloggedBlock {
 
     private boolean connectsTo(BlockState blockState, boolean bl, Direction direction) {
         Block block = blockState.getBlock();
-        boolean bl2 = block instanceof FenceGateBlock && FenceGateBlock.connectsToDirection(blockState, direction);
+        boolean bl2 = block instanceof FenceGateBlock && FenceGateBlock.connectsToDirection(blockState, direction) || block instanceof MMeshGate && MMeshGate.connectsToDirection(blockState, direction);
         return blockState.is(BlockTags.WALLS) || !isExceptionForConnection(blockState) && bl || block instanceof IronBarsBlock || bl2;
     }
 
