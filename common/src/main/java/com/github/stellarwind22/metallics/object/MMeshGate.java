@@ -69,14 +69,12 @@ public class MMeshGate extends HorizontalDirectionalBlock {
         this.registerDefaultState(this.stateDefinition.any().setValue(OPEN, false).setValue(POWERED, false).setValue(IN_WALL, false));
     }
 
-
-
-    protected @NotNull VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
+    public @NotNull VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
         Direction.Axis axis = blockState.getValue(FACING).getAxis();
         return (blockState.getValue(IN_WALL) ? SHAPES_WALL : SHAPES).get(axis);
     }
 
-    protected @NotNull BlockState updateShape(BlockState blockState, LevelReader levelReader, ScheduledTickAccess scheduledTickAccess, BlockPos blockPos, Direction direction, BlockPos blockPos2, BlockState blockState2, RandomSource randomSource) {
+    public @NotNull BlockState updateShape(BlockState blockState, LevelReader levelReader, ScheduledTickAccess scheduledTickAccess, BlockPos blockPos, Direction direction, BlockPos blockPos2, BlockState blockState2, RandomSource randomSource) {
         Direction.Axis axis = direction.getAxis();
         if (blockState.getValue(FACING).getClockWise().getAxis() != axis) {
             return super.updateShape(blockState, levelReader, scheduledTickAccess, blockPos, direction, blockPos2, blockState2, randomSource);
@@ -86,22 +84,22 @@ public class MMeshGate extends HorizontalDirectionalBlock {
         }
     }
 
-    protected @NotNull VoxelShape getBlockSupportShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
+    public @NotNull VoxelShape getBlockSupportShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
         Direction.Axis axis = blockState.getValue(FACING).getAxis();
         return blockState.getValue(OPEN) ? Shapes.empty() : SHAPE_SUPPORT.get(axis);
     }
 
-    protected @NotNull VoxelShape getCollisionShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
+    public @NotNull VoxelShape getCollisionShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
         Direction.Axis axis = blockState.getValue(FACING).getAxis();
         return blockState.getValue(OPEN) ? Shapes.empty() : SHAPE_COLLISION.get(axis);
     }
 
-    protected @NotNull VoxelShape getOcclusionShape(BlockState blockState) {
+    public @NotNull VoxelShape getOcclusionShape(BlockState blockState) {
         Direction.Axis axis = blockState.getValue(FACING).getAxis();
         return (blockState.getValue(IN_WALL) ? SHAPE_OCCLUSION_WALL : SHAPE_OCCLUSION).get(axis);
     }
 
-    protected boolean isPathfindable(BlockState blockState, PathComputationType pathComputationType) {
+    public boolean isPathfindable(BlockState blockState, PathComputationType pathComputationType) {
         switch (pathComputationType) {
             case LAND, AIR -> {
                 return blockState.getValue(OPEN);
@@ -130,7 +128,7 @@ public class MMeshGate extends HorizontalDirectionalBlock {
         return blockState.is(BlockTags.WALLS);
     }
 
-    protected @NotNull InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos blockPos, Player player, BlockHitResult blockHitResult) {
+    public @NotNull InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos blockPos, Player player, BlockHitResult blockHitResult) {
         if (blockState.getValue(OPEN)) {
             blockState = blockState.setValue(OPEN, false);
             level.setBlock(blockPos, blockState, 10);
@@ -150,7 +148,7 @@ public class MMeshGate extends HorizontalDirectionalBlock {
         return InteractionResult.SUCCESS;
     }
 
-    protected void onExplosionHit(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, Explosion explosion, BiConsumer<ItemStack, BlockPos> biConsumer) {
+    public void onExplosionHit(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, Explosion explosion, BiConsumer<ItemStack, BlockPos> biConsumer) {
         if (explosion.canTriggerBlocks() && !(Boolean)blockState.getValue(POWERED)) {
             boolean bl = blockState.getValue(OPEN);
             serverLevel.setBlockAndUpdate(blockPos, blockState.setValue(OPEN, !bl));
@@ -161,7 +159,7 @@ public class MMeshGate extends HorizontalDirectionalBlock {
         super.onExplosionHit(blockState, serverLevel, blockPos, explosion, biConsumer);
     }
 
-    protected void neighborChanged(BlockState blockState, Level level, BlockPos blockPos, Block block, @Nullable Orientation orientation, boolean bl) {
+    public void neighborChanged(BlockState blockState, Level level, BlockPos blockPos, Block block, @Nullable Orientation orientation, boolean bl) {
         if (!level.isClientSide()) {
             boolean bl2 = level.hasNeighborSignal(blockPos);
             if (blockState.getValue(POWERED) != bl2) {
@@ -175,7 +173,7 @@ public class MMeshGate extends HorizontalDirectionalBlock {
         }
     }
 
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+    public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING, OPEN, POWERED, IN_WALL);
     }
 
@@ -187,10 +185,10 @@ public class MMeshGate extends HorizontalDirectionalBlock {
         OPEN = BlockStateProperties.OPEN;
         POWERED = BlockStateProperties.POWERED;
         IN_WALL = BlockStateProperties.IN_WALL;
-        SHAPES = Shapes.rotateHorizontalAxis(Block.cube(16.0F, 16.0F, 4.0F));
+        SHAPES = Shapes.rotateHorizontalAxis(Block.cube(16.0F, 16.0F, 2.0F));
         SHAPES_WALL = Maps.newEnumMap(Util.mapValues(SHAPES, (voxelShape) -> Shapes.join(voxelShape, Block.column(16.0F, 13.0F, 16.0F), BooleanOp.ONLY_FIRST)));
-        SHAPE_COLLISION = Shapes.rotateHorizontalAxis(Block.column(16.0F, 4.0F, 0.0F, 24.0F));
-        SHAPE_SUPPORT = Shapes.rotateHorizontalAxis(Block.column(16.0F, 4.0F, 5.0F, 24.0F));
+        SHAPE_COLLISION = Shapes.rotateHorizontalAxis(Block.column(16.0F, 2.0F, 0.0F, 24.0F));
+        SHAPE_SUPPORT = Shapes.rotateHorizontalAxis(Block.column(16.0F, 2.0F, 5.0F, 24.0F));
         SHAPE_OCCLUSION = Shapes.rotateHorizontalAxis(Shapes.or(Block.box(0.0F, 5.0F, 7.0F, 2.0F, 16.0F, 9.0F), Block.box(14.0F, 5.0F, 7.0F, 16.0F, 16.0F, 9.0F)));
         SHAPE_OCCLUSION_WALL = Maps.newEnumMap(Util.mapValues(SHAPE_OCCLUSION, (voxelShape) -> voxelShape.move(0.0F, -0.1875F, 0.0F).optimize()));
     }
