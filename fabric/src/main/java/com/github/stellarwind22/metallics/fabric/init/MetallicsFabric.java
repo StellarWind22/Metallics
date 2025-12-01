@@ -60,6 +60,7 @@ public final class MetallicsFabric implements ModInitializer {
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_LAMPS);
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_SLABS);
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_MESH_FENCES);
+        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_MESH_GATES);
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_MESH_DOORS);
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_MESH_TRAPDOORS);
 
@@ -71,11 +72,8 @@ public final class MetallicsFabric implements ModInitializer {
                                 "nitre_ore_biomes"
                         )
                 )),
-                        GenerationStep.Decoration.UNDERGROUND_ORES,
-                        ResourceKey.create(Registries.PLACED_FEATURE,
-                                ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID,
-                                        "ore_nitre_salt")
-                        )
+                GenerationStep.Decoration.UNDERGROUND_ORES,
+                ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "ore_nitre_salt"))
         );
     }
 

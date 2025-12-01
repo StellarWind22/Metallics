@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_mesh_gate_inventory",
+  "textures": {
+    "texture": "metallics:block/gold_mesh_gate"
+  }
+}

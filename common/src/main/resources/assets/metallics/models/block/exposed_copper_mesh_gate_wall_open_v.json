@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_mesh_gate_wall_open_v",
+  "textures": {
+    "texture": "metallics:block/exposed_copper_mesh_gate"
+  }
+}
