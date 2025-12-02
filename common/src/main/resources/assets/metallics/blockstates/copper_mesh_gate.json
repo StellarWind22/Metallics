@@ -37,16 +37,14 @@
     },{
       "apply": {
         "model": "metallics:block/copper_mesh_gate",
-        "uvlock": true,
-        "y": 0
+        "uvlock": true
       },
       "when": {
         "facing": "north", "open": "false", "in_wall": "false"
       }
     },{
       "apply": {
-        "model": "metallics:block/copper_mesh_gate_v",
-        "y": 0
+        "model": "metallics:block/copper_mesh_gate_v"
       },
       "when": {
         "facing": "north", "open": "false", "in_wall": "false"
@@ -105,16 +103,14 @@
     },{
       "apply": {
         "model": "metallics:block/copper_mesh_gate_open",
-        "uvlock": true,
-        "y": 0
+        "uvlock": true
       },
       "when": {
         "facing": "north", "open": "true", "in_wall": "false"
       }
     },{
       "apply": {
-        "model": "metallics:block/copper_mesh_gate_open_v",
-        "y": 0
+        "model": "metallics:block/copper_mesh_gate_open_v"
       },
       "when": {
         "facing": "north", "open": "true", "in_wall": "false"
@@ -171,16 +167,14 @@
     },{
       "apply": {
         "model": "metallics:block/copper_mesh_gate_wall",
-        "uvlock": true,
-        "y": 0
+        "uvlock": true
       },
       "when": {
         "facing": "north", "open": "false", "in_wall": "true"
       }
     },{
       "apply": {
-        "model": "metallics:block/copper_mesh_gate_wall_v",
-        "y": 0
+        "model": "metallics:block/copper_mesh_gate_wall_v"
       },
       "when": {
         "facing": "north", "open": "false", "in_wall": "true"
@@ -239,16 +233,14 @@
     },{
       "apply": {
         "model": "metallics:block/copper_mesh_gate_wall_open",
-        "uvlock": true,
-        "y": 0
+        "uvlock": true
       },
       "when": {
         "facing": "north", "open": "true", "in_wall": "true"
       }
     },{
       "apply": {
-        "model": "metallics:block/copper_mesh_gate_wall_open_v",
-        "y": 0
+        "model": "metallics:block/copper_mesh_gate_wall_open_v"
       },
       "when": {
         "facing": "north", "open": "true", "in_wall": "true"

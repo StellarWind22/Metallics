@@ -3,17 +3,51 @@
     {
       "apply": {
         "model": "metallics:block/exposed_copper_mesh_gate",
-        "uvlock": true
+        "uvlock": true,
+        "y": 180
       },
       "when": {
         "facing": "south", "open": "false", "in_wall": "false"
+      }
+    },{
+      "apply": {
+        "model": "metallics:block/exposed_copper_mesh_gate_v",
+        "y": 180
+      },
+      "when": {
+        "facing": "south", "open": "false", "in_wall": "false"
+      }
+    },{
+      "apply": {
+        "model": "metallics:block/exposed_copper_mesh_gate",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "facing": "west", "open": "false", "in_wall": "false"
+      }
+    },{
+      "apply": {
+        "model": "metallics:block/exposed_copper_mesh_gate_v",
+        "y": 270
+      },
+      "when": {
+        "facing": "west", "open": "false", "in_wall": "false"
+      }
+    },{
+      "apply": {
+        "model": "metallics:block/exposed_copper_mesh_gate",
+        "uvlock": true
+      },
+      "when": {
+        "facing": "north", "open": "false", "in_wall": "false"
       }
     },{
       "apply": {
         "model": "metallics:block/exposed_copper_mesh_gate_v"
       },
       "when": {
-        "facing": "south", "open": "false", "in_wall": "false"
+        "facing": "north", "open": "false", "in_wall": "false"
       }
     },{
       "apply": {
@@ -22,7 +56,7 @@
         "y": 90
       },
       "when": {
-        "facing": "west", "open": "false", "in_wall": "false"
+        "facing": "east", "open": "false", "in_wall": "false"
       }
     },{
       "apply": {
@@ -30,41 +64,41 @@
         "y": 90
       },
       "when": {
-        "facing": "west", "open": "false", "in_wall": "false"
-      }
-    },{
-      "apply": {
-        "model": "metallics:block/exposed_copper_mesh_gate",
-        "uvlock": true,
-        "y": 180
-      },
-      "when": {
-        "facing": "north", "open": "false", "in_wall": "false"
-      }
-    },{
-      "apply": {
-        "model": "metallics:block/exposed_copper_mesh_gate_v",
-        "y": 180
-      },
-      "when": {
-        "facing": "north", "open": "false", "in_wall": "false"
-      }
-    },{
-      "apply": {
-        "model": "metallics:block/exposed_copper_mesh_gate",
-        "uvlock": true,
-        "y": 270
-      },
-      "when": {
         "facing": "east", "open": "false", "in_wall": "false"
       }
     },{
       "apply": {
-        "model": "metallics:block/exposed_copper_mesh_gate_v",
+        "model": "metallics:block/exposed_copper_mesh_gate_open",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "facing": "south", "open": "true", "in_wall": "false"
+      }
+    },{
+      "apply": {
+        "model": "metallics:block/exposed_copper_mesh_gate_open_v",
+        "y": 180
+      },
+      "when": {
+        "facing": "south", "open": "true", "in_wall": "false"
+      }
+    },{
+      "apply": {
+        "model": "metallics:block/exposed_copper_mesh_gate_open",
+        "uvlock": true,
         "y": 270
       },
       "when": {
-        "facing": "east", "open": "false", "in_wall": "false"
+        "facing": "west", "open": "true", "in_wall": "false"
+      }
+    },{
+      "apply": {
+        "model": "metallics:block/exposed_copper_mesh_gate_open_v",
+        "y": 270
+      },
+      "when": {
+        "facing": "west", "open": "true", "in_wall": "false"
       }
     },{
       "apply": {
@@ -72,54 +106,20 @@
         "uvlock": true
       },
       "when": {
-        "facing": "south", "open": "true", "in_wall": "false"
+        "facing": "north", "open": "true", "in_wall": "false"
       }
     },{
       "apply": {
         "model": "metallics:block/exposed_copper_mesh_gate_open_v"
       },
       "when": {
-        "facing": "south", "open": "true", "in_wall": "false"
-      }
-    },{
-      "apply": {
-        "model": "metallics:block/exposed_copper_mesh_gate_open",
-        "uvlock": true,
-        "y": 90
-      },
-      "when": {
-        "facing": "west", "open": "true", "in_wall": "false"
-      }
-    },{
-      "apply": {
-        "model": "metallics:block/exposed_copper_mesh_gate_open_v",
-        "y": 90
-      },
-      "when": {
-        "facing": "west", "open": "true", "in_wall": "false"
-      }
-    },{
-      "apply": {
-        "model": "metallics:block/exposed_copper_mesh_gate_open",
-        "uvlock": true,
-        "y": 180
-      },
-      "when": {
-        "facing": "north", "open": "true", "in_wall": "false"
-      }
-    },{
-      "apply": {
-        "model": "metallics:block/exposed_copper_mesh_gate_open_v",
-        "y": 180
-      },
-      "when": {
         "facing": "north", "open": "true", "in_wall": "false"
       }
     },{
       "apply": {
         "model": "metallics:block/exposed_copper_mesh_gate_open",
         "uvlock": true,
-        "y": 270
+        "y": 90
       },
       "when": {
         "facing": "east", "open": "true", "in_wall": "false"
@@ -127,7 +127,7 @@
     },{
       "apply": {
         "model": "metallics:block/exposed_copper_mesh_gate_open_v",
-        "y": 270
+        "y": 90
       },
       "when": {
         "facing": "east", "open": "true", "in_wall": "false"
@@ -151,7 +151,7 @@
       "apply": {
         "model": "metallics:block/exposed_copper_mesh_gate_wall",
         "uvlock": true,
-        "y": 90
+        "y": 270
       },
       "when": {
         "facing": "west", "open": "false", "in_wall": "true"
@@ -159,7 +159,7 @@
     },{
       "apply": {
         "model": "metallics:block/exposed_copper_mesh_gate_wall_v",
-        "y": 90
+        "y": 270
       },
       "when": {
         "facing": "west", "open": "false", "in_wall": "true"
@@ -167,16 +167,14 @@
     },{
       "apply": {
         "model": "metallics:block/exposed_copper_mesh_gate_wall",
-        "uvlock": true,
-        "y": 180
+        "uvlock": true
       },
       "when": {
         "facing": "north", "open": "false", "in_wall": "true"
       }
     },{
       "apply": {
-        "model": "metallics:block/exposed_copper_mesh_gate_wall_v",
-        "y": 180
+        "model": "metallics:block/exposed_copper_mesh_gate_wall_v"
       },
       "when": {
         "facing": "north", "open": "false", "in_wall": "true"
@@ -185,7 +183,7 @@
       "apply": {
         "model": "metallics:block/exposed_copper_mesh_gate_wall",
         "uvlock": true,
-        "y": 270
+        "y": 90
       },
       "when": {
         "facing": "east", "open": "false", "in_wall": "true"
@@ -193,10 +191,44 @@
     },{
       "apply": {
         "model": "metallics:block/exposed_copper_mesh_gate_wall_v",
-        "y": 270
+        "y": 90
       },
       "when": {
         "facing": "east", "open": "false", "in_wall": "true"
+      }
+    },{
+      "apply": {
+        "model": "metallics:block/exposed_copper_mesh_gate_wall_open",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "facing": "south", "open": "true", "in_wall": "true"
+      }
+    },{
+      "apply": {
+        "model": "metallics:block/exposed_copper_mesh_gate_wall_open_v",
+        "y": 180
+      },
+      "when": {
+        "facing": "south", "open": "true", "in_wall": "true"
+      }
+    },{
+      "apply": {
+        "model": "metallics:block/exposed_copper_mesh_gate_wall_open",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "facing": "west", "open": "true", "in_wall": "true"
+      }
+    },{
+      "apply": {
+        "model": "metallics:block/exposed_copper_mesh_gate_wall_open_v",
+        "y": 270
+      },
+      "when": {
+        "facing": "west", "open": "true", "in_wall": "true"
       }
     },{
       "apply": {
@@ -204,54 +236,20 @@
         "uvlock": true
       },
       "when": {
-        "facing": "south", "open": "true", "in_wall": "true"
+        "facing": "north", "open": "true", "in_wall": "true"
       }
     },{
       "apply": {
         "model": "metallics:block/exposed_copper_mesh_gate_wall_open_v"
       },
       "when": {
-        "facing": "south", "open": "true", "in_wall": "true"
-      }
-    },{
-      "apply": {
-        "model": "metallics:block/exposed_copper_mesh_gate_wall_open",
-        "uvlock": true,
-        "y": 90
-      },
-      "when": {
-        "facing": "west", "open": "true", "in_wall": "true"
-      }
-    },{
-      "apply": {
-        "model": "metallics:block/exposed_copper_mesh_gate_wall_open_v",
-        "y": 90
-      },
-      "when": {
-        "facing": "west", "open": "true", "in_wall": "true"
-      }
-    },{
-      "apply": {
-        "model": "metallics:block/exposed_copper_mesh_gate_wall_open",
-        "uvlock": true,
-        "y": 180
-      },
-      "when": {
-        "facing": "north", "open": "true", "in_wall": "true"
-      }
-    },{
-      "apply": {
-        "model": "metallics:block/exposed_copper_mesh_gate_wall_open_v",
-        "y": 180
-      },
-      "when": {
         "facing": "north", "open": "true", "in_wall": "true"
       }
     },{
       "apply": {
         "model": "metallics:block/exposed_copper_mesh_gate_wall_open",
         "uvlock": true,
-        "y": 270
+        "y": 90
       },
       "when": {
         "facing": "east", "open": "true", "in_wall": "true"
@@ -259,7 +257,7 @@
     },{
       "apply": {
         "model": "metallics:block/exposed_copper_mesh_gate_wall_open_v",
-        "y": 270
+        "y": 90
       },
       "when": {
         "facing": "east", "open": "true", "in_wall": "true"
