@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=true": {
+      "model": "metallics:block/metal_workbench_lit"
+    },
+    "lit=false": {
+      "model": "metallics:block/metal_workbench"
+    }
+  }
+}

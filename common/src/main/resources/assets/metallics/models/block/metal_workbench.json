@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_metal_workbench",
+  "textures": {
+    "texture": "metallics:block/metal_workbench"
+  }
+}

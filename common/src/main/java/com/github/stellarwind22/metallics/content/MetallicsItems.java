@@ -18,6 +18,8 @@ public class MetallicsItems {
     private static DeferredRegister<Item> ITEMS;
 
     //Chemical
+    public static RegistrySupplier<BlockItem> METAL_WORKBENCH;
+
     public static RegistrySupplier<Item> NITRE_SALT;
     public static RegistrySupplier<BlockItem> NITRE_SALT_BLOCK;
 
@@ -208,6 +210,8 @@ public class MetallicsItems {
         ITEMS = DeferredRegister.create(Metallics.MOD_ID, Registries.ITEM);
 
         //Register stuff here ▼▼▼
+        METAL_WORKBENCH = registerItem("metal_workbench", props -> new BlockItem(MetallicsBlocks.METAL_WORKBENCH.get(), props));
+
         NITRE_SALT = registerItem("nitre_salt", Item::new);
         NITRE_SALT_BLOCK = registerItem("nitre_salt_block", props -> new BlockItem(MetallicsBlocks.NITRE_SALT_BLOCK.get(), props));
 

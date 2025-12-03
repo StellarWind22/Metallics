@@ -124,6 +124,8 @@ public class MetallicsBlocks {
             .sound(SoundType.COPPER)
             .isValidSpawn(MBlockProps::never);
 
+
+    public static RegistrySupplier<MetalWorkBenchBlock> METAL_WORKBENCH;
     public static RegistrySupplier<Block> NITRE_SALT_BLOCK;
 
     //Soul
@@ -419,6 +421,8 @@ public class MetallicsBlocks {
         BLOCKS = DeferredRegister.create(Metallics.MOD_ID, Registries.BLOCK);
 
         //Register stuff here ▼▼▼
+        METAL_WORKBENCH = registerBlock("metal_workbench", new MBlock<>(MetalWorkBenchBlock::new, Optional.of(blockProps.strength(CPR_GRT).getCopy())));
+
         NITRE_SALT_BLOCK = registerBlock("nitre_salt_block", new MBlock<>(Block::new, Optional.of(saltBlockProps.getCopy())));
 
         //Soul
