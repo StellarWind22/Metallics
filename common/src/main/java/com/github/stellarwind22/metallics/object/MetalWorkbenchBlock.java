@@ -15,14 +15,14 @@ import net.minecraft.world.level.material.Fluids;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class MetalWorkBenchBlock extends BaseEntityBlock implements SimpleWaterloggedBlock {
+public class MetalWorkbenchBlock extends BaseEntityBlock implements SimpleWaterloggedBlock {
 
-    private static final MapCodec<MetalWorkBenchBlock> CODEC = simpleCodec(MetalWorkBenchBlock::new);
+    private static final MapCodec<MetalWorkbenchBlock> CODEC = simpleCodec(MetalWorkbenchBlock::new);
 
     private static final BooleanProperty LIT;
     private static final BooleanProperty WATERLOGGED;
 
-    public MetalWorkBenchBlock(Properties properties) {
+    public MetalWorkbenchBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.getStateDefinition().any().setValue(LIT, false).setValue(WATERLOGGED, false));
     }
