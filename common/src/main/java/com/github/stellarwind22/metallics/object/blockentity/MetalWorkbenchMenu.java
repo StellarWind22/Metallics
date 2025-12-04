@@ -1,4 +1,4 @@
-package com.github.stellarwind22.metallics.object;
+package com.github.stellarwind22.metallics.object.blockentity;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;

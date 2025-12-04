@@ -1,8 +1,8 @@
 package com.github.stellarwind22.metallics.mixin;
 
 import com.github.stellarwind22.metallics.content.MetallicsBlocks;
-import com.github.stellarwind22.metallics.object.MBrushable;
-import com.github.stellarwind22.metallics.object.MBrushingBlockEntity;
+import com.github.stellarwind22.metallics.object.blockentity.MBrushable;
+import com.github.stellarwind22.metallics.object.blockentity.MBrushingBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;

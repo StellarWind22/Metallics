@@ -1,7 +1,7 @@
 package com.github.stellarwind22.metallics.client.renderer;
 
 import com.github.stellarwind22.metallics.object.MCampfireBlock;
-import com.github.stellarwind22.metallics.object.MCampfireBlockEntity;
+import com.github.stellarwind22.metallics.object.blockentity.MCampfireBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import net.minecraft.client.renderer.SubmitNodeCollector;

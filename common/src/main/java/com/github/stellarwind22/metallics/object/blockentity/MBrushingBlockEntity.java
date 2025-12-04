@@ -1,4 +1,4 @@
-package com.github.stellarwind22.metallics.object;
+package com.github.stellarwind22.metallics.object.blockentity;
 
 import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
 

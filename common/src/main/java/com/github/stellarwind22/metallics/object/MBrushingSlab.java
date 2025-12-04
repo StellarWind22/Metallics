@@ -1,5 +1,7 @@
 package com.github.stellarwind22.metallics.object;
 
+import com.github.stellarwind22.metallics.object.blockentity.MBrushable;
+import com.github.stellarwind22.metallics.object.blockentity.MBrushingBlockEntity;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;

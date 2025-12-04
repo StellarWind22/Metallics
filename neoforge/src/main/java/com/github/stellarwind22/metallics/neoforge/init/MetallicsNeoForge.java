@@ -6,7 +6,7 @@ import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
 import com.github.stellarwind22.metallics.content.MetallicsBlocks;
 import com.github.stellarwind22.metallics.init.Metallics;
 import com.github.stellarwind22.metallics.client.init.MetallicsClient;
-import com.github.stellarwind22.metallics.object.MCampfireBlockEntity;
+import com.github.stellarwind22.metallics.object.blockentity.MCampfireBlockEntity;
 import net.minecraft.client.particle.LavaParticle;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.core.registries.Registries;

@@ -1,6 +1,7 @@
 package com.github.stellarwind22.metallics.object;
 
 import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
+import com.github.stellarwind22.metallics.object.blockentity.MCampfireBlockEntity;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
 import com.mojang.serialization.MapCodec;
