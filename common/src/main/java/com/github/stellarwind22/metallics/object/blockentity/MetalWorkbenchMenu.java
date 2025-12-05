@@ -1,11 +1,14 @@
 package com.github.stellarwind22.metallics.object.blockentity;
 
+import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
+import net.minecraft.world.Container;
+import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.MenuType;
+import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 public class MetalWorkbenchMenu extends AbstractContainerMenu {
 
@@ -15,8 +18,15 @@ public class MetalWorkbenchMenu extends AbstractContainerMenu {
     public static final int FUEL_SLOT = 4;
     public static final int OUT_SLOT = 5;
 
-    protected MetalWorkbenchMenu(@Nullable MenuType<?> menuType, int i) {
-        super(menuType, i);
+    private final Container container;
+    private final ContainerData containerData;
+    private final Level level;
+
+    public MetalWorkbenchMenu(int i, Inventory inventory) {
+        super(MetallicsBlockEntityTypes.METAL_WORKBENCH_MENU.get(), i);
+        this.container = new SimpleContainer(5);
+        this.containerData = new SimpleContainerData(1);
+        this.level = inventory.player.level();
     }
 
     @Override
