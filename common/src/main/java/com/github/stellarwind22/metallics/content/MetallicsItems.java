@@ -119,6 +119,7 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> CUT_IRON_STAIRS;
     public static RegistrySupplier<BlockItem> CUT_IRON_SLAB;
     public static RegistrySupplier<BlockItem> CHISELED_IRON_BLOCK;
+    public static RegistrySupplier<BlockItem> IRON_LADDER;
     public static RegistrySupplier<BlockItem> IRON_MESH;
     public static RegistrySupplier<BlockItem> IRON_MESH_FENCE;
     public static RegistrySupplier<BlockItem> IRON_MESH_GATE;
@@ -144,6 +145,7 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> CHISELED_BLUE_IRON_BLOCK;
     public static RegistrySupplier<DoubleHighBlockItem> BLUE_IRON_DOOR;
     public static RegistrySupplier<BlockItem> BLUE_IRON_TRAPDOOR;
+    public static RegistrySupplier<BlockItem> BLUE_IRON_LADDER;
     public static RegistrySupplier<BlockItem> BLUE_IRON_MESH;
     public static RegistrySupplier<BlockItem> BLUE_IRON_MESH_FENCE;
     public static RegistrySupplier<BlockItem> BLUE_IRON_MESH_GATE;
@@ -166,6 +168,7 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> CHISELED_GOLD_BLOCK;
     public static RegistrySupplier<DoubleHighBlockItem> GOLD_DOOR;
     public static RegistrySupplier<BlockItem> GOLD_TRAPDOOR;
+    public static RegistrySupplier<BlockItem> GOLD_LADDER;
     public static RegistrySupplier<BlockItem> GOLD_MESH;
     public static RegistrySupplier<BlockItem> GOLD_MESH_FENCE;
     public static RegistrySupplier<BlockItem> GOLD_MESH_GATE;
@@ -193,6 +196,7 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> CHISELED_NETHERITE_BLOCK;
     public static RegistrySupplier<DoubleHighBlockItem> NETHERITE_DOOR;
     public static RegistrySupplier<BlockItem> NETHERITE_TRAPDOOR;
+    public static RegistrySupplier<BlockItem> NETHERITE_LADDER;
     public static RegistrySupplier<BlockItem> NETHERITE_MESH;
     public static RegistrySupplier<BlockItem> NETHERITE_MESH_FENCE;
     public static RegistrySupplier<BlockItem> NETHERITE_MESH_GATE;
@@ -304,6 +308,7 @@ public class MetallicsItems {
 
 
         //Iron
+        IRON_LADDER = registerItem("iron_ladder", props -> new BlockItem(MetallicsBlocks.IRON_LADDER.get(), props));
         IRON_MESH = registerItem("iron_mesh", props -> new BlockItem(MetallicsBlocks.IRON_MESH.get(), props));
         IRON_MESH_FENCE = registerItem("iron_mesh_fence", props -> new BlockItem(MetallicsBlocks.IRON_MESH_FENCE.get(), props));
         IRON_MESH_GATE = registerItem("iron_mesh_gate", props -> new BlockItem(MetallicsBlocks.IRON_MESH_GATE.get(), props));
@@ -329,6 +334,7 @@ public class MetallicsItems {
         BLUE_IRON_SOUL_LANTERN = registerItem("blue_iron_soul_lantern", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_SOUL_LANTERN.get(), props));
         BLUE_IRON_DOOR = registerItem("blue_iron_door", props -> new DoubleHighBlockItem(MetallicsBlocks.BLUE_IRON_DOOR.get(), props));
         BLUE_IRON_TRAPDOOR = registerItem("blue_iron_trapdoor", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_TRAPDOOR.get(), props));
+        BLUE_IRON_LADDER = registerItem("blue_iron_ladder", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_LADDER.get(), props));
         BLUE_IRON_MESH = registerItem("blue_iron_mesh", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH.get(), props));
         BLUE_IRON_MESH_FENCE = registerItem("blue_iron_mesh_fence", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH_FENCE.get(), props));
         BLUE_IRON_MESH_GATE = registerItem("blue_iron_mesh_gate", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH_GATE.get(), props));
@@ -350,6 +356,7 @@ public class MetallicsItems {
         GOLD_BARS = registerItem("gold_bars", props -> new BlockItem(MetallicsBlocks.GOLD_BARS.get(), props));
         GOLD_DOOR = registerItem("gold_door", props -> new DoubleHighBlockItem(MetallicsBlocks.GOLD_DOOR.get(), props));
         GOLD_TRAPDOOR = registerItem("gold_trapdoor", props -> new BlockItem(MetallicsBlocks.GOLD_TRAPDOOR.get(), props));
+        GOLD_LADDER = registerItem("gold_ladder", props -> new BlockItem(MetallicsBlocks.GOLD_LADDER.get(), props));
         GOLD_MESH = registerItem("gold_mesh", props -> new BlockItem(MetallicsBlocks.GOLD_MESH.get(), props));
         GOLD_MESH_FENCE = registerItem("gold_mesh_fence", props -> new BlockItem(MetallicsBlocks.GOLD_MESH_FENCE.get(), props));
         GOLD_MESH_GATE = registerItem("gold_mesh_gate", props -> new BlockItem(MetallicsBlocks.GOLD_MESH_GATE.get(), props));
@@ -378,6 +385,7 @@ public class MetallicsItems {
         NETHERITE_LANTERN = registerItem("netherite_lantern", props -> new BlockItem(MetallicsBlocks.NETHERITE_LANTERN.get(), props.fireResistant()));
         NETHERITE_DOOR = registerItem("netherite_door", props -> new DoubleHighBlockItem(MetallicsBlocks.NETHERITE_DOOR.get(), props.fireResistant()));
         NETHERITE_TRAPDOOR = registerItem("netherite_trapdoor", props -> new BlockItem(MetallicsBlocks.NETHERITE_TRAPDOOR.get(), props.fireResistant()));
+        NETHERITE_LADDER = registerItem("netherite_ladder", props -> new BlockItem(MetallicsBlocks.NETHERITE_LADDER.get(), props));
         NETHERITE_MESH = registerItem("netherite_mesh", props -> new BlockItem(MetallicsBlocks.NETHERITE_MESH.get(), props.fireResistant()));
         NETHERITE_MESH_FENCE = registerItem("netherite_mesh_fence", props -> new BlockItem(MetallicsBlocks.NETHERITE_MESH_FENCE.get(), props.fireResistant()));
         NETHERITE_MESH_GATE = registerItem("netherite_mesh_gate", props -> new BlockItem(MetallicsBlocks.NETHERITE_MESH_GATE.get(), props));

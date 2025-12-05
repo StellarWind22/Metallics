@@ -1,5 +1,6 @@
 {
   "values": [
+    "metallics:iron_ladder",
     "metallics:iron_plated_block",
     "metallics:iron_slab",
     "metallics:brushed_iron_block",
@@ -12,6 +13,7 @@
     "metallics:iron_mesh_fence",
     "metallics:iron_grate",
     "metallics:iron_lamp",
+    "metallics:blue_iron_ladder",
     "metallics:blue_iron_block",
     "metallics:blue_iron_plated_block",
     "metallics:blue_iron_slab",

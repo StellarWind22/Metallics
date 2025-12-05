@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "metallics:block/blue_iron_ladder",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "metallics:block/blue_iron_ladder"
+    },
+    "facing=south": {
+      "model": "metallics:block/blue_iron_ladder",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "metallics:block/blue_iron_ladder",
+      "y": 270
+    }
+  }
+}

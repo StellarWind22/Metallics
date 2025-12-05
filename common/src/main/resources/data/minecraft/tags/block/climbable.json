@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "metallics:iron_ladder",
+    "metallics:blue_iron_ladder",
+    "metallics:gold_ladder",
+    "metallics:netherite_ladder"
+  ]
+}

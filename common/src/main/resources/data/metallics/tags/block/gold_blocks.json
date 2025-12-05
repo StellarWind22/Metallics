@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "metallics:gold_ladder",
     "metallics:gold_plated_block",
     "metallics:gold_slab",
     "metallics:brushed_gold_block",

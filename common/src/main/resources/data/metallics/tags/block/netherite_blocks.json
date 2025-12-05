@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "metallics:netherite_ladder",
     "metallics:netherite_plated_block",
     "metallics:netherite_slab",
     "metallics:brushed_netherite_block",

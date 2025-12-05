@@ -124,6 +124,13 @@ public class MetallicsBlocks {
             .sound(SoundType.COPPER)
             .isValidSpawn(MBlockProps::never);
 
+    private static final MBlockProps ladderProps = new MBlockProps()
+            .noOcclusion().requiresCorrectToolForDrops()
+            .isSuffocating(MBlockProps::never)
+            .isViewBlocking(MBlockProps::never)
+            .sound(SoundType.COPPER_GRATE)
+            .isValidSpawn(MBlockProps::never);
+
 
     public static RegistrySupplier<MetalWorkbenchBlock> METAL_WORKBENCH;
     public static RegistrySupplier<Block> NITRE_SALT_BLOCK;
@@ -238,6 +245,7 @@ public class MetallicsBlocks {
     public static WeatheringCopperBlocks COPPER_LAMPS;
 
     //Iron
+    public static RegistrySupplier<LadderBlock> IRON_LADDER;
     public static RegistrySupplier<IronBarsBlock> IRON_MESH;
     public static RegistrySupplier<Block> IRON_MESH_FENCE;
     public static RegistrySupplier<MMeshGate> IRON_MESH_GATE;
@@ -263,6 +271,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<DoorBlock> BLUE_IRON_DOOR;
     public static RegistrySupplier<TrapDoorBlock> BLUE_IRON_TRAPDOOR;
     public static RegistrySupplier<IronBarsBlock> BLUE_IRON_MESH;
+    public static RegistrySupplier<LadderBlock> BLUE_IRON_LADDER;
     public static RegistrySupplier<Block> BLUE_IRON_MESH_FENCE;
     public static RegistrySupplier<MMeshGate> BLUE_IRON_MESH_GATE;
     public static RegistrySupplier<DoorBlock> BLUE_IRON_MESH_DOOR;
@@ -288,6 +297,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<IronBarsBlock> GOLD_BARS;
     public static RegistrySupplier<DoorBlock> GOLD_DOOR;
     public static RegistrySupplier<TrapDoorBlock> GOLD_TRAPDOOR;
+    public static RegistrySupplier<LadderBlock> GOLD_LADDER;
     public static RegistrySupplier<IronBarsBlock> GOLD_MESH;
     public static RegistrySupplier<MMeshFenceBlock> GOLD_MESH_FENCE;
     public static RegistrySupplier<MMeshGate> GOLD_MESH_GATE;
@@ -320,6 +330,7 @@ public class MetallicsBlocks {
     public static RegistrySupplier<IronBarsBlock> NETHERITE_BARS;
     public static RegistrySupplier<DoorBlock> NETHERITE_DOOR;
     public static RegistrySupplier<TrapDoorBlock> NETHERITE_TRAPDOOR;
+    public static RegistrySupplier<LadderBlock> NETHERITE_LADDER;
     public static RegistrySupplier<IronBarsBlock> NETHERITE_MESH;
     public static RegistrySupplier<MMeshFenceBlock> NETHERITE_MESH_FENCE;
     public static RegistrySupplier<MMeshGate> NETHERITE_MESH_GATE;
@@ -531,6 +542,7 @@ public class MetallicsBlocks {
         CUT_IRON_STAIRS = registerBlock("cut_iron_stairs", new MBlock<>(props -> new StairBlock(Blocks.IRON_BLOCK.defaultBlockState(), props), Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
         CUT_IRON_SLAB = registerBlock("cut_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
         CHISELED_IRON_BLOCK = registerBlock("chiseled_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        IRON_LADDER = registerBlock("iron_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(IRN_MSH).getCopy())));
         IRON_MESH = registerBlock("iron_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
         IRON_MESH_FENCE = registerBlock("iron_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
         IRON_MESH_GATE = registerBlock("iron_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
@@ -555,6 +567,7 @@ public class MetallicsBlocks {
         CHISELED_BLUE_IRON_BLOCK = registerBlock("chiseled_blue_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_DOOR = registerBlock("blue_iron_door", new MBlock<>(props -> new DoorBlock(BlockSetType.IRON, props), Optional.of(doorProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_TRAPDOOR = registerBlock("blue_iron_trapdoor", new MBlock<>(props -> new TrapDoorBlock(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(IRN_GRT).getCopy())));
+        BLUE_IRON_LADDER = registerBlock("blue_iron_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(IRN_MSH).getCopy())));
         BLUE_IRON_MESH = registerBlock("blue_iron_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
         BLUE_IRON_MESH_FENCE = registerBlock("blue_iron_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
         BLUE_IRON_MESH_GATE = registerBlock("blue_iron_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
@@ -579,6 +592,7 @@ public class MetallicsBlocks {
         CHISELED_GOLD_BLOCK = registerBlock("chiseled_gold_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
         GOLD_DOOR = registerBlock("gold_door", new MBlock<>(props -> new DoorBlock(GOLD_SET.get(), props), Optional.of(doorProps.strength(GLD_GRT).pushReaction(PushReaction.BLOCK).getCopy())));
         GOLD_TRAPDOOR = registerBlock("gold_trapdoor", new MBlock<>(props -> new TrapDoorBlock(GOLD_SET.get(), props), Optional.of(trapdoorProps.strength(GLD_GRT).getCopy())));
+        GOLD_LADDER = registerBlock("gold_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(GLD_MSH).getCopy())));
         GOLD_MESH = registerBlock("gold_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(GLD_MSH).getCopy())));
         GOLD_MESH_FENCE = registerBlock("gold_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(GLD_MSH).getCopy())));
         GOLD_MESH_GATE = registerBlock("gold_mesh_gate", new MBlock<>(props -> new MMeshGate(GOLD_SET.get(), props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
@@ -608,6 +622,7 @@ public class MetallicsBlocks {
         CHISELED_NETHERITE_BLOCK = registerBlock("chiseled_netherite_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
         NETHERITE_DOOR = registerBlock("netherite_door", new MBlock<>(props -> new DoorBlock(NETHERITE_SET.get(), props), Optional.of(doorProps.strength(NTR_GRT).pushReaction(PushReaction.BLOCK).getCopy())));
         NETHERITE_TRAPDOOR = registerBlock("netherite_trapdoor", new MBlock<>(props -> new TrapDoorBlock(NETHERITE_SET.get(), props), Optional.of(trapdoorProps.strength(NTR_GRT).getCopy())));
+        NETHERITE_LADDER = registerBlock("netherite_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(NTR_MSH).getCopy())));
         NETHERITE_MESH = registerBlock("netherite_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
         NETHERITE_MESH_FENCE = registerBlock("netherite_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
         NETHERITE_MESH_GATE = registerBlock("netherite_mesh_gate", new MBlock<>(props -> new MMeshGate(NETHERITE_SET.get(), props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
