@@ -1,0 +1,6 @@
+{
+  "parent": "metallics:block/template_ladder",
+  "textures": {
+    "texture": "metallics:block/exposed_copper_ladder"
+  }
+}
