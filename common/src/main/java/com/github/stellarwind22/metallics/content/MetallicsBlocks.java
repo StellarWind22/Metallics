@@ -197,6 +197,17 @@ public class MetallicsBlocks {
 
     public static WeatheringCopperBlocks COPPER_MESH_GATES;
 
+    public static RegistrySupplier<LadderBlock> COPPER_LADDER;
+    public static RegistrySupplier<LadderBlock> EXPOSED_COPPER_LADDER;
+    public static RegistrySupplier<LadderBlock> WEATHERED_COPPER_LADDER;
+    public static RegistrySupplier<LadderBlock> OXIDIZED_COPPER_LADDER;
+    public static RegistrySupplier<LadderBlock> WAXED_COPPER_LADDER;
+    public static RegistrySupplier<LadderBlock> WAXED_EXPOSED_COPPER_LADDER;
+    public static RegistrySupplier<LadderBlock> WAXED_WEATHERED_COPPER_LADDER;
+    public static RegistrySupplier<LadderBlock> WAXED_OXIDIZED_COPPER_LADDER;
+
+    public static WeatheringCopperBlocks COPPER_LADDERS;
+
     public static RegistrySupplier<WeatheringCopperDoorBlock> COPPER_MESH_DOOR;
     public static RegistrySupplier<WeatheringCopperDoorBlock> EXPOSED_COPPER_MESH_DOOR;
     public static RegistrySupplier<WeatheringCopperDoorBlock> WEATHERED_COPPER_MESH_DOOR;
@@ -445,6 +456,15 @@ public class MetallicsBlocks {
         //Copper
         BRUSHING_COPPER_BLOCK = registerBlock("brushing_copper_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_copper_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
         BRUSHING_COPPER_SLAB = registerBlock("brushing_copper_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_copper_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
+
+        COPPER_LADDER = registerBlock("copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
+        EXPOSED_COPPER_LADDER = registerBlock("exposed_copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
+        WEATHERED_COPPER_LADDER = registerBlock("weathered_copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
+        OXIDIZED_COPPER_LADDER = registerBlock("oxidized_copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
+        WAXED_COPPER_LADDER = registerBlock("waxed_copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
+        WAXED_EXPOSED_COPPER_LADDER = registerBlock("waxed_exposed_copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
+        WAXED_WEATHERED_COPPER_LADDER = registerBlock("waxed_weathered_copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
+        WAXED_OXIDIZED_COPPER_LADDER = registerBlock("waxed_oxidized_copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
 
         BRUSHED_COPPER_BLOCK = registerBlock("brushed_copper_block", new MBlock<>(props -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
         BRUSHED_EXPOSED_COPPER_BLOCK = registerBlock("brushed_exposed_copper_block", new MBlock<>(props -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
@@ -722,6 +742,17 @@ public class MetallicsBlocks {
                 WAXED_EXPOSED_COPPER_MESH_GATE.get(),
                 WAXED_WEATHERED_COPPER_MESH_GATE.get(),
                 WAXED_OXIDIZED_COPPER_MESH_GATE.get()
+        );
+
+        COPPER_LADDERS = new WeatheringCopperBlocks(
+                COPPER_LADDER.get(),
+                EXPOSED_COPPER_LADDER.get(),
+                WEATHERED_COPPER_LADDER.get(),
+                OXIDIZED_COPPER_LADDER.get(),
+                WAXED_COPPER_LADDER.get(),
+                WAXED_EXPOSED_COPPER_LADDER.get(),
+                WAXED_WEATHERED_COPPER_LADDER.get(),
+                WAXED_OXIDIZED_COPPER_LADDER.get()
         );
 
         COPPER_MESH_DOORS = new WeatheringCopperBlocks(

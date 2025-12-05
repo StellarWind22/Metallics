@@ -1,6 +1,14 @@
 {
   "replace": false,
   "values": [
+    "metallics:copper_ladder",
+    "metallics:exposed_copper_ladder",
+    "metallics:weathered_copper_ladder",
+    "metallics:oxidized_copper_ladder",
+    "metallics:waxed_copper_ladder",
+    "metallics:waxed_exposed_copper_ladder",
+    "metallics:waxed_weathered_copper_ladder",
+    "metallics:waxed_oxidized_copper_ladder",
     "metallics:iron_ladder",
     "metallics:blue_iron_ladder",
     "metallics:gold_ladder",
