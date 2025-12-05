@@ -6,7 +6,9 @@ import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
 import com.github.stellarwind22.metallics.content.MetallicsBlocks;
 import com.github.stellarwind22.metallics.init.Metallics;
 import com.github.stellarwind22.metallics.client.init.MetallicsClient;
+import com.github.stellarwind22.metallics.object.blockentity.MBrushingBlockEntity;
 import com.github.stellarwind22.metallics.object.blockentity.MCampfireBlockEntity;
+import com.github.stellarwind22.metallics.object.blockentity.MetalWorkbenchBlockEntity;
 import net.minecraft.client.particle.LavaParticle;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.core.registries.Registries;
@@ -46,6 +48,27 @@ public final class MetallicsNeoForge {
                 MetallicsBlocks.COPPER_CAMPFIRE.get(),
                 MetallicsBlocks.GOLD_CAMPFIRE.get(),
                 MetallicsBlocks.NETHERITE_CAMPFIRE.get()
+        );
+
+        MetallicsBlockEntityTypes.BRUSHABLE_BLOCK = registerBlockEntity(
+                "brushable_block",
+                MBrushingBlockEntity::new,
+                MetallicsBlocks.BRUSHING_COPPER_BLOCK.get(),
+                MetallicsBlocks.BRUSHING_IRON_BLOCK.get(),
+                MetallicsBlocks.BRUSHING_BLUE_IRON_BLOCK.get(),
+                MetallicsBlocks.BRUSHING_GOLD_BLOCK.get(),
+                MetallicsBlocks.BRUSHING_NETHERITE_BLOCK.get(),
+                MetallicsBlocks.BRUSHING_COPPER_SLAB.get(),
+                MetallicsBlocks.BRUSHING_IRON_SLAB.get(),
+                MetallicsBlocks.BRUSHING_BLUE_IRON_SLAB.get(),
+                MetallicsBlocks.BRUSHING_GOLD_SLAB.get(),
+                MetallicsBlocks.BRUSHING_NETHERITE_SLAB.get()
+        );
+
+        MetallicsBlockEntityTypes.METAL_WORKBENCH = registerBlockEntity(
+                "metal_workbench",
+                MetalWorkbenchBlockEntity::new,
+                MetallicsBlocks.METAL_WORKBENCH.get()
         );
 
         if(FMLLoader.getCurrent().getDist() == Dist.CLIENT) {
