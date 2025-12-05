@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "metallics:block/brushed_weathered_copper_block",
-    "side": "metallics:block/double_brushed_weathered_copper_block",
-    "top": "metallics:block/brushed_weathered_copper_block"
-  }
-}

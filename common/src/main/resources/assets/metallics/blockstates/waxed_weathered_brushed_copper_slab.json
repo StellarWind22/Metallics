@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "metallics:block/weathered_brushed_copper_slab"
+    },
+    "type=double": {
+      "model": "metallics:block/weathered_brushed_copper_slab_double"
+    },
+    "type=top": {
+      "model": "metallics:block/weathered_brushed_copper_slab_top"
+    }
+  }
+}

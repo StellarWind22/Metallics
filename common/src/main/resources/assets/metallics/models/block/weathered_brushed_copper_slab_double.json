@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "metallics:block/weathered_brushed_copper_block",
+    "side": "metallics:block/double_weathered_brushed_copper_block"
+  }
+}
