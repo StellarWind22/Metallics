@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:copper_block",
+    "i": "metallics:copper_mesh"
+  },
+  "pattern": [
+    "i#i",
+    "i#i"
+  ],
+  "result": {
+    "id": "metallics:copper_mesh_gate",
+    "count": 1
+  }
+}

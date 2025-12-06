@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "metallics:gold_plated_block",
+    "i": "metallics:gold_mesh"
+  },
+  "pattern": [
+    "i#i",
+    "i#i"
+  ],
+  "result": {
+    "id": "metallics:gold_mesh_gate",
+    "count": 1
+  }
+}

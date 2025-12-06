@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "metallics:netherite_plated_block",
+    "i": "metallics:netherite_mesh"
+  },
+  "pattern": [
+    "i#i",
+    "i#i"
+  ],
+  "result": {
+    "id": "metallics:netherite_mesh_gate",
+    "count": 1
+  }
+}
