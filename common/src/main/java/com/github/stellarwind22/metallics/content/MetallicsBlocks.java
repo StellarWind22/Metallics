@@ -469,20 +469,20 @@ public class MetallicsBlocks {
         BRUSHED_COPPER_BLOCK = registerBlock("brushed_copper_block", new MBlock<>(props -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
         EXPOSED_BRUSHED_COPPER_BLOCK = registerBlock("exposed_brushed_copper_block", new MBlock<>(props -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
         WEATHERED_BRUSHED_COPPER_BLOCK = registerBlock("weathered_brushed_copper_block", new MBlock<>(props -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
-        WEATHERED_OXIDIZED_COPPER_BLOCK = registerBlock("brushed_oxidized_copper_block", new MBlock<>(props -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
+        WEATHERED_OXIDIZED_COPPER_BLOCK = registerBlock("oxidized_brushed_copper_block", new MBlock<>(props -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
         WAXED_BRUSHED_COPPER_BLOCK = registerBlock("waxed_brushed_copper_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(CPR_GRT).getCopy())));
         WAXED_EXPOSED_BRUSHED_COPPER_BLOCK = registerBlock("waxed_exposed_brushed_copper_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(CPR_GRT).getCopy())));
         WAXED_WEATHERED_BRUSHED_COPPER_BLOCK = registerBlock("waxed_weathered_brushed_copper_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(CPR_GRT).getCopy())));
-        WAXED_WEATHERED_OXIDIZED_COPPER_BLOCK = registerBlock("waxed_brushed_oxidized_copper_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(CPR_GRT).getCopy())));
+        WAXED_WEATHERED_OXIDIZED_COPPER_BLOCK = registerBlock("waxed_oxidized_brushed_copper_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(CPR_GRT).getCopy())));
 
         BRUSHED_COPPER_SLAB = registerBlock("brushed_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
         EXPOSED_BRUSHED_COPPER_SLAB = registerBlock("exposed_brushed_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
         WEATHERED_BRUSHED_COPPER_SLAB = registerBlock("weathered_brushed_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.WEATHERED, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
-        WEATHERED_OXIDIZED_COPPER_SLAB = registerBlock("brushed_oxidized_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.OXIDIZED, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
+        WEATHERED_OXIDIZED_COPPER_SLAB = registerBlock("oxidized_brushed_copper_slab", new MBlock<>(props -> new WeatheringCopperSlabBlock(WeatheringCopper.WeatherState.OXIDIZED, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
         WAXED_BRUSHED_COPPER_SLAB = registerBlock("waxed_brushed_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
         WAXED_EXPOSED_BRUSHED_COPPER_SLAB = registerBlock("waxed_exposed_brushed_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
         WAXED_WEATHERED_BRUSHED_COPPER_SLAB = registerBlock("waxed_weathered_brushed_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
-        WAXED_WEATHERED_OXIDIZED_COPPER_SLAB = registerBlock("waxed_brushed_oxidized_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
+        WAXED_WEATHERED_OXIDIZED_COPPER_SLAB = registerBlock("waxed_oxidized_brushed_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
 
         COPPER_MESH = registerBlock("copper_mesh", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
         EXPOSED_COPPER_MESH = registerBlock("exposed_copper_mesh", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
