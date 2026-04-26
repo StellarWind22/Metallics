@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:oxidized_copper",
+    "i": "metallics:oxidized_copper_mesh"
+  },
+  "pattern": [
+    "#i#",
+    "#i#"
+  ],
+  "result": {
+    "id": "metallics:oxidized_copper_mesh_fence",
+    "count": 4
+  }
+}

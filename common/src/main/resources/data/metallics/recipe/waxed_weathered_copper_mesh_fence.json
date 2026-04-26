@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:waxed_weathered_copper",
+    "i": "metallics:waxed_weathered_copper_mesh"
+  },
+  "pattern": [
+    "#i#",
+    "#i#"
+  ],
+  "result": {
+    "id": "metallics:waxed_weathered_copper_mesh_fence",
+    "count": 4
+  }
+}
