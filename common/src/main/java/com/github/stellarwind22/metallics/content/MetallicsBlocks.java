@@ -645,7 +645,7 @@ public class MetallicsBlocks {
         NETHERITE_LADDER = registerBlock("netherite_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(NTR_MSH).getCopy())));
         NETHERITE_MESH = registerBlock("netherite_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
         NETHERITE_MESH_FENCE = registerBlock("netherite_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(NTR_MSH).getCopy())));
-        NETHERITE_MESH_GATE = registerBlock("netherite_mesh_gate", new MBlock<>(props -> new MMeshGate(NETHERITE_SET.get(), props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
+        NETHERITE_MESH_GATE = registerBlock("netherite_mesh_gate", new MBlock<>(props -> new MMeshGate(NETHERITE_SET.get(), props), Optional.of(trapdoorProps.strength(NTR_GRT).getCopy())));
         NETHERITE_MESH_TRAPDOOR = registerBlock("netherite_mesh_trapdoor", new MBlock<>(props -> new TrapDoorBlock(NETHERITE_SET.get(), props), Optional.of(trapdoorProps.strength(NTR_GRT).getCopy())));
         NETHERITE_MESH_DOOR = registerBlock("netherite_mesh_door", new MBlock<>(props -> new DoorBlock(NETHERITE_SET.get(), props), Optional.of(doorProps.strength(NTR_GRT).getCopy())));
         NETHERITE_GRATE = registerBlock("netherite_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));

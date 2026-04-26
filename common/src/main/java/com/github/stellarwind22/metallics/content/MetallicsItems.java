@@ -356,7 +356,7 @@ public class MetallicsItems {
         BLUE_IRON_MESH_FENCE = registerItem("blue_iron_mesh_fence", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH_FENCE.get(), props));
         BLUE_IRON_MESH_GATE = registerItem("blue_iron_mesh_gate", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH_GATE.get(), props));
         BLUE_IRON_MESH_DOOR = registerItem("blue_iron_mesh_door", props -> new DoubleHighBlockItem(MetallicsBlocks.BLUE_IRON_MESH_DOOR.get(), props));
-        BLUE_IRON_MESH_TRAPDOOR = registerItem("blue_iron_mesh_trapdoor", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_TRAPDOOR.get(), props));
+        BLUE_IRON_MESH_TRAPDOOR = registerItem("blue_iron_mesh_trapdoor", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_MESH_TRAPDOOR.get(), props));
         BLUE_IRON_GRATE = registerItem("blue_iron_grate", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_GRATE.get(), props));
         BLUE_IRON_PLATED_BLOCK = registerItem("blue_iron_plated_block", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_PLATED_BLOCK.get(), props));
         BLUE_IRON_SLAB = registerItem("blue_iron_slab", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_SLAB.get(), props));
@@ -405,7 +405,7 @@ public class MetallicsItems {
         NETHERITE_LADDER = registerItem("netherite_ladder", props -> new BlockItem(MetallicsBlocks.NETHERITE_LADDER.get(), props));
         NETHERITE_MESH = registerItem("netherite_mesh", props -> new BlockItem(MetallicsBlocks.NETHERITE_MESH.get(), props.fireResistant()));
         NETHERITE_MESH_FENCE = registerItem("netherite_mesh_fence", props -> new BlockItem(MetallicsBlocks.NETHERITE_MESH_FENCE.get(), props.fireResistant()));
-        NETHERITE_MESH_GATE = registerItem("netherite_mesh_gate", props -> new BlockItem(MetallicsBlocks.NETHERITE_MESH_GATE.get(), props));
+        NETHERITE_MESH_GATE = registerItem("netherite_mesh_gate", props -> new BlockItem(MetallicsBlocks.NETHERITE_MESH_GATE.get(), props.fireResistant()));
         NETHERITE_MESH_DOOR = registerItem("netherite_mesh_door", props -> new DoubleHighBlockItem(MetallicsBlocks.NETHERITE_MESH_DOOR.get(), props.fireResistant()));
         NETHERITE_MESH_TRAPDOOR = registerItem("netherite_mesh_trapdoor", props -> new BlockItem(MetallicsBlocks.NETHERITE_MESH_TRAPDOOR.get(), props.fireResistant()));
         NETHERITE_GRATE = registerItem("netherite_grate", props -> new BlockItem(MetallicsBlocks.NETHERITE_GRATE.get(), props.fireResistant()));
