@@ -6,11 +6,11 @@
     "i": "metallics:waxed_exposed_copper_mesh"
   },
   "pattern": [
-    "#i#",
-    "#i#"
+    "i#i",
+    "i#i"
   ],
   "result": {
-    "id": "metallics:waxed_exposed_copper_mesh_fence",
-    "count": 3
+    "id": "metallics:waxed_exposed_copper_mesh_gate",
+    "count": 1
   }
 }

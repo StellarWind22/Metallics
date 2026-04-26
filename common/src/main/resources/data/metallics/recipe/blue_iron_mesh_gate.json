@@ -6,11 +6,11 @@
     "i": "metallics:blue_iron_mesh"
   },
   "pattern": [
-    "#i#",
-    "#i#"
+    "i#i",
+    "i#i"
   ],
   "result": {
-    "id": "metallics:blue_iron_mesh_fence",
-    "count": 3
+    "id": "metallics:blue_iron_mesh_gate",
+    "count": 1
   }
 }
