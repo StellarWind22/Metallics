@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:exposed_copper",
+    "i": "metallics:exposed_copper_mesh"
+  },
+  "pattern": [
+    "#i",
+    "#i",
+    "#i"
+  ],
+  "result": {
+    "id": "metallics:exposed_copper_mesh_door",
+    "count": 3
+  }
+}
