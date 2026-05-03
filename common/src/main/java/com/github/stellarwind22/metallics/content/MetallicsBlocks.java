@@ -260,6 +260,8 @@ public class MetallicsBlocks {
     public static RegistrySupplier<IronBarsBlock> IRON_MESH;
     public static RegistrySupplier<Block> IRON_MESH_FENCE;
     public static RegistrySupplier<MMeshGate> IRON_MESH_GATE;
+    public static RegistrySupplier<DoorBlock> IRON_MESH_DOOR;
+    public static RegistrySupplier<TrapDoorBlock> IRON_MESH_TRAPDOOR;
     public static RegistrySupplier<Block> IRON_GRATE;
     public static RegistrySupplier<Block> IRON_PLATED_BLOCK;
     public static RegistrySupplier<MBrushingBlock> BRUSHING_IRON_BLOCK;
@@ -566,6 +568,8 @@ public class MetallicsBlocks {
         IRON_MESH = registerBlock("iron_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
         IRON_MESH_FENCE = registerBlock("iron_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
         IRON_MESH_GATE = registerBlock("iron_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
+        IRON_MESH_DOOR = registerBlock("iron_mesh_door", new MBlock<>(props -> new DoorBlock(BlockSetType.IRON, props), Optional.of(doorProps.strength(IRN_GRT).getCopy())));
+        IRON_MESH_TRAPDOOR = registerBlock("iron_mesh_trapdoor", new MBlock<>(props -> new TrapDoorBlock(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(IRN_GRT).getCopy())));
         IRON_GRATE = registerBlock("iron_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         IRON_LAMP = registerBlock("iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
 

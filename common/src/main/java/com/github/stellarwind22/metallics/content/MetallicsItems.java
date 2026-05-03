@@ -132,6 +132,8 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> IRON_MESH;
     public static RegistrySupplier<BlockItem> IRON_MESH_FENCE;
     public static RegistrySupplier<BlockItem> IRON_MESH_GATE;
+    public static RegistrySupplier<BlockItem> IRON_MESH_DOOR;
+    public static RegistrySupplier<BlockItem> IRON_MESH_TRAPDOOR;
     public static RegistrySupplier<BlockItem> IRON_GRATE;
     public static RegistrySupplier<BlockItem> IRON_LAMP;
 
@@ -327,9 +329,11 @@ public class MetallicsItems {
         //Iron
         IRON_LADDER = registerItem("iron_ladder", props -> new BlockItem(MetallicsBlocks.IRON_LADDER.get(), props));
         IRON_MESH = registerItem("iron_mesh", props -> new BlockItem(MetallicsBlocks.IRON_MESH.get(), props));
+        IRON_GRATE = registerItem("iron_grate", props -> new BlockItem(MetallicsBlocks.IRON_GRATE.get(), props));
         IRON_MESH_FENCE = registerItem("iron_mesh_fence", props -> new BlockItem(MetallicsBlocks.IRON_MESH_FENCE.get(), props));
         IRON_MESH_GATE = registerItem("iron_mesh_gate", props -> new BlockItem(MetallicsBlocks.IRON_MESH_GATE.get(), props));
-        IRON_GRATE = registerItem("iron_grate", props -> new BlockItem(MetallicsBlocks.IRON_GRATE.get(), props));
+        IRON_MESH_DOOR = registerItem("iron_mesh_door", props -> new BlockItem(MetallicsBlocks.IRON_MESH_DOOR.get(), props));
+        IRON_MESH_TRAPDOOR = registerItem("iron_mesh_trapdoor", props -> new BlockItem(MetallicsBlocks.IRON_MESH_TRAPDOOR.get(), props));
         IRON_PLATED_BLOCK = registerItem("iron_plated_block", props -> new BlockItem(MetallicsBlocks.IRON_PLATED_BLOCK.get(), props));
         IRON_SLAB = registerItem("iron_slab", props -> new BlockItem(MetallicsBlocks.IRON_SLAB.get(), props));
         BRUSHED_IRON_BLOCK= registerItem("brushed_iron_block", props -> new BlockItem(MetallicsBlocks.BRUSHED_IRON_BLOCK.get(), props));
