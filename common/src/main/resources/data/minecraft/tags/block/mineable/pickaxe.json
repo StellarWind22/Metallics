@@ -4,6 +4,7 @@
     "#metallics:copper_blocks",
     "#metallics:iron_blocks",
     "#metallics:gold_blocks",
-    "#metallics:netherite_blocks"
+    "#metallics:netherite_blocks",
+    "metallics:nitre_salt_block"
   ]
 }
