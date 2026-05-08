@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "_": "metallics:cut_gold_slab"
+  },
+  "pattern": [
+    "_",
+    "_"
+  ],
+  "result": {
+    "id": "metallics:chiseled_gold_block"
+  }
+}

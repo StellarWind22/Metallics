@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "_": "metallics:cut_blue_iron_slab"
+  },
+  "pattern": [
+    "_",
+    "_"
+  ],
+  "result": {
+    "id": "metallics:chiseled_blue_iron_block"
+  }
+}
