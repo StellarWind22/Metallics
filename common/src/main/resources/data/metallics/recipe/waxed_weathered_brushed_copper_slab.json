@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "buiding",
+  "group": "waxed_weathered_brushed_copper_slab",
   "key": {
     "#": "metallics:waxed_weathered_brushed_copper_block"
   },

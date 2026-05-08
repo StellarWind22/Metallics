@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "buiding",
+  "group": "waxed_weathered_copper_mesh_fence",
   "key": {
     "#": "minecraft:waxed_weathered_copper",
     "i": "metallics:waxed_weathered_copper_mesh"

@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
+  "group": "waxed_exposed_copper_grate",
   "key": {
     "#": "metallics:waxed_exposed_copper_mesh"
   },

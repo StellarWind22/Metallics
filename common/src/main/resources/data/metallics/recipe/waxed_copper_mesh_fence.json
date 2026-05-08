@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "buiding",
+  "group": "waxed_copper_mesh_fence",
   "key": {
     "#": "minecraft:waxed_copper_block",
     "i": "metallics:waxed_copper_mesh"

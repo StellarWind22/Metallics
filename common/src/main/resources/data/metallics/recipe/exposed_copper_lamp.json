@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "buiding",
   "key": {
     "#": "minecraft:redstone_lamp",
     ".": "metallics:exposed_copper_mesh"

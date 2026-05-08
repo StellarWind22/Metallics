@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "buiding",
   "group": "netherite_ingot",
   "key": {
     "#": "metallics:netherite_nugget"

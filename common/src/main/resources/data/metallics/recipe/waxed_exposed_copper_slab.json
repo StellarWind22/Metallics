@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "buiding",
+  "group": "waxed_exposed_copper_slab",
   "key": {
     "#": "minecraft:waxed_exposed_copper"
   },
