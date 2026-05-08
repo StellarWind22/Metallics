@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "waxed_oxidized_copper_slab",
+  "ingredients": [
+    "metallics:oxidized_copper_slab",
+    "minecraft:honeycomb"
+  ],
+  "result": {
+    "id": "metallics:waxed_oxidized_copper_slab"
+  }
+}
