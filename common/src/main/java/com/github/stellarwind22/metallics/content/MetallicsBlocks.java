@@ -129,14 +129,12 @@ public class MetallicsBlocks {
             .isValidSpawn(MBlockProps::never);
 
     private static final MBlockProps ladderProps = new MBlockProps()
-            .noOcclusion().requiresCorrectToolForDrops()
-            .isSuffocating(MBlockProps::never)
-            .isViewBlocking(MBlockProps::never)
+            .requiresCorrectToolForDrops()
+            .noOcclusion()
+            .forceSolidOff()
             .sound(SoundType.COPPER_GRATE)
-            .isValidSpawn(MBlockProps::never);
+            .pushReaction(PushReaction.DESTROY);
 
-
-    public static RegistrySupplier<MetalWorkbenchBlock> METAL_WORKBENCH;
     public static RegistrySupplier<Block> NITRE_SALT_BLOCK;
 
     //Soul
@@ -449,8 +447,6 @@ public class MetallicsBlocks {
         BLOCKS = DeferredRegister.create(Metallics.MOD_ID, Registries.BLOCK);
 
         //Register stuff here ▼▼▼
-        METAL_WORKBENCH = registerBlock("metal_workbench", new MBlock<>(MetalWorkbenchBlock::new, Optional.of(blockProps.strength(CPR_GRT).getCopy())));
-
         NITRE_SALT_BLOCK = registerBlock("nitre_salt_block", new MBlock<>(Block::new, Optional.of(saltBlockProps.getCopy())));
 
         //Soul

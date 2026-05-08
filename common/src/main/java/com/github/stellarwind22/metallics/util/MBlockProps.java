@@ -40,6 +40,7 @@ public class MBlockProps {
     public boolean isAir;
     public boolean ignitedByLava;
     boolean forceSolidOn;
+    boolean forceSolidOff;
     public PushReaction pushReaction;
     boolean spawnTerrainParticles;
     public NoteBlockInstrument instrument;
@@ -72,6 +73,7 @@ public class MBlockProps {
         this.requiredFeatures = List.of(FeatureFlags.VANILLA);
     }
 
+    @SuppressWarnings("deprecation")
     public BlockBehaviour.Properties getCopy() {
         BlockBehaviour.Properties copy = BlockBehaviour.Properties.of();
 
@@ -91,6 +93,7 @@ public class MBlockProps {
         if (!this.hasCollision) copy.noCollision();
         if (!this.canOcclude) copy.noOcclusion();
         if (this.forceSolidOn) copy.forceSolidOn();
+        if (this.forceSolidOff) copy.forceSolidOff();
 
         // Special flags
         if (this.requiresCorrectToolForDrops) copy.requiresCorrectToolForDrops();
@@ -207,6 +210,11 @@ public class MBlockProps {
 
     public MBlockProps forceSolidOn() {
         this.forceSolidOn = true;
+        return this;
+    }
+
+    public MBlockProps forceSolidOff() {
+        this.forceSolidOff = true;
         return this;
     }
 

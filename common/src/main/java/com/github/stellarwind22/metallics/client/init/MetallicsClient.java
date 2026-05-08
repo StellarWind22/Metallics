@@ -11,8 +11,6 @@ public class MetallicsClient {
 
         Metallics.LOGGER.info("Initializing client code...");
 
-        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.METAL_WORKBENCH.get());
-
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.COPPER_LADDER.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.EXPOSED_COPPER_LADDER.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WEATHERED_COPPER_LADDER.get());

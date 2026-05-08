@@ -8,7 +8,6 @@ import com.github.stellarwind22.metallics.init.Metallics;
 import com.github.stellarwind22.metallics.client.init.MetallicsClient;
 import com.github.stellarwind22.metallics.object.blockentity.MBrushingBlockEntity;
 import com.github.stellarwind22.metallics.object.blockentity.MCampfireBlockEntity;
-import com.github.stellarwind22.metallics.object.blockentity.MetalWorkbenchBlockEntity;
 import net.minecraft.client.particle.LavaParticle;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.core.registries.Registries;
@@ -65,15 +64,8 @@ public final class MetallicsNeoForge {
                 MetallicsBlocks.BRUSHING_NETHERITE_SLAB.get()
         );
 
-        MetallicsBlockEntityTypes.METAL_WORKBENCH = registerBlockEntity(
-                "metal_workbench",
-                MetalWorkbenchBlockEntity::new,
-                MetallicsBlocks.METAL_WORKBENCH.get()
-        );
-
         if(FMLLoader.getCurrent().getDist() == Dist.CLIENT) {
             MetallicsClient.init();
-
             BlockEntityRenderers.register(MetallicsBlockEntityTypes.CAMPFIRE.get(), MCampfireRenderer::new);
         }
     }
