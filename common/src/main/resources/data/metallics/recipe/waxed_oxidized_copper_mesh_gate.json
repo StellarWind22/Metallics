@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "buiding",
+  "group": "waxed_oxidized_copper_mesh_gate",
   "key": {
     "#": "minecraft:waxed_oxidized_copper",
     "i": "metallics:waxed_oxidized_copper_mesh"

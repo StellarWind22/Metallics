@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "buiding",
+  "group": "waxed_copper_ladder",
   "key": {
     "#": "minecraft:waxed_copper_bars"
   },

@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "buiding",
   "key": {
     "#": "minecraft:oxidized_copper",
     "i": "metallics:oxidized_copper_mesh"

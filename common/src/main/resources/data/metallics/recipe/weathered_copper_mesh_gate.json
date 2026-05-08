@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "buiding",
   "key": {
     "#": "minecraft:waxed_weathered_copper",
     "i": "metallics:waxed_weathered_copper_mesh"
