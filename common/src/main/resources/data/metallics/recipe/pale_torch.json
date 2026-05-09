@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "buiding",
+  "key": {
+    ".": "minecraft:blue_iron_nugget",
+    "#": [
+      "minecraft:coal",
+      "minecraft:charcoal"
+    ],
+    "l": "minecraft:stick"
+  },
+  "pattern": [
+    ".",
+    "#",
+    "l"
+  ],
+  "result": {
+    "id": "metallics:pale_torch",
+    "count": 4
+  }
+}

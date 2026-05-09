@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "buiding",
+  "key": {
+    ".": "metallics:blue_iron_nugget",
+    "i": "metallics:pale_torch"
+  },
+  "pattern": [
+    " . ",
+    ".i.",
+    " . "
+  ],
+  "result": {
+    "id": "metallics:pale_lantern"
+  }
+}
