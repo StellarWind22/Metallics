@@ -14,6 +14,8 @@ public class MetallicsParticleTypes {
     private static DeferredRegister<ParticleType<?>> PARTICLE_TYPES;
 
     public static RegistrySupplier<MSimpleParticleType> COPPER_EMBER;
+    public static RegistrySupplier<MSimpleParticleType> PALE_FLAME;
+    public static RegistrySupplier<MSimpleParticleType> PALE_EMBER;
     public static RegistrySupplier<MSimpleParticleType> GOLD_FLAME;
     public static RegistrySupplier<MSimpleParticleType> GOLD_EMBER;
     public static RegistrySupplier<MSimpleParticleType> NETHERITE_FLAME;
@@ -23,6 +25,8 @@ public class MetallicsParticleTypes {
         PARTICLE_TYPES = DeferredRegister.create(Metallics.MOD_ID, Registries.PARTICLE_TYPE);
 
         COPPER_EMBER = register("copper_ember", () -> new MSimpleParticleType(false));
+        PALE_FLAME = register("pale_flame", () -> new MSimpleParticleType(false));
+        PALE_EMBER = register("pale_ember", () -> new MSimpleParticleType(false));
         GOLD_FLAME = register("gold_flame", () -> new MSimpleParticleType(false));
         GOLD_EMBER = register("gold_ember", () -> new MSimpleParticleType(false));
         NETHERITE_FLAME = register("netherite_flame", () -> new MSimpleParticleType(false));

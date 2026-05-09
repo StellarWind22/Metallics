@@ -144,6 +144,11 @@ public class MetallicsItems {
     public static RegistrySupplier<Item> BLUE_IRON_INGOT;
     public static RegistrySupplier<BlockItem> BLUE_IRON_BLOCK;
 
+    public static RegistrySupplier<BlockItem> PALE_TORCH;
+    public static RegistrySupplier<BlockItem> PALE_CAMPFIRE;
+    public static RegistrySupplier<BlockItem> PALE_JACK_O_LANTERN;
+    public static RegistrySupplier<BlockItem> PALE_LANTERN;
+
     public static RegistrySupplier<BlockItem> BLUE_IRON_PLATED_BLOCK;
     public static RegistrySupplier<BlockItem> BLUE_IRON_SLAB;
     public static RegistrySupplier<BlockItem> BRUSHED_BLUE_IRON_BLOCK;
@@ -367,6 +372,11 @@ public class MetallicsItems {
         CUT_BLUE_IRON_SLAB = registerItem("cut_blue_iron_slab", props -> new BlockItem(MetallicsBlocks.CUT_BLUE_IRON_SLAB.get(), props));
         CHISELED_BLUE_IRON_BLOCK = registerItem("chiseled_blue_iron_block", props -> new BlockItem(MetallicsBlocks.CHISELED_BLUE_IRON_BLOCK.get(), props));
         BLUE_IRON_LAMP = registerItem("blue_iron_lamp", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_LAMP.get(), props));
+
+        PALE_TORCH = registerItem("pale_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.PALE_TORCH.get(), MetallicsBlocks.PALE_WALL_TORCH.get(), Direction.DOWN, props));
+        PALE_CAMPFIRE = registerItem("pale_campfire", props -> new BlockItem(MetallicsBlocks.PALE_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
+        PALE_JACK_O_LANTERN = registerItem("pale_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.PALE_JACK_O_LANTERN.get(), props));
+        PALE_LANTERN = registerItem("pale_lantern", props -> new BlockItem(MetallicsBlocks.PALE_LANTERN.get(), props));
 
         //Gold
         GOLD_CHAIN = registerItem("gold_chain", props -> new BlockItem(MetallicsBlocks.GOLD_CHAIN.get(), props));

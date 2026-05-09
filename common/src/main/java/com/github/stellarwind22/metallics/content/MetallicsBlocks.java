@@ -304,6 +304,12 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CHISELED_BLUE_IRON_BLOCK;
     public static RegistrySupplier<Block> BLUE_IRON_LAMP;
 
+    public static RegistrySupplier<Block> PALE_TORCH;
+    public static RegistrySupplier<Block> PALE_WALL_TORCH;
+    public static RegistrySupplier<MCampfireBlock> PALE_CAMPFIRE;
+    public static RegistrySupplier<Block> PALE_JACK_O_LANTERN;
+    public static RegistrySupplier<Block> PALE_LANTERN;
+
     //Gold
     public static Supplier<BlockSetType> GOLD_SET;
 
@@ -599,6 +605,12 @@ public class MetallicsBlocks {
         BLUE_IRON_MESH_TRAPDOOR = registerBlock("blue_iron_mesh_trapdoor", new MBlock<>(props -> new TrapDoorBlock(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_GRATE = registerBlock("blue_iron_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_LAMP = registerBlock("blue_iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
+
+        PALE_TORCH = registerBlock("pale_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.PALE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
+        PALE_WALL_TORCH = registerBlock("pale_wall_torch", new MBlock<>(props -> new WallTorchBlock(MetallicsParticleTypes.PALE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
+        PALE_CAMPFIRE = registerBlock("pale_campfire", new MBlock<>(props -> new MCampfireBlock(1, MetallicsParticleTypes.PALE_EMBER.get(), props), Optional.of(campfireProps.getCopy())));
+        PALE_JACK_O_LANTERN = registerBlock("pale_jack_o_lantern", new MBlock<>(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
+        PALE_LANTERN = registerBlock("pale_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(IRN_LNT).getCopy())));
 
         //Gold
         GOLD_CHAIN = registerBlock("gold_chain", new MBlock<>(ChainBlock::new, Optional.of(chainProps.strength(GLD_MSH).getCopy())));

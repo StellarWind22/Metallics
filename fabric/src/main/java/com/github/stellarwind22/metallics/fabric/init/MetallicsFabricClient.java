@@ -22,6 +22,8 @@ public final class MetallicsFabricClient implements ClientModInitializer {
         particleFR.register(MetallicsParticleTypes.GOLD_EMBER.get(), LavaParticle.Provider::new);
         particleFR.register(MetallicsParticleTypes.NETHERITE_FLAME.get(), FlameParticle.Provider::new);
         particleFR.register(MetallicsParticleTypes.NETHERITE_EMBER.get(), LavaParticle.Provider::new);
+        particleFR.register(MetallicsParticleTypes.PALE_FLAME.get(), FlameParticle.Provider::new);
+        particleFR.register(MetallicsParticleTypes.PALE_EMBER.get(), LavaParticle.Provider::new);
 
         BlockEntityRenderers.register(MetallicsBlockEntityTypes.CAMPFIRE.get(), MCampfireRenderer::new);
     }

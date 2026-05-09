@@ -46,7 +46,8 @@ public final class MetallicsNeoForge {
                 MCampfireBlockEntity::new,
                 MetallicsBlocks.COPPER_CAMPFIRE.get(),
                 MetallicsBlocks.GOLD_CAMPFIRE.get(),
-                MetallicsBlocks.NETHERITE_CAMPFIRE.get()
+                MetallicsBlocks.NETHERITE_CAMPFIRE.get(),
+                MetallicsBlocks.PALE_CAMPFIRE.get()
         );
 
         MetallicsBlockEntityTypes.BRUSHABLE_BLOCK = registerBlockEntity(
@@ -88,6 +89,8 @@ public final class MetallicsNeoForge {
         @SubscribeEvent
         public static void registerParticleProviders(RegisterParticleProvidersEvent event) {
             event.registerSpriteSet(MetallicsParticleTypes.COPPER_EMBER.get(), LavaParticle.Provider::new);
+            event.registerSpriteSet(MetallicsParticleTypes.PALE_FLAME.get(), LavaParticle.Provider::new);
+            event.registerSpriteSet(MetallicsParticleTypes.PALE_EMBER.get(), LavaParticle.Provider::new);
             event.registerSpriteSet(MetallicsParticleTypes.GOLD_FLAME.get(), LavaParticle.Provider::new);
             event.registerSpriteSet(MetallicsParticleTypes.GOLD_EMBER.get(), LavaParticle.Provider::new);
             event.registerSpriteSet(MetallicsParticleTypes.NETHERITE_FLAME.get(), LavaParticle.Provider::new);

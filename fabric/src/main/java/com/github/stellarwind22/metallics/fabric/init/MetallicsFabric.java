@@ -34,7 +34,8 @@ public final class MetallicsFabric implements ModInitializer {
                 MCampfireBlockEntity::new,
                 MetallicsBlocks.COPPER_CAMPFIRE.get(),
                 MetallicsBlocks.GOLD_CAMPFIRE.get(),
-                MetallicsBlocks.NETHERITE_CAMPFIRE.get()
+                MetallicsBlocks.NETHERITE_CAMPFIRE.get(),
+                MetallicsBlocks.PALE_CAMPFIRE.get()
         );
 
         MetallicsBlockEntityTypes.BRUSHABLE_BLOCK = registerBlockEntity(
