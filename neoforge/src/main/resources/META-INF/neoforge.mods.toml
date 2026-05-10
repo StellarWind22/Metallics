@@ -2,6 +2,7 @@ modLoader = "javafml"
 loaderVersion = "[2,)"
 #issueTrackerURL = ""
 license = "CC0-1"
+logoFile = "metallics.png"
 
 [[mods]]
 modId = "metallics"
@@ -11,7 +12,6 @@ authors = "StellarWind22"
 description = '''
 
 '''
-logoFile = "logo.png"
 
 [[dependencies.metallics]]
 modId = "neoforge"
