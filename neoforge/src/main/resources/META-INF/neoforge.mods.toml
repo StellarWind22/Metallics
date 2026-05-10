@@ -11,7 +11,7 @@ authors = "StellarWind22"
 description = '''
 
 '''
-#logoFile = ""
+logoFile = "logo.png"
 
 [[dependencies.metallics]]
 modId = "neoforge"
