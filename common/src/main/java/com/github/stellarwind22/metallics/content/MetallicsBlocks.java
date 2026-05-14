@@ -98,7 +98,6 @@ public class MetallicsBlocks {
             .isValidSpawn(MBlockProps::never)
             .isSuffocating(MBlockProps::never);
 
-
     private static final MBlockProps campfireProps = new MBlockProps()
             .mapColor(MapColor.PODZOL)
             .instrument(NoteBlockInstrument.BASS)
@@ -261,6 +260,39 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_LAMP;
 
     public static WeatheringCopperBlocks COPPER_LAMPS;
+
+    public static RegistrySupplier<Block> COPPER_BUTTON;
+    public static RegistrySupplier<Block> EXPOSED_COPPER_BUTTON;
+    public static RegistrySupplier<Block> WEATHERED_COPPER_BUTTON;
+    public static RegistrySupplier<Block> OXIDIZED_COPPER_BUTTON;
+    public static RegistrySupplier<Block> WAXED_COPPER_BUTTON;
+    public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_BUTTON;
+    public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_BUTTON;
+    public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_BUTTON;
+
+    public static WeatheringCopperBlocks COPPER_BUTTONS;
+
+    public static RegistrySupplier<Block> COPPER_LEVER;
+    public static RegistrySupplier<Block> EXPOSED_COPPER_LEVER;
+    public static RegistrySupplier<Block> WEATHERING_COPPER_LEVER;
+    public static RegistrySupplier<Block> OXIDIZED_COPPER_LEVER;
+    public static RegistrySupplier<Block> WAXED_COPPER_LEVER;
+    public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_LEVER;
+    public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_LEVER;
+    public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_LEVER;
+
+    public static WeatheringCopperBlocks COPPER_LEVERS;
+
+    public static RegistrySupplier<Block> COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<Block> EXPOSED_COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<Block> WEATHERING_COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<Block> OXIDIZED_COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<Block> WAXED_COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_PRESSURE_PLATE;
+
+    public static WeatheringCopperBlocks COPPER_PRESSURE_PLATES;
 
     //Iron
     public static RegistrySupplier<LadderBlock> IRON_LADDER;
@@ -580,6 +612,15 @@ public class MetallicsBlocks {
         WAXED_WEATHERED_COPPER_LAMP = registerBlock("waxed_weathered_copper_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
         WAXED_OXIDIZED_COPPER_LAMP = registerBlock("waxed_oxidized_copper_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(CPR_LNT).getCopy())));
 
+        COPPER_BUTTON = registerBlock("copper_button", new MBlock<>(props -> new MWeatheringButtonBlock(BlockSetType.COPPER, 20, props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+        EXPOSED_COPPER_BUTTON = registerBlock("exposed_copper_button", new MBlock<>(props -> new MWeatheringButtonBlock(BlockSetType.COPPER, 20, props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+        WEATHERED_COPPER_BUTTON = registerBlock("weathered_copper_button", new MBlock<>(props -> new MWeatheringButtonBlock(BlockSetType.COPPER, 20, props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+        OXIDIZED_COPPER_BUTTON = registerBlock("oxidized_copper_button", new MBlock<>(props -> new MWeatheringButtonBlock(BlockSetType.COPPER, 20, props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+        WAXED_COPPER_BUTTON = registerBlock("waxed_copper_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.COPPER, 20, props), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+        WAXED_EXPOSED_COPPER_BUTTON = registerBlock("waxed_exposed_copper_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.COPPER, 20, props), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+        WAXED_WEATHERED_COPPER_BUTTON = registerBlock("waxed_weathered_copper_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.COPPER, 20, props), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+        WAXED_OXIDIZED_COPPER_BUTTON = registerBlock("waxed_oxidized_copper_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.COPPER, 20, props), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+
         //Iron
         IRON_PLATED_BLOCK = registerBlock("iron_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         IRON_SLAB = registerBlock("iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
@@ -834,6 +875,17 @@ public class MetallicsBlocks {
                 WAXED_EXPOSED_COPPER_LAMP.get(),
                 WAXED_WEATHERED_COPPER_LAMP.get(),
                 WAXED_OXIDIZED_COPPER_LAMP.get()
+        );
+
+        COPPER_BUTTONS = new WeatheringCopperBlocks(
+                COPPER_BUTTON.get(),
+                EXPOSED_COPPER_BUTTON.get(),
+                WEATHERED_COPPER_BUTTON.get(),
+                OXIDIZED_COPPER_BUTTON.get(),
+                WAXED_COPPER_BUTTON.get(),
+                WAXED_EXPOSED_COPPER_BUTTON.get(),
+                WAXED_WEATHERED_COPPER_BUTTON.get(),
+                WAXED_OXIDIZED_COPPER_BUTTON.get()
         );
     }
 

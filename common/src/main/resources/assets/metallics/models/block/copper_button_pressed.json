@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/button_pressed",
   "textures": {
-    "texture": "metallics:block/copper_plated_block"
+    "texture": "minecraft:block/copper_block"
   }
 }

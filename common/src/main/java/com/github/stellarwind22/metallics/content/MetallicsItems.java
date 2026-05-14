@@ -117,6 +117,33 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> WAXED_WEATHERED_COPPER_LAMP;
     public static RegistrySupplier<BlockItem> WAXED_OXIDIZED_COPPER_LAMP;
 
+    public static RegistrySupplier<BlockItem> COPPER_BUTTON;
+    public static RegistrySupplier<BlockItem> EXPOSED_COPPER_BUTTON;
+    public static RegistrySupplier<BlockItem> WEATHERED_COPPER_BUTTON;
+    public static RegistrySupplier<BlockItem> OXIDIZED_COPPER_BUTTON;
+    public static RegistrySupplier<BlockItem> WAXED_COPPER_BUTTON;
+    public static RegistrySupplier<BlockItem> WAXED_EXPOSED_COPPER_BUTTON;
+    public static RegistrySupplier<BlockItem> WAXED_WEATHERED_COPPER_BUTTON;
+    public static RegistrySupplier<BlockItem> WAXED_OXIDIZED_COPPER_BUTTON;
+
+    public static RegistrySupplier<BlockItem> COPPER_LEVER;
+    public static RegistrySupplier<BlockItem> EXPOSED_COPPER_LEVER;
+    public static RegistrySupplier<BlockItem> WEATHERED_COPPER_LEVER;
+    public static RegistrySupplier<BlockItem> OXIDIZED_COPPER_LEVER;
+    public static RegistrySupplier<BlockItem> WAXED_COPPER_LEVER;
+    public static RegistrySupplier<BlockItem> WAXED_EXPOSED_COPPER_LEVER;
+    public static RegistrySupplier<BlockItem> WAXED_WEATHERED_COPPER_LEVER;
+    public static RegistrySupplier<BlockItem> WAXED_OXIDIZED_COPPER_LEVER;
+
+    public static RegistrySupplier<BlockItem> COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<BlockItem> EXPOSED_COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<BlockItem> WEATHERED_COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<BlockItem> OXIDIZED_COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<BlockItem> WAXED_COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<BlockItem> WAXED_EXPOSED_COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<BlockItem> WAXED_WEATHERED_COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<BlockItem> WAXED_OXIDIZED_COPPER_PRESSURE_PLATE;
+
     //Iron
     public static RegistrySupplier<BlockItem> IRON_PLATED_BLOCK;
     public static RegistrySupplier<BlockItem> IRON_SLAB;
@@ -245,6 +272,7 @@ public class MetallicsItems {
         COPPER_MESH_TRAPDOOR = registerItem("copper_mesh_trapdoor", props -> new BlockItem(MetallicsBlocks.COPPER_MESH_TRAPDOOR.get(), props));
         COPPER_SLAB = registerItem("copper_slab", props -> new BlockItem(MetallicsBlocks.COPPER_SLAB.get(), props));
         COPPER_LAMP = registerItem("copper_lamp", props -> new BlockItem(MetallicsBlocks.COPPER_LAMP.get(), props));
+        COPPER_BUTTON = registerItem("copper_button", props -> new BlockItem(MetallicsBlocks.COPPER_BUTTON.get(), props));
 
         EXPOSED_COPPER_LADDER = registerItem("exposed_copper_ladder", props -> new BlockItem(MetallicsBlocks.EXPOSED_COPPER_LADDER.get(), props));
         EXPOSED_BRUSHED_COPPER_BLOCK= registerItem("exposed_brushed_copper_block", props -> new BlockItem(MetallicsBlocks.EXPOSED_BRUSHED_COPPER_BLOCK.get(), props));
@@ -256,6 +284,7 @@ public class MetallicsItems {
         EXPOSED_COPPER_MESH_TRAPDOOR = registerItem("exposed_copper_mesh_trapdoor", props -> new BlockItem(MetallicsBlocks.EXPOSED_COPPER_MESH_TRAPDOOR.get(), props));
         EXPOSED_COPPER_SLAB = registerItem("exposed_copper_slab", props -> new BlockItem(MetallicsBlocks.EXPOSED_COPPER_SLAB.get(), props));
         EXPOSED_COPPER_LAMP = registerItem("exposed_copper_lamp", props -> new BlockItem(MetallicsBlocks.EXPOSED_COPPER_LAMP.get(), props));
+        EXPOSED_COPPER_BUTTON = registerItem("exposed_copper_button", props -> new BlockItem(MetallicsBlocks.EXPOSED_COPPER_BUTTON.get(), props));
 
         WEATHERED_COPPER_LADDER = registerItem("weathered_copper_ladder", props -> new BlockItem(MetallicsBlocks.WEATHERED_COPPER_LADDER.get(), props));
         WEATHERED_BRUSHED_COPPER_BLOCK= registerItem("weathered_brushed_copper_block", props -> new BlockItem(MetallicsBlocks.WEATHERED_BRUSHED_COPPER_BLOCK.get(), props));
@@ -267,6 +296,7 @@ public class MetallicsItems {
         WEATHERED_COPPER_MESH_TRAPDOOR = registerItem("weathered_copper_mesh_trapdoor", props -> new BlockItem(MetallicsBlocks.WEATHERED_COPPER_MESH_TRAPDOOR.get(), props));
         WEATHERED_COPPER_SLAB = registerItem("weathered_copper_slab", props -> new BlockItem(MetallicsBlocks.WEATHERED_COPPER_SLAB.get(), props));
         WEATHERED_COPPER_LAMP = registerItem("weathered_copper_lamp", props -> new BlockItem(MetallicsBlocks.WEATHERED_COPPER_LAMP.get(), props));
+        WEATHERED_COPPER_BUTTON = registerItem("weathered_copper_button", props -> new BlockItem(MetallicsBlocks.WEATHERED_COPPER_BUTTON.get(), props));
 
         OXIDIZED_COPPER_LADDER = registerItem("oxidized_copper_ladder", props -> new BlockItem(MetallicsBlocks.OXIDIZED_COPPER_LADDER.get(), props));
         OXIDIZED_BRUSHED_COPPER_BLOCK = registerItem("oxidized_brushed_copper_block", props -> new BlockItem(MetallicsBlocks.WEATHERED_OXIDIZED_COPPER_BLOCK.get(), props));
@@ -278,6 +308,7 @@ public class MetallicsItems {
         OXIDIZED_COPPER_MESH_TRAPDOOR = registerItem("oxidized_copper_mesh_trapdoor", props -> new BlockItem(MetallicsBlocks.OXIDIZED_COPPER_MESH_TRAPDOOR.get(), props));
         OXIDIZED_COPPER_SLAB = registerItem("oxidized_copper_slab", props -> new BlockItem(MetallicsBlocks.OXIDIZED_COPPER_SLAB.get(), props));
         OXIDIZED_COPPER_LAMP = registerItem("oxidized_copper_lamp", props -> new BlockItem(MetallicsBlocks.OXIDIZED_COPPER_LAMP.get(), props));
+        OXIDIZED_COPPER_BUTTON = registerItem("oxidized_copper_button", props -> new BlockItem(MetallicsBlocks.OXIDIZED_COPPER_BUTTON.get(), props));
 
         WAXED_COPPER_LADDER = registerItem("waxed_copper_ladder", props -> new BlockItem(MetallicsBlocks.WAXED_COPPER_LADDER.get(), props));
         WAXED_BRUSHED_COPPER_BLOCK= registerItem("waxed_brushed_copper_block", props -> new BlockItem(MetallicsBlocks.WAXED_BRUSHED_COPPER_BLOCK.get(), props));
