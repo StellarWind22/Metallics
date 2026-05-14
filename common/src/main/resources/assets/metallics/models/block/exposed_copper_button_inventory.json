@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "metallics:block/exposed_copper_plated_block"
+  }
+}

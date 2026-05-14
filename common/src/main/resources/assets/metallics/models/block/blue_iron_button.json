@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "metallics:block/blue_iron_plated_block"
+  }
+}

@@ -135,6 +135,11 @@ public class MetallicsBlocks {
             .sound(SoundType.COPPER_GRATE)
             .pushReaction(PushReaction.DESTROY);
 
+    private static final MBlockProps buttonProps = new MBlockProps()
+            .noCollision()
+            .pushReaction(PushReaction.DESTROY)
+            .sound(SoundType.METAL);
+
     public static RegistrySupplier<Block> NITRE_SALT_BLOCK;
 
     //Soul
@@ -277,6 +282,10 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CHISELED_IRON_BLOCK;
     public static RegistrySupplier<Block> IRON_LAMP;
 
+    public static RegistrySupplier<Block> IRON_BUTTON;
+    public static RegistrySupplier<Block> IRON_LEVER;
+    public static RegistrySupplier<Block> IRON_PRESSURE_PLATE;
+
     //Blue Iron
     public static RegistrySupplier<Block> BLUE_IRON_CHAIN;
     public static RegistrySupplier<Block> BLUE_IRON_LANTERN;
@@ -303,6 +312,10 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CUT_BLUE_IRON_SLAB;
     public static RegistrySupplier<Block> CHISELED_BLUE_IRON_BLOCK;
     public static RegistrySupplier<Block> BLUE_IRON_LAMP;
+
+    public static RegistrySupplier<Block> BLUE_IRON_BUTTON;
+    public static RegistrySupplier<Block> BLUE_IRON_LEVER;
+    public static RegistrySupplier<Block> BLUE_IRON_PRESSURE_PLATE;
 
     public static RegistrySupplier<Block> PALE_TORCH;
     public static RegistrySupplier<Block> PALE_WALL_TORCH;
@@ -337,6 +350,10 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CUT_GOLD_SLAB;
     public static RegistrySupplier<Block> CHISELED_GOLD_BLOCK;
 
+    public static RegistrySupplier<Block> GOLD_BUTTON;
+    public static RegistrySupplier<Block> GOLD_LEVER;
+    public static RegistrySupplier<Block> GOLD_PRESSURE_PLATE;
+
     public static RegistrySupplier<Block> GOLD_TORCH;
     public static RegistrySupplier<Block> GOLD_WALL_TORCH;
     public static RegistrySupplier<MCampfireBlock> GOLD_CAMPFIRE;
@@ -368,6 +385,10 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CUT_NETHERITE_STAIRS;
     public static RegistrySupplier<Block> CUT_NETHERITE_SLAB;
     public static RegistrySupplier<Block> CHISELED_NETHERITE_BLOCK;
+
+    public static RegistrySupplier<Block> NETHERITE_BUTTON;
+    public static RegistrySupplier<Block> NETHERITE_LEVER;
+    public static RegistrySupplier<Block> NETHERITE_PRESSURE_PLATE;
 
     public static RegistrySupplier<Block> NETHERITE_TORCH;
     public static RegistrySupplier<Block> NETHERITE_WALL_TORCH;
