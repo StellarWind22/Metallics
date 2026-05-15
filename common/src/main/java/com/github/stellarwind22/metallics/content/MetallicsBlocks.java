@@ -272,17 +272,6 @@ public class MetallicsBlocks {
 
     public static WeatheringCopperBlocks COPPER_BUTTONS;
 
-    public static RegistrySupplier<Block> COPPER_LEVER;
-    public static RegistrySupplier<Block> EXPOSED_COPPER_LEVER;
-    public static RegistrySupplier<Block> WEATHERING_COPPER_LEVER;
-    public static RegistrySupplier<Block> OXIDIZED_COPPER_LEVER;
-    public static RegistrySupplier<Block> WAXED_COPPER_LEVER;
-    public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_LEVER;
-    public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_LEVER;
-    public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_LEVER;
-
-    public static WeatheringCopperBlocks COPPER_LEVERS;
-
     public static RegistrySupplier<Block> COPPER_PRESSURE_PLATE;
     public static RegistrySupplier<Block> EXPOSED_COPPER_PRESSURE_PLATE;
     public static RegistrySupplier<Block> WEATHERED_COPPER_PRESSURE_PLATE;

@@ -126,15 +126,6 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> WAXED_WEATHERED_COPPER_BUTTON;
     public static RegistrySupplier<BlockItem> WAXED_OXIDIZED_COPPER_BUTTON;
 
-    public static RegistrySupplier<BlockItem> COPPER_LEVER;
-    public static RegistrySupplier<BlockItem> EXPOSED_COPPER_LEVER;
-    public static RegistrySupplier<BlockItem> WEATHERED_COPPER_LEVER;
-    public static RegistrySupplier<BlockItem> OXIDIZED_COPPER_LEVER;
-    public static RegistrySupplier<BlockItem> WAXED_COPPER_LEVER;
-    public static RegistrySupplier<BlockItem> WAXED_EXPOSED_COPPER_LEVER;
-    public static RegistrySupplier<BlockItem> WAXED_WEATHERED_COPPER_LEVER;
-    public static RegistrySupplier<BlockItem> WAXED_OXIDIZED_COPPER_LEVER;
-
     public static RegistrySupplier<BlockItem> COPPER_PRESSURE_PLATE;
     public static RegistrySupplier<BlockItem> EXPOSED_COPPER_PRESSURE_PLATE;
     public static RegistrySupplier<BlockItem> WEATHERED_COPPER_PRESSURE_PLATE;
