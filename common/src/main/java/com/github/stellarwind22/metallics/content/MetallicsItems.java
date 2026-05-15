@@ -320,6 +320,7 @@ public class MetallicsItems {
         WAXED_COPPER_MESH_TRAPDOOR = registerItem("waxed_copper_mesh_trapdoor", props -> new DoubleHighBlockItem(MetallicsBlocks.WAXED_COPPER_MESH_TRAPDOOR.get(), props));
         WAXED_COPPER_SLAB = registerItem("waxed_copper_slab", props -> new BlockItem(MetallicsBlocks.WAXED_COPPER_SLAB.get(), props));
         WAXED_COPPER_LAMP = registerItem("waxed_copper_lamp", props -> new BlockItem(MetallicsBlocks.WAXED_COPPER_LAMP.get(), props));
+        WAXED_COPPER_BUTTON = registerItem("waxed_copper_button", props -> new BlockItem(MetallicsBlocks.WAXED_COPPER_BUTTON.get(), props));
 
         WAXED_EXPOSED_COPPER_LADDER = registerItem("waxed_exposed_copper_ladder", props -> new BlockItem(MetallicsBlocks.WAXED_EXPOSED_COPPER_LADDER.get(), props));
         WAXED_EXPOSED_BRUSHED_COPPER_BLOCK= registerItem("waxed_exposed_brushed_copper_block", props -> new BlockItem(MetallicsBlocks.WAXED_EXPOSED_BRUSHED_COPPER_BLOCK.get(), props));
@@ -331,6 +332,7 @@ public class MetallicsItems {
         WAXED_EXPOSED_COPPER_MESH_TRAPDOOR = registerItem("waxed_exposed_copper_mesh_trapdoor", props -> new DoubleHighBlockItem(MetallicsBlocks.WAXED_EXPOSED_COPPER_MESH_TRAPDOOR.get(), props));
         WAXED_EXPOSED_COPPER_SLAB = registerItem("waxed_exposed_copper_slab", props -> new BlockItem(MetallicsBlocks.WAXED_EXPOSED_COPPER_SLAB.get(), props));
         WAXED_EXPOSED_COPPER_LAMP = registerItem("waxed_exposed_copper_lamp", props -> new BlockItem(MetallicsBlocks.WAXED_EXPOSED_COPPER_LAMP.get(), props));
+        WAXED_EXPOSED_COPPER_BUTTON = registerItem("waxed_exposed_copper_button", props -> new BlockItem(MetallicsBlocks.WAXED_EXPOSED_COPPER_BUTTON.get(), props));
 
         WAXED_WEATHERED_COPPER_LADDER = registerItem("waxed_weathered_copper_ladder", props -> new BlockItem(MetallicsBlocks.WAXED_WEATHERED_COPPER_LADDER.get(), props));
         WAXED_WEATHERED_BRUSHED_COPPER_BLOCK= registerItem("waxed_weathered_brushed_copper_block", props -> new BlockItem(MetallicsBlocks.WAXED_WEATHERED_BRUSHED_COPPER_BLOCK.get(), props));
@@ -342,6 +344,7 @@ public class MetallicsItems {
         WAXED_WEATHERED_COPPER_MESH_TRAPDOOR = registerItem("waxed_weathered_copper_mesh_trapdoor", props -> new DoubleHighBlockItem(MetallicsBlocks.WAXED_WEATHERED_COPPER_MESH_TRAPDOOR.get(), props));
         WAXED_WEATHERED_COPPER_SLAB = registerItem("waxed_weathered_copper_slab", props -> new BlockItem(MetallicsBlocks.WAXED_WEATHERED_COPPER_SLAB.get(), props));
         WAXED_WEATHERED_COPPER_LAMP = registerItem("waxed_weathered_copper_lamp", props -> new BlockItem(MetallicsBlocks.WAXED_WEATHERED_COPPER_LAMP.get(), props));
+        WAXED_WEATHERED_COPPER_BUTTON = registerItem("waxed_weathered_copper_button", props -> new BlockItem(MetallicsBlocks.WAXED_WEATHERED_COPPER_BUTTON.get(), props));
 
         WAXED_OXIDIZED_COPPER_LADDER = registerItem("waxed_oxidized_copper_ladder", props -> new BlockItem(MetallicsBlocks.WAXED_OXIDIZED_COPPER_LADDER.get(), props));
         WAXED_OXIDIZED_BRUSHED_COPPER_BLOCK= registerItem("waxed_oxidized_brushed_copper_block", props -> new BlockItem(MetallicsBlocks.WAXED_WEATHERED_OXIDIZED_COPPER_BLOCK.get(), props));
@@ -353,6 +356,7 @@ public class MetallicsItems {
         WAXED_OXIDIZED_COPPER_MESH_TRAPDOOR = registerItem("waxed_oxidized_copper_mesh_trapdoor", props -> new DoubleHighBlockItem(MetallicsBlocks.WAXED_OXIDIZED_COPPER_MESH_TRAPDOOR.get(), props));
         WAXED_OXIDIZED_COPPER_SLAB = registerItem("waxed_oxidized_copper_slab", props -> new BlockItem(MetallicsBlocks.WAXED_OXIDIZED_COPPER_SLAB.get(), props));
         WAXED_OXIDIZED_COPPER_LAMP = registerItem("waxed_oxidized_copper_lamp", props -> new BlockItem(MetallicsBlocks.WAXED_OXIDIZED_COPPER_LAMP.get(), props));
+        WAXED_OXIDIZED_COPPER_BUTTON = registerItem("waxed_oxidized_copper_button", props -> new BlockItem(MetallicsBlocks.WAXED_OXIDIZED_COPPER_BUTTON.get(), props));
 
         COPPER_CAMPFIRE = registerItem("copper_campfire", props -> new BlockItem(MetallicsBlocks.COPPER_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
         COPPER_JACK_O_LANTERN = registerItem("copper_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.COPPER_JACK_O_LANTERN.get(), props));
