@@ -304,7 +304,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> IRON_LAMP;
 
     public static RegistrySupplier<Block> IRON_BUTTON;
-    public static RegistrySupplier<Block> IRON_LEVER;
     public static RegistrySupplier<Block> IRON_PRESSURE_PLATE;
 
     //Blue Iron
@@ -335,7 +334,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> BLUE_IRON_LAMP;
 
     public static RegistrySupplier<Block> BLUE_IRON_BUTTON;
-    public static RegistrySupplier<Block> BLUE_IRON_LEVER;
     public static RegistrySupplier<Block> BLUE_IRON_PRESSURE_PLATE;
 
     public static RegistrySupplier<Block> PALE_TORCH;
@@ -372,7 +370,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CHISELED_GOLD_BLOCK;
 
     public static RegistrySupplier<Block> GOLD_BUTTON;
-    public static RegistrySupplier<Block> GOLD_LEVER;
     public static RegistrySupplier<Block> GOLD_PRESSURE_PLATE;
 
     public static RegistrySupplier<Block> GOLD_TORCH;
@@ -408,7 +405,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CHISELED_NETHERITE_BLOCK;
 
     public static RegistrySupplier<Block> NETHERITE_BUTTON;
-    public static RegistrySupplier<Block> NETHERITE_LEVER;
     public static RegistrySupplier<Block> NETHERITE_PRESSURE_PLATE;
 
     public static RegistrySupplier<Block> NETHERITE_TORCH;
