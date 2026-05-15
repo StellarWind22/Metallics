@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:gold_nugget",
+    "#": "metallics:gold_salt",
     "L": "#minecraft:logs",
     "S": "minecraft:stick"
   },

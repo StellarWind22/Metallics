@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "metallics:netherite_nugget",
+    "#": "metallics:netherite_salt",
     "L": "#minecraft:logs",
     "S": "minecraft:stick"
   },

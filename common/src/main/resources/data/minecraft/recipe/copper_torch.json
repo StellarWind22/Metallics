@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "buiding",
   "key": {
-    ".": "metallics:gold_salt",
+    ".": "metallics:copper_salt",
     "#": [
       "minecraft:coal",
       "minecraft:charcoal"
@@ -15,7 +15,7 @@
     "l"
   ],
   "result": {
-    "id": "metallics:gold_torch",
+    "id": "minecraft:copper_torch",
     "count": 4
   }
 }

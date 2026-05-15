@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "buiding",
   "key": {
-    ".": "metallics:blue_iron_nugget",
+    ".": "metallics:blue_iron_salt",
     "#": [
       "minecraft:coal",
       "minecraft:charcoal"

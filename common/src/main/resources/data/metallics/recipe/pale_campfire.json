@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "metallics:blue_iron_nugget",
+    "#": "metallics:blue_iron_salt",
     "L": "#minecraft:logs",
     "S": "minecraft:stick"
   },
