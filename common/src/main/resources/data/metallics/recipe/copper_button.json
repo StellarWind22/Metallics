@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:copper_ingot"
+  ],
+  "result": {
+    "id": "metallics:copper_button"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "buiding",
+  "group": "waxed_oxidized_copper_pressure_plate",
+  "key": {
+    "#": "minecraft:waxed_oxidized_copper"
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "id": "metallics:waxed_oxidized_copper_pressure_plate"
+  }
+}

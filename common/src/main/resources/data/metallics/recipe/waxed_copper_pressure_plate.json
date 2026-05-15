@@ -2,13 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "buiding",
   "key": {
-    "#": "minecraft:weathered_copper"
+    "#": "minecraft:waxed_copper_block"
   },
   "pattern": [
-    "###"
+    "##"
   ],
   "result": {
-    "count": 6,
-    "id": "metallics:weathered_copper_slab"
+    "id": "metallics:waxed_copper_pressure_plate"
   }
 }

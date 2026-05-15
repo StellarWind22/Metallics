@@ -2,13 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "buiding",
   "key": {
-    "#": "minecraft:weathered_copper"
+    "#": "minecraft:oxidized_copper"
   },
   "pattern": [
-    "###"
+    "##"
   ],
   "result": {
-    "count": 6,
-    "id": "metallics:weathered_copper_slab"
+    "id": "metallics:oxidized_copper_pressure_plate"
   }
 }
