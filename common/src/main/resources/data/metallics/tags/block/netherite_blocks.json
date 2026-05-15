@@ -19,6 +19,7 @@
     "metallics:netherite_mesh_door",
     "metallics:netherite_mesh_trapdoor",
     "metallics:netherite_grate",
-    "metallics:netherite_lamp"
+    "metallics:netherite_lamp",
+    "metallics:netherite_button"
   ]
 }

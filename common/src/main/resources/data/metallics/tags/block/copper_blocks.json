@@ -80,6 +80,14 @@
     "metallics:waxed_brushed_copper_slab",
     "metallics:waxed_exposed_brushed_copper_slab",
     "metallics:waxed_weathered_brushed_copper_slab",
-    "metallics:waxed_oxidized_brushed_copper_slab"
+    "metallics:waxed_oxidized_brushed_copper_slab",
+    "metallics:copper_button",
+    "metallics:exposed_copper_button",
+    "metallics:weathered_copper_button",
+    "metallics:oxidized_copper_button",
+    "metallics:waxed_copper_button",
+    "metallics:waxed_exposed_copper_button",
+    "metallics:waxed_weathered_copper_button",
+    "metallics:waxed_oxidized_copper_button"
   ]
 }

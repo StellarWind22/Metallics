@@ -641,6 +641,8 @@ public class MetallicsBlocks {
         IRON_GRATE = registerBlock("iron_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         IRON_LAMP = registerBlock("iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
 
+        IRON_BUTTON = registerBlock("iron_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.IRON, 20, props), Optional.of(buttonProps.strength(IRN_GRT).getCopy())));
+
         //Blue Iron
         BLUE_IRON_CHAIN = registerBlock("blue_iron_chain", new MBlock<>(ChainBlock::new, Optional.of(chainProps.strength(IRN_MSH).getCopy())));
         BLUE_IRON_LANTERN = registerBlock("blue_iron_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(IRN_LNT).getCopy())));
@@ -667,6 +669,8 @@ public class MetallicsBlocks {
         BLUE_IRON_MESH_TRAPDOOR = registerBlock("blue_iron_mesh_trapdoor", new MBlock<>(props -> new TrapDoorBlock(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_GRATE = registerBlock("blue_iron_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_LAMP = registerBlock("blue_iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
+
+        BLUE_IRON_BUTTON = registerBlock("blue_iron_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.IRON, 20, props), Optional.of(buttonProps.strength(IRN_GRT).getCopy())));
 
         PALE_TORCH = registerBlock("pale_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.PALE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
         PALE_WALL_TORCH = registerBlock("pale_wall_torch", new MBlock<>(props -> new WallTorchBlock(MetallicsParticleTypes.PALE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
@@ -704,6 +708,8 @@ public class MetallicsBlocks {
         GOLD_JACK_O_LANTERN = registerBlock("gold_jack_o_lantern", new MBlock<>(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
         GOLD_LAMP = registerBlock("gold_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(GLD_LNT).getCopy())));
 
+        GOLD_BUTTON = registerBlock("gold_button", new MBlock<>(props -> new ButtonBlock(GOLD_SET.get(), 20, props), Optional.of(buttonProps.strength(GLD_GRT).getCopy())));
+
         //Netherite
         NETHERITE_CHAIN = registerBlock("netherite_chain", new MBlock<>(ChainBlock::new, Optional.of(chainProps.strength(NTR_MSH).getCopy())));
         NETHERITE_LANTERN = registerBlock("netherite_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(NTR_LNT).getCopy())));
@@ -733,6 +739,8 @@ public class MetallicsBlocks {
         NETHERITE_CAMPFIRE = registerBlock("netherite_campfire", new MBlock<>(props -> new MCampfireBlock(1, MetallicsParticleTypes.NETHERITE_EMBER.get(), props), Optional.of(campfireProps.getCopy())));
         NETHERITE_JACK_O_LANTERN = registerBlock("netherite_jack_o_lantern", new MBlock<>(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
         NETHERITE_LAMP = registerBlock("netherite_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(NTR_LNT).getCopy())));
+
+        NETHERITE_BUTTON = registerBlock("netherite_button", new MBlock<>(props -> new ButtonBlock(NETHERITE_SET.get(), 20, props), Optional.of(buttonProps.strength(NTR_GRT).getCopy())));
 
         //Register stuff here ▲▲▲
 

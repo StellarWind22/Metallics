@@ -161,6 +161,7 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> IRON_MESH_TRAPDOOR;
     public static RegistrySupplier<BlockItem> IRON_GRATE;
     public static RegistrySupplier<BlockItem> IRON_LAMP;
+    public static RegistrySupplier<BlockItem> IRON_BUTTON;
 
     //Blue Iron
     public static RegistrySupplier<BlockItem> BLUE_IRON_CHAIN;
@@ -194,6 +195,7 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> BLUE_IRON_MESH_TRAPDOOR;
     public static RegistrySupplier<BlockItem> BLUE_IRON_GRATE;
     public static RegistrySupplier<BlockItem> BLUE_IRON_LAMP;
+    public static RegistrySupplier<BlockItem> BLUE_IRON_BUTTON;
 
     //Gold
     public static RegistrySupplier<BlockItem> GOLD_CHAIN;
@@ -222,6 +224,8 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> GOLD_JACK_O_LANTERN;
     public static RegistrySupplier<BlockItem> GOLD_LAMP;
 
+    public static RegistrySupplier<BlockItem> GOLD_BUTTON;
+
     //Netherite
     public static RegistrySupplier<Item> NETHERITE_NUGGET;
     public static RegistrySupplier<BlockItem> NETHERITE_CHAIN;
@@ -249,6 +253,8 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> NETHERITE_CAMPFIRE;
     public static RegistrySupplier<BlockItem> NETHERITE_JACK_O_LANTERN;
     public static RegistrySupplier<BlockItem> NETHERITE_LAMP;
+
+    public static RegistrySupplier<BlockItem> NETHERITE_BUTTON;
 
     public static void init() {
 
@@ -379,6 +385,7 @@ public class MetallicsItems {
         CUT_IRON_SLAB = registerItem("cut_iron_slab", props -> new BlockItem(MetallicsBlocks.CUT_IRON_SLAB.get(), props));
         CHISELED_IRON_BLOCK = registerItem("chiseled_iron_block", props -> new BlockItem(MetallicsBlocks.CHISELED_IRON_BLOCK.get(), props));
         IRON_LAMP = registerItem("iron_lamp", props -> new BlockItem(MetallicsBlocks.IRON_LAMP.get(), props));
+        IRON_BUTTON = registerItem("iron_button", props -> new BlockItem(MetallicsBlocks.IRON_BUTTON.get(), props));
 
         //Blue Iron
         BLUE_IRON_NUGGET = registerItem("blue_iron_nugget", Item::new);
@@ -407,6 +414,7 @@ public class MetallicsItems {
         CUT_BLUE_IRON_SLAB = registerItem("cut_blue_iron_slab", props -> new BlockItem(MetallicsBlocks.CUT_BLUE_IRON_SLAB.get(), props));
         CHISELED_BLUE_IRON_BLOCK = registerItem("chiseled_blue_iron_block", props -> new BlockItem(MetallicsBlocks.CHISELED_BLUE_IRON_BLOCK.get(), props));
         BLUE_IRON_LAMP = registerItem("blue_iron_lamp", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_LAMP.get(), props));
+        IRON_BUTTON = registerItem("blue_iron_button", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_BUTTON.get(), props));
 
         PALE_TORCH = registerItem("pale_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.PALE_TORCH.get(), MetallicsBlocks.PALE_WALL_TORCH.get(), Direction.DOWN, props));
         PALE_CAMPFIRE = registerItem("pale_campfire", props -> new BlockItem(MetallicsBlocks.PALE_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
@@ -434,11 +442,12 @@ public class MetallicsItems {
         CHISELED_GOLD_BLOCK = registerItem("chiseled_gold_block", props -> new BlockItem(MetallicsBlocks.CHISELED_GOLD_BLOCK.get(), props));
         CUT_GOLD_STAIRS = registerItem("cut_gold_stairs", props -> new BlockItem(MetallicsBlocks.CUT_GOLD_STAIRS.get(), props));
         CUT_GOLD_SLAB = registerItem("cut_gold_slab", props -> new BlockItem(MetallicsBlocks.CUT_GOLD_SLAB.get(), props));
+        GOLD_LAMP = registerItem("gold_lamp", props -> new BlockItem(MetallicsBlocks.GOLD_LAMP.get(), props));
+        GOLD_BUTTON = registerItem("gold_button", props -> new BlockItem(MetallicsBlocks.GOLD_BUTTON.get(), props));
 
         GOLD_TORCH = registerItem("gold_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.GOLD_TORCH.get(), MetallicsBlocks.GOLD_WALL_TORCH.get(), Direction.DOWN, props));
         GOLD_CAMPFIRE = registerItem("gold_campfire", props -> new BlockItem(MetallicsBlocks.GOLD_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
         GOLD_JACK_O_LANTERN = registerItem("gold_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.GOLD_JACK_O_LANTERN.get(), props));
-        GOLD_LAMP = registerItem("gold_lamp", props -> new BlockItem(MetallicsBlocks.GOLD_LAMP.get(), props));
 
         //Netherite
         NETHERITE_NUGGET = registerItem("netherite_nugget", props -> new Item(props.fireResistant()));
@@ -462,11 +471,12 @@ public class MetallicsItems {
         CUT_NETHERITE_STAIRS = registerItem("cut_netherite_stairs", props -> new BlockItem(MetallicsBlocks.CUT_NETHERITE_STAIRS.get(), props.fireResistant()));
         CUT_NETHERITE_SLAB = registerItem("cut_netherite_slab", props -> new BlockItem(MetallicsBlocks.CUT_NETHERITE_SLAB.get(), props.fireResistant()));
         CHISELED_NETHERITE_BLOCK = registerItem("chiseled_netherite_block", props -> new BlockItem(MetallicsBlocks.CHISELED_NETHERITE_BLOCK.get(), props.fireResistant()));
+        NETHERITE_LAMP = registerItem("netherite_lamp", props -> new BlockItem(MetallicsBlocks.NETHERITE_LAMP.get(), props.fireResistant()));
+        NETHERITE_BUTTON = registerItem("netherite_button", props -> new BlockItem(MetallicsBlocks.NETHERITE_BUTTON.get(), props));
 
         NETHERITE_TORCH = registerItem("netherite_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.NETHERITE_TORCH.get(), MetallicsBlocks.NETHERITE_WALL_TORCH.get(), Direction.DOWN, props));
         NETHERITE_CAMPFIRE = registerItem("netherite_campfire", props -> new BlockItem(MetallicsBlocks.NETHERITE_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
         NETHERITE_JACK_O_LANTERN = registerItem("netherite_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.NETHERITE_JACK_O_LANTERN.get(), props));
-        NETHERITE_LAMP = registerItem("netherite_lamp", props -> new BlockItem(MetallicsBlocks.NETHERITE_LAMP.get(), props.fireResistant()));
 
         //Register stuff here ▲▲▲
 

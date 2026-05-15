@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "metallics:gold_chain",
+    "metallics:blue_iron_chain",
     "metallics:netherite_chain"
   ]
 }

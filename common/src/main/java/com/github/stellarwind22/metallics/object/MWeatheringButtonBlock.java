@@ -28,6 +28,6 @@ public class MWeatheringButtonBlock extends ButtonBlock implements WeatheringCop
     }
 
     public boolean isRandomlyTicking(BlockState blockState) {
-        return WeatheringCopper.getNext(blockState.getBlock()).isPresent();
+        return WeatheringCopper.getNext(blockState.getBlock()).isPresent() && !blockState.getValue(POWERED);
     }
 }
