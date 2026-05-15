@@ -17,6 +17,7 @@
     "metallics:iron_grate",
     "metallics:iron_lamp",
     "metallics:iron_button",
+    "metallics:iron_pressure_plate",
     "metallics:blue_iron_ladder",
     "metallics:blue_iron_block",
     "metallics:blue_iron_plated_block",
@@ -34,6 +35,7 @@
     "metallics:blue_iron_mesh_trapdoor",
     "metallics:blue_iron_grate",
     "metallics:blue_iron_lamp",
-    "metallics:blue_iron_button"
+    "metallics:blue_iron_button",
+    "metallics:blue_iron_pressure_plate"
   ]
 }

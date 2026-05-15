@@ -66,6 +66,7 @@ public final class MetallicsFabric implements ModInitializer {
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_MESH_DOORS);
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_MESH_TRAPDOORS);
         OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_BUTTONS);
+        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_PRESSURE_PLATES);
 
         BiomeModifications.addFeature(
                 BiomeSelectors.tag(TagKey.create(

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "metallics:block/netherite_pressure_plate"
+    },
+    "powered=true": {
+      "model": "metallics:block/netherite_pressure_plate_down"
+    }
+  }
+}

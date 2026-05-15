@@ -88,6 +88,14 @@
     "metallics:waxed_copper_button",
     "metallics:waxed_exposed_copper_button",
     "metallics:waxed_weathered_copper_button",
-    "metallics:waxed_oxidized_copper_button"
+    "metallics:waxed_oxidized_copper_button",
+    "metallics:copper_pressure_plate",
+    "metallics:exposed_copper_pressure_plate",
+    "metallics:weathered_copper_pressure_plate",
+    "metallics:oxidized_copper_pressure_plate",
+    "metallics:waxed_copper_pressure_plate",
+    "metallics:waxed_exposed_copper_pressure_plate",
+    "metallics:waxed_weathered_copper_pressure_plate",
+    "metallics:waxed_oxidized_copper_pressure_plate"
   ]
 }

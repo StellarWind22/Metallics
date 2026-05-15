@@ -285,7 +285,7 @@ public class MetallicsBlocks {
 
     public static RegistrySupplier<Block> COPPER_PRESSURE_PLATE;
     public static RegistrySupplier<Block> EXPOSED_COPPER_PRESSURE_PLATE;
-    public static RegistrySupplier<Block> WEATHERING_COPPER_PRESSURE_PLATE;
+    public static RegistrySupplier<Block> WEATHERED_COPPER_PRESSURE_PLATE;
     public static RegistrySupplier<Block> OXIDIZED_COPPER_PRESSURE_PLATE;
     public static RegistrySupplier<Block> WAXED_COPPER_PRESSURE_PLATE;
     public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_PRESSURE_PLATE;
@@ -621,6 +621,15 @@ public class MetallicsBlocks {
         WAXED_WEATHERED_COPPER_BUTTON = registerBlock("waxed_weathered_copper_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.COPPER, 20, props), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
         WAXED_OXIDIZED_COPPER_BUTTON = registerBlock("waxed_oxidized_copper_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.COPPER, 20, props), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
 
+        COPPER_PRESSURE_PLATE = registerBlock("copper_pressure_plate", new MBlock<>(props -> new MWeatheringPressurePlateBlock(BlockSetType.COPPER, props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+        EXPOSED_COPPER_PRESSURE_PLATE = registerBlock("exposed_copper_pressure_plate", new MBlock<>(props -> new MWeatheringPressurePlateBlock(BlockSetType.COPPER, props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+        WEATHERED_COPPER_PRESSURE_PLATE = registerBlock("weathered_copper_pressure_plate", new MBlock<>(props -> new MWeatheringPressurePlateBlock(BlockSetType.COPPER, props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+        OXIDIZED_COPPER_PRESSURE_PLATE = registerBlock("oxidized_copper_pressure_plate", new MBlock<>(props -> new MWeatheringPressurePlateBlock(BlockSetType.COPPER, props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+        WAXED_COPPER_PRESSURE_PLATE = registerBlock("waxed_copper_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(BlockSetType.COPPER,  props), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+        WAXED_EXPOSED_COPPER_PRESSURE_PLATE = registerBlock("waxed_exposed_copper_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(BlockSetType.COPPER, props), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+        WAXED_WEATHERED_COPPER_PRESSURE_PLATE = registerBlock("waxed_weathered_copper_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(BlockSetType.COPPER, props), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+        WAXED_OXIDIZED_COPPER_PRESSURE_PLATE = registerBlock("waxed_oxidized_copper_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(BlockSetType.COPPER, props), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
+
         //Iron
         IRON_PLATED_BLOCK = registerBlock("iron_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         IRON_SLAB = registerBlock("iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
@@ -642,6 +651,7 @@ public class MetallicsBlocks {
         IRON_LAMP = registerBlock("iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
 
         IRON_BUTTON = registerBlock("iron_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.IRON, 20, props), Optional.of(buttonProps.strength(IRN_GRT).getCopy())));
+        IRON_PRESSURE_PLATE = registerBlock("iron_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(BlockSetType.IRON, props), Optional.of(buttonProps.strength(IRN_GRT).getCopy())));
 
         //Blue Iron
         BLUE_IRON_CHAIN = registerBlock("blue_iron_chain", new MBlock<>(ChainBlock::new, Optional.of(chainProps.strength(IRN_MSH).getCopy())));
@@ -671,6 +681,7 @@ public class MetallicsBlocks {
         BLUE_IRON_LAMP = registerBlock("blue_iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
 
         BLUE_IRON_BUTTON = registerBlock("blue_iron_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.IRON, 20, props), Optional.of(buttonProps.strength(IRN_GRT).getCopy())));
+        BLUE_IRON_PRESSURE_PLATE = registerBlock("blue_iron_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(BlockSetType.IRON, props), Optional.of(buttonProps.strength(IRN_GRT).getCopy())));
 
         PALE_TORCH = registerBlock("pale_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.PALE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
         PALE_WALL_TORCH = registerBlock("pale_wall_torch", new MBlock<>(props -> new WallTorchBlock(MetallicsParticleTypes.PALE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
@@ -709,6 +720,7 @@ public class MetallicsBlocks {
         GOLD_LAMP = registerBlock("gold_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(GLD_LNT).getCopy())));
 
         GOLD_BUTTON = registerBlock("gold_button", new MBlock<>(props -> new ButtonBlock(GOLD_SET.get(), 20, props), Optional.of(buttonProps.strength(GLD_GRT).getCopy())));
+        GOLD_PRESSURE_PLATE = registerBlock("gold_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(GOLD_SET.get(), props), Optional.of(buttonProps.strength(GLD_GRT).getCopy())));
 
         //Netherite
         NETHERITE_CHAIN = registerBlock("netherite_chain", new MBlock<>(ChainBlock::new, Optional.of(chainProps.strength(NTR_MSH).getCopy())));
@@ -741,6 +753,7 @@ public class MetallicsBlocks {
         NETHERITE_LAMP = registerBlock("netherite_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(NTR_LNT).getCopy())));
 
         NETHERITE_BUTTON = registerBlock("netherite_button", new MBlock<>(props -> new ButtonBlock(NETHERITE_SET.get(), 20, props), Optional.of(buttonProps.strength(NTR_GRT).getCopy())));
+        NETHERITE_PRESSURE_PLATE = registerBlock("netherite_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(NETHERITE_SET.get(), props), Optional.of(buttonProps.strength(NTR_GRT).getCopy())));
 
         //Register stuff here ▲▲▲
 
@@ -894,6 +907,17 @@ public class MetallicsBlocks {
                 WAXED_EXPOSED_COPPER_BUTTON.get(),
                 WAXED_WEATHERED_COPPER_BUTTON.get(),
                 WAXED_OXIDIZED_COPPER_BUTTON.get()
+        );
+
+        COPPER_PRESSURE_PLATES = new WeatheringCopperBlocks(
+                COPPER_PRESSURE_PLATE.get(),
+                EXPOSED_COPPER_PRESSURE_PLATE.get(),
+                WEATHERED_COPPER_PRESSURE_PLATE.get(),
+                OXIDIZED_COPPER_PRESSURE_PLATE.get(),
+                WAXED_COPPER_PRESSURE_PLATE.get(),
+                WAXED_EXPOSED_COPPER_PRESSURE_PLATE.get(),
+                WAXED_WEATHERED_COPPER_PRESSURE_PLATE.get(),
+                WAXED_OXIDIZED_COPPER_PRESSURE_PLATE.get()
         );
     }
 

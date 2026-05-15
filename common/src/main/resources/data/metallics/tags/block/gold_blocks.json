@@ -20,6 +20,7 @@
     "metallics:gold_mesh_trapdoor",
     "metallics:gold_grate",
     "metallics:gold_lamp",
-    "metallics:gold_button"
+    "metallics:gold_button",
+    "metallics:gold_pressure_plate"
   ]
 }

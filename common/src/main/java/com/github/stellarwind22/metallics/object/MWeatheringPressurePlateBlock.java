@@ -28,6 +28,6 @@ public class MWeatheringPressurePlateBlock extends PressurePlateBlock implements
     }
 
     public boolean isRandomlyTicking(BlockState blockState) {
-        return WeatheringCopper.getNext(blockState.getBlock()).isPresent();
+        return WeatheringCopper.getNext(blockState.getBlock()).isPresent() && !blockState.getValue(POWERED);
     }
 }
