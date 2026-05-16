@@ -28,6 +28,13 @@ public class MetallicsItems {
     //Copper
     public static RegistrySupplier<Item> COPPER_SALT;
 
+    public static RegistrySupplier<Item> EXPOSED_COPPER_NUGGET;
+    public static RegistrySupplier<Item> WEATHERED_COPPER_NUGGET;
+    public static RegistrySupplier<Item> OXIDIZED_COPPER_NUGGET;
+    public static RegistrySupplier<Item> EXPOSED_COPPER_INGOT;
+    public static RegistrySupplier<Item> WEATHERED_COPPER_INGOT;
+    public static RegistrySupplier<Item> OXIDIZED_COPPER_INGOT;
+
     public static RegistrySupplier<BlockItem> BRUSHED_COPPER_BLOCK;
     public static RegistrySupplier<BlockItem> EXPOSED_BRUSHED_COPPER_BLOCK;
     public static RegistrySupplier<BlockItem> WEATHERED_BRUSHED_COPPER_BLOCK;
@@ -291,6 +298,7 @@ public class MetallicsItems {
 
         //Copper
         COPPER_SALT = registerItem("copper_salt", Item::new);
+
         COPPER_LADDER = registerItem("copper_ladder", props -> new BlockItem(MetallicsBlocks.COPPER_LADDER.get(), props));
         BRUSHED_COPPER_BLOCK= registerItem("brushed_copper_block", props -> new BlockItem(MetallicsBlocks.BRUSHED_COPPER_BLOCK.get(), props));
         BRUSHED_COPPER_SLAB= registerItem("brushed_copper_slab", props -> new BlockItem(MetallicsBlocks.BRUSHED_COPPER_SLAB.get(), props));
@@ -306,9 +314,11 @@ public class MetallicsItems {
         COPPER_GLASS = registerItem("copper_glass", props -> new BlockItem(MetallicsBlocks.COPPER_GLASS.get(), props));
         COPPER_TINTED_GLASS = registerItem("copper_tinted_glass", props -> new BlockItem(MetallicsBlocks.COPPER_TINTED_GLASS.get(), props));
 
+        EXPOSED_COPPER_NUGGET = registerItem("exposed_copper_nugget", Item::new);
+        EXPOSED_COPPER_INGOT = registerItem("exposed_copper_ingot", Item::new);
         EXPOSED_COPPER_LADDER = registerItem("exposed_copper_ladder", props -> new BlockItem(MetallicsBlocks.EXPOSED_COPPER_LADDER.get(), props));
-        EXPOSED_BRUSHED_COPPER_BLOCK= registerItem("exposed_brushed_copper_block", props -> new BlockItem(MetallicsBlocks.EXPOSED_BRUSHED_COPPER_BLOCK.get(), props));
-        EXPOSED_BRUSHED_COPPER_SLAB= registerItem("exposed_brushed_copper_slab", props -> new BlockItem(MetallicsBlocks.EXPOSED_BRUSHED_COPPER_SLAB.get(), props));
+        EXPOSED_BRUSHED_COPPER_BLOCK = registerItem("exposed_brushed_copper_block", props -> new BlockItem(MetallicsBlocks.EXPOSED_BRUSHED_COPPER_BLOCK.get(), props));
+        EXPOSED_BRUSHED_COPPER_SLAB = registerItem("exposed_brushed_copper_slab", props -> new BlockItem(MetallicsBlocks.EXPOSED_BRUSHED_COPPER_SLAB.get(), props));
         EXPOSED_COPPER_MESH = registerItem("exposed_copper_mesh", props -> new BlockItem(MetallicsBlocks.EXPOSED_COPPER_MESH.get(), props));
         EXPOSED_COPPER_MESH_FENCE = registerItem("exposed_copper_mesh_fence", props -> new BlockItem(MetallicsBlocks.EXPOSED_COPPER_MESH_FENCE.get(), props));
         EXPOSED_COPPER_MESH_GATE = registerItem("exposed_copper_mesh_gate", props -> new DoubleHighBlockItem(MetallicsBlocks.EXPOSED_COPPER_MESH_GATE.get(), props));
@@ -321,6 +331,8 @@ public class MetallicsItems {
         EXPOSED_COPPER_GLASS = registerItem("exposed_copper_glass", props -> new BlockItem(MetallicsBlocks.EXPOSED_COPPER_GLASS.get(), props));
         EXPOSED_COPPER_TINTED_GLASS = registerItem("exposed_copper_tinted_glass", props -> new BlockItem(MetallicsBlocks.EXPOSED_COPPER_TINTED_GLASS.get(), props));
 
+        WEATHERED_COPPER_NUGGET = registerItem("weathered_copper_nugget", Item::new);
+        WEATHERED_COPPER_INGOT = registerItem("weathered_copper_ingot", Item::new);
         WEATHERED_COPPER_LADDER = registerItem("weathered_copper_ladder", props -> new BlockItem(MetallicsBlocks.WEATHERED_COPPER_LADDER.get(), props));
         WEATHERED_BRUSHED_COPPER_BLOCK= registerItem("weathered_brushed_copper_block", props -> new BlockItem(MetallicsBlocks.WEATHERED_BRUSHED_COPPER_BLOCK.get(), props));
         WEATHERED_BRUSHED_COPPER_SLAB= registerItem("weathered_brushed_copper_slab", props -> new BlockItem(MetallicsBlocks.WEATHERED_BRUSHED_COPPER_SLAB.get(), props));
@@ -336,6 +348,8 @@ public class MetallicsItems {
         WEATHERED_COPPER_GLASS = registerItem("weathered_copper_glass", props -> new BlockItem(MetallicsBlocks.WEATHERED_COPPER_GLASS.get(), props));
         WEATHERED_COPPER_TINTED_GLASS = registerItem("weathered_copper_tinted_glass", props -> new BlockItem(MetallicsBlocks.WEATHERED_COPPER_TINTED_GLASS.get(), props));
 
+        OXIDIZED_COPPER_NUGGET = registerItem("oxidized_copper_nugget", Item::new);
+        OXIDIZED_COPPER_INGOT = registerItem("oxidized_copper_ingot", Item::new);
         OXIDIZED_COPPER_LADDER = registerItem("oxidized_copper_ladder", props -> new BlockItem(MetallicsBlocks.OXIDIZED_COPPER_LADDER.get(), props));
         OXIDIZED_BRUSHED_COPPER_BLOCK = registerItem("oxidized_brushed_copper_block", props -> new BlockItem(MetallicsBlocks.WEATHERED_OXIDIZED_COPPER_BLOCK.get(), props));
         OXIDIZED_BRUSHED_COPPER_SLAB= registerItem("oxidized_brushed_copper_slab", props -> new BlockItem(MetallicsBlocks.WEATHERED_OXIDIZED_COPPER_SLAB.get(), props));
