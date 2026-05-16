@@ -16,6 +16,7 @@ import java.util.function.Function;
 public class MetallicsItems {
 
     private static DeferredRegister<Item> ITEMS;
+    public static int registeredItemCount = 0;
 
     //Chemical
     public static RegistrySupplier<Item> NITRE_SALT;
@@ -500,10 +501,13 @@ public class MetallicsItems {
         //Register stuff here ▲▲▲
 
         ITEMS.register();
+
+        Metallics.LOGGER.info("Registered {} items...", registeredItemCount);
     }
 
     @SuppressWarnings("UnstableApiUsage")
     private static <T extends Item> RegistrySupplier<T> registerItem(String name, Function<Item.Properties, T> constructor) {
+        registeredItemCount += 1;
         return ITEMS.register(name, () -> constructor.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, name))).arch$tab(MetallicsTabs.TAB)));
     }
 }

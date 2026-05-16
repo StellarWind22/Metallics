@@ -33,6 +33,8 @@ public class MetallicsBlocks {
     private static Map<String, BlockSetType> BLOCK_SETS;
     private static final HashMap<Block, Block> BRUSHABLE_MAP = new HashMap<>();
 
+    public static int registeredBlockCount = 0;
+
     private static final MBlockProps torchProps = new MBlockProps()
             .noCollision()
             .instabreak()
@@ -138,6 +140,16 @@ public class MetallicsBlocks {
             .noCollision()
             .pushReaction(PushReaction.DESTROY)
             .sound(SoundType.METAL);
+
+    private static final MBlockProps glassProps = new MBlockProps()
+            .instrument(NoteBlockInstrument.HAT)
+            .sound(SoundType.GLASS)
+            .noOcclusion()
+            .isValidSpawn(MBlockProps::never)
+            .isRedstoneConductor(MBlockProps::never)
+            .isSuffocating(MBlockProps::never)
+            .isViewBlocking(MBlockProps::never)
+            .requiresCorrectToolForDrops();
 
     public static RegistrySupplier<Block> NITRE_SALT_BLOCK;
 
@@ -282,6 +294,39 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_PRESSURE_PLATE;
 
     public static WeatheringCopperBlocks COPPER_PRESSURE_PLATES;
+
+    public static RegistrySupplier<Block> COPPER_GLASS;
+    public static RegistrySupplier<Block> EXPOSED_COPPER_GLASS;
+    public static RegistrySupplier<Block> WEATHERED_COPPER_GLASS;
+    public static RegistrySupplier<Block> OXIDIZED_COPPER_GLASS;
+    public static RegistrySupplier<Block> WAXED_COPPER_GLASS;
+    public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_GLASS;
+    public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_GLASS;
+    public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_GLASS;
+
+    public static WeatheringCopperBlocks COPPER_GLASS_BLOCKS;
+
+    public static RegistrySupplier<Block> COPPER_GLASS_PANE;
+    public static RegistrySupplier<Block> EXPOSED_COPPER_GLASS_PANE;
+    public static RegistrySupplier<Block> WEATHERED_COPPER_GLASS_PANE;
+    public static RegistrySupplier<Block> OXIDIZED_COPPER_GLASS_PANE;
+    public static RegistrySupplier<Block> WAXED_COPPER_GLASS_PANE;
+    public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_GLASS_PANE;
+    public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_GLASS_PANE;
+    public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_GLASS_PANE;
+
+    public static WeatheringCopperBlocks COPPER_GLASS_PANES;
+
+    public static RegistrySupplier<Block> COPPER_TINTED_GLASS;
+    public static RegistrySupplier<Block> EXPOSED_COPPER_TINTED_GLASS;
+    public static RegistrySupplier<Block> WEATHERED_COPPER_TINTED_GLASS;
+    public static RegistrySupplier<Block> OXIDIZED_COPPER_TINTED_GLASS;
+    public static RegistrySupplier<Block> WAXED_COPPER_TINTED_GLASS;
+    public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_TINTED_GLASS;
+    public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_TINTED_GLASS;
+    public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_TINTED_GLASS;
+
+    public static WeatheringCopperBlocks COPPER_TINTED_GLASS_BLOCKS;
 
     //Iron
     public static RegistrySupplier<LadderBlock> IRON_LADDER;
@@ -743,6 +788,12 @@ public class MetallicsBlocks {
         //Register stuff here ▲▲▲
 
         BLOCKS.register();
+
+        if(registeredBlockCount != MBlock.blockCount) {
+            Metallics.LOGGER.warn("Count mismatch! {}/{} blocks registered!", MBlock.blockCount, registeredBlockCount);
+        } else {
+            Metallics.LOGGER.info("Registered {} blocks...", registeredBlockCount);
+        }
     }
 
     public static void postInit() {
@@ -909,8 +960,10 @@ public class MetallicsBlocks {
     private static <T extends Block> RegistrySupplier<T> registerBlock(String name, MBlock<T> mBlock) {
         ResourceKey<Block> key = ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, name));
         if(mBlock.feedInProps().isPresent()) {
+            registeredBlockCount += 1;
             return BLOCKS.register(name, () -> mBlock.blockConstructor().apply(mBlock.feedInProps().orElseThrow().setId(key)));
         } else {
+            registeredBlockCount += 1;
             return BLOCKS.register(name, () -> mBlock.blockConstructor().apply(BlockBehaviour.Properties.of().setId(key)));
         }
     }
