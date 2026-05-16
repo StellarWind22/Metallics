@@ -347,6 +347,8 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CUT_IRON_SLAB;
     public static RegistrySupplier<Block> CHISELED_IRON_BLOCK;
     public static RegistrySupplier<Block> IRON_LAMP;
+    public static RegistrySupplier<Block> IRON_GLASS;
+    public static RegistrySupplier<Block> IRON_TINTED_GLASS;
 
     public static RegistrySupplier<Block> IRON_BUTTON;
     public static RegistrySupplier<Block> IRON_PRESSURE_PLATE;
@@ -377,6 +379,8 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CUT_BLUE_IRON_SLAB;
     public static RegistrySupplier<Block> CHISELED_BLUE_IRON_BLOCK;
     public static RegistrySupplier<Block> BLUE_IRON_LAMP;
+    public static RegistrySupplier<Block> BLUE_IRON_GLASS;
+    public static RegistrySupplier<Block> BLUE_IRON_TINTED_GLASS;
 
     public static RegistrySupplier<Block> BLUE_IRON_BUTTON;
     public static RegistrySupplier<Block> BLUE_IRON_PRESSURE_PLATE;
@@ -413,7 +417,9 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CUT_GOLD_STAIRS;
     public static RegistrySupplier<Block> CUT_GOLD_SLAB;
     public static RegistrySupplier<Block> CHISELED_GOLD_BLOCK;
-
+    public static RegistrySupplier<Block> GOLD_LAMP;
+    public static RegistrySupplier<Block> GOLD_GLASS;
+    public static RegistrySupplier<Block> GOLD_TINTED_GLASS;
     public static RegistrySupplier<Block> GOLD_BUTTON;
     public static RegistrySupplier<Block> GOLD_PRESSURE_PLATE;
 
@@ -421,7 +427,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> GOLD_WALL_TORCH;
     public static RegistrySupplier<MCampfireBlock> GOLD_CAMPFIRE;
     public static RegistrySupplier<Block> GOLD_JACK_O_LANTERN;
-    public static RegistrySupplier<Block> GOLD_LAMP;
 
     //Netherite
     public static Supplier<BlockSetType> NETHERITE_SET;
@@ -448,6 +453,9 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> CUT_NETHERITE_STAIRS;
     public static RegistrySupplier<Block> CUT_NETHERITE_SLAB;
     public static RegistrySupplier<Block> CHISELED_NETHERITE_BLOCK;
+    public static RegistrySupplier<Block> NETHERITE_LAMP;
+    public static RegistrySupplier<Block> NETHERITE_GLASS;
+    public static RegistrySupplier<Block> NETHERITE_TINTED_GLASS;
 
     public static RegistrySupplier<Block> NETHERITE_BUTTON;
     public static RegistrySupplier<Block> NETHERITE_PRESSURE_PLATE;
@@ -456,7 +464,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> NETHERITE_WALL_TORCH;
     public static RegistrySupplier<MCampfireBlock> NETHERITE_CAMPFIRE;
     public static RegistrySupplier<Block> NETHERITE_JACK_O_LANTERN;
-    public static RegistrySupplier<Block> NETHERITE_LAMP;
 
     static final StrPair CPR_STR = new StrPair(3.0F, 6.0F);
     static final StrPair IRN_STR = new StrPair(5.0F, 6.0F);
@@ -698,6 +705,8 @@ public class MetallicsBlocks {
         IRON_MESH_TRAPDOOR = registerBlock("iron_mesh_trapdoor", new MBlock<>(props -> new TrapDoorBlock(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(IRN_GRT).getCopy())));
         IRON_GRATE = registerBlock("iron_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         IRON_LAMP = registerBlock("iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
+        IRON_GLASS = registerBlock("iron_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(IRN_GRT).getCopy())));
+        IRON_TINTED_GLASS = registerBlock("iron_tinted_glass", new MBlock<>(TintedGlassBlock::new, Optional.of(glassProps.strength(IRN_GRT).getCopy())));
 
         IRON_BUTTON = registerBlock("iron_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.IRON, 20, props), Optional.of(buttonProps.strength(IRN_GRT).getCopy())));
         IRON_PRESSURE_PLATE = registerBlock("iron_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(BlockSetType.IRON, props), Optional.of(buttonProps.strength(IRN_GRT).getCopy())));
@@ -728,6 +737,8 @@ public class MetallicsBlocks {
         BLUE_IRON_MESH_TRAPDOOR = registerBlock("blue_iron_mesh_trapdoor", new MBlock<>(props -> new TrapDoorBlock(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_GRATE = registerBlock("blue_iron_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_LAMP = registerBlock("blue_iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
+        BLUE_IRON_GLASS = registerBlock("blue_iron_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(IRN_GRT).getCopy())));
+        BLUE_IRON_TINTED_GLASS = registerBlock("blue_iron_tinted_glass", new MBlock<>(TintedGlassBlock::new, Optional.of(glassProps.strength(IRN_GRT).getCopy())));
 
         BLUE_IRON_BUTTON = registerBlock("blue_iron_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.IRON, 20, props), Optional.of(buttonProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_PRESSURE_PLATE = registerBlock("blue_iron_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(BlockSetType.IRON, props), Optional.of(buttonProps.strength(IRN_GRT).getCopy())));
@@ -761,15 +772,17 @@ public class MetallicsBlocks {
         GOLD_MESH_TRAPDOOR = registerBlock("gold_mesh_trapdoor", new MBlock<>(props -> new TrapDoorBlock(GOLD_SET.get(), props), Optional.of(trapdoorProps.strength(GLD_GRT).getCopy())));
         GOLD_MESH_DOOR = registerBlock("gold_mesh_door", new MBlock<>(props -> new DoorBlock(GOLD_SET.get(), props), Optional.of(doorProps.strength(GLD_GRT).getCopy())));
         GOLD_GRATE = registerBlock("gold_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(GLD_GRT).getCopy())));
+        GOLD_LAMP = registerBlock("gold_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(GLD_LNT).getCopy())));
+        GOLD_BUTTON = registerBlock("gold_button", new MBlock<>(props -> new ButtonBlock(GOLD_SET.get(), 20, props), Optional.of(buttonProps.strength(GLD_GRT).getCopy())));
+        GOLD_PRESSURE_PLATE = registerBlock("gold_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(GOLD_SET.get(), props), Optional.of(buttonProps.strength(GLD_GRT).getCopy())));
+
+        GOLD_GLASS = registerBlock("gold_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(GLD_GRT).getCopy())));
+        GOLD_TINTED_GLASS = registerBlock("gold_tinted_glass", new MBlock<>(TintedGlassBlock::new, Optional.of(glassProps.strength(GLD_GRT).getCopy())));
 
         GOLD_TORCH = registerBlock("gold_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.GOLD_FLAME.get(), props), Optional.of(torchProps.getCopy())));
         GOLD_WALL_TORCH = registerBlock("gold_wall_torch", new MBlock<>(props -> new WallTorchBlock(MetallicsParticleTypes.GOLD_FLAME.get(), props), Optional.of(torchProps.getCopy())));
         GOLD_CAMPFIRE = registerBlock("gold_campfire", new MBlock<>(props -> new MCampfireBlock(1, MetallicsParticleTypes.GOLD_EMBER.get(), props), Optional.of(campfireProps.getCopy())));
         GOLD_JACK_O_LANTERN = registerBlock("gold_jack_o_lantern", new MBlock<>(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
-        GOLD_LAMP = registerBlock("gold_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(GLD_LNT).getCopy())));
-
-        GOLD_BUTTON = registerBlock("gold_button", new MBlock<>(props -> new ButtonBlock(GOLD_SET.get(), 20, props), Optional.of(buttonProps.strength(GLD_GRT).getCopy())));
-        GOLD_PRESSURE_PLATE = registerBlock("gold_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(GOLD_SET.get(), props), Optional.of(buttonProps.strength(GLD_GRT).getCopy())));
 
         //Netherite
         NETHERITE_CHAIN = registerBlock("netherite_chain", new MBlock<>(ChainBlock::new, Optional.of(chainProps.strength(NTR_MSH).getCopy())));
@@ -794,15 +807,17 @@ public class MetallicsBlocks {
         NETHERITE_MESH_TRAPDOOR = registerBlock("netherite_mesh_trapdoor", new MBlock<>(props -> new TrapDoorBlock(NETHERITE_SET.get(), props), Optional.of(trapdoorProps.strength(NTR_GRT).getCopy())));
         NETHERITE_MESH_DOOR = registerBlock("netherite_mesh_door", new MBlock<>(props -> new DoorBlock(NETHERITE_SET.get(), props), Optional.of(doorProps.strength(NTR_GRT).getCopy())));
         NETHERITE_GRATE = registerBlock("netherite_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(NTR_GRT).getCopy())));
+        NETHERITE_LAMP = registerBlock("netherite_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(NTR_LNT).getCopy())));
+        NETHERITE_BUTTON = registerBlock("netherite_button", new MBlock<>(props -> new ButtonBlock(NETHERITE_SET.get(), 20, props), Optional.of(buttonProps.strength(NTR_GRT).getCopy())));
+        NETHERITE_PRESSURE_PLATE = registerBlock("netherite_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(NETHERITE_SET.get(), props), Optional.of(buttonProps.strength(NTR_GRT).getCopy())));
+
+        NETHERITE_GLASS = registerBlock("netherite_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(NTR_GRT).getCopy())));
+        NETHERITE_TINTED_GLASS = registerBlock("netherite_tinted_glass", new MBlock<>(TintedGlassBlock::new, Optional.of(glassProps.strength(NTR_GRT).getCopy())));
 
         NETHERITE_TORCH = registerBlock("netherite_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.NETHERITE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
         NETHERITE_WALL_TORCH = registerBlock("netherite_wall_torch", new MBlock<>(props -> new WallTorchBlock(MetallicsParticleTypes.NETHERITE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
         NETHERITE_CAMPFIRE = registerBlock("netherite_campfire", new MBlock<>(props -> new MCampfireBlock(1, MetallicsParticleTypes.NETHERITE_EMBER.get(), props), Optional.of(campfireProps.getCopy())));
         NETHERITE_JACK_O_LANTERN = registerBlock("netherite_jack_o_lantern", new MBlock<>(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
-        NETHERITE_LAMP = registerBlock("netherite_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(NTR_LNT).getCopy())));
-
-        NETHERITE_BUTTON = registerBlock("netherite_button", new MBlock<>(props -> new ButtonBlock(NETHERITE_SET.get(), 20, props), Optional.of(buttonProps.strength(NTR_GRT).getCopy())));
-        NETHERITE_PRESSURE_PLATE = registerBlock("netherite_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(NETHERITE_SET.get(), props), Optional.of(buttonProps.strength(NTR_GRT).getCopy())));
 
         //Register stuff here ▲▲▲
 

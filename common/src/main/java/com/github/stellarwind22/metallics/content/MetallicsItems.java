@@ -154,6 +154,15 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> WAXED_WEATHERED_COPPER_GLASS;
     public static RegistrySupplier<BlockItem> WAXED_OXIDIZED_COPPER_GLASS;
 
+    public static RegistrySupplier<BlockItem> COPPER_GLASS_PANE;
+    public static RegistrySupplier<BlockItem> EXPOSED_COPPER_GLASS_PANE;
+    public static RegistrySupplier<BlockItem> WEATHERED_COPPER_GLASS_PANE;
+    public static RegistrySupplier<BlockItem> OXIDIZED_COPPER_GLASS_PANE;
+    public static RegistrySupplier<BlockItem> WAXED_COPPER_GLASS_PANE;
+    public static RegistrySupplier<BlockItem> WAXED_EXPOSED_COPPER_GLASS_PANE;
+    public static RegistrySupplier<BlockItem> WAXED_WEATHERED_COPPER_GLASS_PANE;
+    public static RegistrySupplier<BlockItem> WAXED_OXIDIZED_COPPER_GLASS_PANE;
+
     public static RegistrySupplier<BlockItem> COPPER_TINTED_GLASS;
     public static RegistrySupplier<BlockItem> EXPOSED_COPPER_TINTED_GLASS;
     public static RegistrySupplier<BlockItem> WEATHERED_COPPER_TINTED_GLASS;
@@ -184,6 +193,8 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> IRON_LAMP;
     public static RegistrySupplier<BlockItem> IRON_BUTTON;
     public static RegistrySupplier<BlockItem> IRON_PRESSURE_PLATE;
+    public static RegistrySupplier<BlockItem> IRON_GLASS;
+    public static RegistrySupplier<BlockItem> IRON_TINTED_GLASS;
 
     //Blue Iron
     public static RegistrySupplier<Item> BLUE_IRON_NUGGET;
@@ -221,6 +232,8 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> BLUE_IRON_LAMP;
     public static RegistrySupplier<BlockItem> BLUE_IRON_BUTTON;
     public static RegistrySupplier<BlockItem> BLUE_IRON_PRESSURE_PLATE;
+    public static RegistrySupplier<BlockItem> BLUE_IRON_GLASS;
+    public static RegistrySupplier<BlockItem> BLUE_IRON_TINTED_GLASS;
 
     //Gold
     public static RegistrySupplier<Item> GOLD_SALT;
@@ -244,14 +257,15 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> GOLD_MESH_TRAPDOOR;
     public static RegistrySupplier<DoubleHighBlockItem> GOLD_MESH_DOOR;
     public static RegistrySupplier<BlockItem> GOLD_GRATE;
+    public static RegistrySupplier<BlockItem> GOLD_LAMP;
+    public static RegistrySupplier<BlockItem> GOLD_BUTTON;
+    public static RegistrySupplier<BlockItem> GOLD_PRESSURE_PLATE;
+    public static RegistrySupplier<BlockItem> GOLD_GLASS;
+    public static RegistrySupplier<BlockItem> GOLD_TINTED_GLASS;
 
     public static RegistrySupplier<BlockItem> GOLD_TORCH;
     public static RegistrySupplier<BlockItem> GOLD_CAMPFIRE;
     public static RegistrySupplier<BlockItem> GOLD_JACK_O_LANTERN;
-    public static RegistrySupplier<BlockItem> GOLD_LAMP;
-
-    public static RegistrySupplier<BlockItem> GOLD_BUTTON;
-    public static RegistrySupplier<BlockItem> GOLD_PRESSURE_PLATE;
 
     //Netherite
     public static RegistrySupplier<Item> NETHERITE_NUGGET;
@@ -276,14 +290,15 @@ public class MetallicsItems {
     public static RegistrySupplier<DoubleHighBlockItem> NETHERITE_MESH_DOOR;
     public static RegistrySupplier<BlockItem> NETHERITE_MESH_TRAPDOOR;
     public static RegistrySupplier<BlockItem> NETHERITE_GRATE;
+    public static RegistrySupplier<BlockItem> NETHERITE_LAMP;
+    public static RegistrySupplier<BlockItem> NETHERITE_BUTTON;
+    public static RegistrySupplier<BlockItem> NETHERITE_PRESSURE_PLATE;
+    public static RegistrySupplier<BlockItem> NETHERITE_GLASS;
+    public static RegistrySupplier<BlockItem> NETHERITE_TINTED_GLASS;
 
     public static RegistrySupplier<BlockItem> NETHERITE_TORCH;
     public static RegistrySupplier<BlockItem> NETHERITE_CAMPFIRE;
     public static RegistrySupplier<BlockItem> NETHERITE_JACK_O_LANTERN;
-    public static RegistrySupplier<BlockItem> NETHERITE_LAMP;
-
-    public static RegistrySupplier<BlockItem> NETHERITE_BUTTON;
-    public static RegistrySupplier<BlockItem> NETHERITE_PRESSURE_PLATE;
 
     public static void init() {
 
@@ -449,6 +464,8 @@ public class MetallicsItems {
         IRON_LAMP = registerItem("iron_lamp", props -> new BlockItem(MetallicsBlocks.IRON_LAMP.get(), props));
         IRON_BUTTON = registerItem("iron_button", props -> new BlockItem(MetallicsBlocks.IRON_BUTTON.get(), props));
         IRON_PRESSURE_PLATE = registerItem("iron_pressure_plate", props -> new BlockItem(MetallicsBlocks.IRON_PRESSURE_PLATE.get(), props));
+        IRON_GLASS = registerItem("iron_glass", props -> new BlockItem(MetallicsBlocks.IRON_GLASS.get(), props));
+        IRON_TINTED_GLASS = registerItem("iron_tinted_glass", props -> new BlockItem(MetallicsBlocks.IRON_TINTED_GLASS.get(), props));
 
         //Blue Iron
         BLUE_IRON_SALT = registerItem("blue_iron_salt", Item::new);
@@ -479,6 +496,8 @@ public class MetallicsItems {
         BLUE_IRON_LAMP = registerItem("blue_iron_lamp", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_LAMP.get(), props));
         BLUE_IRON_BUTTON = registerItem("blue_iron_button", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_BUTTON.get(), props));
         BLUE_IRON_PRESSURE_PLATE = registerItem("blue_iron_pressure_plate", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_PRESSURE_PLATE.get(), props));
+        BLUE_IRON_GLASS = registerItem("blue_iron_glass", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_GLASS.get(), props));
+        BLUE_IRON_TINTED_GLASS = registerItem("blue_iron_tinted_glass", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_TINTED_GLASS.get(), props));
 
         PALE_TORCH = registerItem("pale_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.PALE_TORCH.get(), MetallicsBlocks.PALE_WALL_TORCH.get(), Direction.DOWN, props));
         PALE_CAMPFIRE = registerItem("pale_campfire", props -> new BlockItem(MetallicsBlocks.PALE_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
@@ -510,6 +529,8 @@ public class MetallicsItems {
         GOLD_LAMP = registerItem("gold_lamp", props -> new BlockItem(MetallicsBlocks.GOLD_LAMP.get(), props));
         GOLD_BUTTON = registerItem("gold_button", props -> new BlockItem(MetallicsBlocks.GOLD_BUTTON.get(), props));
         GOLD_PRESSURE_PLATE = registerItem("gold_pressure_plate", props -> new BlockItem(MetallicsBlocks.GOLD_PRESSURE_PLATE.get(), props));
+        GOLD_GLASS = registerItem("gold_glass", props -> new BlockItem(MetallicsBlocks.GOLD_GLASS.get(), props));
+        GOLD_TINTED_GLASS = registerItem("gold_tinted_glass", props -> new BlockItem(MetallicsBlocks.GOLD_TINTED_GLASS.get(), props));
 
         GOLD_TORCH = registerItem("gold_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.GOLD_TORCH.get(), MetallicsBlocks.GOLD_WALL_TORCH.get(), Direction.DOWN, props));
         GOLD_CAMPFIRE = registerItem("gold_campfire", props -> new BlockItem(MetallicsBlocks.GOLD_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
@@ -541,6 +562,8 @@ public class MetallicsItems {
         NETHERITE_LAMP = registerItem("netherite_lamp", props -> new BlockItem(MetallicsBlocks.NETHERITE_LAMP.get(), props.fireResistant()));
         NETHERITE_BUTTON = registerItem("netherite_button", props -> new BlockItem(MetallicsBlocks.NETHERITE_BUTTON.get(), props.fireResistant()));
         NETHERITE_PRESSURE_PLATE = registerItem("netherite_pressure_plate", props -> new BlockItem(MetallicsBlocks.NETHERITE_PRESSURE_PLATE.get(), props.fireResistant()));
+        NETHERITE_GLASS = registerItem("netherite_glass", props -> new BlockItem(MetallicsBlocks.NETHERITE_GLASS.get(), props));
+        NETHERITE_TINTED_GLASS = registerItem("netherite_tinted_glass", props -> new BlockItem(MetallicsBlocks.NETHERITE_TINTED_GLASS.get(), props));
 
         NETHERITE_TORCH = registerItem("netherite_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.NETHERITE_TORCH.get(), MetallicsBlocks.NETHERITE_WALL_TORCH.get(), Direction.DOWN, props));
         NETHERITE_CAMPFIRE = registerItem("netherite_campfire", props -> new BlockItem(MetallicsBlocks.NETHERITE_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));

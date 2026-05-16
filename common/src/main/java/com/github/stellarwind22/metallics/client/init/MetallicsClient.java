@@ -92,6 +92,8 @@ public class MetallicsClient {
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.IRON_MESH_GATE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.IRON_MESH_DOOR.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.IRON_MESH_TRAPDOOR.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.IRON_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.IRON_TINTED_GLASS.get());
 
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.BLUE_IRON_LADDER.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.BLUE_IRON_CHAIN.get());
@@ -106,6 +108,8 @@ public class MetallicsClient {
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.BLUE_IRON_MESH_TRAPDOOR.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.BLUE_IRON_GRATE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.BLUE_IRON_MESH_GATE.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.BLUE_IRON_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.BLUE_IRON_TINTED_GLASS.get());
 
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.PALE_CAMPFIRE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.PALE_LANTERN.get());
@@ -122,6 +126,8 @@ public class MetallicsClient {
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.GOLD_LANTERN.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.GOLD_CAMPFIRE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.GOLD_MESH_GATE.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.GOLD_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.GOLD_TINTED_GLASS.get());
 
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.NETHERITE_LADDER.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.NETHERITE_CHAIN.get());
@@ -135,6 +141,8 @@ public class MetallicsClient {
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.NETHERITE_MESH_TRAPDOOR.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.NETHERITE_GRATE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.NETHERITE_MESH_GATE.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.NETHERITE_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.NETHERITE_TINTED_GLASS.get());
 
         Metallics.LOGGER.info("Metallics blockRenderTypes/Particles registered!");
     }
