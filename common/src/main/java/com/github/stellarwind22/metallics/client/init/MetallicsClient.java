@@ -65,6 +65,24 @@ public class MetallicsClient {
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_WEATHERED_COPPER_MESH_TRAPDOOR.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_OXIDIZED_COPPER_MESH_TRAPDOOR.get());
 
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.COPPER_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.EXPOSED_COPPER_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WEATHERED_COPPER_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.OXIDIZED_COPPER_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_COPPER_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_EXPOSED_COPPER_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_WEATHERED_COPPER_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_OXIDIZED_COPPER_GLASS.get());
+
+        RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.COPPER_TINTED_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.EXPOSED_COPPER_TINTED_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.WEATHERED_COPPER_TINTED_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.OXIDIZED_COPPER_TINTED_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.WAXED_COPPER_TINTED_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.WAXED_EXPOSED_COPPER_TINTED_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.WAXED_WEATHERED_COPPER_TINTED_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.WAXED_OXIDIZED_COPPER_TINTED_GLASS.get());
+
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.COPPER_CAMPFIRE.get());
 
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.IRON_LADDER.get());

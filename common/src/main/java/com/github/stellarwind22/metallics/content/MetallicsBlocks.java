@@ -660,11 +660,30 @@ public class MetallicsBlocks {
         WAXED_WEATHERED_COPPER_PRESSURE_PLATE = registerBlock("waxed_weathered_copper_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(BlockSetType.COPPER, props), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
         WAXED_OXIDIZED_COPPER_PRESSURE_PLATE = registerBlock("waxed_oxidized_copper_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(BlockSetType.COPPER, props), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
 
+        COPPER_GLASS = registerBlock("copper_glass", new MBlock<>(props -> new MWeatheringTransparentBlock(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        EXPOSED_COPPER_GLASS = registerBlock("exposed_copper_glass", new MBlock<>(props -> new MWeatheringTransparentBlock(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        WEATHERED_COPPER_GLASS = registerBlock("weathered_copper_glass", new MBlock<>(props -> new MWeatheringTransparentBlock(props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        OXIDIZED_COPPER_GLASS = registerBlock("oxidized_copper_glass", new MBlock<>(props -> new MWeatheringTransparentBlock(props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        WAXED_COPPER_GLASS = registerBlock("waxed_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        WAXED_EXPOSED_COPPER_GLASS = registerBlock("waxed_exposed_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        WAXED_WEATHERED_COPPER_GLASS = registerBlock("waxed_weathered_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        WAXED_OXIDIZED_COPPER_GLASS = registerBlock("waxed_oxidized_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+
+        COPPER_TINTED_GLASS = registerBlock("copper_tinted_glass", new MBlock<>(props -> new MWeatheringTintedBlock(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        EXPOSED_COPPER_TINTED_GLASS = registerBlock("exposed_copper_tinted_glass", new MBlock<>(props -> new MWeatheringTintedBlock(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        WEATHERED_COPPER_TINTED_GLASS = registerBlock("weathered_copper_tinted_glass", new MBlock<>(props -> new MWeatheringTintedBlock(props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        OXIDIZED_COPPER_TINTED_GLASS = registerBlock("oxidized_copper_tinted_glass", new MBlock<>(props -> new MWeatheringTintedBlock(props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        WAXED_COPPER_TINTED_GLASS = registerBlock("waxed_copper_tinted_glass", new MBlock<>(TintedGlassBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        WAXED_EXPOSED_COPPER_TINTED_GLASS = registerBlock("waxed_exposed_copper_tinted_glass", new MBlock<>(TintedGlassBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        WAXED_WEATHERED_COPPER_TINTED_GLASS = registerBlock("waxed_weathered_copper_tinted_glass", new MBlock<>(TintedGlassBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        WAXED_OXIDIZED_COPPER_TINTED_GLASS = registerBlock("waxed_oxidized_copper_tinted_glass", new MBlock<>(TintedGlassBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+
         //Iron
         IRON_PLATED_BLOCK = registerBlock("iron_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         IRON_SLAB = registerBlock("iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
         BRUSHING_IRON_BLOCK = registerBlock("brushing_iron_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_iron_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         BRUSHING_IRON_SLAB = registerBlock("brushing_iron_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_iron_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
+
         BRUSHED_IRON_BLOCK = registerBlock("brushed_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         BRUSHED_IRON_SLAB = registerBlock("brushed_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
         CUT_IRON_BLOCK = registerBlock("cut_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
@@ -954,6 +973,28 @@ public class MetallicsBlocks {
                 WAXED_EXPOSED_COPPER_PRESSURE_PLATE.get(),
                 WAXED_WEATHERED_COPPER_PRESSURE_PLATE.get(),
                 WAXED_OXIDIZED_COPPER_PRESSURE_PLATE.get()
+        );
+
+        COPPER_GLASS_BLOCKS = new WeatheringCopperBlocks(
+                COPPER_GLASS.get(),
+                EXPOSED_COPPER_GLASS.get(),
+                WEATHERED_COPPER_GLASS.get(),
+                OXIDIZED_COPPER_GLASS.get(),
+                WAXED_COPPER_GLASS.get(),
+                WAXED_EXPOSED_COPPER_GLASS.get(),
+                WAXED_WEATHERED_COPPER_GLASS.get(),
+                WAXED_OXIDIZED_COPPER_GLASS.get()
+        );
+
+        COPPER_TINTED_GLASS_BLOCKS = new WeatheringCopperBlocks(
+                COPPER_TINTED_GLASS.get(),
+                EXPOSED_COPPER_TINTED_GLASS.get(),
+                WEATHERED_COPPER_TINTED_GLASS.get(),
+                OXIDIZED_COPPER_TINTED_GLASS.get(),
+                WAXED_COPPER_TINTED_GLASS.get(),
+                WAXED_EXPOSED_COPPER_TINTED_GLASS.get(),
+                WAXED_WEATHERED_COPPER_TINTED_GLASS.get(),
+                WAXED_OXIDIZED_COPPER_TINTED_GLASS.get()
         );
     }
 
