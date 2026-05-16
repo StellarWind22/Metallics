@@ -435,7 +435,7 @@ public class MetallicsBlocks {
     public static Supplier<BlockSetType> NETHERITE_SET;
 
     public static RegistrySupplier<Block> NETHERITE_CHAIN;
-    public static RegistrySupplier<Block> NETHERITE_LANTERN;
+    public static RegistrySupplier<Block> INFERNAL_LANTERN;
     public static RegistrySupplier<IronBarsBlock> NETHERITE_BARS;
     public static RegistrySupplier<DoorBlock> NETHERITE_DOOR;
     public static RegistrySupplier<TrapDoorBlock> NETHERITE_TRAPDOOR;
@@ -464,10 +464,10 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> NETHERITE_BUTTON;
     public static RegistrySupplier<Block> NETHERITE_PRESSURE_PLATE;
 
-    public static RegistrySupplier<Block> NETHERITE_TORCH;
-    public static RegistrySupplier<Block> NETHERITE_WALL_TORCH;
-    public static RegistrySupplier<MCampfireBlock> NETHERITE_CAMPFIRE;
-    public static RegistrySupplier<Block> NETHERITE_JACK_O_LANTERN;
+    public static RegistrySupplier<Block> INFERNAL_TORCH;
+    public static RegistrySupplier<Block> INFERNAL_WALL_TORCH;
+    public static RegistrySupplier<MCampfireBlock> INFERNAL_CAMPFIRE;
+    public static RegistrySupplier<Block> INFERNAL_JACK_O_LANTERN;
 
     static final StrPair CPR_STR = new StrPair(3.0F, 6.0F);
     static final StrPair IRN_STR = new StrPair(5.0F, 6.0F);
@@ -802,7 +802,7 @@ public class MetallicsBlocks {
 
         //Netherite
         NETHERITE_CHAIN = registerBlock("netherite_chain", new MBlock<>(ChainBlock::new, Optional.of(chainProps.strength(NTR_MSH).getCopy())));
-        NETHERITE_LANTERN = registerBlock("netherite_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(NTR_LNT).getCopy())));
+        INFERNAL_LANTERN = registerBlock("infernal_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(NTR_LNT).getCopy())));
         NETHERITE_BARS = registerBlock("netherite_bars", new MBlock<>(IronBarsBlock::new, Optional.of(barsProps.strength(NTR_STR).getCopy())));
         NETHERITE_PLATED_BLOCK = registerBlock("netherite_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
         NETHERITE_SLAB = registerBlock("netherite_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(NTR_GRT).getCopy())));
@@ -831,10 +831,10 @@ public class MetallicsBlocks {
         NETHERITE_GLASS_PANE = registerBlock("netherite_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(NTR_MSH).getCopy())));
         NETHERITE_TINTED_GLASS = registerBlock("netherite_tinted_glass", new MBlock<>(TintedGlassBlock::new, Optional.of(glassProps.strength(NTR_GRT).getCopy())));
 
-        NETHERITE_TORCH = registerBlock("netherite_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.NETHERITE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
-        NETHERITE_WALL_TORCH = registerBlock("netherite_wall_torch", new MBlock<>(props -> new WallTorchBlock(MetallicsParticleTypes.NETHERITE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
-        NETHERITE_CAMPFIRE = registerBlock("netherite_campfire", new MBlock<>(props -> new MCampfireBlock(1, MetallicsParticleTypes.NETHERITE_EMBER.get(), props), Optional.of(campfireProps.getCopy())));
-        NETHERITE_JACK_O_LANTERN = registerBlock("netherite_jack_o_lantern", new MBlock<>(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
+        INFERNAL_TORCH = registerBlock("infernal_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.INFERNAL_FLAME.get(), props), Optional.of(torchProps.getCopy())));
+        INFERNAL_WALL_TORCH = registerBlock("infernal_wall_torch", new MBlock<>(props -> new WallTorchBlock(MetallicsParticleTypes.INFERNAL_FLAME.get(), props), Optional.of(torchProps.getCopy())));
+        INFERNAL_CAMPFIRE = registerBlock("infernal_campfire", new MBlock<>(props -> new MCampfireBlock(1, MetallicsParticleTypes.INFERNAL_EMBER.get(), props), Optional.of(campfireProps.getCopy())));
+        INFERNAL_JACK_O_LANTERN = registerBlock("infernal_jack_o_lantern", new MBlock<>(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
 
         //Register stuff here ▲▲▲
 

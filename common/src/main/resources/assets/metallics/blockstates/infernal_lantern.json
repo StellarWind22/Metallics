@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "metallics:block/infernal_lantern"
+    },
+    "hanging=true": {
+      "model": "metallics:block/infernal_lantern_hanging"
+    }
+  }
+}

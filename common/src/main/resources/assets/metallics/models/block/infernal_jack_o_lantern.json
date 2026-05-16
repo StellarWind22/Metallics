@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/orientable",
   "textures": {
-    "front": "metallics:block/netherite_jack_o_lantern",
+    "front": "metallics:block/infernal_jack_o_lantern",
     "side": "minecraft:block/pumpkin_side",
     "top": "minecraft:block/pumpkin_top"
   }

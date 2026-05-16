@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "metallics:item/netherite_torch"
+    "model": "metallics:item/ferrous_campfire"
   }
 }

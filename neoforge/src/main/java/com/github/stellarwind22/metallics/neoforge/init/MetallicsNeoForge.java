@@ -46,7 +46,7 @@ public final class MetallicsNeoForge {
                 MCampfireBlockEntity::new,
                 MetallicsBlocks.COPPER_CAMPFIRE.get(),
                 MetallicsBlocks.GOLD_CAMPFIRE.get(),
-                MetallicsBlocks.NETHERITE_CAMPFIRE.get(),
+                MetallicsBlocks.INFERNAL_CAMPFIRE.get(),
                 MetallicsBlocks.PALE_CAMPFIRE.get()
         );
 
@@ -93,8 +93,8 @@ public final class MetallicsNeoForge {
             event.registerSpriteSet(MetallicsParticleTypes.PALE_EMBER.get(), LavaParticle.Provider::new);
             event.registerSpriteSet(MetallicsParticleTypes.GOLD_FLAME.get(), LavaParticle.Provider::new);
             event.registerSpriteSet(MetallicsParticleTypes.GOLD_EMBER.get(), LavaParticle.Provider::new);
-            event.registerSpriteSet(MetallicsParticleTypes.NETHERITE_FLAME.get(), LavaParticle.Provider::new);
-            event.registerSpriteSet(MetallicsParticleTypes.NETHERITE_EMBER.get(), LavaParticle.Provider::new);
+            event.registerSpriteSet(MetallicsParticleTypes.INFERNAL_FLAME.get(), LavaParticle.Provider::new);
+            event.registerSpriteSet(MetallicsParticleTypes.INFERNAL_EMBER.get(), LavaParticle.Provider::new);
         }
     }
 }

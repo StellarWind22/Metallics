@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "metallics:block/ferrous_lantern"
+    },
+    "hanging=true": {
+      "model": "metallics:block/ferrous_lantern_hanging"
+    }
+  }
+}
