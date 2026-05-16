@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side_alt",
+  "textures": {
+    "edge": "minecraft:block/oxidized_copper_mesh_edge",
+    "pane": "minecraft:block/oxidized_copper_glass"
+  }
+}
