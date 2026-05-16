@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:exposed_copper"
+  ],
+  "result": {
+    "count": 9,
+    "id": "metallics:exposed_copper_ingot"
+  }
+}
