@@ -96,6 +96,22 @@
     "metallics:waxed_copper_pressure_plate",
     "metallics:waxed_exposed_copper_pressure_plate",
     "metallics:waxed_weathered_copper_pressure_plate",
-    "metallics:waxed_oxidized_copper_pressure_plate"
+    "metallics:waxed_oxidized_copper_pressure_plate",
+    "metallics:copper_glass",
+    "metallics:exposed_copper_glass",
+    "metallics:weathered_copper_glass",
+    "metallics:oxidized_copper_glass",
+    "metallics:waxed_copper_glass",
+    "metallics:waxed_exposed_copper_glass",
+    "metallics:waxed_weathered_copper_glass",
+    "metallics:waxed_oxidized_copper_glass",
+    "metallics:copper_tinted_glass",
+    "metallics:exposed_copper_tinted_glass",
+    "metallics:weathered_copper_tinted_glass",
+    "metallics:oxidized_copper_tinted_glass",
+    "metallics:waxed_copper_tinted_glass",
+    "metallics:waxed_exposed_copper_tinted_glass",
+    "metallics:waxed_weathered_copper_tinted_glass",
+    "metallics:waxed_oxidized_copper_tinted_glass"
   ]
 }

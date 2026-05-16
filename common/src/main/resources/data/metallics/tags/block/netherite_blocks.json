@@ -21,6 +21,8 @@
     "metallics:netherite_grate",
     "metallics:netherite_lamp",
     "metallics:netherite_button",
-    "metallics:netherite_pressure_plate"
+    "metallics:netherite_pressure_plate",
+    "metallics:netherite_glass",
+    "metallics:netherite_tinted_glass"
   ]
 }
