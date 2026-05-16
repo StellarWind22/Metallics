@@ -112,6 +112,14 @@
     "metallics:waxed_copper_tinted_glass",
     "metallics:waxed_exposed_copper_tinted_glass",
     "metallics:waxed_weathered_copper_tinted_glass",
-    "metallics:waxed_oxidized_copper_tinted_glass"
+    "metallics:waxed_oxidized_copper_tinted_glass",
+    "metallics:copper_glass_pane",
+    "metallics:exposed_copper_glass_pane",
+    "metallics:weathered_copper_glass_pane",
+    "metallics:oxidized_copper_glass_pane",
+    "metallics:waxed_copper_glass_pane",
+    "metallics:waxed_exposed_copper_glass_pane",
+    "metallics:waxed_weathered_copper_glass_pane",
+    "metallics:waxed_oxidized_copper_glass_pane"
   ]
 }

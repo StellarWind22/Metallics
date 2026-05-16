@@ -19,6 +19,7 @@
     "metallics:iron_button",
     "metallics:iron_pressure_plate",
     "metallics:iron_glass",
+    "metallics:iron_glass_pane",
     "metallics:iron_tinted_glass",
     "metallics:blue_iron_ladder",
     "metallics:blue_iron_block",
@@ -40,6 +41,7 @@
     "metallics:blue_iron_button",
     "metallics:blue_iron_pressure_plate",
     "metallics:blue_iron_glass",
+    "metallics:blue_iron_glass_pane",
     "metallics:blue_iron_tinted_glass"
   ]
 }

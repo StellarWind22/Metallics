@@ -671,23 +671,23 @@ public class MetallicsBlocks {
         WAXED_WEATHERED_COPPER_PRESSURE_PLATE = registerBlock("waxed_weathered_copper_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(BlockSetType.COPPER, props), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
         WAXED_OXIDIZED_COPPER_PRESSURE_PLATE = registerBlock("waxed_oxidized_copper_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(BlockSetType.COPPER, props), Optional.of(buttonProps.strength(CPR_GRT).getCopy())));
 
-        COPPER_GLASS = registerBlock("copper_glass", new MBlock<>(props -> new MWeatheringTransparentBlock(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(glassProps.strength(CPR_GRT).getCopy())));
-        EXPOSED_COPPER_GLASS = registerBlock("exposed_copper_glass", new MBlock<>(props -> new MWeatheringTransparentBlock(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(glassProps.strength(CPR_GRT).getCopy())));
-        WEATHERED_COPPER_GLASS = registerBlock("weathered_copper_glass", new MBlock<>(props -> new MWeatheringTransparentBlock(props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(glassProps.strength(CPR_GRT).getCopy())));
-        OXIDIZED_COPPER_GLASS = registerBlock("oxidized_copper_glass", new MBlock<>(props -> new MWeatheringTransparentBlock(props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(glassProps.strength(CPR_GRT).getCopy())));
-        WAXED_COPPER_GLASS = registerBlock("waxed_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
-        WAXED_EXPOSED_COPPER_GLASS = registerBlock("waxed_exposed_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
-        WAXED_WEATHERED_COPPER_GLASS = registerBlock("waxed_weathered_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
-        WAXED_OXIDIZED_COPPER_GLASS = registerBlock("waxed_oxidized_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        COPPER_GLASS = registerBlock("copper_glass", new MBlock<>(props -> new MWeatheringTransparentBlock(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        EXPOSED_COPPER_GLASS = registerBlock("exposed_copper_glass", new MBlock<>(props -> new MWeatheringTransparentBlock(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        WEATHERED_COPPER_GLASS = registerBlock("weathered_copper_glass", new MBlock<>(props -> new MWeatheringTransparentBlock(props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        OXIDIZED_COPPER_GLASS = registerBlock("oxidized_copper_glass", new MBlock<>(props -> new MWeatheringTransparentBlock(props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        WAXED_COPPER_GLASS = registerBlock("waxed_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        WAXED_EXPOSED_COPPER_GLASS = registerBlock("waxed_exposed_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        WAXED_WEATHERED_COPPER_GLASS = registerBlock("waxed_weathered_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        WAXED_OXIDIZED_COPPER_GLASS = registerBlock("waxed_oxidized_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
 
-        COPPER_GLASS_PANE = registerBlock("copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
-        EXPOSED_COPPER_GLASS_PANE = registerBlock("exposed_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
-        WEATHERED_COPPER_GLASS_PANE = registerBlock("weathered_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
-        OXIDIZED_COPPER_GLASS_PANE = registerBlock("oxidized_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
-        WAXED_COPPER_GLASS_PANE = registerBlock("waxed_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
-        WAXED_EXPOSED_COPPER_GLASS_PANE = registerBlock("waxed_exposed_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
-        WAXED_WEATHERED_COPPER_GLASS_PANE = registerBlock("waxed_weathered_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
-        WAXED_OXIDIZED_COPPER_GLASS_PANE = registerBlock("waxed_oxidized_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_GRT).getCopy())));
+        COPPER_GLASS_PANE = registerBlock("copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        EXPOSED_COPPER_GLASS_PANE = registerBlock("exposed_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        WEATHERED_COPPER_GLASS_PANE = registerBlock("weathered_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        OXIDIZED_COPPER_GLASS_PANE = registerBlock("oxidized_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        WAXED_COPPER_GLASS_PANE = registerBlock("waxed_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        WAXED_EXPOSED_COPPER_GLASS_PANE = registerBlock("waxed_exposed_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        WAXED_WEATHERED_COPPER_GLASS_PANE = registerBlock("waxed_weathered_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        WAXED_OXIDIZED_COPPER_GLASS_PANE = registerBlock("waxed_oxidized_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
 
         COPPER_TINTED_GLASS = registerBlock("copper_tinted_glass", new MBlock<>(props -> new MWeatheringTintedBlock(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(glassProps.strength(CPR_GRT).getCopy())));
         EXPOSED_COPPER_TINTED_GLASS = registerBlock("exposed_copper_tinted_glass", new MBlock<>(props -> new MWeatheringTintedBlock(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(glassProps.strength(CPR_GRT).getCopy())));
@@ -718,8 +718,8 @@ public class MetallicsBlocks {
         IRON_MESH_TRAPDOOR = registerBlock("iron_mesh_trapdoor", new MBlock<>(props -> new TrapDoorBlock(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(IRN_GRT).getCopy())));
         IRON_GRATE = registerBlock("iron_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         IRON_LAMP = registerBlock("iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
-        IRON_GLASS = registerBlock("iron_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(IRN_GRT).getCopy())));
-        IRON_GLASS_PANE = registerBlock("iron_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(IRN_GRT).getCopy())));
+        IRON_GLASS = registerBlock("iron_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(IRN_MSH).getCopy())));
+        IRON_GLASS_PANE = registerBlock("iron_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(IRN_MSH).getCopy())));
         IRON_TINTED_GLASS = registerBlock("iron_tinted_glass", new MBlock<>(TintedGlassBlock::new, Optional.of(glassProps.strength(IRN_GRT).getCopy())));
 
         IRON_BUTTON = registerBlock("iron_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.IRON, 20, props), Optional.of(buttonProps.strength(IRN_GRT).getCopy())));
@@ -751,8 +751,8 @@ public class MetallicsBlocks {
         BLUE_IRON_MESH_TRAPDOOR = registerBlock("blue_iron_mesh_trapdoor", new MBlock<>(props -> new TrapDoorBlock(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_GRATE = registerBlock("blue_iron_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_LAMP = registerBlock("blue_iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
-        BLUE_IRON_GLASS = registerBlock("blue_iron_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(IRN_GRT).getCopy())));
-        BLUE_IRON_GLASS_PANE = registerBlock("blue_iron_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(IRN_GRT).getCopy())));
+        BLUE_IRON_GLASS = registerBlock("blue_iron_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(IRN_MSH).getCopy())));
+        BLUE_IRON_GLASS_PANE = registerBlock("blue_iron_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(IRN_MSH).getCopy())));
         BLUE_IRON_TINTED_GLASS = registerBlock("blue_iron_tinted_glass", new MBlock<>(TintedGlassBlock::new, Optional.of(glassProps.strength(IRN_GRT).getCopy())));
 
         BLUE_IRON_BUTTON = registerBlock("blue_iron_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.IRON, 20, props), Optional.of(buttonProps.strength(IRN_GRT).getCopy())));
@@ -791,8 +791,8 @@ public class MetallicsBlocks {
         GOLD_BUTTON = registerBlock("gold_button", new MBlock<>(props -> new ButtonBlock(GOLD_SET.get(), 20, props), Optional.of(buttonProps.strength(GLD_GRT).getCopy())));
         GOLD_PRESSURE_PLATE = registerBlock("gold_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(GOLD_SET.get(), props), Optional.of(buttonProps.strength(GLD_GRT).getCopy())));
 
-        GOLD_GLASS = registerBlock("gold_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(GLD_GRT).getCopy())));
-        GOLD_GLASS_PANE = registerBlock("gold_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(GLD_GRT).getCopy())));
+        GOLD_GLASS = registerBlock("gold_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(GLD_MSH).getCopy())));
+        GOLD_GLASS_PANE = registerBlock("gold_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(GLD_MSH).getCopy())));
         GOLD_TINTED_GLASS = registerBlock("gold_tinted_glass", new MBlock<>(TintedGlassBlock::new, Optional.of(glassProps.strength(GLD_GRT).getCopy())));
 
         GOLD_TORCH = registerBlock("gold_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.GOLD_FLAME.get(), props), Optional.of(torchProps.getCopy())));
@@ -827,8 +827,8 @@ public class MetallicsBlocks {
         NETHERITE_BUTTON = registerBlock("netherite_button", new MBlock<>(props -> new ButtonBlock(NETHERITE_SET.get(), 20, props), Optional.of(buttonProps.strength(NTR_GRT).getCopy())));
         NETHERITE_PRESSURE_PLATE = registerBlock("netherite_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(NETHERITE_SET.get(), props), Optional.of(buttonProps.strength(NTR_GRT).getCopy())));
 
-        NETHERITE_GLASS = registerBlock("netherite_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(NTR_GRT).getCopy())));
-        NETHERITE_GLASS_PANE = registerBlock("netherite_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(NTR_GRT).getCopy())));
+        NETHERITE_GLASS = registerBlock("netherite_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(NTR_MSH).getCopy())));
+        NETHERITE_GLASS_PANE = registerBlock("netherite_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(NTR_MSH).getCopy())));
         NETHERITE_TINTED_GLASS = registerBlock("netherite_tinted_glass", new MBlock<>(TintedGlassBlock::new, Optional.of(glassProps.strength(NTR_GRT).getCopy())));
 
         NETHERITE_TORCH = registerBlock("netherite_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.NETHERITE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
