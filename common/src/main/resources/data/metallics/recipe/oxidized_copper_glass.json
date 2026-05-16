@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "buiding",
+  "key": {
+    ".": "metallics:oxidized_copper_nugget",
+    "#": "minecraft:glass"
+  },
+  "pattern": [
+    "...",
+    ".#.",
+    "..."
+  ],
+  "result": {
+    "count": 2,
+    "id": "metallics:oxidized_copper_glass"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "metallics:nitre_salt",
+    "minecraft:iron_nugget"
+  ],
+  "result": {
+    "id": "metallics:iron_salt"
+  }
+}

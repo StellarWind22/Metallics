@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "metallics:nitre_salt",
+    "minecraft:copper_nugget"
+  ],
+  "result": {
+    "id": "metallics:copper_salt"
+  }
+}
