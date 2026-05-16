@@ -74,6 +74,15 @@ public class MetallicsClient {
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_WEATHERED_COPPER_GLASS.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_OXIDIZED_COPPER_GLASS.get());
 
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.COPPER_GLASS_PANE.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.EXPOSED_COPPER_GLASS_PANE.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WEATHERED_COPPER_GLASS_PANE.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.OXIDIZED_COPPER_GLASS_PANE.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_COPPER_GLASS_PANE.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_EXPOSED_COPPER_GLASS_PANE.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_WEATHERED_COPPER_GLASS_PANE.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.WAXED_OXIDIZED_COPPER_GLASS_PANE.get());
+
         RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.COPPER_TINTED_GLASS.get());
         RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.EXPOSED_COPPER_TINTED_GLASS.get());
         RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.WEATHERED_COPPER_TINTED_GLASS.get());
@@ -93,6 +102,7 @@ public class MetallicsClient {
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.IRON_MESH_DOOR.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.IRON_MESH_TRAPDOOR.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.IRON_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.IRON_GLASS_PANE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.IRON_TINTED_GLASS.get());
 
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.BLUE_IRON_LADDER.get());
@@ -109,6 +119,7 @@ public class MetallicsClient {
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.BLUE_IRON_GRATE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.BLUE_IRON_MESH_GATE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.BLUE_IRON_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.BLUE_IRON_GLASS_PANE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.BLUE_IRON_TINTED_GLASS.get());
 
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.PALE_CAMPFIRE.get());
@@ -127,6 +138,7 @@ public class MetallicsClient {
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.GOLD_CAMPFIRE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.GOLD_MESH_GATE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.GOLD_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.GOLD_GLASS_PANE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.GOLD_TINTED_GLASS.get());
 
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.NETHERITE_LADDER.get());
@@ -142,6 +154,7 @@ public class MetallicsClient {
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.NETHERITE_GRATE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.NETHERITE_MESH_GATE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.NETHERITE_GLASS.get());
+        RenderTypeRegistry.register(ChunkSectionLayer.CUTOUT, MetallicsBlocks.NETHERITE_GLASS_PANE.get());
         RenderTypeRegistry.register(ChunkSectionLayer.TRANSLUCENT, MetallicsBlocks.NETHERITE_TINTED_GLASS.get());
 
         Metallics.LOGGER.info("Metallics blockRenderTypes/Particles registered!");

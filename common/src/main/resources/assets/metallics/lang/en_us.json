@@ -237,5 +237,17 @@
     "item.metallics.gold_glass": "Gold Glass",
     "item.metallics.gold_tinted_glass": "Gold Tinted Glass",
     "item.metallics.netherite_glass": "Netherite Glass",
-    "item.metallics.netherite_tinted_glass": "Netherite Tinted Glass"
+    "item.metallics.netherite_tinted_glass": "Netherite Tinted Glass",
+    "item.metallics.iron_glass_pane": "Iron Glass Pane",
+    "item.metallics.blue_iron_glass_pane": "Blue Iron Glass Pane",
+    "item.metallics.gold_glass_pane": "Gold Glass Pane",
+    "item.metallics.netherite_glass_pane": "Netherite Glass Pane",
+    "item.metallics.copper_glass_pane": "Copper Glass Pane",
+    "item.metallics.exposed_copper_glass_pane": "Exposed Copper Glass Pane",
+    "item.metallics.weathered_copper_glass_pane": "Weathered Copper Glass Pane",
+    "item.metallics.oxidized_copper_glass_pane": "Oxidized Copper Glass Pane",
+    "item.metallics.waxed_copper_glass_pane": "Waxed Copper Glass Pane",
+    "item.metallics.waxed_exposed_copper_glass_pane": "Waxed Exposed Copper Glass Pane",
+    "item.metallics.waxed_weathered_copper_glass_pane": "Waxed Weathered Copper Glass Pane",
+    "item.metallics.waxed_oxidized_copper_glass_pane": "Waxed Oxidized Copper Glass Pane"
 }

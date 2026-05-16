@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_glass_pane_noside",
   "textures": {
-    "pane": "metallics:block/exposed_copper_glass"
+    "pane": "metallics:block/blue_iron_glass"
   }
 }

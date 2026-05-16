@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/template_glass_pane_side",
   "textures": {
-    "edge": "minecraft:block/iron_mesh_edge",
-    "pane": "minecraft:block/iron_glass"
+    "edge": "metallics:block/iron_misc",
+    "pane": "metallics:block/iron_glass"
   }
 }

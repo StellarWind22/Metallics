@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/template_glass_pane_post",
   "textures": {
-    "edge": "minecraft:block/copper_mesh_edge",
-    "pane": "minecraft:block/copper_glass"
+    "edge": "metallics:block/copper_misc",
+    "pane": "metallics:block/copper_glass"
   }
 }

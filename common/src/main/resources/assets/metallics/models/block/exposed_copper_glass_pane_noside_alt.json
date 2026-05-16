@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_glass_pane_noside_alt",
   "textures": {
-    "pane": "minecraft:block/exposed_copper_glass"
+    "pane": "metallics:block/exposed_copper_glass"
   }
 }

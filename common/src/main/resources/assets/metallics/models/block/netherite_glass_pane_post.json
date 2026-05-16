@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/template_glass_pane_post",
   "textures": {
-    "edge": "minecraft:block/netherite_mesh_edge",
-    "pane": "minecraft:block/netherite_glass"
+    "edge": "metallics:block/netherite_misc",
+    "pane": "metallics:block/netherite_glass"
   }
 }
