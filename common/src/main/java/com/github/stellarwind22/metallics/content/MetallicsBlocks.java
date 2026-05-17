@@ -403,7 +403,6 @@ public class MetallicsBlocks {
     public static Supplier<BlockSetType> GOLD_SET;
 
     public static RegistrySupplier<Block> GOLD_CHAIN;
-    public static RegistrySupplier<Block> GOLD_LANTERN;
     public static RegistrySupplier<IronBarsBlock> GOLD_BARS;
     public static RegistrySupplier<DoorBlock> GOLD_DOOR;
     public static RegistrySupplier<TrapDoorBlock> GOLD_TRAPDOOR;
@@ -432,10 +431,11 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> GOLD_BUTTON;
     public static RegistrySupplier<Block> GOLD_PRESSURE_PLATE;
 
-    public static RegistrySupplier<Block> GOLD_TORCH;
-    public static RegistrySupplier<Block> GOLD_WALL_TORCH;
-    public static RegistrySupplier<MCampfireBlock> GOLD_CAMPFIRE;
-    public static RegistrySupplier<Block> GOLD_JACK_O_LANTERN;
+    public static RegistrySupplier<Block> AZURE_TORCH;
+    public static RegistrySupplier<Block> AZURE_WALL_TORCH;
+    public static RegistrySupplier<MCampfireBlock> AZURE_CAMPFIRE;
+    public static RegistrySupplier<Block> AZURE_JACK_O_LANTERN;
+    public static RegistrySupplier<Block> AZURE_LANTERN;
 
     //Netherite
     public static Supplier<BlockSetType> NETHERITE_SET;
@@ -778,7 +778,6 @@ public class MetallicsBlocks {
 
         //Gold
         GOLD_CHAIN = registerBlock("gold_chain", new MBlock<>(ChainBlock::new, Optional.of(chainProps.strength(GLD_MSH).getCopy())));
-        GOLD_LANTERN = registerBlock("gold_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(GLD_LNT).getCopy())));
         GOLD_BARS = registerBlock("gold_bars", new MBlock<>(IronBarsBlock::new, Optional.of(barsProps.strength(GLD_STR).getCopy())));
         GOLD_PLATED_BLOCK = registerBlock("gold_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
         GOLD_SLAB = registerBlock("gold_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(GLD_GRT).getCopy())));
@@ -807,10 +806,11 @@ public class MetallicsBlocks {
         GOLD_GLASS_PANE = registerBlock("gold_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(GLD_MSH).getCopy())));
         GOLD_TINTED_GLASS = registerBlock("gold_tinted_glass", new MBlock<>(TintedGlassBlock::new, Optional.of(glassProps.strength(GLD_GRT).getCopy())));
 
-        GOLD_TORCH = registerBlock("gold_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.GOLD_FLAME.get(), props), Optional.of(torchProps.getCopy())));
-        GOLD_WALL_TORCH = registerBlock("gold_wall_torch", new MBlock<>(props -> new WallTorchBlock(MetallicsParticleTypes.GOLD_FLAME.get(), props), Optional.of(torchProps.getCopy())));
-        GOLD_CAMPFIRE = registerBlock("gold_campfire", new MBlock<>(props -> new MCampfireBlock(1, MetallicsParticleTypes.GOLD_EMBER.get(), props), Optional.of(campfireProps.getCopy())));
-        GOLD_JACK_O_LANTERN = registerBlock("gold_jack_o_lantern", new MBlock<>(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
+        AZURE_TORCH = registerBlock("azure_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.AZURE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
+        AZURE_WALL_TORCH = registerBlock("azure_wall_torch", new MBlock<>(props -> new WallTorchBlock(MetallicsParticleTypes.AZURE_FLAME.get(), props), Optional.of(torchProps.getCopy())));
+        AZURE_CAMPFIRE = registerBlock("azure_campfire", new MBlock<>(props -> new MCampfireBlock(1, MetallicsParticleTypes.AZURE_EMBER.get(), props), Optional.of(campfireProps.getCopy())));
+        AZURE_JACK_O_LANTERN = registerBlock("azure_jack_o_lantern", new MBlock<>(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
+        AZURE_LANTERN = registerBlock("azure_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(GLD_LNT).getCopy())));
 
         //Netherite
         NETHERITE_CHAIN = registerBlock("netherite_chain", new MBlock<>(ChainBlock::new, Optional.of(chainProps.strength(NTR_MSH).getCopy())));

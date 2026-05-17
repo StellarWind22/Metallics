@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "metallics:block/azure_lantern"
+    },
+    "hanging=true": {
+      "model": "metallics:block/azure_lantern_hanging"
+    }
+  }
+}

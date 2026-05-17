@@ -18,8 +18,8 @@ public class MetallicsParticleTypes {
     public static RegistrySupplier<MSimpleParticleType> FERROUS_EMBER;
     public static RegistrySupplier<MSimpleParticleType> PALE_FLAME;
     public static RegistrySupplier<MSimpleParticleType> PALE_EMBER;
-    public static RegistrySupplier<MSimpleParticleType> GOLD_FLAME;
-    public static RegistrySupplier<MSimpleParticleType> GOLD_EMBER;
+    public static RegistrySupplier<MSimpleParticleType> AZURE_FLAME;
+    public static RegistrySupplier<MSimpleParticleType> AZURE_EMBER;
     public static RegistrySupplier<MSimpleParticleType> INFERNAL_FLAME;
     public static RegistrySupplier<MSimpleParticleType> INFERNAL_EMBER;
 
@@ -31,8 +31,8 @@ public class MetallicsParticleTypes {
         FERROUS_EMBER = register("ferrous_ember", () -> new MSimpleParticleType(false));
         PALE_FLAME = register("pale_flame", () -> new MSimpleParticleType(false));
         PALE_EMBER = register("pale_ember", () -> new MSimpleParticleType(false));
-        GOLD_FLAME = register("gold_flame", () -> new MSimpleParticleType(false));
-        GOLD_EMBER = register("gold_ember", () -> new MSimpleParticleType(false));
+        AZURE_FLAME = register("azure_flame", () -> new MSimpleParticleType(false));
+        AZURE_EMBER = register("azure_ember", () -> new MSimpleParticleType(false));
         INFERNAL_FLAME = register("infernal_flame", () -> new MSimpleParticleType(false));
         INFERNAL_EMBER = register("infernal_ember", () -> new MSimpleParticleType(false));
 

@@ -34,7 +34,7 @@ public final class MetallicsFabric implements ModInitializer {
                 MCampfireBlockEntity::new,
                 MetallicsBlocks.COPPER_CAMPFIRE.get(),
                 MetallicsBlocks.FERROUS_CAMPFIRE.get(),
-                MetallicsBlocks.GOLD_CAMPFIRE.get(),
+                MetallicsBlocks.AZURE_CAMPFIRE.get(),
                 MetallicsBlocks.INFERNAL_CAMPFIRE.get(),
                 MetallicsBlocks.PALE_CAMPFIRE.get()
         );

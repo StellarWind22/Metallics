@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "metallics:item/gold_chunk"
+    "layer0": "metallics:block/azure_torch"
   }
 }
