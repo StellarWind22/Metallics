@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "buiding",
+  "key": {
+    ".": "minecraft:iron_nugget",
+    "i": "metallics:ferrous_torch"
+  },
+  "pattern": [
+    " . ",
+    ".i.",
+    " . "
+  ],
+  "result": {
+    "id": "metallics:ferrous_lantern"
+  }
+}

@@ -18,6 +18,8 @@ public final class MetallicsFabricClient implements ClientModInitializer {
         ParticleFactoryRegistry particleFR = ParticleFactoryRegistry.getInstance();
 
         particleFR.register(MetallicsParticleTypes.COPPER_EMBER.get(), LavaParticle.Provider::new);
+        particleFR.register(MetallicsParticleTypes.FERROUS_FLAME.get(), FlameParticle.Provider::new);
+        particleFR.register(MetallicsParticleTypes.FERROUS_EMBER.get(), LavaParticle.Provider::new);
         particleFR.register(MetallicsParticleTypes.GOLD_FLAME.get(), FlameParticle.Provider::new);
         particleFR.register(MetallicsParticleTypes.GOLD_EMBER.get(), LavaParticle.Provider::new);
         particleFR.register(MetallicsParticleTypes.INFERNAL_FLAME.get(), FlameParticle.Provider::new);

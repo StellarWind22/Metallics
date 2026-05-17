@@ -45,6 +45,7 @@ public final class MetallicsNeoForge {
         MetallicsBlockEntityTypes.CAMPFIRE = registerBlockEntity("campfire",
                 MCampfireBlockEntity::new,
                 MetallicsBlocks.COPPER_CAMPFIRE.get(),
+                MetallicsBlocks.FERROUS_CAMPFIRE.get(),
                 MetallicsBlocks.GOLD_CAMPFIRE.get(),
                 MetallicsBlocks.INFERNAL_CAMPFIRE.get(),
                 MetallicsBlocks.PALE_CAMPFIRE.get()
@@ -89,6 +90,8 @@ public final class MetallicsNeoForge {
         @SubscribeEvent
         public static void registerParticleProviders(RegisterParticleProvidersEvent event) {
             event.registerSpriteSet(MetallicsParticleTypes.COPPER_EMBER.get(), LavaParticle.Provider::new);
+            event.registerSpriteSet(MetallicsParticleTypes.FERROUS_FLAME.get(), LavaParticle.Provider::new);
+            event.registerSpriteSet(MetallicsParticleTypes.FERROUS_EMBER.get(), LavaParticle.Provider::new);
             event.registerSpriteSet(MetallicsParticleTypes.PALE_FLAME.get(), LavaParticle.Provider::new);
             event.registerSpriteSet(MetallicsParticleTypes.PALE_EMBER.get(), LavaParticle.Provider::new);
             event.registerSpriteSet(MetallicsParticleTypes.GOLD_FLAME.get(), LavaParticle.Provider::new);

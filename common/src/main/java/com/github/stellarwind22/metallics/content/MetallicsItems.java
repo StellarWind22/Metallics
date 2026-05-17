@@ -197,6 +197,11 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> IRON_GLASS_PANE;
     public static RegistrySupplier<BlockItem> IRON_TINTED_GLASS;
 
+    public static RegistrySupplier<BlockItem> FERROUS_TORCH;
+    public static RegistrySupplier<BlockItem> FERROUS_CAMPFIRE;
+    public static RegistrySupplier<BlockItem> FERROUS_JACK_O_LANTERN;
+    public static RegistrySupplier<BlockItem> FERROUS_LANTERN;
+
     //Blue Iron
     public static RegistrySupplier<Item> BLUE_IRON_NUGGET;
     public static RegistrySupplier<Item> BLUE_IRON_INGOT;
@@ -207,12 +212,6 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> BLUE_IRON_SOUL_LANTERN;
     public static RegistrySupplier<BlockItem> BLUE_IRON_BARS;
     public static RegistrySupplier<BlockItem> BLUE_IRON_BLOCK;
-
-    public static RegistrySupplier<BlockItem> PALE_TORCH;
-    public static RegistrySupplier<BlockItem> PALE_CAMPFIRE;
-    public static RegistrySupplier<BlockItem> PALE_JACK_O_LANTERN;
-    public static RegistrySupplier<BlockItem> PALE_LANTERN;
-
     public static RegistrySupplier<BlockItem> BLUE_IRON_PLATED_BLOCK;
     public static RegistrySupplier<BlockItem> BLUE_IRON_SLAB;
     public static RegistrySupplier<BlockItem> BRUSHED_BLUE_IRON_BLOCK;
@@ -236,6 +235,11 @@ public class MetallicsItems {
     public static RegistrySupplier<BlockItem> BLUE_IRON_GLASS;
     public static RegistrySupplier<BlockItem> BLUE_IRON_GLASS_PANE;
     public static RegistrySupplier<BlockItem> BLUE_IRON_TINTED_GLASS;
+
+    public static RegistrySupplier<BlockItem> PALE_TORCH;
+    public static RegistrySupplier<BlockItem> PALE_CAMPFIRE;
+    public static RegistrySupplier<BlockItem> PALE_JACK_O_LANTERN;
+    public static RegistrySupplier<BlockItem> PALE_LANTERN;
 
     //Gold
     public static RegistrySupplier<Item> GOLD_SALT;
@@ -479,6 +483,11 @@ public class MetallicsItems {
         IRON_GLASS = registerItem("iron_glass", props -> new BlockItem(MetallicsBlocks.IRON_GLASS.get(), props));
         IRON_GLASS_PANE = registerItem("iron_glass_pane", props -> new BlockItem(MetallicsBlocks.IRON_GLASS_PANE.get(), props));
         IRON_TINTED_GLASS = registerItem("iron_tinted_glass", props -> new BlockItem(MetallicsBlocks.IRON_TINTED_GLASS.get(), props));
+
+        FERROUS_TORCH = registerItem("ferrous_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.FERROUS_TORCH.get(), MetallicsBlocks.FERROUS_WALL_TORCH.get(), Direction.DOWN, props));
+        FERROUS_CAMPFIRE = registerItem("ferrous_campfire", props -> new BlockItem(MetallicsBlocks.FERROUS_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
+        FERROUS_JACK_O_LANTERN = registerItem("ferrous_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.FERROUS_JACK_O_LANTERN.get(), props));
+        FERROUS_LANTERN = registerItem("ferrous_lantern", props -> new BlockItem(MetallicsBlocks.FERROUS_LANTERN.get(), props));
 
         //Blue Iron
         BLUE_IRON_SALT = registerItem("blue_iron_salt", Item::new);

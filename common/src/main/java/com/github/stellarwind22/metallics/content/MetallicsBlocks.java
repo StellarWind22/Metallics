@@ -354,6 +354,12 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> IRON_BUTTON;
     public static RegistrySupplier<Block> IRON_PRESSURE_PLATE;
 
+    public static RegistrySupplier<Block> FERROUS_TORCH;
+    public static RegistrySupplier<Block> FERROUS_WALL_TORCH;
+    public static RegistrySupplier<MCampfireBlock> FERROUS_CAMPFIRE;
+    public static RegistrySupplier<Block> FERROUS_JACK_O_LANTERN;
+    public static RegistrySupplier<Block> FERROUS_LANTERN;
+
     //Blue Iron
     public static RegistrySupplier<Block> BLUE_IRON_CHAIN;
     public static RegistrySupplier<Block> BLUE_IRON_LANTERN;
@@ -724,6 +730,12 @@ public class MetallicsBlocks {
 
         IRON_BUTTON = registerBlock("iron_button", new MBlock<>(props -> new ButtonBlock(BlockSetType.IRON, 20, props), Optional.of(buttonProps.strength(IRN_GRT).getCopy())));
         IRON_PRESSURE_PLATE = registerBlock("iron_pressure_plate", new MBlock<>(props -> new PressurePlateBlock(BlockSetType.IRON, props), Optional.of(buttonProps.strength(IRN_GRT).getCopy())));
+
+        FERROUS_TORCH = registerBlock("ferrous_torch", new MBlock<>(props -> new TorchBlock(MetallicsParticleTypes.FERROUS_FLAME.get(), props), Optional.of(torchProps.getCopy())));
+        FERROUS_WALL_TORCH = registerBlock("ferrous_wall_torch", new MBlock<>(props -> new WallTorchBlock(MetallicsParticleTypes.FERROUS_FLAME.get(), props), Optional.of(torchProps.getCopy())));
+        FERROUS_CAMPFIRE = registerBlock("ferrous_campfire", new MBlock<>(props -> new MCampfireBlock(1, MetallicsParticleTypes.FERROUS_EMBER.get(), props), Optional.of(campfireProps.getCopy())));
+        FERROUS_JACK_O_LANTERN = registerBlock("ferrous_jack_o_lantern", new MBlock<>(CarvedPumpkinBlock::new, Optional.of(jackOLanternProps.getCopy())));
+        FERROUS_LANTERN = registerBlock("ferrous_lantern", new MBlock<>(LanternBlock::new, Optional.of(lanternProps.strength(IRN_LNT).getCopy())));
 
         //Blue Iron
         BLUE_IRON_CHAIN = registerBlock("blue_iron_chain", new MBlock<>(ChainBlock::new, Optional.of(chainProps.strength(IRN_MSH).getCopy())));
