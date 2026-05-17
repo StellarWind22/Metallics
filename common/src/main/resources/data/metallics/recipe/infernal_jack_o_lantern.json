@@ -3,13 +3,13 @@
   "category": "buiding",
   "key": {
     "#": "minecraft:carved_pumpkin",
-    "i": "metallics:netherite_torch"
+    "i": "metallics:infernal_torch"
   },
   "pattern": [
     "#",
     "i"
   ],
   "result": {
-    "id": "metallics:netherite_jack_o_lantern"
+    "id": "metallics:infernal_jack_o_lantern"
   }
 }

@@ -3,7 +3,7 @@
   "category": "buiding",
   "key": {
     ".": "minecraft:iron_nugget",
-    "#": "minecraft:glass"
+    "#": "minecraft:tinted_glass"
   },
   "pattern": [
     " . ",
@@ -11,6 +11,6 @@
     " . "
   ],
   "result": {
-    "id": "metallics:iron_glass"
+    "id": "metallics:iron_tinted_glass"
   }
 }

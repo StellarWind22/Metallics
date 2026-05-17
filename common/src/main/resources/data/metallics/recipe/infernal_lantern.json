@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "buiding",
   "key": {
-    ".": "minecraft:iron_nugget",
-    "#": "minecraft:glass"
+    ".": "metallics:netherite_nugget",
+    "i": "metallics:infernal_torch"
   },
   "pattern": [
     " . ",
-    ".#.",
+    ".i.",
     " . "
   ],
   "result": {
-    "id": "metallics:iron_glass"
+    "id": "metallics:infernal_lantern"
   }
 }

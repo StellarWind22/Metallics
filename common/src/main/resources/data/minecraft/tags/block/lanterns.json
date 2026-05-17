@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "metallics:gold_lantern",
-    "metallics:netherite_lantern"
+    "metallics:infernal_lantern",
+    "metallics:pale_lantern",
+    "metallics:blue_iron_lantern",
+    "metallics:blue_iron_soul_lantern"
   ]
 }

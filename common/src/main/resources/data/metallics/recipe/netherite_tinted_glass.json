@@ -3,14 +3,14 @@
   "category": "buiding",
   "key": {
     ".": "metallics:netherite_nugget",
-    "i": "metallics:netherite_torch"
+    "#": "minecraft:tinted_glass"
   },
   "pattern": [
     " . ",
-    ".i.",
+    ".#.",
     " . "
   ],
   "result": {
-    "id": "metallics:netherite_lantern"
+    "id": "metallics:netherite_tinted_glass"
   }
 }
