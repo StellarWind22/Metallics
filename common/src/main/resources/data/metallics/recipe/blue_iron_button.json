@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "metallics:brushed_blue_iron_block"
+  ],
+  "result": {
+    "id": "metallics:blue_iron_button"
+  }
+}

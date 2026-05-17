@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "metallics:weathered_brushed_copper_block"
+  ],
+  "result": {
+    "id": "metallics:weathered_copper_button"
+  }
+}

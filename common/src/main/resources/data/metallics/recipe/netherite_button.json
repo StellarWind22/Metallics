@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "metallics:brushed_netherite_block"
+  ],
+  "result": {
+    "id": "metallics:netherite_button"
+  }
+}
