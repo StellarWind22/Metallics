@@ -539,7 +539,6 @@ public class MetallicsItems {
         GOLD_MESH_GATE = registerItem("gold_mesh_gate", props -> new BlockItem(MetallicsBlocks.GOLD_MESH_GATE.get(), props));
         GOLD_MESH_DOOR = registerItem("gold_mesh_door", props -> new DoubleHighBlockItem(MetallicsBlocks.GOLD_MESH_DOOR.get(), props));
         GOLD_MESH_TRAPDOOR = registerItem("gold_mesh_trapdoor", props -> new BlockItem(MetallicsBlocks.GOLD_MESH_TRAPDOOR.get(), props));
-        GOLD_LANTERN = registerItem("gold_lantern", props -> new BlockItem(MetallicsBlocks.GOLD_LANTERN.get(), props));
         GOLD_GRATE = registerItem("gold_grate", props -> new BlockItem(MetallicsBlocks.GOLD_GRATE.get(), props));
         GOLD_PLATED_BLOCK = registerItem("gold_plated_block", props -> new BlockItem(MetallicsBlocks.GOLD_PLATED_BLOCK.get(), props));
         GOLD_SLAB = registerItem("gold_slab", props -> new BlockItem(MetallicsBlocks.GOLD_SLAB.get(), props));
@@ -559,13 +558,13 @@ public class MetallicsItems {
         GOLD_TORCH = registerItem("gold_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.GOLD_TORCH.get(), MetallicsBlocks.GOLD_WALL_TORCH.get(), Direction.DOWN, props));
         GOLD_CAMPFIRE = registerItem("gold_campfire", props -> new BlockItem(MetallicsBlocks.GOLD_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
         GOLD_JACK_O_LANTERN = registerItem("gold_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.GOLD_JACK_O_LANTERN.get(), props));
+        GOLD_LANTERN = registerItem("gold_lantern", props -> new BlockItem(MetallicsBlocks.GOLD_LANTERN.get(), props));
 
         //Netherite
         NETHERITE_NUGGET = registerItem("netherite_nugget", props -> new Item(props.fireResistant()));
         NETHERITE_SALT = registerItem("netherite_salt", Item::new);
         NETHERITE_CHAIN = registerItem("netherite_chain", props -> new BlockItem(MetallicsBlocks.NETHERITE_CHAIN.get(), props.fireResistant()));
         NETHERITE_BARS = registerItem("netherite_bars", props -> new BlockItem(MetallicsBlocks.NETHERITE_BARS.get(), props.fireResistant()));
-        INFERNAL_LANTERN = registerItem("infernal_lantern", props -> new BlockItem(MetallicsBlocks.INFERNAL_LANTERN.get(), props.fireResistant()));
         NETHERITE_DOOR = registerItem("netherite_door", props -> new DoubleHighBlockItem(MetallicsBlocks.NETHERITE_DOOR.get(), props.fireResistant()));
         NETHERITE_TRAPDOOR = registerItem("netherite_trapdoor", props -> new BlockItem(MetallicsBlocks.NETHERITE_TRAPDOOR.get(), props.fireResistant()));
         NETHERITE_LADDER = registerItem("netherite_ladder", props -> new BlockItem(MetallicsBlocks.NETHERITE_LADDER.get(), props));
@@ -593,6 +592,7 @@ public class MetallicsItems {
         INFERNAL_TORCH = registerItem("infernal_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.INFERNAL_TORCH.get(), MetallicsBlocks.INFERNAL_WALL_TORCH.get(), Direction.DOWN, props));
         INFERNAL_CAMPFIRE = registerItem("infernal_campfire", props -> new BlockItem(MetallicsBlocks.INFERNAL_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
         INFERNAL_JACK_O_LANTERN = registerItem("infernal_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.INFERNAL_JACK_O_LANTERN.get(), props));
+        INFERNAL_LANTERN = registerItem("infernal_lantern", props -> new BlockItem(MetallicsBlocks.INFERNAL_LANTERN.get(), props.fireResistant()));
 
         //Register stuff here ▲▲▲
 
