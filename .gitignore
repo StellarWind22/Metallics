@@ -39,5 +39,6 @@ tmp/
 *.exe
 _*.json
 _*.png.mcmeta
+_*.bin
 
 !scripts/*.py
