@@ -499,7 +499,7 @@ public class MetallicsBlocks {
     static final StrPair GLD_MSH = GLD_STR.mult(MSH_MULT);
     static final StrPair NTR_MSH = NTR_STR.mult(MSH_MULT);
 
-    public static void preInit() {
+    public static void FabricInitSetTypes() {
 
         BLOCK_SETS = BlockSetTypeAccessor.metallics$getTypes();
 
@@ -542,6 +542,42 @@ public class MetallicsBlocks {
         );
 
         BlockSetTypeAccessor.metallics$setTypes(BLOCK_SETS);
+    }
+
+    public static void NeoForgeInitSetTypes() {
+        //Gold
+        GOLD_SET = () -> new BlockSetType(
+                        "gold",
+                        true,
+                        true,
+                        false,
+                        BlockSetType.PressurePlateSensitivity.MOBS,
+                        SoundType.COPPER,
+                        SoundEvents.COPPER_DOOR_CLOSE,
+                        SoundEvents.COPPER_DOOR_OPEN,
+                        SoundEvents.COPPER_TRAPDOOR_CLOSE,
+                        SoundEvents.COPPER_TRAPDOOR_OPEN,
+                        SoundEvents.METAL_PRESSURE_PLATE_CLICK_OFF,
+                        SoundEvents.METAL_PRESSURE_PLATE_CLICK_ON,
+                        SoundEvents.STONE_BUTTON_CLICK_OFF,
+                        SoundEvents.STONE_BUTTON_CLICK_ON);
+
+        //Netherite
+        NETHERITE_SET = () -> new BlockSetType(
+                        "netherite",
+                        false,
+                        false,
+                        false,
+                        BlockSetType.PressurePlateSensitivity.MOBS,
+                        SoundType.IRON,
+                        SoundEvents.IRON_DOOR_CLOSE,
+                        SoundEvents.IRON_DOOR_OPEN,
+                        SoundEvents.IRON_TRAPDOOR_CLOSE,
+                        SoundEvents.IRON_TRAPDOOR_OPEN,
+                        SoundEvents.METAL_PRESSURE_PLATE_CLICK_OFF,
+                        SoundEvents.METAL_PRESSURE_PLATE_CLICK_ON,
+                        SoundEvents.STONE_BUTTON_CLICK_OFF,
+                        SoundEvents.STONE_BUTTON_CLICK_ON);
     }
 
     private static Supplier<BlockSetType> registerBlockSetType(BlockSetType type) {

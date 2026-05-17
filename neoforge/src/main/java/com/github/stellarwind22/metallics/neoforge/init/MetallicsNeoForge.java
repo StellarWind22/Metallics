@@ -14,6 +14,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -35,6 +36,9 @@ public final class MetallicsNeoForge {
 
     public MetallicsNeoForge() {
         // Run our common setup.
+        MetallicsBlocks.NeoForgeInitSetTypes();
+        BlockSetType.register(MetallicsBlocks.GOLD_SET.get());
+        BlockSetType.register(MetallicsBlocks.NETHERITE_SET.get());
         Metallics.init();
 
         BLOCK_ENTITY_TYPES = DeferredRegister.create(
@@ -46,7 +50,7 @@ public final class MetallicsNeoForge {
                 MCampfireBlockEntity::new,
                 MetallicsBlocks.COPPER_CAMPFIRE.get(),
                 MetallicsBlocks.FERROUS_CAMPFIRE.get(),
-                MetallicsBlocks.GOLD_CAMPFIRE.get(),
+                MetallicsBlocks.AZURE_CAMPFIRE.get(),
                 MetallicsBlocks.INFERNAL_CAMPFIRE.get(),
                 MetallicsBlocks.PALE_CAMPFIRE.get()
         );
@@ -94,8 +98,8 @@ public final class MetallicsNeoForge {
             event.registerSpriteSet(MetallicsParticleTypes.FERROUS_EMBER.get(), LavaParticle.Provider::new);
             event.registerSpriteSet(MetallicsParticleTypes.PALE_FLAME.get(), LavaParticle.Provider::new);
             event.registerSpriteSet(MetallicsParticleTypes.PALE_EMBER.get(), LavaParticle.Provider::new);
-            event.registerSpriteSet(MetallicsParticleTypes.GOLD_FLAME.get(), LavaParticle.Provider::new);
-            event.registerSpriteSet(MetallicsParticleTypes.GOLD_EMBER.get(), LavaParticle.Provider::new);
+            event.registerSpriteSet(MetallicsParticleTypes.AZURE_FLAME.get(), LavaParticle.Provider::new);
+            event.registerSpriteSet(MetallicsParticleTypes.AZURE_EMBER.get(), LavaParticle.Provider::new);
             event.registerSpriteSet(MetallicsParticleTypes.INFERNAL_FLAME.get(), LavaParticle.Provider::new);
             event.registerSpriteSet(MetallicsParticleTypes.INFERNAL_EMBER.get(), LavaParticle.Provider::new);
         }

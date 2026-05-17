@@ -27,6 +27,7 @@ public final class MetallicsFabric implements ModInitializer {
     @Override
     public void onInitialize() {
 
+        MetallicsBlocks.FabricInitSetTypes();
         Metallics.init();
 
         MetallicsBlockEntityTypes.CAMPFIRE = registerBlockEntity(
