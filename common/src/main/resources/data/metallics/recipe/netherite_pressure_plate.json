@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "buiding",
+  "key": {
+    "#": "metallics:netherite_plated_block"
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "id": "metallics:netherite_pressure_plate"
+  }
+}
