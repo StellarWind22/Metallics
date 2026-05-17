@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "minecraft:copper_ingot"
+    "metallics:brushed_copper_block"
   ],
   "result": {
     "id": "metallics:copper_button"

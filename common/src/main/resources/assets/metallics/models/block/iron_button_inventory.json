@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/button_inventory",
   "textures": {
-    "texture": "metallics:block/iron_plated_block"
+    "texture": "metallics:block/brushed_iron_block"
   }
 }
