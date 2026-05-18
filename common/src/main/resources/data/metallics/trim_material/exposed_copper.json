@@ -1,0 +1,7 @@
+{
+  "asset_name": "exposed_copper",
+  "description": {
+    "color": "#A9987B",
+    "translate": "trim_material.metallics.exposed_copper"
+  }
+}

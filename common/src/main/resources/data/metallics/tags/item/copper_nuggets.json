@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:copper_nugget",
+    "metallics:exposed_copper_nugget",
+    "metallics:weathered_copper_nugget",
+    "metallics:oxidized_copper_nugget"
+  ]
+}

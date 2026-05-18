@@ -1,0 +1,7 @@
+{
+  "asset_name": "oxidized_copper",
+  "description": {
+    "color": "#59B292",
+    "translate": "trim_material.metallics.oxidized_copper"
+  }
+}

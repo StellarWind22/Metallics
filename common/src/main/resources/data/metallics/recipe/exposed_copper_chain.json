@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": "metallics:exposed_copper_nugget"
+  },
+  "pattern": [
+    "N",
+    "N",
+    "N"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:exposed_copper_chain"
+  }
+}

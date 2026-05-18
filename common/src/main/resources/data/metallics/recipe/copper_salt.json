@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     "metallics:vitralite",
-    "minecraft:copper_nugget"
+    "#metallics:copper_nuggets"
   ],
   "result": {
     "id": "metallics:copper_salt"

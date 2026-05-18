@@ -1,0 +1,7 @@
+{
+  "asset_name": "weathered_copper",
+  "description": {
+    "color": "#6C975C",
+    "translate": "trim_material.metallics.weathered_copper"
+  }
+}
