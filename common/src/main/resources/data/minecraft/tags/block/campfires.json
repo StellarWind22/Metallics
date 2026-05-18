@@ -3,6 +3,8 @@
   "values": [
     "metallics:copper_campfire",
     "metallics:azure_campfire",
-    "metallics:infernal_campfire"
+    "metallics:infernal_campfire",
+    "metallics:pale_campfire",
+    "metallics:ferrous_campfire"
   ]
 }

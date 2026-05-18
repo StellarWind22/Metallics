@@ -36,8 +36,10 @@ public abstract class BrushItemMixin {
     @Invoker("spawnDustParticles")
     abstract void metallics$spawnDustParticles(Level level, BlockHitResult result, BlockState state, Vec3 vec3, HumanoidArm humanoidArm);
 
-    @Inject(method = "onUseTick",
-    at = @At("HEAD"))
+    @Inject(
+            method = "onUseTick(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;I)V",
+            at = @At("HEAD")
+    )
     public void onUseTick(Level level, LivingEntity livingEntity, ItemStack itemStack, int i, CallbackInfo ci) {
 
         BrushItem self = (BrushItem) (Object) this;

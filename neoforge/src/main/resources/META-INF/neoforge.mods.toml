@@ -13,6 +13,9 @@ description = '''
 
 '''
 
+[[mixins]]
+config = "metallics.mixins.json"
+
 [[dependencies.metallics]]
 modId = "neoforge"
 type = "required"

@@ -29,7 +29,6 @@ import java.util.function.Supplier;
 public class MetallicsBlocks {
 
     private static DeferredRegister<Block> BLOCKS;
-    private static Map<String, BlockSetType> BLOCK_SETS;
     private static final HashMap<Block, Block> BRUSHABLE_MAP = new HashMap<>();
 
     public static int registeredBlockCount = 0;
