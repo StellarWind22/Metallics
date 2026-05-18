@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "buiding",
+  "key": {
+    "#": "minecraft:waxed_oxidized_copper",
+    "i": "metallics:waxed_oxidized_copper_mesh"
+  },
+  "pattern": [
+    "ii",
+    "##"
+  ],
+  "result": {
+    "id": "metallics:waxed_oxidized_copper_mesh_trapdoor"
+  }
+}

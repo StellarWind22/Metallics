@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "buiding",
+  "key": {
+    "#": "metallics:netherite_plated_block",
+    "i": "metallics:netherite_mesh"
+  },
+  "pattern": [
+    "ii",
+    "##"
+  ],
+  "result": {
+    "id": "metallics:netherite_mesh_trapdoor"
+  }
+}

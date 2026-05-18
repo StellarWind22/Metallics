@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "buiding",
+  "key": {
+    "#": "metallics:blue_iron_plated_block"
+  },
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "result": {
+    "id": "metallics:blue_iron_door",
+    "count": 3
+  }
+}

@@ -647,16 +647,16 @@ public class MetallicsBlocks {
         WAXED_WEATHERED_COPPER_MESH_FENCE = registerBlock("waxed_weathered_copper_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
         WAXED_OXIDIZED_COPPER_MESH_FENCE = registerBlock("waxed_oxidized_copper_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
 
-        COPPER_MESH_GATE = registerBlock("copper_mesh_gate", new MBlock<>(props -> new MWeatheringMeshGate(WeatheringCopper.WeatherState.UNAFFECTED, BlockSetType.COPPER, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
-        EXPOSED_COPPER_MESH_GATE = registerBlock("exposed_copper_mesh_gate", new MBlock<>(props -> new MWeatheringMeshGate(WeatheringCopper.WeatherState.EXPOSED, BlockSetType.COPPER, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
-        WEATHERED_COPPER_MESH_GATE = registerBlock("weathered_copper_mesh_gate", new MBlock<>(props -> new MWeatheringMeshGate(WeatheringCopper.WeatherState.WEATHERED, BlockSetType.COPPER, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
-        OXIDIZED_COPPER_MESH_GATE = registerBlock("oxidized_copper_mesh_gate", new MBlock<>(props -> new MWeatheringMeshGate(WeatheringCopper.WeatherState.OXIDIZED, BlockSetType.COPPER, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
-        WAXED_COPPER_MESH_GATE = registerBlock("waxed_copper_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.COPPER, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
-        WAXED_EXPOSED_COPPER_MESH_GATE = registerBlock("waxed_exposed_copper_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.COPPER, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
-        WAXED_WEATHERED_COPPER_MESH_GATE = registerBlock("waxed_weathered_copper_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.COPPER, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
-        WAXED_OXIDIZED_COPPER_MESH_GATE = registerBlock("waxed_oxidized_copper_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.COPPER, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
+        COPPER_MESH_GATE = registerBlock("copper_mesh_gate", new MBlock<>(props -> new MWeatheringMeshGate(WeatheringCopper.WeatherState.UNAFFECTED, BlockSetType.COPPER, props), Optional.of(meshProps.strength(CPR_GRT).getCopy())));
+        EXPOSED_COPPER_MESH_GATE = registerBlock("exposed_copper_mesh_gate", new MBlock<>(props -> new MWeatheringMeshGate(WeatheringCopper.WeatherState.EXPOSED, BlockSetType.COPPER, props), Optional.of(meshProps.strength(CPR_GRT).getCopy())));
+        WEATHERED_COPPER_MESH_GATE = registerBlock("weathered_copper_mesh_gate", new MBlock<>(props -> new MWeatheringMeshGate(WeatheringCopper.WeatherState.WEATHERED, BlockSetType.COPPER, props), Optional.of(meshProps.strength(CPR_GRT).getCopy())));
+        OXIDIZED_COPPER_MESH_GATE = registerBlock("oxidized_copper_mesh_gate", new MBlock<>(props -> new MWeatheringMeshGate(WeatheringCopper.WeatherState.OXIDIZED, BlockSetType.COPPER, props), Optional.of(meshProps.strength(CPR_GRT).getCopy())));
+        WAXED_COPPER_MESH_GATE = registerBlock("waxed_copper_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.COPPER, props), Optional.of(meshProps.strength(CPR_GRT).getCopy())));
+        WAXED_EXPOSED_COPPER_MESH_GATE = registerBlock("waxed_exposed_copper_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.COPPER, props), Optional.of(meshProps.strength(CPR_GRT).getCopy())));
+        WAXED_WEATHERED_COPPER_MESH_GATE = registerBlock("waxed_weathered_copper_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.COPPER, props), Optional.of(meshProps.strength(CPR_GRT).getCopy())));
+        WAXED_OXIDIZED_COPPER_MESH_GATE = registerBlock("waxed_oxidized_copper_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.COPPER, props), Optional.of(meshProps.strength(CPR_GRT).getCopy())));
 
-        COPPER_MESH_TRAPDOOR = registerBlock("copper_mesh_trapdoor", new MBlock<>(props -> new WeatheringCopperTrapDoorBlock(BlockSetType.COPPER, WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
+        COPPER_MESH_TRAPDOOR = registerBlock("copper_mesh_trapdoor", new MBlock<>(props -> new WeatheringCopperTrapDoorBlock(BlockSetType.COPPER, WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(meshProps.strength(CPR_GRT).getCopy())));
         EXPOSED_COPPER_MESH_TRAPDOOR = registerBlock("exposed_copper_mesh_trapdoor", new MBlock<>(props -> new WeatheringCopperTrapDoorBlock(BlockSetType.COPPER, WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
         WEATHERED_COPPER_MESH_TRAPDOOR = registerBlock("weathered_copper_mesh_trapdoor", new MBlock<>(props -> new WeatheringCopperTrapDoorBlock(BlockSetType.COPPER, WeatheringCopper.WeatherState.WEATHERED, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
         OXIDIZED_COPPER_MESH_TRAPDOOR = registerBlock("oxidized_copper_mesh_trapdoor", new MBlock<>(props -> new WeatheringCopperTrapDoorBlock(BlockSetType.COPPER, WeatheringCopper.WeatherState.OXIDIZED, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
@@ -755,8 +755,8 @@ public class MetallicsBlocks {
         IRON_LADDER = registerBlock("iron_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(IRN_MSH).getCopy())));
         IRON_MESH = registerBlock("iron_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
         IRON_MESH_FENCE = registerBlock("iron_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
-        IRON_MESH_GATE = registerBlock("iron_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
-        IRON_MESH_DOOR = registerBlock("iron_mesh_door", new MBlock<>(props -> new DoorBlock(BlockSetType.IRON, props), Optional.of(doorProps.strength(IRN_GRT).getCopy())));
+        IRON_MESH_GATE = registerBlock("iron_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.IRON, props), Optional.of(meshProps.strength(CPR_GRT).getCopy())));
+        IRON_MESH_DOOR = registerBlock("iron_mesh_door", new MBlock<>(props -> new DoorBlock(BlockSetType.IRON, props), Optional.of(meshProps.strength(IRN_GRT).getCopy())));
         IRON_MESH_TRAPDOOR = registerBlock("iron_mesh_trapdoor", new MBlock<>(props -> new TrapDoorBlock(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(IRN_GRT).getCopy())));
         IRON_GRATE = registerBlock("iron_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));
         IRON_LAMP = registerBlock("iron_lamp", new MBlock<>(RedstoneLampBlock::new, Optional.of(lampProps.strength(IRN_LNT).getCopy())));
@@ -794,7 +794,7 @@ public class MetallicsBlocks {
         BLUE_IRON_LADDER = registerBlock("blue_iron_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(IRN_MSH).getCopy())));
         BLUE_IRON_MESH = registerBlock("blue_iron_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
         BLUE_IRON_MESH_FENCE = registerBlock("blue_iron_mesh_fence", new MBlock<>(MMeshFenceBlock::new, Optional.of(meshProps.strength(IRN_MSH).getCopy())));
-        BLUE_IRON_MESH_GATE = registerBlock("blue_iron_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(CPR_GRT).getCopy())));
+        BLUE_IRON_MESH_GATE = registerBlock("blue_iron_mesh_gate", new MBlock<>(props -> new MMeshGate(BlockSetType.IRON, props), Optional.of(meshProps.strength(CPR_GRT).getCopy())));
         BLUE_IRON_MESH_DOOR = registerBlock("blue_iron_mesh_door", new MBlock<>(props -> new DoorBlock(BlockSetType.IRON, props), Optional.of(doorProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_MESH_TRAPDOOR = registerBlock("blue_iron_mesh_trapdoor", new MBlock<>(props -> new TrapDoorBlock(BlockSetType.IRON, props), Optional.of(trapdoorProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_GRATE = registerBlock("blue_iron_grate", new MBlock<>(MGrateBlock::new, Optional.of(grateProps.strength(IRN_GRT).getCopy())));

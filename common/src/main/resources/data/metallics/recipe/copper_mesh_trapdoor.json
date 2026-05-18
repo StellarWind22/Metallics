@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "buiding",
+  "key": {
+    "#": "minecraft:copper_block",
+    "i": "metallics:copper_mesh"
+  },
+  "pattern": [
+    "ii",
+    "##"
+  ],
+  "result": {
+    "id": "metallics:copper_mesh_trapdoor"
+  }
+}
