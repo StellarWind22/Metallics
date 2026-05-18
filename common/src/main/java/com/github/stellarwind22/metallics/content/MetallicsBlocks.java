@@ -2,7 +2,6 @@ package com.github.stellarwind22.metallics.content;
 
 import com.github.stellarwind22.metallics.client.content.MetallicsParticleTypes;
 import com.github.stellarwind22.metallics.init.Metallics;
-import com.github.stellarwind22.metallics.mixin.BlockSetTypeAccessor;
 import com.github.stellarwind22.metallics.object.*;
 import com.github.stellarwind22.metallics.util.MBlock;
 import com.github.stellarwind22.metallics.util.MBlockProps;
@@ -499,52 +498,7 @@ public class MetallicsBlocks {
     static final StrPair GLD_MSH = GLD_STR.mult(MSH_MULT);
     static final StrPair NTR_MSH = NTR_STR.mult(MSH_MULT);
 
-    public static void FabricInitSetTypes() {
-
-        BLOCK_SETS = BlockSetTypeAccessor.metallics$getTypes();
-
-        //Gold
-        GOLD_SET = registerBlockSetType(
-                new BlockSetType(
-                        "gold",
-                        true,
-                        true,
-                        false,
-                        BlockSetType.PressurePlateSensitivity.MOBS,
-                        SoundType.COPPER,
-                        SoundEvents.COPPER_DOOR_CLOSE,
-                        SoundEvents.COPPER_DOOR_OPEN,
-                        SoundEvents.COPPER_TRAPDOOR_CLOSE,
-                        SoundEvents.COPPER_TRAPDOOR_OPEN,
-                        SoundEvents.METAL_PRESSURE_PLATE_CLICK_OFF,
-                        SoundEvents.METAL_PRESSURE_PLATE_CLICK_ON,
-                        SoundEvents.STONE_BUTTON_CLICK_OFF,
-                        SoundEvents.STONE_BUTTON_CLICK_ON)
-        );
-
-        //Netherite
-        NETHERITE_SET = registerBlockSetType(
-                new BlockSetType(
-                        "netherite",
-                        false,
-                        false,
-                        false,
-                        BlockSetType.PressurePlateSensitivity.MOBS,
-                        SoundType.IRON,
-                        SoundEvents.IRON_DOOR_CLOSE,
-                        SoundEvents.IRON_DOOR_OPEN,
-                        SoundEvents.IRON_TRAPDOOR_CLOSE,
-                        SoundEvents.IRON_TRAPDOOR_OPEN,
-                        SoundEvents.METAL_PRESSURE_PLATE_CLICK_OFF,
-                        SoundEvents.METAL_PRESSURE_PLATE_CLICK_ON,
-                        SoundEvents.STONE_BUTTON_CLICK_OFF,
-                        SoundEvents.STONE_BUTTON_CLICK_ON)
-        );
-
-        BlockSetTypeAccessor.metallics$setTypes(BLOCK_SETS);
-    }
-
-    public static void NeoForgeInitSetTypes() {
+    public static void InitSetTypes() {
         //Gold
         GOLD_SET = () -> new BlockSetType(
                         "gold",
@@ -578,11 +532,6 @@ public class MetallicsBlocks {
                         SoundEvents.METAL_PRESSURE_PLATE_CLICK_ON,
                         SoundEvents.STONE_BUTTON_CLICK_OFF,
                         SoundEvents.STONE_BUTTON_CLICK_ON);
-    }
-
-    private static Supplier<BlockSetType> registerBlockSetType(BlockSetType type) {
-        BLOCK_SETS.put(type.name(), type);
-        return () -> type;
     }
 
     public static void init() {

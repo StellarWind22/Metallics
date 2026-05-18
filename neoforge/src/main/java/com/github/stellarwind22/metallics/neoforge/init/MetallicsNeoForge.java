@@ -36,7 +36,7 @@ public final class MetallicsNeoForge {
                 Metallics.MOD_ID
         );
 
-        MetallicsBlocks.NeoForgeInitSetTypes();
+        MetallicsBlocks.InitSetTypes();
         BlockSetType.register(MetallicsBlocks.GOLD_SET.get());
         BlockSetType.register(MetallicsBlocks.NETHERITE_SET.get());
 

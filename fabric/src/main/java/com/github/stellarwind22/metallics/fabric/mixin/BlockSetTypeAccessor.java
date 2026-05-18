@@ -1,4 +1,4 @@
-package com.github.stellarwind22.metallics.mixin;
+package com.github.stellarwind22.metallics.fabric.mixin;
 
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import org.spongepowered.asm.mixin.Mixin;

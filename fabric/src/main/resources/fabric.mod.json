@@ -29,6 +29,7 @@
     "fabric-api": "*"
   },
   "mixins": [
-    "metallics.mixins.json"
+    "metallics.mixins.json",
+    "metallics.fabric.mixins.json"
   ]
 }

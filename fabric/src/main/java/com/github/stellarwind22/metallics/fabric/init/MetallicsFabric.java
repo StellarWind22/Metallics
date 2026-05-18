@@ -3,6 +3,7 @@ package com.github.stellarwind22.metallics.fabric.init;
 import com.github.stellarwind22.metallics.client.content.MetallicsParticleTypes;
 import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
 import com.github.stellarwind22.metallics.content.MetallicsBlocks;
+import com.github.stellarwind22.metallics.fabric.mixin.BlockSetTypeAccessor;
 import com.github.stellarwind22.metallics.init.Metallics;
 import com.github.stellarwind22.metallics.object.blockentity.MBrushingBlockEntity;
 import com.github.stellarwind22.metallics.object.blockentity.MCampfireBlockEntity;
@@ -20,15 +21,28 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.levelgen.GenerationStep;
 
+import java.util.Map;
 import java.util.function.Supplier;
 
 public final class MetallicsFabric implements ModInitializer {
+
+    private static Map<String, BlockSetType> BLOCK_SETS;
     @Override
     public void onInitialize() {
 
-        MetallicsBlocks.FabricInitSetTypes();
+        //Handle set type fabric weirdness
+        BLOCK_SETS = BlockSetTypeAccessor.metallics$getTypes();
+
+        MetallicsBlocks.InitSetTypes();
+        registerBlockSetType(MetallicsBlocks.GOLD_SET.get());
+        registerBlockSetType(MetallicsBlocks.NETHERITE_SET.get());
+
+        BlockSetTypeAccessor.metallics$setTypes(BLOCK_SETS);
+
+        //Normal Init stuff
         MetallicsParticleTypes.init();
         Metallics.init();
         MetallicsBlocks.postInit();
@@ -96,5 +110,9 @@ public final class MetallicsFabric implements ModInitializer {
                 FabricBlockEntityTypeBuilder.<E>create(factory, blocks).build()
         );
         return () -> type;
+    }
+
+    private static void registerBlockSetType(BlockSetType type) {
+        BLOCK_SETS.put(type.name(), type);
     }
 }
