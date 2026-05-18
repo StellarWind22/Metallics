@@ -17,7 +17,124 @@
       "next_oxidation_stage": "metallics:weathered_copper_lamp"
     },
     "metallics:weathered_copper_lamp": {
-      "next_oxidation_stage": "metallics:oxidized_copper_mesh"
+      "next_oxidation_stage": "metallics:oxidized_copper_lamp"
+    },
+    "metallics:copper_mesh_fence": {
+      "next_oxidation_stage": "metallics:exposed_copper_mesh_fence"
+    },
+    "metallics:exposed_copper_mesh_fence": {
+      "next_oxidation_stage": "metallics:weathered_copper_mesh_fence"
+    },
+    "metallics:weathered_copper_mesh_fence": {
+      "next_oxidation_stage": "metallics:oxidized_copper_mesh_fence"
+    },
+    "metallics:copper_mesh_gate": {
+      "next_oxidation_stage": "metallics:exposed_copper_mesh_gate"
+    },
+    "metallics:exposed_copper_mesh_gate": {
+      "next_oxidation_stage": "metallics:weathered_copper_mesh_gate"
+    },
+    "metallics:weathered_copper_mesh_gate": {
+      "next_oxidation_stage": "metallics:oxidized_copper_mesh_gate"
+    },
+    "metallics:copper_mesh_door": {
+      "next_oxidation_stage": "metallics:exposed_copper_mesh_door"
+    },
+    "metallics:exposed_copper_mesh_door": {
+      "next_oxidation_stage": "metallics:weathered_copper_mesh_door"
+    },
+    "metallics:weathered_copper_mesh_door": {
+      "next_oxidation_stage": "metallics:oxidized_copper_mesh_door"
+    },
+    "metallics:copper_mesh_trapdoor": {
+      "next_oxidation_stage": "metallics:exposed_copper_mesh_trapdoor"
+    },
+    "metallics:exposed_copper_mesh_trapdoor": {
+      "next_oxidation_stage": "metallics:weathered_copper_mesh_trapdoor"
+    },
+    "metallics:weathered_copper_mesh_trapdoor": {
+      "next_oxidation_stage": "metallics:oxidized_copper_mesh_trapdoor"
+    },
+    "metallics:copper_slab": {
+      "next_oxidation_stage": "metallics:exposed_copper_slab"
+    },
+    "metallics:exposed_copper_slab": {
+      "next_oxidation_stage": "metallics:weathered_copper_slab"
+    },
+    "metallics:weathered_copper_slab": {
+      "next_oxidation_stage": "metallics:oxidized_copper_slab"
+    },
+    "metallics:brushed_copper_block": {
+      "next_oxidation_stage": "metallics:exposed_brushed_copper_block"
+    },
+    "metallics:exposed_brushed_copper_block": {
+      "next_oxidation_stage": "metallics:weathered_brushed_copper_block"
+    },
+    "metallics:weathered_brushed_copper_block": {
+      "next_oxidation_stage": "metallics:oxidized_brushed_copper_block"
+    },
+    "metallics:brushed_copper_slab": {
+      "next_oxidation_stage": "metallics:exposed_brushed_copper_slab"
+    },
+    "metallics:exposed_brushed_copper_slab": {
+      "next_oxidation_stage": "metallics:weathered_brushed_copper_slab"
+    },
+    "metallics:weathered_brushed_copper_slab": {
+      "next_oxidation_stage": "metallics:oxidized_brushed_copper_slab"
+    },
+    "metallics:copper_ladder": {
+      "next_oxidation_stage": "metallics:exposed_copper_ladder"
+    },
+    "metallics:exposed_copper_ladder": {
+      "next_oxidation_stage": "metallics:weathered_copper_ladder"
+    },
+    "metallics:weathered_copper_ladder": {
+      "next_oxidation_stage": "metallics:oxidized_copper_ladder"
+    },
+    "metallics:copper_button": {
+      "next_oxidation_stage": "metallics:exposed_copper_button"
+    },
+    "metallics:exposed_copper_button": {
+      "next_oxidation_stage": "metallics:weathered_copper_button"
+    },
+    "metallics:weathered_copper_button": {
+      "next_oxidation_stage": "metallics:oxidized_copper_button"
+    },
+    "metallics:copper_pressure_plate": {
+      "next_oxidation_stage": "metallics:exposed_copper_pressure_plate"
+    },
+    "metallics:exposed_copper_pressure_plate": {
+      "next_oxidation_stage": "metallics:weathered_copper_pressure_plate"
+    },
+    "metallics:weathered_copper_pressure_plate": {
+      "next_oxidation_stage": "metallics:oxidized_copper_pressure_plate"
+    },
+    "metallics:copper_glass": {
+      "next_oxidation_stage": "metallics:exposed_copper_glass"
+    },
+    "metallics:exposed_copper_glass": {
+      "next_oxidation_stage": "metallics:weathered_copper_glass"
+    },
+    "metallics:weathered_copper_glass": {
+      "next_oxidation_stage": "metallics:oxidized_copper_glass"
+    },
+    "metallics:copper_glass_pane": {
+      "next_oxidation_stage": "metallics:exposed_copper_glass_pane"
+    },
+    "metallics:exposed_copper_glass_pane": {
+      "next_oxidation_stage": "metallics:weathered_copper_glass_pane"
+    },
+    "metallics:weathered_copper_glass_pane": {
+      "next_oxidation_stage": "metallics:oxidized_copper_glass_pane"
+    },
+    "metallics:copper_tinted_glass": {
+      "next_oxidation_stage": "metallics:exposed_copper_tinted_glass"
+    },
+    "metallics:exposed_copper_tinted_glass": {
+      "next_oxidation_stage": "metallics:weathered_copper_tinted_glass"
+    },
+    "metallics:weathered_copper_tinted_glass": {
+      "next_oxidation_stage": "metallics:oxidized_copper_tinted_glass"
     }
   }
 }

@@ -601,10 +601,10 @@ public class MetallicsBlocks {
         BRUSHING_COPPER_BLOCK = registerBlock("brushing_copper_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_copper_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
         BRUSHING_COPPER_SLAB = registerBlock("brushing_copper_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_copper_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
 
-        COPPER_LADDER = registerBlock("copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
-        EXPOSED_COPPER_LADDER = registerBlock("exposed_copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
-        WEATHERED_COPPER_LADDER = registerBlock("weathered_copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
-        OXIDIZED_COPPER_LADDER = registerBlock("oxidized_copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
+        COPPER_LADDER = registerBlock("copper_ladder", new MBlock<>(props -> new MWeatheringLadderBlock(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
+        EXPOSED_COPPER_LADDER = registerBlock("exposed_copper_ladder", new MBlock<>(props -> new MWeatheringLadderBlock(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
+        WEATHERED_COPPER_LADDER = registerBlock("weathered_copper_ladder", new MBlock<>(props -> new MWeatheringLadderBlock(props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
+        OXIDIZED_COPPER_LADDER = registerBlock("oxidized_copper_ladder", new MBlock<>(props -> new MWeatheringLadderBlock(props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
         WAXED_COPPER_LADDER = registerBlock("waxed_copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
         WAXED_EXPOSED_COPPER_LADDER = registerBlock("waxed_exposed_copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
         WAXED_WEATHERED_COPPER_LADDER = registerBlock("waxed_weathered_copper_ladder", new MBlock<>(LadderBlock::new, Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
@@ -722,10 +722,10 @@ public class MetallicsBlocks {
         WAXED_WEATHERED_COPPER_GLASS = registerBlock("waxed_weathered_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
         WAXED_OXIDIZED_COPPER_GLASS = registerBlock("waxed_oxidized_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
 
-        COPPER_GLASS_PANE = registerBlock("copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
-        EXPOSED_COPPER_GLASS_PANE = registerBlock("exposed_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
-        WEATHERED_COPPER_GLASS_PANE = registerBlock("weathered_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
-        OXIDIZED_COPPER_GLASS_PANE = registerBlock("oxidized_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        COPPER_GLASS_PANE = registerBlock("copper_glass_pane", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        EXPOSED_COPPER_GLASS_PANE = registerBlock("exposed_copper_glass_pane", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        WEATHERED_COPPER_GLASS_PANE = registerBlock("weathered_copper_glass_pane", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.WEATHERED, props), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        OXIDIZED_COPPER_GLASS_PANE = registerBlock("oxidized_copper_glass_pane", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.OXIDIZED, props), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
         WAXED_COPPER_GLASS_PANE = registerBlock("waxed_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
         WAXED_EXPOSED_COPPER_GLASS_PANE = registerBlock("waxed_exposed_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
         WAXED_WEATHERED_COPPER_GLASS_PANE = registerBlock("waxed_weathered_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));

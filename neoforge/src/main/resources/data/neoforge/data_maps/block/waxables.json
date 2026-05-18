@@ -24,6 +24,138 @@
     },
     "metallics:oxidized_copper_lamp": {
       "waxed": "metallics:waxed_oxidized_copper_lamp"
+    },
+    "metallics:copper_ladder": {
+      "waxed": "metallics:waxed_copper_ladder"
+    },
+    "metallics:exposed_copper_ladder": {
+      "waxed": "metallics:waxed_exposed_copper_ladder"
+    },
+    "metallics:weathered_copper_ladder": {
+      "waxed": "metallics:waxed_weathered_copper_ladder"
+    },
+    "metallics:oxidized_copper_ladder": {
+      "waxed": "metallics:waxed_oxidized_copper_ladder"
+    },
+    "metallics:copper_mesh_fence": {
+      "waxed": "metallics:waxed_copper_mesh_fence"
+    },
+    "metallics:exposed_copper_mesh_fence": {
+      "waxed": "metallics:waxed_exposed_copper_mesh_fence"
+    },
+    "metallics:weathered_copper_mesh_fence": {
+      "waxed": "metallics:waxed_weathered_copper_mesh_fence"
+    },
+    "metallics:oxidized_copper_mesh_fence": {
+      "waxed": "metallics:waxed_oxidized_copper_mesh_fence"
+    },
+    "metallics:copper_mesh_gate": {
+      "waxed": "metallics:waxed_copper_mesh_gate"
+    },
+    "metallics:exposed_copper_mesh_gate": {
+      "waxed": "metallics:waxed_exposed_copper_mesh_gate"
+    },
+    "metallics:weathered_copper_mesh_gate": {
+      "waxed": "metallics:waxed_weathered_copper_mesh_gate"
+    },
+    "metallics:oxidized_copper_mesh_gate": {
+      "waxed": "metallics:waxed_oxidized_copper_mesh_gate"
+    },
+    "metallics:copper_mesh_door": {
+      "waxed": "metallics:waxed_copper_mesh_door"
+    },
+    "metallics:exposed_copper_mesh_door": {
+      "waxed": "metallics:waxed_exposed_copper_mesh_door"
+    },
+    "metallics:weathered_copper_mesh_door": {
+      "waxed": "metallics:waxed_weathered_copper_mesh_door"
+    },
+    "metallics:oxidized_copper_mesh_door": {
+      "waxed": "metallics:waxed_oxidized_copper_mesh_door"
+    },
+    "metallics:copper_mesh_trapdoor": {
+      "waxed": "metallics:waxed_copper_mesh_trapdoor"
+    },
+    "metallics:exposed_copper_mesh_trapdoor": {
+      "waxed": "metallics:waxed_exposed_copper_mesh_trapdoor"
+    },
+    "metallics:weathered_copper_mesh_trapdoor": {
+      "waxed": "metallics:waxed_weathered_copper_mesh_trapdoor"
+    },
+    "metallics:oxidized_copper_mesh_trapdoor": {
+      "waxed": "metallics:waxed_oxidized_copper_mesh_trapdoor"
+    },
+    "metallics:copper_slab": {
+      "waxed": "metallics:waxed_copper_slab"
+    },
+    "metallics:exposed_copper_slab": {
+      "waxed": "metallics:waxed_exposed_copper_slab"
+    },
+    "metallics:weathered_copper_slab": {
+      "waxed": "metallics:waxed_weathered_copper_slab"
+    },
+    "metallics:oxidized_copper_slab": {
+      "waxed": "metallics:waxed_oxidized_copper_slab"
+    },
+    "metallics:copper_button": {
+      "waxed": "metallics:waxed_copper_button"
+    },
+    "metallics:exposed_copper_button": {
+      "waxed": "metallics:waxed_exposed_copper_button"
+    },
+    "metallics:weathered_copper_button": {
+      "waxed": "metallics:waxed_weathered_copper_button"
+    },
+    "metallics:oxidized_copper_button": {
+      "waxed": "metallics:waxed_oxidized_copper_button"
+    },
+    "metallics:copper_pressure_plate": {
+      "waxed": "metallics:waxed_copper_pressure_plate"
+    },
+    "metallics:exposed_copper_pressure_plate": {
+      "waxed": "metallics:waxed_exposed_copper_pressure_plate"
+    },
+    "metallics:weathered_copper_pressure_plate": {
+      "waxed": "metallics:waxed_weathered_copper_pressure_plate"
+    },
+    "metallics:oxidized_copper_pressure_plate": {
+      "waxed": "metallics:waxed_oxidized_copper_pressure_plate"
+    },
+    "metallics:copper_glass": {
+      "waxed": "metallics:waxed_copper_glass"
+    },
+    "metallics:exposed_copper_glass": {
+      "waxed": "metallics:waxed_exposed_copper_glass"
+    },
+    "metallics:weathered_copper_glass": {
+      "waxed": "metallics:waxed_weathered_copper_glass"
+    },
+    "metallics:oxidized_copper_glass": {
+      "waxed": "metallics:waxed_oxidized_copper_glass"
+    },
+    "metallics:copper_glass_pane": {
+      "waxed": "metallics:waxed_copper_glass_pane"
+    },
+    "metallics:exposed_copper_glass_pane": {
+      "waxed": "metallics:waxed_exposed_copper_glass_pane"
+    },
+    "metallics:weathered_copper_glass_pane": {
+      "waxed": "metallics:waxed_weathered_copper_glass_pane"
+    },
+    "metallics:oxidized_copper_glass_pane": {
+      "waxed": "metallics:waxed_oxidized_copper_glass_pane"
+    },
+    "metallics:copper_tinted_glass": {
+      "waxed": "metallics:waxed_copper_tinted_glass"
+    },
+    "metallics:exposed_copper_tinted_glass": {
+      "waxed": "metallics:waxed_exposed_copper_tinted_glass"
+    },
+    "metallics:weathered_copper_tinted_glass": {
+      "waxed": "metallics:waxed_weathered_copper_tinted_glass"
+    },
+    "metallics:oxidized_copper_tinted_glass": {
+      "waxed": "metallics:waxed_oxidized_copper_tinted_glass"
     }
   }
 }
