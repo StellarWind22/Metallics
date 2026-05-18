@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "buiding",
+  "group": "waxed_exposed_copper_glass_pane",
   "key": {
     "#": "metallics:waxed_exposed_copper_glass"
   },

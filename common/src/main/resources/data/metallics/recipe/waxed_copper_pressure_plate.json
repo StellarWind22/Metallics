@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "buiding",
+  "group": "waxed_copper_pressure_plate",
   "key": {
     "#": "minecraft:waxed_copper_block"
   },
