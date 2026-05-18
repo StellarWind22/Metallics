@@ -151,7 +151,7 @@ public class MetallicsBlocks {
             .isViewBlocking(MBlockProps::never)
             .requiresCorrectToolForDrops();
 
-    public static RegistrySupplier<Block> NITRE_SALT_BLOCK;
+    public static RegistrySupplier<Block> VITRALITE_BLOCK;
 
     //Soul
     public static RegistrySupplier<Block> SOUL_JACK_O_LANTERN;
@@ -589,7 +589,7 @@ public class MetallicsBlocks {
         BLOCKS = DeferredRegister.create(Metallics.MOD_ID, Registries.BLOCK);
 
         //Register stuff here ▼▼▼
-        NITRE_SALT_BLOCK = registerBlock("nitre_salt_block", new MBlock<>(Block::new, Optional.of(saltBlockProps.getCopy())));
+        VITRALITE_BLOCK = registerBlock("vitralite_block", new MBlock<>(Block::new, Optional.of(saltBlockProps.getCopy())));
 
         //Soul
         SOUL_JACK_O_LANTERN = registerBlock("soul_jack_o_lantern", new MBlock<>(

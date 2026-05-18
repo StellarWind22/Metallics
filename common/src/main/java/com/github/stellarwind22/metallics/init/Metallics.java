@@ -17,9 +17,7 @@ public final class Metallics {
         LOGGER.info("Initializing common code...");
 
         MetallicsTabs.init();
-        MetallicsParticleTypes.init();
         MetallicsBlocks.init();
-        MetallicsBlocks.postInit();
         MetallicsItems.init();
 
         LOGGER.info("Metallics tabs/blocks/blockEntities/items registered!");

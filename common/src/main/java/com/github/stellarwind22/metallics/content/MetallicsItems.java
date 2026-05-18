@@ -19,8 +19,8 @@ public class MetallicsItems {
     public static int registeredItemCount = 0;
 
     //Chemical
-    public static RegistrySupplier<Item> NITRE_SALT;
-    public static RegistrySupplier<BlockItem> NITRE_SALT_BLOCK;
+    public static RegistrySupplier<Item> VITRALITE;
+    public static RegistrySupplier<BlockItem> VITRALITE_BLOCK;
 
     //Soul
     public static RegistrySupplier<BlockItem> SOUL_JACK_O_LANTERN;
@@ -313,8 +313,8 @@ public class MetallicsItems {
         ITEMS = DeferredRegister.create(Metallics.MOD_ID, Registries.ITEM);
 
         //Register stuff here ▼▼▼
-        NITRE_SALT = registerItem("nitre_salt", Item::new);
-        NITRE_SALT_BLOCK = registerItem("nitre_salt_block", props -> new BlockItem(MetallicsBlocks.NITRE_SALT_BLOCK.get(), props));
+        VITRALITE = registerItem("vitralite", Item::new);
+        VITRALITE_BLOCK = registerItem("vitralite_block", props -> new BlockItem(MetallicsBlocks.VITRALITE_BLOCK.get(), props));
 
         //Soul
         SOUL_JACK_O_LANTERN = registerItem("soul_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.SOUL_JACK_O_LANTERN.get(), props));

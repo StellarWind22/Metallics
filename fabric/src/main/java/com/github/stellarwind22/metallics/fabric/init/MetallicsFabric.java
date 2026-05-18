@@ -1,5 +1,6 @@
 package com.github.stellarwind22.metallics.fabric.init;
 
+import com.github.stellarwind22.metallics.client.content.MetallicsParticleTypes;
 import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
 import com.github.stellarwind22.metallics.content.MetallicsBlocks;
 import com.github.stellarwind22.metallics.init.Metallics;
@@ -28,7 +29,9 @@ public final class MetallicsFabric implements ModInitializer {
     public void onInitialize() {
 
         MetallicsBlocks.FabricInitSetTypes();
+        MetallicsParticleTypes.init();
         Metallics.init();
+        MetallicsBlocks.postInit();
 
         MetallicsBlockEntityTypes.CAMPFIRE = registerBlockEntity(
                 "campfire",
@@ -82,7 +85,7 @@ public final class MetallicsFabric implements ModInitializer {
                         )
                 )),
                 GenerationStep.Decoration.UNDERGROUND_ORES,
-                ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "ore_nitre_salt"))
+                ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "ore_vitralite"))
         );
     }
 

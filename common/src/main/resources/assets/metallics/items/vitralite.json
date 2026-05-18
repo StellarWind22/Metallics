@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "metallics:block/nitre_salt_block"
+    "model": "metallics:item/vitralite"
   }
 }

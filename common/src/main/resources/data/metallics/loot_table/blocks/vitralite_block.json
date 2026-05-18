@@ -26,7 +26,7 @@
                   }
                 }
               ],
-              "name": "metallics:nitre_salt_block"
+              "name": "metallics:vitralite_block"
             },
             {
               "type": "minecraft:item",
@@ -49,7 +49,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "metallics:nitre_salt"
+              "name": "metallics:vitralite"
             }
           ]
         }
@@ -57,5 +57,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "metallics:blocks/nitre_salt_block"
+  "random_sequence": "metallics:blocks/vitralite_block"
 }

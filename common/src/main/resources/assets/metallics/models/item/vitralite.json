@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "metallics:item/nitre_salt"
+    "layer0": "metallics:item/vitralite"
   }
 }
