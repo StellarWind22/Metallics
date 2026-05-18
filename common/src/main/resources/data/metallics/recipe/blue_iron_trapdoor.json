@@ -1,16 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "buiding",
+  "category": "redstone",
   "key": {
     "#": "metallics:blue_iron_ingot"
   },
   "pattern": [
     "##",
-    "##",
     "##"
   ],
   "result": {
-    "id": "metallics:blue_iron_door",
-    "count": 3
+    "id": "metallics:blue_iron_trapdoor"
   }
 }

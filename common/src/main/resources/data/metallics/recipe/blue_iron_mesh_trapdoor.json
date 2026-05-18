@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "buiding",
   "key": {
-    "#": "metallics:blue_iron_plated_block",
+    "#": "metallics:blue_iron_ingot",
     "i": "metallics:blue_iron_mesh"
   },
   "pattern": [

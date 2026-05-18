@@ -1,16 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "buiding",
+  "category": "redstone",
   "key": {
     "#": "minecraft:netherite_ingot"
   },
   "pattern": [
     "##",
-    "##",
     "##"
   ],
   "result": {
-    "id": "metallics:netherite_door",
-    "count": 3
+    "id": "metallics:netherite_trapdoor"
   }
 }

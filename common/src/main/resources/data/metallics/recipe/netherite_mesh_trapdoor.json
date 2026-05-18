@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "buiding",
   "key": {
-    "#": "metallics:netherite_plated_block",
+    "#": "minecraft:netherite_ingot",
     "i": "metallics:netherite_mesh"
   },
   "pattern": [

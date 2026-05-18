@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "buiding",
   "key": {
-    "#": "minecraft:exposed_copper",
+    "#": "metallics:exposed_copper_ingot",
     "i": "metallics:exposed_copper_mesh"
   },
   "pattern": [
