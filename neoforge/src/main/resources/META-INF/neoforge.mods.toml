@@ -1,7 +1,7 @@
 modLoader = "javafml"
 loaderVersion = "[2,)"
 #issueTrackerURL = ""
-license = "CC0-1"
+license = "MIT"
 
 [[mods]]
 modId = "metallics"
