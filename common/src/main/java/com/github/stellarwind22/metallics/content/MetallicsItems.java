@@ -6,8 +6,8 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.ItemContainerContents;
 import net.minecraft.world.item.equipment.trim.TrimMaterial;
@@ -317,9 +317,9 @@ public class MetallicsItems {
 
         ITEMS = DeferredRegister.create(Metallics.MOD_ID, Registries.ITEM);
 
-        EXPOSED_COPPER_TRIM = ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "exposed_copper"));
-        WEATHERED_COPPER_TRIM = ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "weathered_copper"));
-        OXIDIZED_COPPER_TRIM = ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "oxidized_copper"));
+        EXPOSED_COPPER_TRIM = ResourceKey.create(Registries.TRIM_MATERIAL, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "exposed_copper"));
+        WEATHERED_COPPER_TRIM = ResourceKey.create(Registries.TRIM_MATERIAL, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "weathered_copper"));
+        OXIDIZED_COPPER_TRIM = ResourceKey.create(Registries.TRIM_MATERIAL, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "oxidized_copper"));
 
         //Register stuff here ▼▼▼
         VITRALITE = registerItem("vitralite", Item::new);
@@ -611,6 +611,6 @@ public class MetallicsItems {
     @SuppressWarnings("UnstableApiUsage")
     private static <T extends Item> RegistrySupplier<T> registerItem(String name, Function<Item.Properties, T> constructor) {
         registeredItemCount += 1;
-        return ITEMS.register(name, () -> constructor.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, name))).arch$tab(MetallicsTabs.TAB)));
+        return ITEMS.register(name, () -> constructor.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, name))).arch$tab(MetallicsTabs.TAB)));
     }
 }

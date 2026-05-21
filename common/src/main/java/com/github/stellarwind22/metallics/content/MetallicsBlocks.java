@@ -9,8 +9,8 @@ import com.github.stellarwind22.metallics.util.StrPair;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
@@ -22,7 +22,6 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 import java.util.function.Supplier;
 
@@ -546,8 +545,8 @@ public class MetallicsBlocks {
         ));
 
         //Copper
-        BRUSHING_COPPER_BLOCK = registerBlock("brushing_copper_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_copper_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
-        BRUSHING_COPPER_SLAB = registerBlock("brushing_copper_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_copper_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
+        BRUSHING_COPPER_BLOCK = registerBlock("brushing_copper_block", new MBlock<>(props -> new MBrushingBlock(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_copper_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
+        BRUSHING_COPPER_SLAB = registerBlock("brushing_copper_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_copper_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
 
         COPPER_LADDER = registerBlock("copper_ladder", new MBlock<>(props -> new MWeatheringLadderBlock(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
         EXPOSED_COPPER_LADDER = registerBlock("exposed_copper_ladder", new MBlock<>(props -> new MWeatheringLadderBlock(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
@@ -691,8 +690,8 @@ public class MetallicsBlocks {
         //Iron
         IRON_PLATED_BLOCK = registerBlock("iron_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         IRON_SLAB = registerBlock("iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
-        BRUSHING_IRON_BLOCK = registerBlock("brushing_iron_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_iron_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(IRN_GRT).getCopy())));
-        BRUSHING_IRON_SLAB = registerBlock("brushing_iron_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_iron_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
+        BRUSHING_IRON_BLOCK = registerBlock("brushing_iron_block", new MBlock<>(props -> new MBrushingBlock(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_iron_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        BRUSHING_IRON_SLAB = registerBlock("brushing_iron_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_iron_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
 
         BRUSHED_IRON_BLOCK = registerBlock("brushed_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         BRUSHED_IRON_SLAB = registerBlock("brushed_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
@@ -729,8 +728,8 @@ public class MetallicsBlocks {
         BLUE_IRON_BLOCK = registerBlock("blue_iron_block",  new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_PLATED_BLOCK = registerBlock("blue_iron_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_SLAB = registerBlock("blue_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
-        BRUSHING_BLUE_IRON_BLOCK = registerBlock("brushing_blue_iron_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_blue_iron_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(IRN_GRT).getCopy())));
-        BRUSHING_BLUE_IRON_SLAB = registerBlock("brushing_blue_iron_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_blue_iron_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
+        BRUSHING_BLUE_IRON_BLOCK = registerBlock("brushing_blue_iron_block", new MBlock<>(props -> new MBrushingBlock(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_blue_iron_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        BRUSHING_BLUE_IRON_SLAB = registerBlock("brushing_blue_iron_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_blue_iron_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
         BRUSHED_BLUE_IRON_BLOCK = registerBlock("brushed_blue_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         BRUSHED_BLUE_IRON_SLAB = registerBlock("brushed_blue_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
         CUT_BLUE_IRON_BLOCK = registerBlock("cut_blue_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
@@ -765,8 +764,8 @@ public class MetallicsBlocks {
         GOLD_BARS = registerBlock("gold_bars", new MBlock<>(IronBarsBlock::new, Optional.of(barsProps.strength(GLD_STR).getCopy())));
         GOLD_PLATED_BLOCK = registerBlock("gold_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
         GOLD_SLAB = registerBlock("gold_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(GLD_GRT).getCopy())));
-        BRUSHING_GOLD_BLOCK = registerBlock("brushing_gold_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_gold_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(GLD_GRT).getCopy())));
-        BRUSHING_GOLD_SLAB = registerBlock("brushing_gold_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_gold_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(GLD_GRT).getCopy())));
+        BRUSHING_GOLD_BLOCK = registerBlock("brushing_gold_block", new MBlock<>(props -> new MBrushingBlock(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_gold_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(GLD_GRT).getCopy())));
+        BRUSHING_GOLD_SLAB = registerBlock("brushing_gold_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_gold_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(GLD_GRT).getCopy())));
         BRUSHED_GOLD_BLOCK = registerBlock("brushed_gold_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
         BRUSHED_GOLD_SLAB = registerBlock("brushed_gold_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(GLD_GRT).getCopy())));
         CUT_GOLD_BLOCK = registerBlock("cut_gold_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
@@ -802,8 +801,8 @@ public class MetallicsBlocks {
         NETHERITE_BARS = registerBlock("netherite_bars", new MBlock<>(IronBarsBlock::new, Optional.of(barsProps.strength(NTR_STR).getCopy())));
         NETHERITE_PLATED_BLOCK = registerBlock("netherite_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
         NETHERITE_SLAB = registerBlock("netherite_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(NTR_GRT).getCopy())));
-        BRUSHING_NETHERITE_BLOCK = registerBlock("brushing_netherite_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_netherite_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(NTR_GRT).getCopy())));
-        BRUSHING_NETHERITE_SLAB = registerBlock("brushing_netherite_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_netherite_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(NTR_GRT).getCopy())));
+        BRUSHING_NETHERITE_BLOCK = registerBlock("brushing_netherite_block", new MBlock<>(props -> new MBrushingBlock(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_netherite_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(NTR_GRT).getCopy())));
+        BRUSHING_NETHERITE_SLAB = registerBlock("brushing_netherite_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_netherite_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(NTR_GRT).getCopy())));
         BRUSHED_NETHERITE_BLOCK = registerBlock("brushed_netherite_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
         BRUSHED_NETHERITE_SLAB = registerBlock("brushed_netherite_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(NTR_GRT).getCopy())));
         CUT_NETHERITE_BLOCK = registerBlock("cut_netherite_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
@@ -1038,7 +1037,7 @@ public class MetallicsBlocks {
     }
 
     private static <T extends Block> RegistrySupplier<T> registerBlock(String name, MBlock<T> mBlock) {
-        ResourceKey<Block> key = ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, name));
+        ResourceKey<Block> key = ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, name));
         if(mBlock.feedInProps().isPresent()) {
             registeredBlockCount += 1;
             return BLOCKS.register(name, () -> mBlock.blockConstructor().apply(mBlock.feedInProps().orElseThrow().setId(key)));

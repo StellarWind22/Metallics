@@ -15,8 +15,8 @@ import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -93,20 +93,20 @@ public final class MetallicsFabric implements ModInitializer {
         BiomeModifications.addFeature(
                 BiomeSelectors.tag(TagKey.create(
                         Registries.BIOME,
-                        ResourceLocation.fromNamespaceAndPath(
+                        Identifier.fromNamespaceAndPath(
                                 Metallics.MOD_ID,
                                 "nitre_ore_biomes"
                         )
                 )),
                 GenerationStep.Decoration.UNDERGROUND_ORES,
-                ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "ore_vitralite"))
+                ResourceKey.create(Registries.PLACED_FEATURE, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "ore_vitralite"))
         );
     }
 
     public static <E extends BlockEntity> Supplier<BlockEntityType<E>> registerBlockEntity(String name, FabricBlockEntityTypeBuilder.Factory<? extends E> factory, Block... blocks) {
         var type = Registry.register(
                 BuiltInRegistries.BLOCK_ENTITY_TYPE,
-                ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, name),
+                Identifier.fromNamespaceAndPath(Metallics.MOD_ID, name),
                 FabricBlockEntityTypeBuilder.<E>create(factory, blocks).build()
         );
         return () -> type;

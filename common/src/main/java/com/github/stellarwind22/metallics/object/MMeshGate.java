@@ -5,7 +5,6 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import java.util.Map;
 import java.util.function.BiConsumer;
-import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
@@ -13,6 +12,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
+import net.minecraft.util.Util;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -41,6 +41,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.NonNull;
 
 public class MMeshGate extends HorizontalDirectionalBlock {
 
@@ -69,12 +70,12 @@ public class MMeshGate extends HorizontalDirectionalBlock {
         this.registerDefaultState(this.stateDefinition.any().setValue(OPEN, false).setValue(POWERED, false).setValue(IN_WALL, false));
     }
 
-    public @NotNull VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
+    public @NotNull VoxelShape getShape(BlockState blockState, @NonNull BlockGetter blockGetter, @NonNull BlockPos blockPos, @NonNull CollisionContext collisionContext) {
         Direction.Axis axis = blockState.getValue(FACING).getAxis();
         return (blockState.getValue(IN_WALL) ? SHAPES_WALL : SHAPES).get(axis);
     }
 
-    public @NotNull BlockState updateShape(BlockState blockState, LevelReader levelReader, ScheduledTickAccess scheduledTickAccess, BlockPos blockPos, Direction direction, BlockPos blockPos2, BlockState blockState2, RandomSource randomSource) {
+    public @NotNull BlockState updateShape(BlockState blockState, @NonNull LevelReader levelReader, @NonNull ScheduledTickAccess scheduledTickAccess, @NonNull BlockPos blockPos, Direction direction, @NonNull BlockPos blockPos2, @NonNull BlockState blockState2, @NonNull RandomSource randomSource) {
         Direction.Axis axis = direction.getAxis();
         if (blockState.getValue(FACING).getClockWise().getAxis() != axis) {
             return super.updateShape(blockState, levelReader, scheduledTickAccess, blockPos, direction, blockPos2, blockState2, randomSource);
@@ -84,12 +85,12 @@ public class MMeshGate extends HorizontalDirectionalBlock {
         }
     }
 
-    public @NotNull VoxelShape getBlockSupportShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
+    public @NotNull VoxelShape getBlockSupportShape(BlockState blockState, @NonNull BlockGetter blockGetter, @NonNull BlockPos blockPos) {
         Direction.Axis axis = blockState.getValue(FACING).getAxis();
         return blockState.getValue(OPEN) ? Shapes.empty() : SHAPE_SUPPORT.get(axis);
     }
 
-    public @NotNull VoxelShape getCollisionShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
+    public @NotNull VoxelShape getCollisionShape(BlockState blockState, @NonNull BlockGetter blockGetter, @NonNull BlockPos blockPos, @NonNull CollisionContext collisionContext) {
         Direction.Axis axis = blockState.getValue(FACING).getAxis();
         return blockState.getValue(OPEN) ? Shapes.empty() : SHAPE_COLLISION.get(axis);
     }
@@ -99,7 +100,7 @@ public class MMeshGate extends HorizontalDirectionalBlock {
         return (blockState.getValue(IN_WALL) ? SHAPE_OCCLUSION_WALL : SHAPE_OCCLUSION).get(axis);
     }
 
-    public boolean isPathfindable(BlockState blockState, PathComputationType pathComputationType) {
+    public boolean isPathfindable(@NonNull BlockState blockState, PathComputationType pathComputationType) {
         switch (pathComputationType) {
             case LAND, AIR -> {
                 return blockState.getValue(OPEN);
@@ -128,7 +129,7 @@ public class MMeshGate extends HorizontalDirectionalBlock {
         return blockState.is(BlockTags.WALLS);
     }
 
-    public @NotNull InteractionResult useWithoutItem(BlockState blockState, Level level, BlockPos blockPos, Player player, BlockHitResult blockHitResult) {
+    public @NotNull InteractionResult useWithoutItem(BlockState blockState, @NonNull Level level, @NonNull BlockPos blockPos, @NonNull Player player, @NonNull BlockHitResult blockHitResult) {
         if (blockState.getValue(OPEN)) {
             blockState = blockState.setValue(OPEN, false);
             level.setBlock(blockPos, blockState, 10);
@@ -148,7 +149,7 @@ public class MMeshGate extends HorizontalDirectionalBlock {
         return InteractionResult.SUCCESS;
     }
 
-    public void onExplosionHit(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, Explosion explosion, BiConsumer<ItemStack, BlockPos> biConsumer) {
+    public void onExplosionHit(@NonNull BlockState blockState, @NonNull ServerLevel serverLevel, @NonNull BlockPos blockPos, Explosion explosion, @NonNull BiConsumer<ItemStack, BlockPos> biConsumer) {
         if (explosion.canTriggerBlocks() && !(Boolean)blockState.getValue(POWERED)) {
             boolean bl = blockState.getValue(OPEN);
             serverLevel.setBlockAndUpdate(blockPos, blockState.setValue(OPEN, !bl));
@@ -159,7 +160,7 @@ public class MMeshGate extends HorizontalDirectionalBlock {
         super.onExplosionHit(blockState, serverLevel, blockPos, explosion, biConsumer);
     }
 
-    public void neighborChanged(BlockState blockState, Level level, BlockPos blockPos, Block block, @Nullable Orientation orientation, boolean bl) {
+    public void neighborChanged(@NonNull BlockState blockState, Level level, @NonNull BlockPos blockPos, @NonNull Block block, @Nullable Orientation orientation, boolean bl) {
         if (!level.isClientSide()) {
             boolean bl2 = level.hasNeighborSignal(blockPos);
             if (blockState.getValue(POWERED) != bl2) {

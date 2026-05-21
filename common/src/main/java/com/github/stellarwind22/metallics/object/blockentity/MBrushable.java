@@ -3,7 +3,7 @@ package com.github.stellarwind22.metallics.object.blockentity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.RandomSource;
@@ -21,7 +21,7 @@ public interface MBrushable {
 
     Block getBrushableBlock();
 
-    ResourceLocation getTurnsInto();
+    Identifier getTurnsInto();
 
     SoundEvent brushSound();
 

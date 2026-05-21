@@ -8,7 +8,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.FluidTags;
@@ -34,6 +34,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.NonNull;
 
 import java.util.Objects;
 
@@ -42,14 +43,14 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable, Simple
     public static final MapCodec<MBrushingSlab> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(
             ExtraCodecs.POSITIVE_INT.fieldOf("tick_delay").forGetter(MBrushingSlab::tickDelay),
             ExtraCodecs.POSITIVE_INT.fieldOf("brushes_to_complete").forGetter(MBrushingSlab::brushesToComplete),
-            ResourceLocation.CODEC.fieldOf("turns_into").forGetter(MBrushingSlab::getTurnsInto),
+            Identifier.CODEC.fieldOf("turns_into").forGetter(MBrushingSlab::getTurnsInto),
             BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_sound").forGetter(MBrushingSlab::brushSound),
             BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_completed_sound").forGetter(MBrushingSlab::brushCompletedSound),
             propertiesCodec()).apply(instance, MBrushingSlab::new));
 
     private final int tickDelay;
     private final int brushesToComplete;
-    private final ResourceLocation turnsInto;
+    private final Identifier turnsInto;
     private final SoundEvent brushSound;
     private final SoundEvent brushCompletedSound;
 
@@ -60,7 +61,7 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable, Simple
 
     private static final IntegerProperty DUSTED;
 
-    public MBrushingSlab(int tickDelay, int brushesToComplete, ResourceLocation turnsInto, SoundEvent brushSound, SoundEvent brushCompletedSound, Properties properties) {
+    public MBrushingSlab(int tickDelay, int brushesToComplete, Identifier turnsInto, SoundEvent brushSound, SoundEvent brushCompletedSound, Properties properties) {
         super(properties);
         this.tickDelay = tickDelay;
         this.brushesToComplete = brushesToComplete;
@@ -91,7 +92,7 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable, Simple
     }
 
     @Override
-    public ResourceLocation getTurnsInto() {
+    public Identifier getTurnsInto() {
         return this.turnsInto;
     }
 
@@ -111,12 +112,12 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable, Simple
     }
 
     @Override
-    public void animateTick(BlockState blockState, Level level, BlockPos blockPos, RandomSource randomSource) {
+    public void animateTick(@NonNull BlockState blockState, @NonNull Level level, @NonNull BlockPos blockPos, @NonNull RandomSource randomSource) {
         this.animateTickBrushable(blockState, level, blockPos, randomSource);
     }
 
     @Override
-    public void onPlace(BlockState blockState, Level level, BlockPos blockPos, BlockState blockState2, boolean bl) {
+    public void onPlace(@NonNull BlockState blockState, @NonNull Level level, @NonNull BlockPos blockPos, @NonNull BlockState blockState2, boolean bl) {
         this.onPlaceBrushable(level, blockPos);
     }
 
@@ -126,12 +127,12 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable, Simple
     }
 
     @Override
-    public @Nullable BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public @Nullable BlockEntity newBlockEntity(@NonNull BlockPos blockPos, @NonNull BlockState blockState) {
         return new MBrushingBlockEntity(blockPos, blockState);
     }
 
     @Override
-    public void tick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
+    public void tick(@NonNull BlockState blockState, @NonNull ServerLevel serverLevel, @NonNull BlockPos blockPos, @NonNull RandomSource randomSource) {
         this.tickBrushable(serverLevel, blockPos);
     }
 
@@ -139,7 +140,7 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable, Simple
         return blockState.getValue(TYPE) != SlabType.DOUBLE;
     }
 
-    protected @NotNull VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
+    protected @NotNull VoxelShape getShape(BlockState blockState, @NonNull BlockGetter blockGetter, @NonNull BlockPos blockPos, @NonNull CollisionContext collisionContext) {
         VoxelShape var10000;
         switch (blockState.getValue(TYPE)) {
             case TOP -> var10000 = SHAPE_TOP;
@@ -190,15 +191,15 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable, Simple
     }
 
     @Override
-    public boolean placeLiquid(LevelAccessor levelAccessor, BlockPos blockPos, BlockState blockState, FluidState fluidState) {
+    public boolean placeLiquid(@NonNull LevelAccessor levelAccessor, @NonNull BlockPos blockPos, BlockState blockState, @NonNull FluidState fluidState) {
         return blockState.getValue(TYPE) != SlabType.DOUBLE && SimpleWaterloggedBlock.super.placeLiquid(levelAccessor, blockPos, blockState, fluidState);
     }
 
-    public boolean canPlaceLiquid(@Nullable LivingEntity livingEntity, BlockGetter blockGetter, BlockPos blockPos, BlockState blockState, Fluid fluid) {
+    public boolean canPlaceLiquid(@Nullable LivingEntity livingEntity, @NonNull BlockGetter blockGetter, @NonNull BlockPos blockPos, BlockState blockState, @NonNull Fluid fluid) {
         return blockState.getValue(TYPE) != SlabType.DOUBLE && SimpleWaterloggedBlock.super.canPlaceLiquid(livingEntity, blockGetter, blockPos, blockState, fluid);
     }
 
-    protected @NotNull BlockState updateShape(BlockState blockState, LevelReader levelReader, ScheduledTickAccess scheduledTickAccess, BlockPos blockPos, Direction direction, BlockPos blockPos2, BlockState blockState2, RandomSource randomSource) {
+    protected @NotNull BlockState updateShape(BlockState blockState, @NonNull LevelReader levelReader, @NonNull ScheduledTickAccess scheduledTickAccess, @NonNull BlockPos blockPos, @NonNull Direction direction, @NonNull BlockPos blockPos2, @NonNull BlockState blockState2, @NonNull RandomSource randomSource) {
         if (blockState.getValue(WATERLOGGED)) {
             scheduledTickAccess.scheduleTick(blockPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelReader));
         }
@@ -206,7 +207,7 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable, Simple
         return super.updateShape(blockState, levelReader, scheduledTickAccess, blockPos, direction, blockPos2, blockState2, randomSource);
     }
 
-    protected boolean isPathfindable(BlockState blockState, PathComputationType pathComputationType) {
+    protected boolean isPathfindable(@NonNull BlockState blockState, @NonNull PathComputationType pathComputationType) {
         if (Objects.requireNonNull(pathComputationType) == PathComputationType.WATER) {
             return blockState.getFluidState().is(FluidTags.WATER);
         }
