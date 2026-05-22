@@ -14,7 +14,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.ExtraCodecs;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.*;
@@ -55,8 +55,8 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable, Simple
 
     public static final EnumProperty<SlabType> TYPE;
     public static final BooleanProperty WATERLOGGED;
-    private static final VoxelShape SHAPE_BOTTOM;
-    private static final VoxelShape SHAPE_TOP;
+    protected static final VoxelShape BOTTOM_AABB;
+    protected static final VoxelShape TOP_AABB;
 
     private static final IntegerProperty DUSTED;
 
@@ -140,15 +140,18 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable, Simple
     }
 
     protected @NotNull VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
-        VoxelShape var10000;
-        switch (blockState.getValue(TYPE)) {
-            case TOP -> var10000 = SHAPE_TOP;
-            case BOTTOM -> var10000 = SHAPE_BOTTOM;
-            case DOUBLE -> var10000 = Shapes.block();
-            default -> throw new MatchException(null, null);
+        SlabType slabType = (SlabType)blockState.getValue(TYPE);
+        switch (slabType) {
+            case DOUBLE -> {
+                return Shapes.block();
+            }
+            case TOP -> {
+                return TOP_AABB;
+            }
+            default -> {
+                return BOTTOM_AABB;
+            }
         }
-
-        return var10000;
     }
 
     @Nullable
@@ -194,16 +197,16 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable, Simple
         return blockState.getValue(TYPE) != SlabType.DOUBLE && SimpleWaterloggedBlock.super.placeLiquid(levelAccessor, blockPos, blockState, fluidState);
     }
 
-    public boolean canPlaceLiquid(@Nullable LivingEntity livingEntity, BlockGetter blockGetter, BlockPos blockPos, BlockState blockState, Fluid fluid) {
-        return blockState.getValue(TYPE) != SlabType.DOUBLE && SimpleWaterloggedBlock.super.canPlaceLiquid(livingEntity, blockGetter, blockPos, blockState, fluid);
+    public boolean canPlaceLiquid(@Nullable Player player, BlockGetter blockGetter, BlockPos blockPos, BlockState blockState, Fluid fluid) {
+        return blockState.getValue(TYPE) != SlabType.DOUBLE && SimpleWaterloggedBlock.super.canPlaceLiquid(player, blockGetter, blockPos, blockState, fluid);
     }
 
-    protected @NotNull BlockState updateShape(BlockState blockState, LevelReader levelReader, ScheduledTickAccess scheduledTickAccess, BlockPos blockPos, Direction direction, BlockPos blockPos2, BlockState blockState2, RandomSource randomSource) {
+    protected @NotNull BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState2, LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos2) {
         if (blockState.getValue(WATERLOGGED)) {
-            scheduledTickAccess.scheduleTick(blockPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelReader));
+            levelAccessor.scheduleTick(blockPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelAccessor));
         }
 
-        return super.updateShape(blockState, levelReader, scheduledTickAccess, blockPos, direction, blockPos2, blockState2, randomSource);
+        return super.updateShape(blockState, direction, blockState2, levelAccessor, blockPos, blockPos2);
     }
 
     protected boolean isPathfindable(BlockState blockState, PathComputationType pathComputationType) {
@@ -216,8 +219,8 @@ public class MBrushingSlab extends BaseEntityBlock implements MBrushable, Simple
     static {
         TYPE = BlockStateProperties.SLAB_TYPE;
         WATERLOGGED = BlockStateProperties.WATERLOGGED;
-        SHAPE_BOTTOM = Block.column(16.0F, 0.0F, 8.0F);
-        SHAPE_TOP = Block.column(16.0F, 8.0F, 16.0F);
+        BOTTOM_AABB = Block.box(0.0F, 0.0F, 0.0F, 16.0F, 8.0F, 16.0F);
+        TOP_AABB = Block.box(0.0F, 8.0F, 0.0F, 16.0F, 16.0F, 16.0F);
         DUSTED = BlockStateProperties.DUSTED;
     }
 }

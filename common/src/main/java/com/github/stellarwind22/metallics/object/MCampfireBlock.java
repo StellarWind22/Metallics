@@ -1,6 +1,5 @@
 package com.github.stellarwind22.metallics.object;
 
-import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
 import com.github.stellarwind22.metallics.object.blockentity.MCampfireBlockEntity;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
@@ -18,28 +17,22 @@ import net.minecraft.stats.Stats;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.InsideBlockEffectApplier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.item.crafting.CampfireCookingRecipe;
-import net.minecraft.world.item.crafting.RecipeManager;
-import net.minecraft.world.item.crafting.RecipePropertySet;
-import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.item.crafting.SingleRecipeInput;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.ScheduledTickAccess;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.CampfireBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -58,7 +51,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-@SuppressWarnings("deprecation")
+import java.util.Optional;
+
 public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterloggedBlock {
 
     protected static final MapCodec<SimpleParticleType> PARTICLE_OPTIONS_FIELD = BuiltInRegistries.PARTICLE_TYPE.byNameCodec().comapFlatMap((particleType) -> {
@@ -79,10 +73,10 @@ public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterlogged
     public static final BooleanProperty SIGNAL_FIRE;
     public static final BooleanProperty WATERLOGGED;
     public static final EnumProperty<Direction> FACING;
-    private static final VoxelShape SHAPE;
-    private static final VoxelShape SHAPE_VIRTUAL_POST;
     private final int fireDamage;
     private final SimpleParticleType campfireParticle;
+    protected static final VoxelShape SHAPE = Block.box(0.0F, 0.0F, 0.0F, 16.0F, 7.0F, 16.0F);
+    private static final VoxelShape VIRTUAL_FENCE_POST;
 
     public @NotNull MapCodec<MCampfireBlock> codec() {
         return CODEC;
@@ -95,31 +89,31 @@ public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterlogged
         this.registerDefaultState(this.stateDefinition.any().setValue(LIT, true).setValue(SIGNAL_FIRE, false).setValue(WATERLOGGED, false).setValue(FACING, Direction.NORTH));
     }
 
-    protected @NotNull InteractionResult useItemOn(ItemStack itemStack, BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+
+    protected @NotNull ItemInteractionResult useItemOn(ItemStack itemStack, BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
         BlockEntity blockEntity = level.getBlockEntity(blockPos);
-        if (blockEntity instanceof MCampfireBlockEntity mCampfireBlockEntity) {
+        if (blockEntity instanceof CampfireBlockEntity campfireBlockEntity) {
             ItemStack itemStack2 = player.getItemInHand(interactionHand);
-            if (level.recipeAccess().propertySet(RecipePropertySet.CAMPFIRE_INPUT).test(itemStack2)) {
-                if (level instanceof ServerLevel serverLevel) {
-                    if (mCampfireBlockEntity.placeFood(serverLevel, player, itemStack2)) {
-                        player.awardStat(Stats.INTERACT_WITH_CAMPFIRE);
-                        return InteractionResult.SUCCESS_SERVER;
-                    }
+            Optional<RecipeHolder<CampfireCookingRecipe>> optional = campfireBlockEntity.getCookableRecipe(itemStack2);
+            if (optional.isPresent()) {
+                if (!level.isClientSide && campfireBlockEntity.placeFood(player, itemStack2, ((CampfireCookingRecipe)((RecipeHolder<?>)optional.get()).value()).getCookingTime())) {
+                    player.awardStat(Stats.INTERACT_WITH_CAMPFIRE);
+                    return ItemInteractionResult.SUCCESS;
                 }
 
-                return InteractionResult.CONSUME;
+                return ItemInteractionResult.CONSUME;
             }
         }
 
-        return InteractionResult.TRY_WITH_EMPTY_HAND;
+        return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
     }
 
-    protected void entityInside(BlockState blockState, Level level, BlockPos blockPos, Entity entity, InsideBlockEffectApplier insideBlockEffectApplier, boolean bl) {
+    protected void entityInside(BlockState blockState, Level level, BlockPos blockPos, Entity entity) {
         if (blockState.getValue(LIT) && entity instanceof LivingEntity) {
             entity.hurt(level.damageSources().campfire(), (float)this.fireDamage);
         }
 
-        super.entityInside(blockState, level, blockPos, entity, insideBlockEffectApplier, bl);
+        super.entityInside(blockState, level, blockPos, entity);
     }
 
     @Nullable
@@ -130,12 +124,12 @@ public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterlogged
         return this.defaultBlockState().setValue(WATERLOGGED, bl).setValue(SIGNAL_FIRE, this.isSmokeSource(levelAccessor.getBlockState(blockPos.below()))).setValue(LIT, !bl).setValue(FACING, blockPlaceContext.getHorizontalDirection());
     }
 
-    protected @NotNull BlockState updateShape(BlockState blockState, LevelReader levelReader, ScheduledTickAccess scheduledTickAccess, BlockPos blockPos, Direction direction, BlockPos blockPos2, BlockState blockState2, RandomSource randomSource) {
+    protected @NotNull BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState2, LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos2) {
         if (blockState.getValue(WATERLOGGED)) {
-            scheduledTickAccess.scheduleTick(blockPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelReader));
+            levelAccessor.scheduleTick(blockPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelAccessor));
         }
 
-        return direction == Direction.DOWN ? blockState.setValue(SIGNAL_FIRE, this.isSmokeSource(blockState2)) : super.updateShape(blockState, levelReader, scheduledTickAccess, blockPos, direction, blockPos2, blockState2, randomSource);
+        return direction == Direction.DOWN ? blockState.setValue(SIGNAL_FIRE, this.isSmokeSource(blockState2)) : super.updateShape(blockState, direction, blockState2, levelAccessor, blockPos, blockPos2);
     }
 
     private boolean isSmokeSource(BlockState blockState) {
@@ -218,7 +212,7 @@ public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterlogged
                 return true;
             }
 
-            boolean bl = Shapes.joinIsNotEmpty(SHAPE_VIRTUAL_POST, blockState.getCollisionShape(level, blockPos, CollisionContext.empty()), BooleanOp.AND);
+            boolean bl = Shapes.joinIsNotEmpty(VIRTUAL_FENCE_POST, blockState.getCollisionShape(level, blockPos, CollisionContext.empty()), BooleanOp.AND);
             if (bl) {
                 BlockState blockState2 = level.getBlockState(blockPos2.below());
                 return isLitCampfire(blockState2);
@@ -253,15 +247,10 @@ public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterlogged
 
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState blockState, BlockEntityType<T> blockEntityType) {
-        if (level instanceof ServerLevel serverLevel) {
-            if (blockState.getValue(LIT)) {
-                RecipeManager.CachedCheck<SingleRecipeInput, CampfireCookingRecipe> cachedCheck = RecipeManager.createCheck(RecipeType.CAMPFIRE_COOKING);
-                return createTickerHelper(blockEntityType, MetallicsBlockEntityTypes.CAMPFIRE.get(), (levelx, blockPos, blockStatex, mCampfireBlockEntity) -> MCampfireBlockEntity.cookTick(serverLevel, blockPos, blockStatex, mCampfireBlockEntity, cachedCheck));
-            } else {
-                return createTickerHelper(blockEntityType, MetallicsBlockEntityTypes.CAMPFIRE.get(), MCampfireBlockEntity::cooldownTick);
-            }
+        if (level.isClientSide) {
+            return blockState.getValue(LIT) ? createTickerHelper(blockEntityType, BlockEntityType.CAMPFIRE, CampfireBlockEntity::particleTick) : null;
         } else {
-            return blockState.getValue(LIT) ? createTickerHelper(blockEntityType, MetallicsBlockEntityTypes.CAMPFIRE.get(), MCampfireBlockEntity::particleTick) : null;
+            return blockState.getValue(LIT) ? createTickerHelper(blockEntityType, BlockEntityType.CAMPFIRE, CampfireBlockEntity::cookTick) : createTickerHelper(blockEntityType, BlockEntityType.CAMPFIRE, CampfireBlockEntity::cooldownTick);
         }
     }
 
@@ -278,7 +267,6 @@ public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterlogged
         SIGNAL_FIRE = BlockStateProperties.SIGNAL_FIRE;
         WATERLOGGED = BlockStateProperties.WATERLOGGED;
         FACING = BlockStateProperties.HORIZONTAL_FACING;
-        SHAPE = Block.column(16.0F, 0.0F, 7.0F);
-        SHAPE_VIRTUAL_POST = Block.column(4.0F, 0.0F, 16.0F);
+        VIRTUAL_FENCE_POST = Block.box(6.0F, 0.0F, 6.0F, 10.0F, 16.0F, 10.0F);
     }
 }
