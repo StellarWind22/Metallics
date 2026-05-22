@@ -8,6 +8,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.ExtraCodecs;
@@ -42,7 +43,7 @@ public class MBrushingBlock extends BaseEntityBlock implements MBrushable {
 
     private static final IntegerProperty DUSTED;
 
-    public MBrushingBlock(int tickDelay, int brushesToComplete, Identifier turnsInto, SoundEvent brushSound, SoundEvent brushCompletedSound, Properties properties) {
+    public MBrushingBlock(int tickDelay, int brushesToComplete, ResourceLocation turnsInto, SoundEvent brushSound, SoundEvent brushCompletedSound, Properties properties) {
         super(properties);
         this.tickDelay = tickDelay;
         this.brushesToComplete = brushesToComplete;

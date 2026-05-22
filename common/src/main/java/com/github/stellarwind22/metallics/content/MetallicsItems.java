@@ -3,14 +3,15 @@ package com.github.stellarwind22.metallics.content;
 import com.github.stellarwind22.metallics.init.Metallics;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.component.ItemContainerContents;
-import net.minecraft.world.item.equipment.trim.TrimMaterial;
 
 import java.util.function.Function;
 
@@ -317,9 +318,9 @@ public class MetallicsItems {
 
         ITEMS = DeferredRegister.create(Metallics.MOD_ID, Registries.ITEM);
 
-        EXPOSED_COPPER_TRIM = ResourceKey.create(Registries.TRIM_MATERIAL, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "exposed_copper"));
-        WEATHERED_COPPER_TRIM = ResourceKey.create(Registries.TRIM_MATERIAL, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "weathered_copper"));
-        OXIDIZED_COPPER_TRIM = ResourceKey.create(Registries.TRIM_MATERIAL, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "oxidized_copper"));
+        EXPOSED_COPPER_TRIM = ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "exposed_copper"));
+        WEATHERED_COPPER_TRIM = ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "weathered_copper"));
+        OXIDIZED_COPPER_TRIM = ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "oxidized_copper"));
 
         //Register stuff here ▼▼▼
         VITRALITE = registerItem("vitralite", Item::new);
@@ -346,7 +347,7 @@ public class MetallicsItems {
         COPPER_TINTED_GLASS = registerItem("copper_tinted_glass", props -> new BlockItem(MetallicsBlocks.COPPER_TINTED_GLASS.get(), props));
 
         EXPOSED_COPPER_NUGGET = registerItem("exposed_copper_nugget", Item::new);
-        EXPOSED_COPPER_INGOT = registerItem("exposed_copper_ingot", props -> new Item(props.trimMaterial(EXPOSED_COPPER_TRIM)));
+        EXPOSED_COPPER_INGOT = registerItem("exposed_copper_ingot", props -> new Item(props)); //TODO: FIX trim materials for 1.21.1
         EXPOSED_COPPER_LADDER = registerItem("exposed_copper_ladder", props -> new BlockItem(MetallicsBlocks.EXPOSED_COPPER_LADDER.get(), props));
         EXPOSED_BRUSHED_COPPER_BLOCK = registerItem("exposed_brushed_copper_block", props -> new BlockItem(MetallicsBlocks.EXPOSED_BRUSHED_COPPER_BLOCK.get(), props));
         EXPOSED_BRUSHED_COPPER_SLAB = registerItem("exposed_brushed_copper_slab", props -> new BlockItem(MetallicsBlocks.EXPOSED_BRUSHED_COPPER_SLAB.get(), props));
@@ -364,7 +365,7 @@ public class MetallicsItems {
         EXPOSED_COPPER_TINTED_GLASS = registerItem("exposed_copper_tinted_glass", props -> new BlockItem(MetallicsBlocks.EXPOSED_COPPER_TINTED_GLASS.get(), props));
 
         WEATHERED_COPPER_NUGGET = registerItem("weathered_copper_nugget", Item::new);
-        WEATHERED_COPPER_INGOT = registerItem("weathered_copper_ingot", props -> new Item(props.trimMaterial(WEATHERED_COPPER_TRIM)));
+        WEATHERED_COPPER_INGOT = registerItem("weathered_copper_ingot", props -> new Item(props)); //TODO: FIX trim materials for 1.21.1
         WEATHERED_COPPER_LADDER = registerItem("weathered_copper_ladder", props -> new BlockItem(MetallicsBlocks.WEATHERED_COPPER_LADDER.get(), props));
         WEATHERED_BRUSHED_COPPER_BLOCK= registerItem("weathered_brushed_copper_block", props -> new BlockItem(MetallicsBlocks.WEATHERED_BRUSHED_COPPER_BLOCK.get(), props));
         WEATHERED_BRUSHED_COPPER_SLAB= registerItem("weathered_brushed_copper_slab", props -> new BlockItem(MetallicsBlocks.WEATHERED_BRUSHED_COPPER_SLAB.get(), props));
@@ -382,7 +383,7 @@ public class MetallicsItems {
         WEATHERED_COPPER_TINTED_GLASS = registerItem("weathered_copper_tinted_glass", props -> new BlockItem(MetallicsBlocks.WEATHERED_COPPER_TINTED_GLASS.get(), props));
 
         OXIDIZED_COPPER_NUGGET = registerItem("oxidized_copper_nugget", Item::new);
-        OXIDIZED_COPPER_INGOT = registerItem("oxidized_copper_ingot", props -> new Item(props.trimMaterial(OXIDIZED_COPPER_TRIM)));
+        OXIDIZED_COPPER_INGOT = registerItem("oxidized_copper_ingot", props -> new Item(props)); //TODO: FIX trim materials for 1.21.1
         OXIDIZED_COPPER_LADDER = registerItem("oxidized_copper_ladder", props -> new BlockItem(MetallicsBlocks.OXIDIZED_COPPER_LADDER.get(), props));
         OXIDIZED_BRUSHED_COPPER_BLOCK = registerItem("oxidized_brushed_copper_block", props -> new BlockItem(MetallicsBlocks.WEATHERED_OXIDIZED_COPPER_BLOCK.get(), props));
         OXIDIZED_BRUSHED_COPPER_SLAB= registerItem("oxidized_brushed_copper_slab", props -> new BlockItem(MetallicsBlocks.WEATHERED_OXIDIZED_COPPER_SLAB.get(), props));
@@ -491,7 +492,7 @@ public class MetallicsItems {
         IRON_TINTED_GLASS = registerItem("iron_tinted_glass", props -> new BlockItem(MetallicsBlocks.IRON_TINTED_GLASS.get(), props));
 
         IRON_SALT = registerItem("iron_salt", Item::new);
-        FERROUS_TORCH = registerItem("ferrous_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.FERROUS_TORCH.get(), MetallicsBlocks.FERROUS_WALL_TORCH.get(), Direction.DOWN, props));
+        FERROUS_TORCH = registerItem("ferrous_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.FERROUS_TORCH.get(), MetallicsBlocks.FERROUS_WALL_TORCH.get(), props, Direction.DOWN));
         FERROUS_CAMPFIRE = registerItem("ferrous_campfire", props -> new BlockItem(MetallicsBlocks.FERROUS_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
         FERROUS_JACK_O_LANTERN = registerItem("ferrous_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.FERROUS_JACK_O_LANTERN.get(), props));
         FERROUS_LANTERN = registerItem("ferrous_lantern", props -> new BlockItem(MetallicsBlocks.FERROUS_LANTERN.get(), props));
@@ -529,7 +530,7 @@ public class MetallicsItems {
         BLUE_IRON_TINTED_GLASS = registerItem("blue_iron_tinted_glass", props -> new BlockItem(MetallicsBlocks.BLUE_IRON_TINTED_GLASS.get(), props));
 
         BLUE_IRON_SALT = registerItem("blue_iron_salt", Item::new);
-        PALE_TORCH = registerItem("pale_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.PALE_TORCH.get(), MetallicsBlocks.PALE_WALL_TORCH.get(), Direction.DOWN, props));
+        PALE_TORCH = registerItem("pale_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.PALE_TORCH.get(), MetallicsBlocks.PALE_WALL_TORCH.get(), props, Direction.DOWN));
         PALE_CAMPFIRE = registerItem("pale_campfire", props -> new BlockItem(MetallicsBlocks.PALE_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
         PALE_JACK_O_LANTERN = registerItem("pale_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.PALE_JACK_O_LANTERN.get(), props));
         PALE_LANTERN = registerItem("pale_lantern", props -> new BlockItem(MetallicsBlocks.PALE_LANTERN.get(), props));
@@ -562,7 +563,7 @@ public class MetallicsItems {
         GOLD_TINTED_GLASS = registerItem("gold_tinted_glass", props -> new BlockItem(MetallicsBlocks.GOLD_TINTED_GLASS.get(), props));
 
         GOLD_SALT = registerItem("gold_salt", Item::new);
-        AZURE_TORCH = registerItem("azure_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.AZURE_TORCH.get(), MetallicsBlocks.AZURE_WALL_TORCH.get(), Direction.DOWN, props));
+        AZURE_TORCH = registerItem("azure_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.AZURE_TORCH.get(), MetallicsBlocks.AZURE_WALL_TORCH.get(), props, Direction.DOWN));
         AZURE_CAMPFIRE = registerItem("azure_campfire", props -> new BlockItem(MetallicsBlocks.AZURE_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
         AZURE_JACK_O_LANTERN = registerItem("azure_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.AZURE_JACK_O_LANTERN.get(), props));
         AZURE_LANTERN = registerItem("azure_lantern", props -> new BlockItem(MetallicsBlocks.AZURE_LANTERN.get(), props));
@@ -596,7 +597,7 @@ public class MetallicsItems {
         NETHERITE_TINTED_GLASS = registerItem("netherite_tinted_glass", props -> new BlockItem(MetallicsBlocks.NETHERITE_TINTED_GLASS.get(), props));
 
         NETHERITE_SALT = registerItem("netherite_salt", Item::new);
-        INFERNAL_TORCH = registerItem("infernal_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.INFERNAL_TORCH.get(), MetallicsBlocks.INFERNAL_WALL_TORCH.get(), Direction.DOWN, props));
+        INFERNAL_TORCH = registerItem("infernal_torch", props -> new StandingAndWallBlockItem(MetallicsBlocks.INFERNAL_TORCH.get(), MetallicsBlocks.INFERNAL_WALL_TORCH.get(), props, Direction.DOWN));
         INFERNAL_CAMPFIRE = registerItem("infernal_campfire", props -> new BlockItem(MetallicsBlocks.INFERNAL_CAMPFIRE.get(), props.component(DataComponents.CONTAINER, ItemContainerContents.EMPTY)));
         INFERNAL_JACK_O_LANTERN = registerItem("infernal_jack_o_lantern", props -> new BlockItem(MetallicsBlocks.INFERNAL_JACK_O_LANTERN.get(), props));
         INFERNAL_LANTERN = registerItem("infernal_lantern", props -> new BlockItem(MetallicsBlocks.INFERNAL_LANTERN.get(), props.fireResistant()));
@@ -611,6 +612,6 @@ public class MetallicsItems {
     @SuppressWarnings("UnstableApiUsage")
     private static <T extends Item> RegistrySupplier<T> registerItem(String name, Function<Item.Properties, T> constructor) {
         registeredItemCount += 1;
-        return ITEMS.register(name, () -> constructor.apply(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, name))).arch$tab(MetallicsTabs.TAB)));
+        return ITEMS.register(name, () -> constructor.apply(new Item.Properties().arch$tab(MetallicsTabs.TAB)));
     }
 }

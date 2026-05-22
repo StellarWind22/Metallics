@@ -9,8 +9,8 @@ import com.github.stellarwind22.metallics.util.StrPair;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
@@ -166,8 +166,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> WAXED_WEATHERED_BRUSHED_COPPER_BLOCK;
     public static RegistrySupplier<Block> WAXED_WEATHERED_OXIDIZED_COPPER_BLOCK;
 
-    public static WeatheringCopperBlocks BRUSHED_COPPER_BLOCKS;
-
     public static RegistrySupplier<WeatheringCopperSlabBlock> BRUSHED_COPPER_SLAB;
     public static RegistrySupplier<WeatheringCopperSlabBlock> EXPOSED_BRUSHED_COPPER_SLAB;
     public static RegistrySupplier<WeatheringCopperSlabBlock> WEATHERED_BRUSHED_COPPER_SLAB;
@@ -176,8 +174,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<SlabBlock> WAXED_EXPOSED_BRUSHED_COPPER_SLAB;
     public static RegistrySupplier<SlabBlock> WAXED_WEATHERED_BRUSHED_COPPER_SLAB;
     public static RegistrySupplier<SlabBlock> WAXED_WEATHERED_OXIDIZED_COPPER_SLAB;
-
-    public static WeatheringCopperBlocks BRUSHED_COPPER_SLABS;
 
     public static RegistrySupplier<IronBarsBlock> COPPER_MESH;
     public static RegistrySupplier<IronBarsBlock> EXPOSED_COPPER_MESH;
@@ -188,8 +184,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<IronBarsBlock> WAXED_WEATHERED_COPPER_MESH;
     public static RegistrySupplier<IronBarsBlock> WAXED_OXIDIZED_COPPER_MESH;
 
-    public static WeatheringCopperBlocks COPPER_MESHES;
-
     public static RegistrySupplier<MWeatheringMeshFenceBlock> COPPER_MESH_FENCE;
     public static RegistrySupplier<MWeatheringMeshFenceBlock> EXPOSED_COPPER_MESH_FENCE;
     public static RegistrySupplier<MWeatheringMeshFenceBlock> WEATHERED_COPPER_MESH_FENCE;
@@ -198,8 +192,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<MMeshFenceBlock> WAXED_EXPOSED_COPPER_MESH_FENCE;
     public static RegistrySupplier<MMeshFenceBlock> WAXED_WEATHERED_COPPER_MESH_FENCE;
     public static RegistrySupplier<MMeshFenceBlock> WAXED_OXIDIZED_COPPER_MESH_FENCE;
-
-    public static WeatheringCopperBlocks COPPER_MESH_FENCES;
 
     public static RegistrySupplier<MWeatheringMeshGate> COPPER_MESH_GATE;
     public static RegistrySupplier<MWeatheringMeshGate> EXPOSED_COPPER_MESH_GATE;
@@ -210,8 +202,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<MMeshGate> WAXED_WEATHERED_COPPER_MESH_GATE;
     public static RegistrySupplier<MMeshGate> WAXED_OXIDIZED_COPPER_MESH_GATE;
 
-    public static WeatheringCopperBlocks COPPER_MESH_GATES;
-
     public static RegistrySupplier<LadderBlock> COPPER_LADDER;
     public static RegistrySupplier<LadderBlock> EXPOSED_COPPER_LADDER;
     public static RegistrySupplier<LadderBlock> WEATHERED_COPPER_LADDER;
@@ -220,8 +210,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<LadderBlock> WAXED_EXPOSED_COPPER_LADDER;
     public static RegistrySupplier<LadderBlock> WAXED_WEATHERED_COPPER_LADDER;
     public static RegistrySupplier<LadderBlock> WAXED_OXIDIZED_COPPER_LADDER;
-
-    public static WeatheringCopperBlocks COPPER_LADDERS;
 
     public static RegistrySupplier<WeatheringCopperDoorBlock> COPPER_MESH_DOOR;
     public static RegistrySupplier<WeatheringCopperDoorBlock> EXPOSED_COPPER_MESH_DOOR;
@@ -232,8 +220,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<DoorBlock> WAXED_WEATHERED_COPPER_MESH_DOOR;
     public static RegistrySupplier<DoorBlock> WAXED_OXIDIZED_COPPER_MESH_DOOR;
 
-    public static WeatheringCopperBlocks COPPER_MESH_DOORS;
-
     public static RegistrySupplier<WeatheringCopperTrapDoorBlock> COPPER_MESH_TRAPDOOR;
     public static RegistrySupplier<WeatheringCopperTrapDoorBlock> EXPOSED_COPPER_MESH_TRAPDOOR;
     public static RegistrySupplier<WeatheringCopperTrapDoorBlock> WEATHERED_COPPER_MESH_TRAPDOOR;
@@ -243,8 +229,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<TrapDoorBlock> WAXED_WEATHERED_COPPER_MESH_TRAPDOOR;
     public static RegistrySupplier<TrapDoorBlock> WAXED_OXIDIZED_COPPER_MESH_TRAPDOOR;
 
-    public static WeatheringCopperBlocks COPPER_MESH_TRAPDOORS;
-
     public static RegistrySupplier<Block> COPPER_SLAB;
     public static RegistrySupplier<Block> EXPOSED_COPPER_SLAB;
     public static RegistrySupplier<Block> WEATHERED_COPPER_SLAB;
@@ -253,8 +237,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_SLAB;
     public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_SLAB;
     public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_SLAB;
-
-    public static WeatheringCopperBlocks COPPER_SLABS;
 
     public static RegistrySupplier<MCampfireBlock> COPPER_CAMPFIRE;
     public static RegistrySupplier<Block> COPPER_JACK_O_LANTERN;
@@ -268,8 +250,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_LAMP;
     public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_LAMP;
 
-    public static WeatheringCopperBlocks COPPER_LAMPS;
-
     public static RegistrySupplier<Block> COPPER_BUTTON;
     public static RegistrySupplier<Block> EXPOSED_COPPER_BUTTON;
     public static RegistrySupplier<Block> WEATHERED_COPPER_BUTTON;
@@ -278,8 +258,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_BUTTON;
     public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_BUTTON;
     public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_BUTTON;
-
-    public static WeatheringCopperBlocks COPPER_BUTTONS;
 
     public static RegistrySupplier<Block> COPPER_PRESSURE_PLATE;
     public static RegistrySupplier<Block> EXPOSED_COPPER_PRESSURE_PLATE;
@@ -290,8 +268,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_PRESSURE_PLATE;
     public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_PRESSURE_PLATE;
 
-    public static WeatheringCopperBlocks COPPER_PRESSURE_PLATES;
-
     public static RegistrySupplier<Block> COPPER_GLASS;
     public static RegistrySupplier<Block> EXPOSED_COPPER_GLASS;
     public static RegistrySupplier<Block> WEATHERED_COPPER_GLASS;
@@ -300,8 +276,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_GLASS;
     public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_GLASS;
     public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_GLASS;
-
-    public static WeatheringCopperBlocks COPPER_GLASS_BLOCKS;
 
     public static RegistrySupplier<Block> COPPER_GLASS_PANE;
     public static RegistrySupplier<Block> EXPOSED_COPPER_GLASS_PANE;
@@ -312,8 +286,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_GLASS_PANE;
     public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_GLASS_PANE;
 
-    public static WeatheringCopperBlocks COPPER_GLASS_PANES;
-
     public static RegistrySupplier<Block> COPPER_TINTED_GLASS;
     public static RegistrySupplier<Block> EXPOSED_COPPER_TINTED_GLASS;
     public static RegistrySupplier<Block> WEATHERED_COPPER_TINTED_GLASS;
@@ -322,8 +294,6 @@ public class MetallicsBlocks {
     public static RegistrySupplier<Block> WAXED_EXPOSED_COPPER_TINTED_GLASS;
     public static RegistrySupplier<Block> WAXED_WEATHERED_COPPER_TINTED_GLASS;
     public static RegistrySupplier<Block> WAXED_OXIDIZED_COPPER_TINTED_GLASS;
-
-    public static WeatheringCopperBlocks COPPER_TINTED_GLASS_BLOCKS;
 
     //Iron
     public static RegistrySupplier<LadderBlock> IRON_LADDER;
@@ -545,8 +515,8 @@ public class MetallicsBlocks {
         ));
 
         //Copper
-        BRUSHING_COPPER_BLOCK = registerBlock("brushing_copper_block", new MBlock<>(props -> new MBrushingBlock(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_copper_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
-        BRUSHING_COPPER_SLAB = registerBlock("brushing_copper_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_copper_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
+        BRUSHING_COPPER_BLOCK = registerBlock("brushing_copper_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_copper_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(CPR_GRT).getCopy())));
+        BRUSHING_COPPER_SLAB = registerBlock("brushing_copper_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_copper_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
 
         COPPER_LADDER = registerBlock("copper_ladder", new MBlock<>(props -> new MWeatheringLadderBlock(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
         EXPOSED_COPPER_LADDER = registerBlock("exposed_copper_ladder", new MBlock<>(props -> new MWeatheringLadderBlock(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(ladderProps.strength(CPR_GRT).getCopy())));
@@ -690,8 +660,8 @@ public class MetallicsBlocks {
         //Iron
         IRON_PLATED_BLOCK = registerBlock("iron_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         IRON_SLAB = registerBlock("iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
-        BRUSHING_IRON_BLOCK = registerBlock("brushing_iron_block", new MBlock<>(props -> new MBrushingBlock(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_iron_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(IRN_GRT).getCopy())));
-        BRUSHING_IRON_SLAB = registerBlock("brushing_iron_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_iron_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
+        BRUSHING_IRON_BLOCK = registerBlock("brushing_iron_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_iron_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        BRUSHING_IRON_SLAB = registerBlock("brushing_iron_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_iron_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
 
         BRUSHED_IRON_BLOCK = registerBlock("brushed_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         BRUSHED_IRON_SLAB = registerBlock("brushed_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
@@ -728,8 +698,8 @@ public class MetallicsBlocks {
         BLUE_IRON_BLOCK = registerBlock("blue_iron_block",  new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_PLATED_BLOCK = registerBlock("blue_iron_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         BLUE_IRON_SLAB = registerBlock("blue_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
-        BRUSHING_BLUE_IRON_BLOCK = registerBlock("brushing_blue_iron_block", new MBlock<>(props -> new MBrushingBlock(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_blue_iron_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(IRN_GRT).getCopy())));
-        BRUSHING_BLUE_IRON_SLAB = registerBlock("brushing_blue_iron_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_blue_iron_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
+        BRUSHING_BLUE_IRON_BLOCK = registerBlock("brushing_blue_iron_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_blue_iron_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(IRN_GRT).getCopy())));
+        BRUSHING_BLUE_IRON_SLAB = registerBlock("brushing_blue_iron_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_blue_iron_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
         BRUSHED_BLUE_IRON_BLOCK = registerBlock("brushed_blue_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
         BRUSHED_BLUE_IRON_SLAB = registerBlock("brushed_blue_iron_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(IRN_GRT).getCopy())));
         CUT_BLUE_IRON_BLOCK = registerBlock("cut_blue_iron_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(IRN_GRT).getCopy())));
@@ -764,8 +734,8 @@ public class MetallicsBlocks {
         GOLD_BARS = registerBlock("gold_bars", new MBlock<>(IronBarsBlock::new, Optional.of(barsProps.strength(GLD_STR).getCopy())));
         GOLD_PLATED_BLOCK = registerBlock("gold_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
         GOLD_SLAB = registerBlock("gold_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(GLD_GRT).getCopy())));
-        BRUSHING_GOLD_BLOCK = registerBlock("brushing_gold_block", new MBlock<>(props -> new MBrushingBlock(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_gold_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(GLD_GRT).getCopy())));
-        BRUSHING_GOLD_SLAB = registerBlock("brushing_gold_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_gold_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(GLD_GRT).getCopy())));
+        BRUSHING_GOLD_BLOCK = registerBlock("brushing_gold_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_gold_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(GLD_GRT).getCopy())));
+        BRUSHING_GOLD_SLAB = registerBlock("brushing_gold_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_gold_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(GLD_GRT).getCopy())));
         BRUSHED_GOLD_BLOCK = registerBlock("brushed_gold_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
         BRUSHED_GOLD_SLAB = registerBlock("brushed_gold_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(GLD_GRT).getCopy())));
         CUT_GOLD_BLOCK = registerBlock("cut_gold_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(GLD_GRT).getCopy())));
@@ -801,8 +771,8 @@ public class MetallicsBlocks {
         NETHERITE_BARS = registerBlock("netherite_bars", new MBlock<>(IronBarsBlock::new, Optional.of(barsProps.strength(NTR_STR).getCopy())));
         NETHERITE_PLATED_BLOCK = registerBlock("netherite_plated_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
         NETHERITE_SLAB = registerBlock("netherite_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(NTR_GRT).getCopy())));
-        BRUSHING_NETHERITE_BLOCK = registerBlock("brushing_netherite_block", new MBlock<>(props -> new MBrushingBlock(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_netherite_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(NTR_GRT).getCopy())));
-        BRUSHING_NETHERITE_SLAB = registerBlock("brushing_netherite_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_netherite_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(NTR_GRT).getCopy())));
+        BRUSHING_NETHERITE_BLOCK = registerBlock("brushing_netherite_block", new MBlock<>(props -> new MBrushingBlock(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_netherite_block"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(blockProps.strength(NTR_GRT).getCopy())));
+        BRUSHING_NETHERITE_SLAB = registerBlock("brushing_netherite_slab", new MBlock<>(props -> new MBrushingSlab(4, 3, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "brushed_netherite_slab"), SoundEvents.BRUSH_GENERIC, SoundEvents.COPPER_PLACE, props), Optional.of(stairSlabProps.strength(NTR_GRT).getCopy())));
         BRUSHED_NETHERITE_BLOCK = registerBlock("brushed_netherite_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
         BRUSHED_NETHERITE_SLAB = registerBlock("brushed_netherite_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(NTR_GRT).getCopy())));
         CUT_NETHERITE_BLOCK = registerBlock("cut_netherite_block", new MBlock<>(Block::new, Optional.of(blockProps.strength(NTR_GRT).getCopy())));
@@ -869,181 +839,16 @@ public class MetallicsBlocks {
 
     public static void oxidizationInit() {
 
-        //Post registration stuff here ▼▼▼
-        BRUSHED_COPPER_BLOCKS = new WeatheringCopperBlocks(
-                BRUSHED_COPPER_BLOCK.get(),
-                EXPOSED_BRUSHED_COPPER_BLOCK.get(),
-                WEATHERED_BRUSHED_COPPER_BLOCK.get(),
-                WEATHERED_OXIDIZED_COPPER_BLOCK.get(),
-                WAXED_BRUSHED_COPPER_BLOCK.get(),
-                WAXED_EXPOSED_BRUSHED_COPPER_BLOCK.get(),
-                WAXED_WEATHERED_BRUSHED_COPPER_BLOCK.get(),
-                WAXED_WEATHERED_OXIDIZED_COPPER_BLOCK.get()
-        );
-
-        BRUSHED_COPPER_SLABS = new WeatheringCopperBlocks(
-                BRUSHED_COPPER_SLAB.get(),
-                EXPOSED_BRUSHED_COPPER_SLAB.get(),
-                WEATHERED_BRUSHED_COPPER_SLAB.get(),
-                WEATHERED_OXIDIZED_COPPER_SLAB.get(),
-                WAXED_BRUSHED_COPPER_SLAB.get(),
-                WAXED_EXPOSED_BRUSHED_COPPER_SLAB.get(),
-                WAXED_WEATHERED_BRUSHED_COPPER_SLAB.get(),
-                WAXED_WEATHERED_OXIDIZED_COPPER_SLAB.get()
-        );
-
-        COPPER_MESHES = new WeatheringCopperBlocks(
-                COPPER_MESH.get(),
-                EXPOSED_COPPER_MESH.get(),
-                WEATHERED_COPPER_MESH.get(),
-                OXIDIZED_COPPER_MESH.get(),
-                WAXED_COPPER_MESH.get(),
-                WAXED_EXPOSED_COPPER_MESH.get(),
-                WAXED_WEATHERED_COPPER_MESH.get(),
-                WAXED_OXIDIZED_COPPER_MESH.get()
-        );
-
-        COPPER_MESH_FENCES = new WeatheringCopperBlocks(
-                COPPER_MESH_FENCE.get(),
-                EXPOSED_COPPER_MESH_FENCE.get(),
-                WEATHERED_COPPER_MESH_FENCE.get(),
-                OXIDIZED_COPPER_MESH_FENCE.get(),
-                WAXED_COPPER_MESH_FENCE.get(),
-                WAXED_EXPOSED_COPPER_MESH_FENCE.get(),
-                WAXED_WEATHERED_COPPER_MESH_FENCE.get(),
-                WAXED_OXIDIZED_COPPER_MESH_FENCE.get()
-        );
-
-        COPPER_MESH_GATES = new WeatheringCopperBlocks(
-                COPPER_MESH_GATE.get(),
-                EXPOSED_COPPER_MESH_GATE.get(),
-                WEATHERED_COPPER_MESH_GATE.get(),
-                OXIDIZED_COPPER_MESH_GATE.get(),
-                WAXED_COPPER_MESH_GATE.get(),
-                WAXED_EXPOSED_COPPER_MESH_GATE.get(),
-                WAXED_WEATHERED_COPPER_MESH_GATE.get(),
-                WAXED_OXIDIZED_COPPER_MESH_GATE.get()
-        );
-
-        COPPER_LADDERS = new WeatheringCopperBlocks(
-                COPPER_LADDER.get(),
-                EXPOSED_COPPER_LADDER.get(),
-                WEATHERED_COPPER_LADDER.get(),
-                OXIDIZED_COPPER_LADDER.get(),
-                WAXED_COPPER_LADDER.get(),
-                WAXED_EXPOSED_COPPER_LADDER.get(),
-                WAXED_WEATHERED_COPPER_LADDER.get(),
-                WAXED_OXIDIZED_COPPER_LADDER.get()
-        );
-
-        COPPER_MESH_DOORS = new WeatheringCopperBlocks(
-                COPPER_MESH_DOOR.get(),
-                EXPOSED_COPPER_MESH_DOOR.get(),
-                WEATHERED_COPPER_MESH_DOOR.get(),
-                OXIDIZED_COPPER_MESH_DOOR.get(),
-                WAXED_COPPER_MESH_DOOR.get(),
-                WAXED_EXPOSED_COPPER_MESH_DOOR.get(),
-                WAXED_WEATHERED_COPPER_MESH_DOOR.get(),
-                WAXED_OXIDIZED_COPPER_MESH_DOOR.get()
-        );
-
-        COPPER_MESH_TRAPDOORS = new WeatheringCopperBlocks(
-                COPPER_MESH_TRAPDOOR.get(),
-                EXPOSED_COPPER_MESH_TRAPDOOR.get(),
-                WEATHERED_COPPER_MESH_TRAPDOOR.get(),
-                OXIDIZED_COPPER_MESH_TRAPDOOR.get(),
-                WAXED_COPPER_MESH_TRAPDOOR.get(),
-                WAXED_EXPOSED_COPPER_MESH_TRAPDOOR.get(),
-                WAXED_WEATHERED_COPPER_MESH_TRAPDOOR.get(),
-                WAXED_OXIDIZED_COPPER_MESH_TRAPDOOR.get()
-        );
-
-        COPPER_SLABS = new WeatheringCopperBlocks(
-                COPPER_SLAB.get(),
-                EXPOSED_COPPER_SLAB.get(),
-                WEATHERED_COPPER_SLAB.get(),
-                OXIDIZED_COPPER_SLAB.get(),
-                WAXED_COPPER_SLAB.get(),
-                WAXED_EXPOSED_COPPER_SLAB.get(),
-                WAXED_WEATHERED_COPPER_SLAB.get(),
-                WAXED_OXIDIZED_COPPER_SLAB.get()
-        );
-
-        COPPER_LAMPS = new WeatheringCopperBlocks(
-                COPPER_LAMP.get(),
-                EXPOSED_COPPER_LAMP.get(),
-                WEATHERED_COPPER_LAMP.get(),
-                OXIDIZED_COPPER_LAMP.get(),
-                WAXED_COPPER_LAMP.get(),
-                WAXED_EXPOSED_COPPER_LAMP.get(),
-                WAXED_WEATHERED_COPPER_LAMP.get(),
-                WAXED_OXIDIZED_COPPER_LAMP.get()
-        );
-
-        COPPER_BUTTONS = new WeatheringCopperBlocks(
-                COPPER_BUTTON.get(),
-                EXPOSED_COPPER_BUTTON.get(),
-                WEATHERED_COPPER_BUTTON.get(),
-                OXIDIZED_COPPER_BUTTON.get(),
-                WAXED_COPPER_BUTTON.get(),
-                WAXED_EXPOSED_COPPER_BUTTON.get(),
-                WAXED_WEATHERED_COPPER_BUTTON.get(),
-                WAXED_OXIDIZED_COPPER_BUTTON.get()
-        );
-
-        COPPER_PRESSURE_PLATES = new WeatheringCopperBlocks(
-                COPPER_PRESSURE_PLATE.get(),
-                EXPOSED_COPPER_PRESSURE_PLATE.get(),
-                WEATHERED_COPPER_PRESSURE_PLATE.get(),
-                OXIDIZED_COPPER_PRESSURE_PLATE.get(),
-                WAXED_COPPER_PRESSURE_PLATE.get(),
-                WAXED_EXPOSED_COPPER_PRESSURE_PLATE.get(),
-                WAXED_WEATHERED_COPPER_PRESSURE_PLATE.get(),
-                WAXED_OXIDIZED_COPPER_PRESSURE_PLATE.get()
-        );
-
-        COPPER_GLASS_BLOCKS = new WeatheringCopperBlocks(
-                COPPER_GLASS.get(),
-                EXPOSED_COPPER_GLASS.get(),
-                WEATHERED_COPPER_GLASS.get(),
-                OXIDIZED_COPPER_GLASS.get(),
-                WAXED_COPPER_GLASS.get(),
-                WAXED_EXPOSED_COPPER_GLASS.get(),
-                WAXED_WEATHERED_COPPER_GLASS.get(),
-                WAXED_OXIDIZED_COPPER_GLASS.get()
-        );
-
-        COPPER_GLASS_PANES = new WeatheringCopperBlocks(
-                COPPER_GLASS_PANE.get(),
-                EXPOSED_COPPER_GLASS_PANE.get(),
-                WEATHERED_COPPER_GLASS_PANE.get(),
-                OXIDIZED_COPPER_GLASS_PANE.get(),
-                WAXED_COPPER_GLASS_PANE.get(),
-                WAXED_EXPOSED_COPPER_GLASS_PANE.get(),
-                WAXED_WEATHERED_COPPER_GLASS_PANE.get(),
-                WAXED_OXIDIZED_COPPER_GLASS_PANE.get()
-        );
-
-        COPPER_TINTED_GLASS_BLOCKS = new WeatheringCopperBlocks(
-                COPPER_TINTED_GLASS.get(),
-                EXPOSED_COPPER_TINTED_GLASS.get(),
-                WEATHERED_COPPER_TINTED_GLASS.get(),
-                OXIDIZED_COPPER_TINTED_GLASS.get(),
-                WAXED_COPPER_TINTED_GLASS.get(),
-                WAXED_EXPOSED_COPPER_TINTED_GLASS.get(),
-                WAXED_WEATHERED_COPPER_TINTED_GLASS.get(),
-                WAXED_OXIDIZED_COPPER_TINTED_GLASS.get()
-        );
     }
 
     private static <T extends Block> RegistrySupplier<T> registerBlock(String name, MBlock<T> mBlock) {
-        ResourceKey<Block> key = ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, name));
+        ResourceKey<Block> key = ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, name));
         if(mBlock.feedInProps().isPresent()) {
             registeredBlockCount += 1;
-            return BLOCKS.register(name, () -> mBlock.blockConstructor().apply(mBlock.feedInProps().orElseThrow().setId(key)));
+            return BLOCKS.register(name, () -> mBlock.blockConstructor().apply(mBlock.feedInProps().orElseThrow()));
         } else {
             registeredBlockCount += 1;
-            return BLOCKS.register(name, () -> mBlock.blockConstructor().apply(BlockBehaviour.Properties.of().setId(key)));
+            return BLOCKS.register(name, () -> mBlock.blockConstructor().apply(BlockBehaviour.Properties.of()));
         }
     }
 }
