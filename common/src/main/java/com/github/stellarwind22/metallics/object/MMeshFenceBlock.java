@@ -128,6 +128,8 @@ public class MMeshFenceBlock extends Block implements SimpleWaterloggedBlock {
         }
     }
 
+    WallBlock
+
     private static boolean isConnected(BlockState blockState, Property<WallSide> property) {
         return blockState.getValue(property) != WallSide.NONE;
     }
