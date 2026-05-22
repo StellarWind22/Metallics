@@ -7,7 +7,6 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
@@ -23,21 +22,20 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.jspecify.annotations.NonNull;
 
 public class MBrushingBlock extends BaseEntityBlock implements MBrushable {
 
     public static final MapCodec<MBrushingBlock> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(
             ExtraCodecs.POSITIVE_INT.fieldOf("tick_delay").forGetter(MBrushingBlock::tickDelay),
             ExtraCodecs.POSITIVE_INT.fieldOf("brushes_to_complete").forGetter(MBrushingBlock::brushesToComplete),
-            Identifier.CODEC.fieldOf("turns_into").forGetter(MBrushingBlock::getTurnsInto),
+            ResourceLocation.CODEC.fieldOf("turns_into").forGetter(MBrushingBlock::getTurnsInto),
             BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_sound").forGetter(MBrushingBlock::brushSound),
             BuiltInRegistries.SOUND_EVENT.byNameCodec().fieldOf("brush_completed_sound").forGetter(MBrushingBlock::brushCompletedSound),
             propertiesCodec()).apply(instance, MBrushingBlock::new));
 
     private final int tickDelay;
     private final int brushesToComplete;
-    private final Identifier turnsInto;
+    private final ResourceLocation turnsInto;
     private final SoundEvent brushSound;
     private final SoundEvent brushCompletedSound;
 
@@ -74,7 +72,7 @@ public class MBrushingBlock extends BaseEntityBlock implements MBrushable {
     }
 
     @Override
-    public Identifier getTurnsInto() {
+    public ResourceLocation getTurnsInto() {
         return this.turnsInto;
     }
 
@@ -94,12 +92,12 @@ public class MBrushingBlock extends BaseEntityBlock implements MBrushable {
     }
 
     @Override
-    public void animateTick(@NonNull BlockState blockState, @NonNull Level level, @NonNull BlockPos blockPos, @NonNull RandomSource randomSource) {
+    public void animateTick(BlockState blockState, Level level, BlockPos blockPos, RandomSource randomSource) {
         this.animateTickBrushable(blockState, level, blockPos, randomSource);
     }
 
     @Override
-    public void onPlace(@NonNull BlockState blockState, @NonNull Level level, @NonNull BlockPos blockPos, @NonNull BlockState blockState2, boolean bl) {
+    public void onPlace(BlockState blockState, Level level, BlockPos blockPos, BlockState blockState2, boolean bl) {
         this.onPlaceBrushable(level, blockPos);
     }
 
@@ -109,12 +107,12 @@ public class MBrushingBlock extends BaseEntityBlock implements MBrushable {
     }
 
     @Override
-    public @Nullable BlockEntity newBlockEntity(@NonNull BlockPos blockPos, @NonNull BlockState blockState) {
+    public @Nullable BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
         return new MBrushingBlockEntity(blockPos, blockState);
     }
 
     @Override
-    public void tick(@NonNull BlockState blockState, @NonNull ServerLevel serverLevel, @NonNull BlockPos blockPos, @NonNull RandomSource randomSource) {
+    public void tick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
         this.tickBrushable(serverLevel, blockPos);
     }
 
