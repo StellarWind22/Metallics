@@ -1,6 +1,1 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "metallics:item/weathered_copper_ingot"
-  }
-}
+{"parent":"minecraft:item/generated","textures":{"layer0":"metallics:item/weathered_copper_ingot"}}

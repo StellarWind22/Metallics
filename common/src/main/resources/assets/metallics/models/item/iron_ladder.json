@@ -1,6 +1,1 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "metallics:block/iron_ladder"
-  }
-}
+{"parent":"minecraft:item/generated","textures":{"layer0":"metallics:block/iron_ladder"}}

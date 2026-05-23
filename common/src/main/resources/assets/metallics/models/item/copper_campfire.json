@@ -1,6 +1,1 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "metallics:item/copper_campfire"
-  }
-}
+{"parent":"minecraft:item/generated","textures":{"layer0":"metallics:item/copper_campfire"}}

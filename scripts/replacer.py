@@ -58,6 +58,18 @@ def main():
     if replacement == "!":
         replacement = ""
 
+    #Shortcuts
+    target = target.replace("%%"," ")
+    replacement = replacement.replace("%%"," ")
+
+    target = target.replace("%r","\r")
+    replacement = replacement.replace("%r","\r")
+
+    target = target.replace("%n","\n")
+    replacement = replacement.replace("%n","\n")
+
+    print("Target: " + target)
+
     if not os.path.isdir(root_dir):
         print(f"Error: {root_dir} is not a valid directory")
         sys.exit(1)
