@@ -189,8 +189,42 @@ public class MMeshFenceBlock extends Block implements SimpleWaterloggedBlock {
     }
 
     public boolean shouldRaisePost(BlockState blockState, BlockState blockState2, VoxelShape voxelShape) {
-        boolean bl = blockState2.getBlock() instanceof WallBlock && blockState2.getValue(UP);
-        if (bl) {
+        Block block = blockState2.getBlock();
+        boolean bars = block instanceof IronBarsBlock;
+        boolean match = bars;
+
+        if(match) {
+            var bl_n = blockState.getValue(NORTH_WALL) != WallSide.NONE;
+            if(bl_n) {
+                if(!blockState2.getValue(IronBarsBlock.NORTH)) {
+                    match = false;
+                }
+            }
+
+            var bl_s = blockState.getValue(SOUTH_WALL) != WallSide.NONE;
+            if(bl_s) {
+                if(!blockState2.getValue(IronBarsBlock.SOUTH)) {
+                    match = false;
+                }
+            }
+
+            var bl_e = blockState.getValue(EAST_WALL) != WallSide.NONE;
+            if(bl_e) {
+                if(!blockState2.getValue(IronBarsBlock.EAST)) {
+                    match = false;
+                }
+            }
+
+            var bl_w = blockState.getValue(WEST_WALL) != WallSide.NONE;
+            if(bl_w) {
+                if(!blockState2.getValue(IronBarsBlock.WEST)) {
+                    match = false;
+                }
+            }
+        }
+
+        boolean bl = (block instanceof WallBlock && blockState2.getValue(WallBlock.UP) || (block instanceof MMeshFenceBlock && blockState2.getValue(UP)) || (!match && bars));
+        if(bl) {
             return true;
         } else {
             WallSide wallSide = blockState.getValue(NORTH_WALL);
@@ -202,11 +236,11 @@ public class MMeshFenceBlock extends Block implements SimpleWaterloggedBlock {
             boolean bl4 = wallSide3 == WallSide.NONE;
             boolean bl5 = wallSide == WallSide.NONE;
             boolean bl6 = bl5 && bl2 && bl3 && bl4 || bl5 != bl2 || bl3 != bl4;
-            if (bl6) {
+            if(bl6) {
                 return true;
             } else {
                 boolean bl7 = wallSide == WallSide.TALL && wallSide2 == WallSide.TALL || wallSide3 == WallSide.TALL && wallSide4 == WallSide.TALL;
-                if (bl7) {
+                if(bl7) {
                     return false;
                 } else {
                     return blockState2.is(BlockTags.WALL_POST_OVERRIDE) || isCovered(voxelShape, POST_TEST);
@@ -229,10 +263,6 @@ public class MMeshFenceBlock extends Block implements SimpleWaterloggedBlock {
 
     public @NotNull FluidState getFluidState(BlockState blockState) {
         return blockState.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(blockState);
-    }
-
-    public boolean propagatesSkylightDown(BlockState blockState) {
-        return !blockState.getValue(WATERLOGGED);
     }
 
     public void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
