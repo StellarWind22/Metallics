@@ -3,5 +3,7 @@
   "description": {
     "color": "#59B292",
     "translate": "trim_material.metallics.oxidized_copper"
-  }
+  },
+  "ingredient": "metallics:oxidized_copper_ingot",
+  "item_model_index": 0.4
 }

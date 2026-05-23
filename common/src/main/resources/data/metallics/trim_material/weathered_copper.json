@@ -3,5 +3,7 @@
   "description": {
     "color": "#6C975C",
     "translate": "trim_material.metallics.weathered_copper"
-  }
+  },
+  "ingredient": "metallics:weathered_copper_ingot",
+  "item_model_index": 0.4
 }

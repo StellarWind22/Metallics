@@ -3,5 +3,8 @@
   "description": {
     "color": "#A9987B",
     "translate": "trim_material.metallics.exposed_copper"
-  }
+  },
+  "ingredient": "metallics:exposed_copper_ingot",
+  "item_model_index": 0.4
 }
+
