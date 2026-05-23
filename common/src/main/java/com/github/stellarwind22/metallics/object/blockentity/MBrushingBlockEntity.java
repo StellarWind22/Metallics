@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -59,7 +60,7 @@ public class MBrushingBlockEntity extends BlockEntity {
         Block block2;
         if (block instanceof MBrushable mBrushableBlock) {
             if(turnsInto == null) {
-                turnsInto = serverLevel.registryAccess().lookup(Registries.BLOCK).orElseThrow().get(mBrushableBlock.getTurnsInto()).orElseThrow().value();
+                turnsInto = serverLevel.registryAccess().lookup(Registries.BLOCK).orElseThrow().get(ResourceKey.create(Registries.BLOCK, mBrushableBlock.getTurnsInto())).orElseThrow().value();
             }
             block2 = this.turnsInto;
         } else {

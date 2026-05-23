@@ -10,13 +10,11 @@ import com.github.stellarwind22.metallics.object.blockentity.MCampfireBlockEntit
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
-import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -74,42 +72,28 @@ public final class MetallicsFabric implements ModInitializer {
 
         MetallicsBlocks.oxidizationInit();
 
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.BRUSHED_COPPER_BLOCKS);
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.BRUSHED_COPPER_SLABS);
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_LADDERS);
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_MESHES);
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_LAMPS);
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_SLABS);
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_MESH_FENCES);
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_MESH_GATES);
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_MESH_DOORS);
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_MESH_TRAPDOORS);
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_BUTTONS);
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_PRESSURE_PLATES);
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_GLASS_BLOCKS);
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_GLASS_PANES);
-        OxidizableBlocksRegistry.registerCopperBlockSet(MetallicsBlocks.COPPER_TINTED_GLASS_BLOCKS);
+        //TODO: ADD IN OXIDIZABLE REGISTRATION STUFF
 
         BiomeModifications.addFeature(
                 BiomeSelectors.tag(TagKey.create(
                         Registries.BIOME,
-                        Identifier.fromNamespaceAndPath(
+                        ResourceLocation.fromNamespaceAndPath(
                                 Metallics.MOD_ID,
                                 "nitre_ore_biomes"
                         )
                 )),
                 GenerationStep.Decoration.UNDERGROUND_ORES,
-                ResourceKey.create(Registries.PLACED_FEATURE, Identifier.fromNamespaceAndPath(Metallics.MOD_ID, "ore_vitralite"))
+                ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, "ore_vitralite"))
         );
     }
 
-    public static <E extends BlockEntity> Supplier<BlockEntityType<E>> registerBlockEntity(String name, FabricBlockEntityTypeBuilder.Factory<? extends E> factory, Block... blocks) {
-        var type = Registry.register(
+    public static <E extends BlockEntity> Supplier<BlockEntityType<E>> registerBlockEntity(String name, BlockEntityType.BlockEntitySupplier<E> factory, Block...blocks) {
+        var e = Registry.register(
                 BuiltInRegistries.BLOCK_ENTITY_TYPE,
-                Identifier.fromNamespaceAndPath(Metallics.MOD_ID, name),
-                FabricBlockEntityTypeBuilder.<E>create(factory, blocks).build()
+                ResourceLocation.fromNamespaceAndPath(Metallics.MOD_ID, name),
+                BlockEntityType.Builder.of(factory, blocks).build()
         );
-        return () -> type;
+        return () -> e;
     }
 
     private static void registerBlockSetType(BlockSetType type) {

@@ -52,15 +52,15 @@ public class MCampfireBlockEntity extends BlockEntity implements Clearable {
         boolean bl = false;
 
         for(int i = 0; i < campfireBlockEntity.items.size(); ++i) {
-            ItemStack itemStack = (ItemStack)campfireBlockEntity.items.get(i);
+            ItemStack itemStack = campfireBlockEntity.items.get(i);
             if (!itemStack.isEmpty()) {
                 bl = true;
                 int var10002 = campfireBlockEntity.cookingProgress[i]++;
                 if (campfireBlockEntity.cookingProgress[i] >= campfireBlockEntity.cookingTime[i]) {
                     SingleRecipeInput singleRecipeInput = new SingleRecipeInput(itemStack);
-                    ItemStack itemStack2 = (ItemStack)campfireBlockEntity.quickCheck.getRecipeFor(singleRecipeInput, level).map((recipeHolder) -> ((CampfireCookingRecipe)recipeHolder.value()).assemble(singleRecipeInput, level.registryAccess())).orElse(itemStack);
+                    ItemStack itemStack2 = campfireBlockEntity.quickCheck.getRecipeFor(singleRecipeInput, level).map((recipeHolder) -> recipeHolder.value().assemble(singleRecipeInput, level.registryAccess())).orElse(itemStack);
                     if (itemStack2.isItemEnabled(level.enabledFeatures())) {
-                        Containers.dropItemStack(level, (double)blockPos.getX(), (double)blockPos.getY(), (double)blockPos.getZ(), itemStack2);
+                        Containers.dropItemStack(level, blockPos.getX(), blockPos.getY(), blockPos.getZ(), itemStack2);
                         campfireBlockEntity.items.set(i, ItemStack.EMPTY);
                         level.sendBlockUpdated(blockPos, blockState, blockState, 3);
                         level.gameEvent(GameEvent.BLOCK_CHANGE, blockPos, Context.of(blockState));
@@ -95,14 +95,14 @@ public class MCampfireBlockEntity extends BlockEntity implements Clearable {
         RandomSource randomSource = level.random;
         if (randomSource.nextFloat() < 0.11F) {
             for(int i = 0; i < randomSource.nextInt(2) + 2; ++i) {
-                CampfireBlock.makeParticles(level, blockPos, (Boolean)blockState.getValue(CampfireBlock.SIGNAL_FIRE), false);
+                CampfireBlock.makeParticles(level, blockPos, blockState.getValue(CampfireBlock.SIGNAL_FIRE), false);
             }
         }
 
-        int i = ((Direction)blockState.getValue(CampfireBlock.FACING)).get2DDataValue();
+        int i = blockState.getValue(CampfireBlock.FACING).get2DDataValue();
 
         for(int j = 0; j < campfireBlockEntity.items.size(); ++j) {
-            if (!((ItemStack)campfireBlockEntity.items.get(j)).isEmpty() && randomSource.nextFloat() < 0.2F) {
+            if (!campfireBlockEntity.items.get(j).isEmpty() && randomSource.nextFloat() < 0.2F) {
                 Direction direction = Direction.from2DDataValue(Math.floorMod(j + i, 4));
                 float f = 0.3125F;
                 double d = (double)blockPos.getX() + (double)0.5F - (double)((float)direction.getStepX() * 0.3125F) + (double)((float)direction.getClockWise().getStepX() * 0.3125F);
@@ -110,7 +110,7 @@ public class MCampfireBlockEntity extends BlockEntity implements Clearable {
                 double g = (double)blockPos.getZ() + (double)0.5F - (double)((float)direction.getStepZ() * 0.3125F) + (double)((float)direction.getClockWise().getStepZ() * 0.3125F);
 
                 for(int k = 0; k < 4; ++k) {
-                    level.addParticle(ParticleTypes.SMOKE, d, e, g, (double)0.0F, 5.0E-4, (double)0.0F);
+                    level.addParticle(ParticleTypes.SMOKE, d, e, g, 0.0F, 5.0E-4, 0.0F);
                 }
             }
         }
@@ -160,7 +160,7 @@ public class MCampfireBlockEntity extends BlockEntity implements Clearable {
 
     public boolean placeFood(@Nullable LivingEntity livingEntity, ItemStack itemStack, int i) {
         for(int j = 0; j < this.items.size(); ++j) {
-            ItemStack itemStack2 = (ItemStack)this.items.get(j);
+            ItemStack itemStack2 = this.items.get(j);
             if (itemStack2.isEmpty()) {
                 this.cookingTime[j] = i;
                 this.cookingProgress[j] = 0;
@@ -194,7 +194,7 @@ public class MCampfireBlockEntity extends BlockEntity implements Clearable {
 
     protected void applyImplicitComponents(BlockEntity.DataComponentInput dataComponentInput) {
         super.applyImplicitComponents(dataComponentInput);
-        ((ItemContainerContents)dataComponentInput.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY)).copyInto(this.getItems());
+        dataComponentInput.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).copyInto(this.getItems());
     }
 
     protected void collectImplicitComponents(DataComponentMap.Builder builder) {

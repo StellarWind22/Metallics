@@ -65,7 +65,7 @@ public class MetallicsBlocks {
 
     private static final MBlockProps barsProps = new MBlockProps()
             .requiresCorrectToolForDrops()
-            .sound(SoundType.IRON).noOcclusion();
+            .sound(SoundType.METAL).noOcclusion();
 
     private static final MBlockProps meshProps = new MBlockProps()
             .requiresCorrectToolForDrops()
@@ -491,7 +491,7 @@ public class MetallicsBlocks {
                         false,
                         false,
                         BlockSetType.PressurePlateSensitivity.MOBS,
-                        SoundType.IRON,
+                        SoundType.METAL,
                         SoundEvents.IRON_DOOR_CLOSE,
                         SoundEvents.IRON_DOOR_OPEN,
                         SoundEvents.IRON_TRAPDOOR_CLOSE,
@@ -545,10 +545,10 @@ public class MetallicsBlocks {
         WAXED_WEATHERED_BRUSHED_COPPER_SLAB = registerBlock("waxed_weathered_brushed_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
         WAXED_WEATHERED_OXIDIZED_COPPER_SLAB = registerBlock("waxed_oxidized_brushed_copper_slab", new MBlock<>(SlabBlock::new, Optional.of(stairSlabProps.strength(CPR_GRT).getCopy())));
 
-        COPPER_MESH = registerBlock("copper_mesh", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
-        EXPOSED_COPPER_MESH = registerBlock("exposed_copper_mesh", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
-        WEATHERED_COPPER_MESH = registerBlock("weathered_copper_mesh", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.WEATHERED, props), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
-        OXIDIZED_COPPER_MESH = registerBlock("oxidized_copper_mesh", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.OXIDIZED, props), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        COPPER_MESH = registerBlock("copper_mesh", new MBlock<>(props -> new MWeatheringBarsBlock(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        EXPOSED_COPPER_MESH = registerBlock("exposed_copper_mesh", new MBlock<>(props -> new MWeatheringBarsBlock(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        WEATHERED_COPPER_MESH = registerBlock("weathered_copper_mesh", new MBlock<>(props -> new MWeatheringBarsBlock(props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
+        OXIDIZED_COPPER_MESH = registerBlock("oxidized_copper_mesh", new MBlock<>(props -> new MWeatheringBarsBlock(props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(meshProps.strength(CPR_MSH).getCopy())));
         WAXED_COPPER_MESH = registerBlock("waxed_copper_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
         WAXED_EXPOSED_COPPER_MESH = registerBlock("waxed_exposed_copper_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
         WAXED_WEATHERED_COPPER_MESH = registerBlock("waxed_weathered_copper_mesh", new MBlock<>(IronBarsBlock::new, Optional.of(meshProps.strength(CPR_MSH).getCopy())));
@@ -639,10 +639,10 @@ public class MetallicsBlocks {
         WAXED_WEATHERED_COPPER_GLASS = registerBlock("waxed_weathered_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
         WAXED_OXIDIZED_COPPER_GLASS = registerBlock("waxed_oxidized_copper_glass", new MBlock<>(TransparentBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
 
-        COPPER_GLASS_PANE = registerBlock("copper_glass_pane", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.UNAFFECTED, props), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
-        EXPOSED_COPPER_GLASS_PANE = registerBlock("exposed_copper_glass_pane", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.EXPOSED, props), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
-        WEATHERED_COPPER_GLASS_PANE = registerBlock("weathered_copper_glass_pane", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.WEATHERED, props), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
-        OXIDIZED_COPPER_GLASS_PANE = registerBlock("oxidized_copper_glass_pane", new MBlock<>(props -> new WeatheringCopperBarsBlock(WeatheringCopper.WeatherState.OXIDIZED, props), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        COPPER_GLASS_PANE = registerBlock("copper_glass_pane", new MBlock<>(props -> new MWeatheringBarsBlock(props, WeatheringCopper.WeatherState.UNAFFECTED), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        EXPOSED_COPPER_GLASS_PANE = registerBlock("exposed_copper_glass_pane", new MBlock<>(props -> new MWeatheringBarsBlock(props, WeatheringCopper.WeatherState.EXPOSED), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        WEATHERED_COPPER_GLASS_PANE = registerBlock("weathered_copper_glass_pane", new MBlock<>(props -> new MWeatheringBarsBlock(props, WeatheringCopper.WeatherState.WEATHERED), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
+        OXIDIZED_COPPER_GLASS_PANE = registerBlock("oxidized_copper_glass_pane", new MBlock<>(props -> new MWeatheringBarsBlock(props, WeatheringCopper.WeatherState.OXIDIZED), Optional.of(glassProps.strength(CPR_MSH).getCopy())));
         WAXED_COPPER_GLASS_PANE = registerBlock("waxed_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
         WAXED_EXPOSED_COPPER_GLASS_PANE = registerBlock("waxed_exposed_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));
         WAXED_WEATHERED_COPPER_GLASS_PANE = registerBlock("waxed_weathered_copper_glass_pane", new MBlock<>(IronBarsBlock::new, Optional.of(glassProps.strength(CPR_MSH).getCopy())));

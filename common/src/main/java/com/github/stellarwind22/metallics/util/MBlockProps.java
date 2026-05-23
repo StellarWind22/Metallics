@@ -90,7 +90,7 @@ public class MBlockProps {
         copy.strength(this.destroyTime, this.explosionResistance);
 
         // Collision / occlusion
-        if (!this.hasCollision) copy.noCollision();
+        if (!this.hasCollision) copy.noCollission();
         if (!this.canOcclude) copy.noOcclusion();
         if (this.forceSolidOn) copy.forceSolidOn();
         if (this.forceSolidOff) copy.forceSolidOff();
