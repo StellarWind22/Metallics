@@ -2,6 +2,8 @@ package com.github.stellarwind22.metallics.object.blockentity;
 
 import java.util.Optional;
 
+import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
+import com.github.stellarwind22.metallics.object.MCampfireBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -25,9 +27,7 @@ import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.gameevent.GameEvent.Context;
@@ -41,7 +41,7 @@ public class MCampfireBlockEntity extends BlockEntity implements Clearable {
     private final RecipeManager.CachedCheck<SingleRecipeInput, CampfireCookingRecipe> quickCheck;
 
     public MCampfireBlockEntity(BlockPos blockPos, BlockState blockState) {
-        super(BlockEntityType.CAMPFIRE, blockPos, blockState);
+        super(MetallicsBlockEntityTypes.CAMPFIRE.get(), blockPos, blockState);
         this.items = NonNullList.withSize(4, ItemStack.EMPTY);
         this.cookingProgress = new int[4];
         this.cookingTime = new int[4];
@@ -95,11 +95,11 @@ public class MCampfireBlockEntity extends BlockEntity implements Clearable {
         RandomSource randomSource = level.random;
         if (randomSource.nextFloat() < 0.11F) {
             for(int i = 0; i < randomSource.nextInt(2) + 2; ++i) {
-                CampfireBlock.makeParticles(level, blockPos, blockState.getValue(CampfireBlock.SIGNAL_FIRE), false);
+                MCampfireBlock.makeParticles(level, blockPos, blockState.getValue(MCampfireBlock.SIGNAL_FIRE), false);
             }
         }
 
-        int i = blockState.getValue(CampfireBlock.FACING).get2DDataValue();
+        int i = blockState.getValue(MCampfireBlock.FACING).get2DDataValue();
 
         for(int j = 0; j < campfireBlockEntity.items.size(); ++j) {
             if (!campfireBlockEntity.items.get(j).isEmpty() && randomSource.nextFloat() < 0.2F) {

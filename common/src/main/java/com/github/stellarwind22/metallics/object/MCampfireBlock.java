@@ -1,5 +1,6 @@
 package com.github.stellarwind22.metallics.object;
 
+import com.github.stellarwind22.metallics.content.MetallicsBlockEntityTypes;
 import com.github.stellarwind22.metallics.object.blockentity.MCampfireBlockEntity;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.DataResult;
@@ -32,7 +33,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.CampfireBlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -92,11 +92,11 @@ public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterlogged
 
     protected @NotNull ItemInteractionResult useItemOn(ItemStack itemStack, BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
         BlockEntity blockEntity = level.getBlockEntity(blockPos);
-        if (blockEntity instanceof CampfireBlockEntity campfireBlockEntity) {
+        if (blockEntity instanceof MCampfireBlockEntity MCampfireBlockEntity) {
             ItemStack itemStack2 = player.getItemInHand(interactionHand);
-            Optional<RecipeHolder<CampfireCookingRecipe>> optional = campfireBlockEntity.getCookableRecipe(itemStack2);
+            Optional<RecipeHolder<CampfireCookingRecipe>> optional = MCampfireBlockEntity.getCookableRecipe(itemStack2);
             if (optional.isPresent()) {
-                if (!level.isClientSide && campfireBlockEntity.placeFood(player, itemStack2, ((CampfireCookingRecipe)((RecipeHolder<?>)optional.get()).value()).getCookingTime())) {
+                if (!level.isClientSide && MCampfireBlockEntity.placeFood(player, itemStack2, ((CampfireCookingRecipe)((RecipeHolder<?>)optional.get()).value()).getCookingTime())) {
                     player.awardStat(Stats.INTERACT_WITH_CAMPFIRE);
                     return ItemInteractionResult.SUCCESS;
                 }
@@ -241,16 +241,16 @@ public class MCampfireBlock extends BaseEntityBlock implements SimpleWaterlogged
         builder.add(LIT, SIGNAL_FIRE, WATERLOGGED, FACING);
     }
 
-    public @NotNull BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public @NotNull MCampfireBlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
         return new MCampfireBlockEntity(blockPos, blockState);
     }
 
     @Nullable
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState blockState, BlockEntityType<T> blockEntityType) {
         if (level.isClientSide) {
-            return blockState.getValue(LIT) ? createTickerHelper(blockEntityType, BlockEntityType.CAMPFIRE, CampfireBlockEntity::particleTick) : null;
+            return blockState.getValue(LIT) ? createTickerHelper(blockEntityType, MetallicsBlockEntityTypes.CAMPFIRE.get(), MCampfireBlockEntity::particleTick) : null;
         } else {
-            return blockState.getValue(LIT) ? createTickerHelper(blockEntityType, BlockEntityType.CAMPFIRE, CampfireBlockEntity::cookTick) : createTickerHelper(blockEntityType, BlockEntityType.CAMPFIRE, CampfireBlockEntity::cooldownTick);
+            return blockState.getValue(LIT) ? createTickerHelper(blockEntityType, MetallicsBlockEntityTypes.CAMPFIRE.get(), MCampfireBlockEntity::cookTick) : createTickerHelper(blockEntityType, MetallicsBlockEntityTypes.CAMPFIRE.get(), MCampfireBlockEntity::cooldownTick);
         }
     }
 
